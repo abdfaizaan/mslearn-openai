@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 120 minutes
 
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -12,11 +12,11 @@ In this lab, you will complete the following tasks:
 - Task 3: Explore a model in the Completions playground
 - Task 4: Use the Chat playground
 - Task 5: Explore prompts and parameters 
-- Task 6: Explore code-generation
+- Task 6: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
@@ -64,19 +64,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/180625(03).png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
-   ![](../media/update08.png)
+   ![](../media/L1T2S3-1407.png)
 
 1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
-      ![](../media/180625(04).png)
+      ![](../media/L1T2S4-1407.png)
 
 1. Search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)** and then click on **Confirm (3)**
 
-   ![](../media/180625(05).png)
-
-   ![](../media/180625(06).png)
+   ![](../media/L1T2S5-1407.png)
 
 1. Click on **Customize**.
    
@@ -94,17 +92,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
            ![](../media/get-started-openai-lab1-2.png)
 
-           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+           >**Note**: gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
 
 1. **Click the back arrow** on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
-      ![](../media/180625(07).png)
+      ![](../media/L1T2S8.1-1407.png)
 
-      ![](../media/180625(08).png)
+      ![](../media/L1T2S4-1407.png)
 
 1. Search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)** and then click on **Confirm (3)**.
 
-   ![](../media/180625(09).png)
+   ![](../media/L1T2S9-1407.png)
 
 1. Click on **Customize**.
 
@@ -123,7 +121,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
 
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
@@ -135,15 +133,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ## Task 3: Explore a model in the Completions playground
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Foundry, in the left pane under **Playgrounds**, select **Completions**.
 
-   ![](../media/nlpe7.png)
+   ![](../media/L1T3S1-1407.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected , type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer (2)` in the prompt and click on **Generate (3)**.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected  and paste the below prompt in the **Prompt (2)** section and click on **Generate (3)**.
 
-      ![](../media/nlpe8.png)
+   ```
+   Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer
+   ```
+      ![](../media/L1T3S1-1407.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -155,13 +156,13 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
+4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](../media/NO-3a.png)
 
-      ![](../media/get-started-openai-lab1-4.png)
+      ![](../media/L1T3S5.2-1407.png)
     
 6. Close the **Sample Code**.
 
@@ -173,11 +174,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/get-started-openai-lab1-5.png)
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI ` **(1)**, click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
+1. In the **Setup** section, in the **Give the model instructions and context (1)** box, replace the current text with the below statement, and click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
 
-      ![](../media/nlpe10.png)
+   ```
+   The system is an AI teacher that helps people learn about AI
+   ```
 
-      ![](../media/continuee.png)
+      ![](../media/L1T4S2-1407.png)
+
+      ![](../media/L1T4S3-1407.png)
    
 1. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
@@ -185,31 +190,45 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Enter the following message and response in the designated boxes:
 
-      - **User**: `What are different types of artificial intelligence?` **(1)**
+      - **User (1)**:
+        ```
+        What are the different types of artificial intelligence?
+        ```
     
-      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
+      - **Assistant (2)**:
+        ```
+        There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+        ``` 
 
-         ![](../media/nlpe11.png)
+         ![](../media/L1T4S4-1407.png)
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-      ![](../media/nlpe12.png)
+      ![](../media/L1T4S5.1-1407.png)
 
-      ![](../media/continuee.png)
+      ![](../media/L1T4S3-1407.png)
    
-1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the below-mentioned text **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
-   ![](../media/180625(10).png)
+   ```
+   What is artificial intelligence?
+   ```
+
+   ![](../media/L1T4S6-1407.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 1. Review the response.
 
-   ![](../media/nlpe14.png)
+   ![](../media/L1T4S7-1407.png)
 
-1. Then submit the following message to continue the conversation: `How is it related to machine learning?`
+1. Then submit the following message to continue the conversation:
+
+   ```
+   `How is it related to machine learning?`
+   ```
 
 1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
@@ -232,19 +251,19 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 2. **Submit (2)** the following message in a chat session **(1)**
 
       ```
-      Write three multiple choice questions based on the following text.
+      Write three multiple-choice questions based on the following text.
 
       Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution, you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+      - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicles.*
 
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       
       ```
 
-      ![](../media/nlpe15.png)
+      ![](../media/L1T5S2-1407.png)
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
@@ -252,33 +271,33 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    
 4. Observe the following about the prompt and parameters you used:
 
-      - The prompt specifically states that the desired output should be three multiple choice questions.
+      - The prompt specifically states that the desired output should be three multiple-choice questions.
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 6: Explore code-generation
+### Task 6: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
 1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` **(1)** then save the changes by clicking on **Apply changes (2)** and click on **Continue** when prompted.
 
-      ![](../media/nlpe16.png)
+      ![](../media/L1T6S1-1407.png)
 
-      ![](../media/continuee.png)
+      ![](../media/L1T4S3-1407.png)
 
-2. In the **Chat session** pane, select **Clear chat** button then select **Clear** from the pop-up window to clear the chat history and start a new session.
+2. In the **Chat session** pane, select the **Clear chat** button, then select **Clear** from the pop-up window to clear the chat history and start a new session.
 
-      ![](../media/openai-14a.png)
+      ![](../media/L1T6S2-1407.png)
 
-      ![](../media/clear-chat.png)
+      ![](../media/L1T6S2.2-1407.png)
 
-3. Submit the following user message:
+4. Submit the following user message:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
       ```
 
-4. Review the response, which should include sample Python code that meets the requirement in the prompt.
+5. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
      ![](../media/task-6-lasta.png)
 

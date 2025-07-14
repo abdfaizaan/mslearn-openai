@@ -98,10 +98,6 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
     code .
     ```
-1. On switch to classic Cloudshell, Click on confirm
-
-    ![](../media/confirm.png)
-
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

@@ -24,11 +24,11 @@ The architecture flow for this task begins with provisioning an Azure OpenAI res
 
 ## Architecture Diagram
 
- ![Access Your VM and Lab Guide](../media/arch20-1.png)
+ ![Access Your VM and Lab Guide](../media/arch-diag-new.png)
 
 ## Explanation of Components
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrate with your data, enabling customized and secure interactions.
+1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
 1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
 
@@ -42,34 +42,33 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 ![Access Your VM and Lab Guide](../media/getting-started-eng-openai-1.png)
 
-## Lab Guide Zoom In/Zoom Out
-
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![Manage Your Virtual Machine](../media/nleg2.png)
-
 ## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+To get a better understanding of your lab resources and credentials, you can navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/getting-started-eng-openai-5.png)
-
+![Explore Lab Resources](../media/exp-lab-resources.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/getting-started-eng-openai-2.png)
+![Use the Split Window Feature](../media/split-feature-new.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/getting-started-eng-openai-3.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+
+![Manage Your Virtual Machine](../media/nleg2.png)
 
 ## Lab Validation
 
@@ -96,17 +95,10 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
-
-5. If you see the pop-up Action Required, click Ask Later.
-
-   ![](../media/up1.png)
-    
-   > **NOTE**: Do not enable MFA, select Ask Later.
  
 7. If prompted to stay signed in, you can click "No."
  
-8. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
- 
+8. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
  
 This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
 
