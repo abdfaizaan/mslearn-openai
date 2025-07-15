@@ -22,7 +22,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/g1.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services in AI Foundary | Azure OpenAI** blade, click on **Create**.
 
    ![](./media/create_ai.png)
 
@@ -64,11 +64,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/openai_resource1.png)
 
-1. In the **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base Model (3)**.
+1. In the **Deployments (1)** on the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
     ![](./media/g3.png "Create a new deployment")
 
-1. Search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
+1. In the search bar search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
    ![](./media/g4.png)
    
@@ -82,11 +82,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Deployment type: **Standard (1)**
 
-      - Model version:**2024-07-18(default) (3)**
+      - Model version:**2024-07-18(Default) (3)**
 
       - Tokens per Minute Rate Limit (thousands): **10K (4)**
 
-      - Content Filter: **DefaultV2 (5)**
+      - Content filter: **DefaultV2 (5)**
 
       - Enable dynamic quota: **Enabled (6)**
 
@@ -102,7 +102,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base Model (3)**.
+1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
     ![](./media/g3.png "Create a new deployment")    
 
@@ -124,7 +124,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
 
-      - Content Filter: **DefaultV2 (5)**
+      - Content filter: **DefaultV2 (5)**
       
       - Enable dynamic quota: **Enabled (6)**
       
@@ -144,11 +144,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Foundry, in the left pane under **Playground (1)**, select **Completions (2)**.
+1. In Azure OpenAI Foundry, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
 
       ![](./media/g9.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt **(2)** and click on **Generate (3)**.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt section **(2)** and click on **Generate (3)**.
 
       ![](./media/g10.png)
 
@@ -162,7 +162,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
       >**Note:** You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-4. At the bottom of the page, note the number of **tokens** detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
+4. At the bottom of the page, note the number of **Tokens** detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
 
       ![](./media/g11.png)  
 
@@ -176,13 +176,13 @@ In this task, you'll explore a model in the Completions playground that involves
 
 ## Task 4: Use the Chat playground
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat (1)** page, and ensure that the **my-gpt-model (2)** model is selected in the configuration pane.
+1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(2024-07-18) (2)** model is selected in the configuration pane.
 
       ![](./media/g12.png)  
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI` **(1)** and click on **Apply changes (2)**. 
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: `The system is an AI teacher that helps people learn about AI` **(1)** and click on **Apply changes (2)**. 
 
       ![](./media/g13.png)
 
@@ -190,7 +190,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](./media/g14.png)
    
-1. In the **Setup** section, Click on **Add section (1)** box, then click on **Examples (2)**.
+1. In the **Setup** section, Click on **+ Add section (1)** box, then click on **Examples (2)**.
 
       ![](./media/g15.png)
 
@@ -208,7 +208,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](./media/nls202.png)
    
-1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send(1)** button to submit the message and view the response.
 
       ![](./media/NO-7a.png)
    
@@ -218,9 +218,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](./media/model_response.png)
 
-1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](./media/image5a.png)
 
@@ -228,7 +228,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameter (1)**, set the following parameter values:
+1. In the **Chat Configuration** pane select **Parameters (1)**, set the following parameter values:
       
       - Max response: **500 (2)**
      
@@ -236,7 +236,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    
           ![](./media/image6.png)
       
-2. Submit the following message in a chat session
+2. Submit the following message as a query in a chat session
 
       ```
       Write three multiple choice questions based on the following text.
