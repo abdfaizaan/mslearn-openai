@@ -12,10 +12,10 @@ You will explore how to use generative AI to improve advertising emails and cate
 
 By the end of this lab, you will be able to:
 
-- **Introduction to Prompt Engineering & Azure OpenAI Foundry (Read-Only)**: Learn to craft effective prompts for AI models using Azure OpenAI Playground, experimenting with different types and design tips. This hands-on experience will help you understand how different prompt styles influence AI responses and improve your results.
-- **Utilize prompt engineering in your app**: Provision an Azure OpenAI resource, deploy a model, apply prompt engineering in the chat playground, set up and configure an application in Cloud Shell, and run your application to see the results.
-- **Advanced Concepts (Read-Only)**: Master the art of tuning prompts to achieve specific outcomes and explore advanced methods for refining AI outputs, all without the need for fine-tuning GPT models. Learn how to leverage prompt adjustments and design techniques to enhance model responses effectively.
-- **Fine Tuning (Read-Only)**: Master prompt engineering using Azure OpenAI Playground to refine AI responses, tailoring outputs for specific tasks such as enhancing advertising emails and categorizing articles.
+- **Introduction to Prompt Engineering & Azure OpenAI Foundry (Read-Only):** Learn to craft effective prompts for AI models using Azure OpenAI Playground, experimenting with different types and design tips. This hands-on experience will help you understand how different prompt styles influence AI responses and improve your results.
+- **Utilize prompt engineering in your app:** Provision an Azure OpenAI resource, deploy a model, apply prompt engineering in the chat playground, set up and configure an application in Cloud Shell, and run your application to see the results.
+- **Advanced Concepts (Read-Only):** Master the art of tuning prompts to achieve specific outcomes and explore advanced methods for refining AI outputs, all without the need for fine-tuning GPT models. Learn how to leverage prompt adjustments and design techniques to enhance model responses effectively.
+- **Fine Tuning (Read-Only):** Master prompt engineering using Azure OpenAI Playground to refine AI responses, tailoring outputs for specific tasks such as enhancing advertising emails and categorizing articles.
   
 ## Pre-requisites
 
@@ -36,11 +36,11 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 The architecture for this lab involves the following key components:
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
+1. **Azure OpenAI:** Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
 
-1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
+1. **Azure OpenAI Models:** Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
 
-1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
+1. **Azure CloudShell:** Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
    
 ## Getting Started with the Lab
  
@@ -68,21 +68,19 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![](../media/resources1.png)
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/inline-validationupd.png)
-
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+![Inline Validation](../media/inline-validationupd.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/timer.png)
 
@@ -104,11 +102,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
        ![Enter Your Password](../media/sc900-image-2.png)
     
-1. If prompted to stay signed in, you can click "No".
+1. If you see the pop-up **Stay Signed in?**, select **No**.
  
-1. If a **Welcome to Microsoft Azure** page appears, simply click "Cancel" to skip the tour.
-
-This hands-on lab will help you master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
+1. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
 
 ## Support Contact
 
