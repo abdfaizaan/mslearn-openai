@@ -66,7 +66,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Deployments (1)** on the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/AIfoundarydepl.png "Create a new deployment")
+    ![](./media/AIfoundarydepl1.png "Create a new deployment")
 
 1. In the search bar search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
@@ -104,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/AIfoundarydepl.png "Create a new deployment")    
+    ![](./media/AIfoundarydepl1.png "Create a new deployment")    
 
 1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)** and click on **Confirm (3)**.
 
