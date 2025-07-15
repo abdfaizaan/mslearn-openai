@@ -1,10 +1,10 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
@@ -36,7 +36,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
       ![](../media/nlpe1.png "Create Azure OpenAI resource")
 
-      >**Note** : **Please deploy Openai resource in Swedencentral Region**.
+      >**Note:** **Please deploy Openai resource in Swedencentral Region**.
 
 4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
 
@@ -152,7 +152,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
     ![](../media/nls101.png)
 
-   >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
+   >**Note:** The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
 
    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
@@ -303,6 +303,8 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 ## Summary
 
-In this lab, you have provisiond an Azure OpenAI resource, deployed a model, explored a model in the Completions playground, used the Chat playground, explored prompts, parameters and code-generation.
+In this lab, you have provisioned an Azure OpenAI resource, deployed a model, explored a model in the Completions playground, used the Chat playground, explored prompts, parameters, and code-generation.
 
-### You have successfully completed the lab.
+### You have successfully completed the lab. Click on Next >> to proceed with the next exercise.
+     
+   ![](../media/next-1507.png)
