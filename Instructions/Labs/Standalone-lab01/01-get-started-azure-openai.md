@@ -66,7 +66,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Deployments (1)** on the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/g3.png "Create a new deployment")
+    ![](./media/AIfoundarydepl.png "Create a new deployment")
 
 1. In the search bar search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
@@ -104,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](./media/g3.png "Create a new deployment")    
+    ![](./media/AIfoundarydepl.png "Create a new deployment")    
 
 1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)** and click on **Confirm (3)**.
 
@@ -146,7 +146,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
 1. In Azure OpenAI Foundry, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
 
-      ![](./media/g9.png)
+      ![](./media/AIFoundaryCompleteion.png.png)
 
 2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt section **(2)** and click on **Generate (3)**.
 
@@ -192,7 +192,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
    
 1. In the **Setup** section, Click on **+ Add section (1)** box, then click on **Examples (2)**.
 
-      ![](./media/g15.png)
+      ![](./media/AIFoundaryAddsection.png.png)
 
 1. Enter the following message and response in the designated boxes:
 
