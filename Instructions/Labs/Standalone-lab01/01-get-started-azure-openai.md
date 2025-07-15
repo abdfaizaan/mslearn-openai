@@ -166,7 +166,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
       ![](./media/g11.png)  
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+5. Use the **{} View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](./media/NO-3a.png)
 
@@ -178,7 +178,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
 In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(2024-07-18) (2)** model is selected in the configuration pane.
+1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2024-07-18) (2)** model is selected in the configuration pane.
 
       ![](./media/g12.png)  
 
