@@ -146,7 +146,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
 1. In Azure AI Foundry | Azure OpenAI Service, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
 
-      ![](./media/AIFoundaryCompleteion.png.png)
+      ![](./media/AIFoundaryCompleteion.png)
 
 2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt section **(2)** and click on **Generate (3)**.
 
