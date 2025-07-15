@@ -22,7 +22,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/g1.png)
 
-2. On **Azure AI Services in AI Foundary | Azure OpenAI** blade, click on **Create**.
+2. On **Azure OpenAI services in AI Foundary | Azure OpenAI** blade, click on **Create**.
 
    ![](./media/create_ai.png)
 
@@ -64,11 +64,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/openai_resource1.png)
 
-1. In the **Deployments (1)** on the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
     ![](./media/AIfoundarydepl1.png "Create a new deployment")
 
-1. In the search bar search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
+1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
    ![](./media/g4.png)
    
@@ -144,7 +144,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Foundry, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
+1. In Azure AI Foundry | Azure OpenAI Service, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
 
       ![](./media/AIFoundaryCompleteion.png.png)
 
@@ -208,7 +208,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](./media/nls202.png)
    
-1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send(1)** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
       ![](./media/NO-7a.png)
    
