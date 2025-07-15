@@ -14,14 +14,15 @@ Understand how to deploy Azure OpenAI Service, enabling you to integrate and exp
 
 ## Pre-Requisites
 
-Participants should have knowledge and understanding of the following :
+Participants should have basic knowledge and understanding of the following :
 
 - **Azure Portal:** For managing and provisioning Azure resources.
-- **Azure AI Foundry:** For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
+- **Azure AI Foundry:** For deploying models, configuring and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
 
 ## Architecture
 
-This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
+This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models.
+The flow of the lab will be to use a existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI.Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
 
@@ -31,9 +32,11 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 
 - **Azure Portal:** Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
 
+- **Resource Group:** This is a container in Azure that holds related resources for your project, it helps us organize and manage services like your OpenAI model in one place.
+
 - **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-3.5-Turbo, providing scalable access for tasks such as text completion and code generation.
 
-- **Azure AI Foundry:** Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
+- **Azure AI Foundry:** Interactive environment to explore by deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
 ## Getting Started with the Lab
 
@@ -41,7 +44,7 @@ Welcome to your Get Started with Azure OpenAI Service Workshop! We've prepared a
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and the guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and the **Guide** will be right at your fingertips within your web browser.
  
 ![Access Your VM and Lab Guide](./media/ll1.png)
 
@@ -57,7 +60,7 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
 ![Use the Split Window Feature](./media/ll3.png)
  
@@ -75,7 +78,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
       ![Launch Azure Portal](./media/sc900-image(1).png)
     
