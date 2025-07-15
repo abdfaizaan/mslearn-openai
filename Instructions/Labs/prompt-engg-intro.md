@@ -1,8 +1,8 @@
 # Lab-01: Introduction to Prompt Engineering & Azure OpenAI Foundry [Read-Only]
 
-### Estimated Duration: 60 minutes
+### Estimated Duration: 60 Minutes
 
-In this exercise, you'll explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips.
+In this lab, you'll explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips.
 
 ## Topics
 
@@ -39,7 +39,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
    ![](../media/17-12-24(1).png)
 
-1. On **AI Foundry | Azure OpenAI** blade, select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** pane, select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/L1S2-1007.png)
 
@@ -350,9 +350,8 @@ IT Support Agent:
 Some of the examples above were adopted from the ["Best practices for prompt engineering with OpenAI API" article](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) and the 
 [Democratizing Artificial Intelligence Research, Education, and Technologies's Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
 
-
 ### Summary: 
-In this exercise, you learned how to create powerful prompts for AI models by examining the idea of prompt engineering in this assignment. Using Azure OpenAI Playground, you gained practical experience by experimenting with various prompt types and comprehending their components and design advice.
 
-## You have successfully completed the lab.
-### Click on Next >> to proceed to the next lab.
+In this lab, you learned how to create powerful prompts for AI models by examining the idea of prompt engineering in this assignment. Using Azure OpenAI Playground, you gained practical experience by experimenting with various prompt types and comprehending their components and design advice.
+
+## You have successfully completed the lab. Click on Next >> to proceed to the next lab.
