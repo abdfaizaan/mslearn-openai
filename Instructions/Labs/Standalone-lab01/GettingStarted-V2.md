@@ -14,7 +14,7 @@ Understand how to deploy Azure OpenAI Service, enabling you to integrate and exp
 
 ## Pre-Requisites
 
-Participants should have: Basic knowledge and understanding of the following
+Participants should have knowledge and understanding of the following :
 
 - **Azure Portal:** For managing and provisioning Azure resources.
 - **Azure AI Foundry:** For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
