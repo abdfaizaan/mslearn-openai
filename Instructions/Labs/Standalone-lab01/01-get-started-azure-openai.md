@@ -192,7 +192,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
    
 1. In the **Setup** section, Click on **+ Add section (1)** box, then click on **Examples (2)**.
 
-      ![](./media/AIFoundaryAddsection.png.png)
+      ![](./media/AIFoundaryAddsection.png)
 
 1. Enter the following message and response in the designated boxes:
 
