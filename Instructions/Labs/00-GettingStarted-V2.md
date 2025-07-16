@@ -1,4 +1,4 @@
-# Get Started With OpenAI And Build Natural Language Solution
+# Get Started With OpenAI And Build a Natural Language Solution
 
 ### Overall Estimated Duration: 4 Hours
 
@@ -60,7 +60,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/getting-started-eng-openai-3.png)
 
@@ -72,11 +72,9 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/getting-started-eng-openai-4.png)
-
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+![Inline Validation](../media/getting-started-eng-openai-4.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -96,11 +94,9 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
        ![Enter Your Password](../media/sc900-image-2.png)
  
-7. If prompted to stay signed in, you can click "No."
+7. If prompted to **Stay Signed in**, you can click **No**.
  
 8. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
- 
-This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
 
 ## Support Contact
 

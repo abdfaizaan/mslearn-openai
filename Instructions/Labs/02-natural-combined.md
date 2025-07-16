@@ -21,7 +21,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/nlp1.png)
+   ![](../media/select-openai-1607.png)
 
 1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left pane. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
@@ -476,12 +476,12 @@ Now that your app has been set up, you can just run it to send your request to y
 
    **System message:**
    ```
-      You are an AI assistant
+   You are an AI assistant
    ```
    
    **User message:**
    ```
-      Write an intro for a new wildlife Rescue 
+   Write an intro for a new wildlife Rescue 
    ```
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
@@ -490,15 +490,12 @@ Now that your app has been set up, you can just run it to send your request to y
 
    **System message:**
    ```
-      You are an AI assistant helping to write emails
+   You are an AI assistant helping to write emails
    ```
 
    **User message:**
    ```
-   Write a promotional email for a new wildlife rescue, including the following: `
-   - Rescue name is Contoso `
-   - It specializes in elephants `
-   - Call for donations to be given at our website
+   Write a promotional email for a new wildlife rescue, including the following:-Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website
    ```
 
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
@@ -507,16 +504,12 @@ Now that your app has been set up, you can just run it to send your request to y
 
    **System message:**
    ```
-      You are an AI assistant helping to write emails
+   You are an AI assistant helping to write emails
    ```
 
    **User message:**
    ```
-      Write a promotional email for a new wildlife rescue, including the following: `
-      - Rescue name is Contoso `
-      - It specializes in elephants, as well as zebras and giraffes `
-      - Call for donations to be given at our website `
-      Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
    ```
 1. Observe the output, and see how the email has changed based on your clear instructions.   
 
@@ -524,16 +517,12 @@ Now that your app has been set up, you can just run it to send your request to y
 
    **System message:**
    ```
-      You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.
+   You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.
    ```
 
    **User message:**
    ```
-      Write a promotional email for a new wildlife rescue, including the following: `
-      - Rescue name is Contoso `
-      - It specializes in elephants, as well as zebras and giraffes `
-      - Call for donations to be given at our website `
-      Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits..
    ```
 
 1. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
