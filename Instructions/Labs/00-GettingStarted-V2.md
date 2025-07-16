@@ -5,11 +5,11 @@
 
 ## Overview
 
-This hands-on labs offer a comprehensive introduction to Azure OpenAI Service. You will begin by configuring the service and integrating Azure OpenAI SDKs into your application. Techniques in prompt engineering will refine interactions, and you'll also gain skills in generating and enhancing code. The DALL-E model will be utilized for image generation, and you will explore the use of your own data for retrieval-augmented generation (RAG). Additionally, you will delve into content filtering to manage and regulate generated outputs. Throughout the labs, you'll gain practical experience with real-world AI applications, learn best practices for deploying and scaling these services in a production environment, and understand how to integrate various Azure services to develop resilient, scalable, and secure AI-powered applications.
+This hands-on lab offers a comprehensive introduction to the Azure OpenAI Service. You will begin by configuring the service and integrating Azure OpenAI SDKs into your application. Techniques in prompt engineering will refine interactions, and you'll also gain skills in generating and enhancing code. The DALL-E model will be utilized for image generation, and you will explore the use of your own data for retrieval-augmented generation (RAG). Additionally, you will delve into content filtering to manage and regulate generated outputs. Throughout the labs, you'll gain practical experience with real-world AI applications, learn best practices for deploying and scaling these services in a production environment, and understand how to integrate various Azure services to develop resilient, scalable, and secure AI-powered applications.
 
 ## Objective 
 
-This lab is aimed to give learners hands-on experience with Azure OpenAI resources, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation. By completing this lab
+This lab is aimed at giving learners hands-on experience with Azure OpenAI resources, deploying and exploring models using the Completions and Chat playgrounds, and experimenting with prompts, parameters, and code generation. By completing this lab
 
 Participants will learn:
 
@@ -52,7 +52,7 @@ The architecture for this lab involves the following key components:
 - **Azure CloudShell**: Offers an online, browser-based shell for managing Azure resources and running scripts. Allows you to deploy, manage, and automate Azure services directly from your web browser, eliminating the need for local installations.
 - **DALL-E**: DALL-E uses artificial intelligence technology to generate visuals from written descriptions. Enhances creativity by translating word inputs into distinct and coherent pictures.
 - **Prompt Engineering**: Prompt engineering fine-tunes input prompts to improve AI model replies, ensuring accurate and relevant outputs by optimizing how prompts are produced and delivered to AI models.
-- **AI chat**: AI chat also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
+- **AI chat**: AI chat, also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
 
 # Getting Started with the lab
  
@@ -72,34 +72,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](../media/dev-02.png)
+   ![Explore Lab Resources](../media/exp-lab-resources.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../media/dev-03.png)
+ ![Use the Split Window Feature](../media/split-feature-new.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/dev-04.png)
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](../media/dev-05.png)
 
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/dev-06.png)
-
 
 ## Let's Get Started with Azure Portal
 
@@ -127,8 +124,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
-
 ### Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
  
@@ -137,4 +132,4 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
  
-### Happy learning !
+### Happy learning!

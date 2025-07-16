@@ -1,17 +1,17 @@
 # Lab 03: Utilize prompt engineering in your app
 
-## Estimated Duration: 60 minutes
+## Estimated Duration: 60 Minutes
 
-## Lab scenario
+## Lab Overview
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+In this lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
-In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Apply prompt engineering in chat playground
+- Task 1: Apply prompt engineering in the chat playground
 - Task 2: Set up an application in Cloud Shell
 - Task 3: Configure your application
 - Task 4: Run your application
@@ -24,7 +24,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/dev-genai-june-5.png)
 
-1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
+1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**.
+
+   ```
+   You are an AI assistant that helps people find information.
+   ```
 
 1. In the **Chat session**, submit the following query:
 
@@ -37,27 +41,31 @@ In this task, you will examine how prompt engineering improves model responses i
     
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
     
-    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    The response provides a description of the article. However, suppose you want a more specific format for article categorization.
+    The response describes the article. However, suppose you want a more specific format for article categorization.
 
-1. In the **Setup** section change the **Give the model instructions and context** to `You are a news aggregator that categorizes news articles.`
+1. In the **Setup** section, change the **Give the model instructions and context** to the below text and click on **Apply changes**. 
 
-6. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
+   ```
+   You are a news aggregator that categorizes news articles.
+   ```
+
+1. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
 
     **User:**
     
     ```prompt
     What kind of article is this?
     ---
-    New York Baseballers Wins Big Against Chicago
+    New York Baseballers Win Big Against Chicago
     
-    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
     
     Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
     
-    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but they were unable to get the runner home to score.
     ```
     
     **Assistant:**
@@ -66,7 +74,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Sports
       ```
 
-7. Add another example with the following text.
+1. Add another example with the following text.
 
     **User:**
     
@@ -75,12 +83,12 @@ In this task, you will examine how prompt engineering improves model responses i
     ---
     Joyous moments at the Oscars
     
-    The Oscars this past week where quite something!
+    The Oscars this past week were quite something!
     
     Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
     These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
     
-    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
     ```
     
     **Assistant:**
@@ -89,11 +97,11 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-8. Use the **Apply changes** button to save your changes and click on **Continue**.
+1. Use the **Apply changes** button to save your changes and click on **Continue**.
 
    ![](../media/L3T1S7-0205.png)
 
-9. In the **Chat session** section, resubmit the following prompt:
+1. In the **Chat session** section, resubmit the following prompt:
 
     ```prompt
     What kind of article is this?
@@ -104,14 +112,18 @@ In this task, you will examine how prompt engineering improves model responses i
     
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
     
-    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-10. Set the **Give the model instructions and context to** `You are an AI assistant that helps people find information.` with no examples. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-11. In the **Chat session** section, submit the following prompt:
+   ```
+   You are an AI assistant that helps people find information.
+   ```
+
+1. In the **Chat session** section, submit the following prompt:
 
     ```prompt
     # 1. Create a list of animals
@@ -119,10 +131,15 @@ In this task, you will examine how prompt engineering improves model responses i
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you actually wanted was for the model to write a Python program that performs the tasks you described?
+    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-12. Change the **Give the model instructions and context** to `You are a coding assistant helping write python code.` and apply the changes.
-13. Resubmit the following prompt to the model:
+1. Change the **Give the model instructions and context** to the text mentioned below, and apply the changes.
+
+   ```
+   You are a coding assistant helping write Python code.
+   ```
+
+1. Resubmit the following prompt to the model:
 
     ```
     # 1. Create a list of animals
@@ -130,7 +147,7 @@ In this task, you will examine how prompt engineering improves model responses i
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-    The model should correctly respond with python code doing what the comments requested.
+    The model should correctly respond with Python code, doing what the comments requested.
 
 ### Task 2: Set up an application in Cloud Shell
 
@@ -140,22 +157,22 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+   > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
 
-   ![](../media/cloudshell-bash.png)
+   >  ![](../media/cloudshell-bash.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
    ![](../media/classic-cloudshell.png)
 
-4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering
@@ -163,7 +180,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
-6. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
 
    ```bash
       code .
