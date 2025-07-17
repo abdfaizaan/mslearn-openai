@@ -1,6 +1,6 @@
 # Lab-03: Advanced Concepts [Read-Only]
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 ## Topics
 
