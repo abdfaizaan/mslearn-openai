@@ -1,4 +1,4 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# Lab 02: Use Azure OpenAI SDKs in your App
 
 ### Estimated Duration: 120 Minutes
 
@@ -31,7 +31,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Please paste it in a text editor such as Notepad for later use.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Please paste it into a text editor such as Notepad for later use.
 
         ![](../media/180625(13).png "Keys and Endpoints")
 
@@ -43,10 +43,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-    >**Note**: If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
 
     ![](../media/180625(14).png)
-
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
@@ -109,7 +108,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ## Task 3: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+In this task, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
@@ -148,26 +147,26 @@ For this exercise, you'll complete some key parts of the application to enable u
     
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
 
-    - **C#**:
+    - **C#:**
      
       ![](../media/nlp26.png)   
 
-    - **Python**:
+    - **Python:**
      
       ![](../media/nlp27.png) 
 
-       > **Note**: You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
 1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
-    **C#** : 
+    **C#:** 
 
     ```bash
     cd CSharp
     dotnet add package Azure.AI.OpenAI --version 2.1.0
     ```
 
-    **Python** : 
+    **Python:** 
 
     ```bash
     cd Python
@@ -178,7 +177,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Navigate to your preferred language folder, replace the comment **Add Azure OpenAI package** with code to add the Azure OpenAI SDK library:
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
     // Add Azure OpenAI packages
@@ -188,7 +187,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S6-1507.png) 
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Add Azure OpenAI package
@@ -199,7 +198,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1.  In the application code for your language, find the comment **Configure the Azure OpenAI client**, and add code to configure the Azure OpenAI client:
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
     // Configure the Azure OpenAI client
@@ -209,7 +208,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S7-1507.png)  
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Configure the Azure OpenAI client
@@ -222,11 +221,11 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S7-py.png)   
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 1. In the function that calls the **Azure OpenAI model**, under the comment **Get response from Azure OpenAI**, add the code to format and send the request to the model.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
       // Get response from Azure OpenAI
@@ -249,7 +248,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S8-1507.png)      
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Get response from Azure OpenAI
@@ -273,7 +272,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
       
       ```CSharp
       // Implicit using statements are included
@@ -378,10 +377,9 @@ For this exercise, you'll complete some key parts of the application to enable u
       }
       
       }
-
       ```
     
-   **Python**: application.py
+   **Python:** application.py
 
       ```Python
       import os
@@ -451,10 +449,9 @@ For this exercise, you'll complete some key parts of the application to enable u
       
       if __name__ == '__main__': 
           asyncio.run(main())
-
       ```
     
-1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**
+1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
@@ -466,44 +463,48 @@ Now that your app has been set up, you can just run it to send your request to y
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
-    - **C#**: `dotnet run`
+    - **C#:** `dotnet run`
     
-    - **Python**: `python application.py`
+    - **Python:** `python application.py`
 
-      > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+      > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-1. In the terminal it will asks you to enter a key to continue.
+1. In the terminal, it will ask you to enter a key to continue.
 
     ![](../media/170725(08).png)
 
 1. For the first iteration, enter the following prompts:
 
    **System message:**
+   
    ```
    You are an AI assistant
    ```
    
-   >>**Note**: System message should given in system.txt in C# or Python. Follow the same steps for remaining prompts.
+   >>**Note:** System message should given in system.txt in C# or Python. Follow the same steps for the remaining prompts.
    
-1. In Enter User message give this following message.
+1. In the Enter User message, give the following message.
 
    **User message:**
+   
    ```
    Write an intro for a new wildlife Rescue 
    ```
 
-   >>**Note**: User message should given in terminal in C# or Python. Follow the same steps for remaining prompts.
+   >>**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
 1. Next, enter the following prompts, which specify a format for the response:
 
    **System message:**
+   
    ```
    You are an AI assistant helping to write emails
    ```
 
    **User message:**
+   
    ```
    Write a promotional email for a new wildlife rescue, including the following:-Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website
    ```
@@ -513,24 +514,29 @@ Now that your app has been set up, you can just run it to send your request to y
 1. Next, enter the following prompts that additionally specify the content:
 
    **System message:**
+   
    ```
    You are an AI assistant helping to write emails
    ```
 
    **User message:**
+
    ```
    Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
    ```
+   
 1. Observe the output, and see how the email has changed based on your clear instructions.   
 
 1. Next, enter the following prompts where we add details about tone to the system message:
 
    **System message:**
+   
    ```
    You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.
    ```
 
    **User message:**
+
    ```
    Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits..
    ```
@@ -544,4 +550,4 @@ In this lab, you have accomplished the following:
 - Deploy an OpenAI model within the Azure AI Foundry portal
 - Integrate Azure OpenAI models into your applications
 
-### You have successfully completed the lab.
+### You have successfully completed the Hands-on lab.
