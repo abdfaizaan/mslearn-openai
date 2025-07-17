@@ -48,19 +48,19 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ![](../media/180625(14).png)
 
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
     ![](../media/180625(15).png)
 
-1. Within the Getting Started page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
+3. Within the Getting Started page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
+4. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-1. Within the **Create storage account** page, enter the following details:
+5. Within the **Create storage account** page, enter the following details:
 
     - Subscription: Default- Choose the only existing subscription assigned for this lab **(1)**.
     - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
@@ -71,13 +71,13 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
         ![](../media/nlpe18.png "Create storage advanced settings")
 
-1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
+7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
 
     ![](../media/nlpe19.png)
 
-1. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
@@ -86,7 +86,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/L2T2S8-1507.png)    
   
-1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
+9. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd mslearn-openai/Labfiles/01-app-develop
@@ -94,7 +94,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
+10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
@@ -472,6 +472,10 @@ Now that your app has been set up, you can just run it to send your request to y
 
       > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
+1. In the terminal it will asks you to enter a key to continue.
+
+    ![](../media/170725(08).png)
+
 1. For the first iteration, enter the following prompts:
 
    **System message:**
@@ -479,10 +483,16 @@ Now that your app has been set up, you can just run it to send your request to y
    You are an AI assistant
    ```
    
+   >>**Note**: System message should given in system.txt in C# or Python. Follow the same steps for remaining prompts.
+   
+1. In Enter User message give this following message.
+
    **User message:**
    ```
    Write an intro for a new wildlife Rescue 
    ```
+
+   >>**Note**: User message should given in terminal in C# or Python. Follow the same steps for remaining prompts.
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
