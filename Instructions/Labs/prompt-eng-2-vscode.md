@@ -28,7 +28,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/gg_ex2_1_2.png)
 
-1. Create an **Azure OpenAI** resource with the following settings 
+1. In the **Create Azure OpenAI** pane, configure a new **Azure OpenAI** resource using the following settings:
 
     - **Subscription:** Default - Pre-assigned subscription **(1)**.
     - **Resource group:** openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
@@ -37,25 +37,25 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier:** Standard S0 **(5)**
     -  Click on **Next** **(6)**
   
-       ![](../media/L2T1S3-1007.png "Create Azure OpenAI resource")
+       ![](../media/gg_ex2_1_3.png "Create Azure OpenAI resource")
 
        >**Note:** Make sure you are deploying OpenAI resource in **France Central** Region.
 
-1. Click on **Next** two times and subsequently click on **Create**.
+1. Click **Next** twice to navigate to the **Review + submit** tab, then click **Create** to deploy the Azure OpenAI resource.
 
-   ![](../media/L2T1S4-1007.png)
+   ![](../media/gg_ex2_1_4.png)
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
 
-   ![](../media/L2T1S5-1007.png)
+   ![](../media/gg_ex2_1_5.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+1. In the **Azure OpenAI** resource, under the **Resource Management** section, to capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/L2T1S6-1007.png "Keys and Endpoints")
+        ![](../media/gg_ex2_1_6.png "Keys and Endpoints")
 
 #### Validation
 
@@ -72,11 +72,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/17-12-24(1).png)
+   ![](../media/gg_ex2_1_7.png)
 
 1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/L2T2S2-1007.png)
+   ![](../media/gs_1_11.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
     
