@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 120 Minutes
 
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models.
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this lab, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -26,7 +26,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/180625(01).png)
 
-3. Create an **Azure OpenAI** resource using the specified settings. Leave all other options at their default values, and click **Next (6)** three times to proceed through the remaining steps.
+3. Fill in the required details on the **Create Azure OpenAI** page:
    
     - Subscription: Default - Pre-assigned subscription **(1)**
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
@@ -36,13 +36,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
       ![](../media/nlpe1.png "Create Azure OpenAI resource")
 
-      >**Note:** **Please deploy Openai resource in Swedencentral Region**.
+      >**Note:** Ensure the resource is deployed in the **Sweden Central** region.
 
-4. Review all the remaining configured settings **Networks** and **Tags** to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
+1. Click **Next (6)** through the tabs and then **Review + Create**.
+
+1. Review the **Networks** and **Tags** settings, then click on **Create** to start the deployment.
 
      ![](../media/170725(01).png "Create Azure OpenAI resource")
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. Wait for the deployment to complete, then go to the deployed resource from the notification pane.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -55,15 +57,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
-
-   ![](../media/select-openai-1607.png)
-
-1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. From the **Azure portal**, navigate to your OpenAI resource **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
    ![](../media/180625(03).png)
 
-1. In the Azure OpenAI resource page, click on **Overview (1)**, then select **Go to Azure AI Foundry portal (2)**, which will navigate to the **Azure AI Foundry portal**.
+1. On the **Azure OpenAI** resource page, click **Overview (1)**, then select **Go to Azure AI Foundry portal (2)** to navigate to the **Azure AI Foundry portal**.
 
    ![](../media/goto-aiportal-1607.png)
 
@@ -71,7 +69,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/deploy-model-1607.png)
 
-1. On the Select a model page, search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)**, and then click on **Confirm (3)**
+1. On the **Select a model** page, search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)**, and then click on **Confirm (3)**
 
    ![](../media/select-gpt-model-1607.png)
 
@@ -83,9 +81,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Deployment name: **my-gpt-model (1)**
       - Deployment type: **Standard (2)**
-      - Model version: **2024-07-18(default) (3)**
+      - Model version: **2024-07-18 (Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **8K (4)**
-      - Content Filter: **DefaultV2 (5)**
+      - Content filter: **DefaultV2 (5)**
       - Enable dynamic quota: **Enabled (6)**
       - Click on **Deploy** **(7)**
   
@@ -93,13 +91,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
            >**Note**: gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
 
-1. **Click the back arrow** on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
+1. Click the **back arrow** to return to the previous screen, then in the left pane under **Shared Resources**, select **Deployments (1)**. Next, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
       ![](../media/back-to-deployments-1607.png)
 
       ![](../media/deploy-model-1607.png)
 
-1. On the Select a model page, search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)**, and then click on **Confirm (3)**.
+1. On the **Select a model** page, search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)**, and then click on **Confirm (3)**.
 
    ![](../media/select-turbo-model-1607.png)
 
@@ -112,7 +110,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Deployment type: **Standard (2)**
       - Model version: **0914 (Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
-      - Content Filter: **DefaultV2 (5)**      
+      - Content filter: **DefaultV2 (5)**      
       - Enable dynamic quota: **Enabled (6)**
       - Click on **Deploy** **(7)**
   
@@ -133,17 +131,22 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Foundry, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
+1. In the Azure OpenAI Foundry portal, navigate to the left pane and select **Playgrounds (1) -> Completions (2)**.
 
    ![](../media/select-completions-1607.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected for the Deployments, and paste the below prompt in the **Prompt (2)** section and click on **Generate (3)**.
+2. On the **Completions** page:
 
-   ```
-   Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer
-   ```
+   * Ensure that **gpt-35-turbo-instruct (1)** is selected under **Deployments**.
+   * In the **Prompt (2)** text box, enter the following prompt:
 
-      ![](../media/170725(02).png)
+     ```
+     Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer.
+     ```
+
+   * Click **Generate (3)** to submit the prompt and receive the response.
+
+     ![](../media/170725\(02\).png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -163,29 +166,32 @@ In this task, you'll explore a model in the Completions playground that involves
 
       ![](../media/L1T3S5.2-1407.png)
     
-6. Close the **Sample Code**.
+6. Close the **Sample Code** window once you’ve reviewed the content.
 
 ## Task 4: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Deployments (1)** select **my-gpt-model** and click **Open in playground (3)** it opens **Chat Playground**
+1. Navigate to the **Shared resources** section in the left-hand menu and select **Deployments (1)**. From the list of available deployments, choose **my-gpt-model**, then click on **Open in playground (2)**. This action will launch the **Chat Playground**, where you can interact with the deployed model in a conversational interface.
 
    ![](../media/170725(03).png)
 
    ![](../media/170725(04).png)
 
-1. In the **Setup** section, in the **Give the model instructions and context (1)** box, replace the current text with the below statement, and click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
+2. In the **Setup** pane:
 
-   ```
-   The system is an AI teacher that helps people learn about AI
-   ```
+   * Replace the default **System message (1)** with the following instruction:
+
+     ```
+     The system is an AI teacher that helps people learn about AI.
+     ```
+   * Click **Apply changes (2)** and confirm by selecting **Continue** on the prompt.
 
       ![](../media/L1T4S2-1607.png)
 
       ![](../media/L1T4S3-1407.png)
    
-1. In the **Setup (1)** section, Click on **Add section (2)** box, then click on **Examples (3)**.
+1. In the **Setup (1)** section, click on **+ Add section (2)** box, then click on **Examples (3)**.
 
       ![](../media/170725(05).png)
 
@@ -205,7 +211,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+1. Click **Apply changes**, then **Continue** to initialize the chat with the updated context.
 
       ![](../media/L1T4S5.1-1607.png)
 
@@ -225,7 +231,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/L1T4S7-1407.png)
 
-1. Then submit the following message to continue the conversation:
+1. After reviewing the response, submit the following follow-up message:
 
    ```
    `How is it related to machine learning?`
@@ -245,15 +251,14 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameters (1)** , set the following parameter values:
+1. In the **Chat Configuration** pane, go to **Parameters (1)** and set the following values:
+
+   * **Max response tokens (2)**: 500
+   * **Temperature (3)**: 0 (for deterministic responses)
+
+     ![](../media/image6.png)
       
-      - **Max response**: 500 **(2)**
-     
-      - **Temperature**: 0 **(3)**
-   
-          ![](../media/image6.png)
-      
-2. **Submit (2)** the following message in a chat session **(1)**
+2. In the chat input box, enter the message **(1)** and click **Submit (2)** to send it.
 
       ```
       Write three multiple-choice questions based on the following text.
@@ -283,11 +288,17 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` **(1)** then save the changes by clicking on **Apply changes (2)** and click on **Continue** when prompted.
+1. In the **Setup** pane, update the **System message (1)** to:
 
-      ![](../media/L1T6S1-1607.png)
+   ```
+   You are a Python developer.
+   ```
 
-      ![](../media/L1T4S3-1407.png)
+   * Click **Apply changes (2)** and then **Continue** when prompted.
+
+     ![](../media/L1T6S1-1607.png)
+
+     ![](../media/L1T4S3-1407.png)
 
 2. In the **Chat session** pane, select the **Clear chat** button, then select **Clear** from the pop-up window to clear the chat history and start a new session.
 
@@ -295,13 +306,13 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](../media/L1T6S2.2-1407.png)
 
-4. Submit the following user message:
+4. Enter the following prompt:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
       ```
 
-5. Review the response, which should include sample Python code that meets the requirement in the prompt.
+5. Review the generated Python code snippet. The model should return a valid function definition that multiplies two inputs and returns the result.
 
      ![](../media/task-6-lasta.png)
 
