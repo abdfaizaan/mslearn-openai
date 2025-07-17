@@ -22,13 +22,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/17-12-24(1).png)
+   ![](../media/gg_ex2_1_1.png)
 
-2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
+1. In the **AI Foundry** portal, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **Create (2)** at the top to provision a new Azure OpenAI resource.
 
-   ![](../media/L2T1S2-1007.png)
+   ![](../media/gg_ex2_1_2.png)
 
-3. Create an **Azure OpenAI** resource with the following settings 
+1. Create an **Azure OpenAI** resource with the following settings 
 
     - **Subscription:** Default - Pre-assigned subscription **(1)**.
     - **Resource group:** openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
@@ -41,15 +41,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
        >**Note:** Make sure you are deploying OpenAI resource in **France Central** Region.
 
-4. Click on **Next** two times and subsequently click on **Create**.
+1. Click on **Next** two times and subsequently click on **Create**.
 
    ![](../media/L2T1S4-1007.png)
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
+1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
 
    ![](../media/L2T1S5-1007.png)
 
-6. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -74,23 +74,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(1).png)
 
-2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/L2T2S2-1007.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
     
    ![](../media/update08.png)   
 
-4. In the **Deployments (1)** page, click on **+ Deploy model (2)**, choose **Deploy base Model (3)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model (2)**, choose **Deploy base Model (3)**.
 
    ![](../media/17-12-24(5).png)
 
-5. Search for **gpt-35-turbo (1)**, select it **(2)**, and click on **Confirm (3)**.
+1. Search for **gpt-35-turbo (1)**, select it **(2)**, and click on **Confirm (3)**.
 
    ![](../media/L2T2S5-1007.png)
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name:** text-turbo **(1)**
     - **Deployment type:** Standard **(2)**
    
@@ -127,13 +127,13 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/17022025(3).png)
 
-2. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue**.
+1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue**.
 
    ![](../media/17022025(9).png)
 
    ![](../media/17-12-24(10).png)
 
-3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
    ```code
    1. Create a list of animals
@@ -143,17 +143,17 @@ In this task, you will examine how prompt engineering improves model responses i
    
    >**Note:** Kindly refresh the screen in case you encounter any error message and perform the above step again.
 
-4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
    ![](../media/17022025(10).png)
 
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue**.
+1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue**.
 
    ![](../media/17022025(11).png)
 
    ![](../media/17-12-24(10).png)
 
-6. Format the instructions as Python comments. Send the following prompt to the model.
+1. Format the instructions as Python comments. Send the following prompt to the model.
 
    ```code
    # 1. Create a list of animals
@@ -161,11 +161,11 @@ In this task, you will examine how prompt engineering improves model responses i
    # 3. Combine them randomly into a list of 25 animal and name pairs
    ```
 
-7. The model should correctly respond with complete Python code, doing what the comments requested.
+1. The model should correctly respond with complete Python code, doing what the comments requested.
 
-8. Next, we'll see the impact of a shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes**, and subsequently click on **Continue**. This will create a new chat session.
+1. Next, we'll see the impact of a shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes**, and subsequently click on **Continue**. This will create a new chat session.
 
-9. Send the following prompt to the model.
+1. Send the following prompt to the model.
 
    ```code
    Severe drought likely in California
@@ -177,9 +177,9 @@ In this task, you will examine how prompt engineering improves model responses i
    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
    ```
 
-10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
+1. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
 
-11. In the **Setup** section near the system message, click **+ Add section (1)**, select **Examples (2)** from the dropdown, and add the following example.
+1. In the **Setup** section near the system message, click **+ Add section (1)**, select **Examples (2)** from the dropdown, and add the following example.
 
     **User:**
 
@@ -201,7 +201,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     ![](../media/L2T3S11-1007.png)
 
-12. Click **+ Add section (1)** again, select **Examples (2)** from the dropdown, and add another example with the provided text.
+1. Click **+ Add section (1)** again, select **Examples (2)** from the dropdown, and add another example with the provided text.
 
     **User:**
 
@@ -222,7 +222,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-13. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
+1. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -234,7 +234,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-14. This time, the model should respond with an appropriate classification, even without instructions.
+1. This time, the model should respond with an appropriate classification, even without instructions.
     > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
 ## Task 4: Configure your application
@@ -313,7 +313,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install openai==1.55.3
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+1. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#:** Program.cs
 
@@ -329,7 +329,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and add the necessary code for configuring the client.
+1. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#:** Program.cs
 
@@ -349,7 +349,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         )
     ```
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+1. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#:** Program.cs
 
@@ -391,7 +391,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     )
     ```
 
-8. The  modified code should look as shown below:
+1. The  modified code should look as shown below:
 
     **C#**
       
@@ -565,7 +565,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
        asyncio.run(main())
       ```
 
-9. To save the changes made to the file, right-click on the file and hit **Save** or press **CTRL+S**.
+1. To save the changes made to the file, right-click on the file and hit **Save** or press **CTRL+S**.
 
 ## Task 5: Run your application
 
@@ -573,9 +573,9 @@ In this task, you will run your configured app to send a request to your model a
 
 1. In the folder of your preferred language, open `system.txt` in VS Code. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
-2. In the VS Code terminal, navigate to the folder for your preferred language.
+1. In the VS Code terminal, navigate to the folder for your preferred language.
 
-3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file with **CTRL+S**.
+1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file with **CTRL+S**.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -602,7 +602,7 @@ In this task, you will run your configured app to send a request to your model a
     </Project> 
    ``` 
 
-4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#:** `dotnet run`
     
@@ -610,7 +610,7 @@ In this task, you will run your configured app to send a request to your model a
 
     >**Note:** If you see a message like *"Press any key to continue..."*, please press **Enter**.
 
-5. For the first iteration, enter the following prompts:
+1. For the first iteration, enter the following prompts:
 
     **System message (system.txt)**
 
@@ -628,7 +628,7 @@ In this task, you will run your configured app to send a request to your model a
     
     ![](../media/x233upd.png)
 
-6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 7. Next, enter the following prompts which specify a format for the response:
 
     **System message (system.txt)**
@@ -649,9 +649,9 @@ In this task, you will run your configured app to send a request to your model a
     
       ![](../media/email1.png)
 
-8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
-9. Next, enter the following prompts that additionally specify the content:
+1. Next, enter the following prompts that additionally specify the content:
 
     **System message (system.txt)**
 
@@ -673,8 +673,8 @@ In this task, you will run your configured app to send a request to your model a
 
     ![](../media/email1.png)
 
-11. Observe the output, and see how the email has changed based on your clear instructions.
-12. Next, enter the following prompts where we add details about tone to the system message:
+1. Observe the output, and see how the email has changed based on your clear instructions.
+1. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message (system.txt)**
 
@@ -694,9 +694,9 @@ In this task, you will run your configured app to send a request to your model a
     
     > **Note:** You will see a pop-up, click on **Paste as one line**
 
-13. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+1. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
-14. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here, you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here, you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 15. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 16. In your app, immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
@@ -720,8 +720,8 @@ In this task, you will run your configured app to send a request to your model a
 
     > **Note:** Ensure that all indentation errors are corrected before moving forward.
 
-17. Save the file with **CTRL+S** and rerun your app.
-18. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+1. Save the file with **CTRL+S** and rerun your app.
+1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message (system.txt)**
 
