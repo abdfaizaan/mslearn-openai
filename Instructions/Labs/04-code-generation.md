@@ -112,10 +112,6 @@ In this task, you will complete key parts of the application to enable it to use
 
     ![](../media/oai04.png)
 
-    >**Note:** You can get the **endpoint** and **Key** details under the Home.
-
-    ![](../media/oai05.png)
-    
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
     ```
