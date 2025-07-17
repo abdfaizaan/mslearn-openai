@@ -767,3 +767,7 @@ In this lab, you have accomplished the following:
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab. Click on Next >> to proceed to the next lab.
+
+![Launch Azure Portal](../media/gs_1_9.png)
+
+### Happy Learning!!
