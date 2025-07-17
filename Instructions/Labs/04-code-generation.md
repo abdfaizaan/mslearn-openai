@@ -116,7 +116,7 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```
     cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 2.1.0
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.5
     ```
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
