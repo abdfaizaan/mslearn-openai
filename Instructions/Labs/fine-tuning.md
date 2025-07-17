@@ -1,6 +1,6 @@
 # Lab-04: Fine Tuning [Read-Only]
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 ## Topics
 
