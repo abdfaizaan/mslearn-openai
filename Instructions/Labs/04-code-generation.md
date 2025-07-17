@@ -27,8 +27,14 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
-1. Next, send the prompt `Do the same thing, but this time write it in C#`.
+
+1. Next, send the prompt:
+   ```
+   Do the same thing, but this time write it in C#.
+   ```
+
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+
 1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
