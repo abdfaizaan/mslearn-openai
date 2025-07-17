@@ -80,9 +80,9 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level in the lab environment, click the **A↕ (1)** icon next to the timer and select a preferred zoom option from the **dropdown menu (2)**.
 
-   ![Manage Your Virtual Machine](../media/timer.png)
+   ![Manage Your Virtual Machine](../media/gs_1_2.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -103,6 +103,8 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
        ![Enter Your Password](../media/sc900-image-2.png)
     
 1. If you see the pop-up **Stay Signed in?**, select **No**.
+
+   ![](../media/gs_1_6.png)
  
 1. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
 
@@ -117,6 +119,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Launch Azure Portal](../media/sc900-imageupd.png)
+![Launch Azure Portal](../media/gs_1_7.png)
 
 ### Happy Learning!!

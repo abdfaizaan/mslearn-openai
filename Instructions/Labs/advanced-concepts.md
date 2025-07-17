@@ -1,6 +1,6 @@
 # Lab-03: Advanced Concepts [Read-Only]
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 ## Topics
 
@@ -207,5 +207,6 @@ JSON:
 ### Summary
 In this lab, we learned how to use different types of prompts – Zero-Shot, One-Shot, and Few-Shot – to get better outputs from GPT models. We saw how giving clear instructions or a few examples can make the model understand and respond exactly the way we want.
 
-## You have successfully completed the lab.
-### Click on Next >> to proceed to the next lab.
+![Launch Azure Portal](../media/gs_1_10.png)
+
+### Happy Learning!!
