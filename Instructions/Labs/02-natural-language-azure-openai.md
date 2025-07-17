@@ -107,7 +107,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
+<validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
 ## Task 3: Configure your application
 
