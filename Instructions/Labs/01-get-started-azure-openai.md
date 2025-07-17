@@ -38,9 +38,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       >**Note:** **Please deploy Openai resource in Swedencentral Region**.
 
-4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
+4. Review all the remaining configured settings **Networks** and **Tags** to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
 
-     ![](../media/180625(02).png "Create Azure OpenAI resource")
+     ![](../media/170725(01).png "Create Azure OpenAI resource")
      
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
@@ -64,7 +64,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/180625(03).png)
 
-1. In the Azure OpenAI resource page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on **Overview (1)** then select **Go to Azure AI Foundry portal (2)**, which will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/goto-aiportal-1607.png)
 
@@ -144,7 +144,7 @@ In this task, you'll explore a model in the Completions playground that involves
    ```
    Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer
    ```
-      ![](../media/L1T3S2-1607.png)
+      ![](../media/170725(02).png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -170,9 +170,11 @@ In this task, you'll explore a model in the Completions playground that involves
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section from the left pane, select the **Chat (1)** option. Ensure that the **my-gpt-model (2)** model is selected for the Deployments.
+1. In the **Deployments (1)** select **my-gpt-model** and click **Open in playground (3)** it opens **Chat Playground**
 
-   ![](../media/get-started-openai-lab1-5.png)
+   ![](../media/170725(03).png)
+
+   ![](../media/170725(04).png)
 
 1. In the **Setup** section, in the **Give the model instructions and context (1)** box, replace the current text with the below statement, and click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
 
@@ -184,9 +186,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/L1T4S3-1407.png)
    
-1. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
+1. In the **Setup (1)** section, Click on **Add section (2)** box, then click on **Examples (3)**.
 
-      ![](../media/L1T4S3-1607.png)
+      ![](../media/170725(05).png)
 
 1. Enter the following message and response in the designated boxes:
 
@@ -232,15 +234,19 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
+     ![](../media/170725(06).png)
+
 1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](../media/image5a.png)
+
+      ![](../media/170725(07).png)
 
 ### Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **ParameterS (1)** , set the following parameter values:
+1. In the **Chat Configuration** pane select **Parameters (1)** , set the following parameter values:
       
       - **Max response**: 500 **(2)**
      
