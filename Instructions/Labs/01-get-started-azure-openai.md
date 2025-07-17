@@ -38,9 +38,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       >**Note:** Ensure the resource is deployed in the **Sweden Central** region.
 
-1. Click **Next (6)** through the tabs and then **Review + Create**.
+4. Click **Next** on each tab without changing anything.
 
-1. Review the **Networks** and **Tags** settings, then click on **Create** to start the deployment.
+5. Finally, click **Review + create**, then click **Create** to start the deployment.
 
      ![](../media/170725(01).png "Create Azure OpenAI resource")
 
