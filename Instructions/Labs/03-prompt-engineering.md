@@ -192,12 +192,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're going to integrate Azure OpenAI functionality.
 
-2. Open the configuration file for your language.
+1. Open the configuration file for your language.
 
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
@@ -206,7 +206,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -226,7 +226,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     </Project>
     ```    
 
-     ![](../media/u47upd.png)    
+     ![](../media/L3T3S4-1707.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -285,7 +285,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
       > pip install --user openai==1.56.2
       > ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+1. Navigate to your preferred language folder, select the code file, and add the necessary libraries in the **Add Azure OpenAI package** section.
 
     **C#:** Program.cs
 
@@ -294,6 +294,8 @@ In this task, you will complete key parts of the provided C# or Python applicati
    using Azure.AI.OpenAI;
     ```
 
+      ![](../media/L3T3S10c-1707.png)
+
     **Python:** prompt-engineering.py
 
     ```python
@@ -301,16 +303,20 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open the application code for your language and replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
+      ![](../media/L3T3S10p1707.png)
 
-    **C#:** Program.cs
+1. Open the application code for your language and add the necessary code for configuring the client.
+
+    **C#:** Program.cs - Add the code in **Initialize the Azure OpenAI client** section
 
     ```csharp
    // Initialize the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
-    **Python:** prompt-engineering.py
+      ![](../media/L3T3S11c-1707.png)
+
+    **Python:** prompt-engineering.py - Add the code in **Set OpenAI configuration settings** section
 
    ```python
     # Configure the Azure OpenAI client
@@ -320,11 +326,14 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
+
+      ![](../media/L3T3S11p-1707.png)
+
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+1. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
-    **C#:** Program.cs
+    **C#:** Program.cs - Add the code in **Create chat completion options** section
 
     ```csharp
     // Format and send the request to the model
@@ -345,7 +354,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
           var completions = response.Value;
     ```
 
-    **Python:** prompt-engineering.py
+      ![](../media/L3T3S12c-1707.png)
+
+    **Python:** prompt-engineering.py - Add the code in **Create chat completion options** section
 
    ```python
     # Format and send the request to the model
@@ -364,9 +375,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
         max_tokens=800
     )
     ```
+
+      ![](../media/L3T3S12p-1707.png)
+
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-8. The modified code should look like as shown below:
+1. The modified code should look like as shown below:
 
     **C#**
       
@@ -379,7 +393,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
          using Azure;
          
          // Add Azure OpenAI package
-         // Add Azure OpenAI package
          using Azure.AI.OpenAI;
          
          // Build a config object and retrieve user settings.
@@ -388,82 +401,95 @@ In this task, you will complete key parts of the provided C# or Python applicati
              .Build();
          string? oaiEndpoint = config["AzureOAIEndpoint"];
          string? oaiKey = config["AzureOAIKey"];
-         string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+         string? oaiModelName = config["AzureOAIModelName"];
          
+         string command;
          bool printFullResponse = false;
          
          do {
-             // Pause for system message update
-             Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
-             Console.ReadKey();
-             
-             Console.WriteLine("\nUsing system message from system.txt");
-             string systemMessage = System.IO.File.ReadAllText("system.txt"); 
-             systemMessage = systemMessage.Trim();
+             Console.WriteLine("\n1: Basic prompt (no prompt engineering)\n" +
+             "2: Prompt with email formatting and basic system message\n" +
+             "3: Prompt with formatting and specifying content\n" +
+             "4: Prompt adjusting system message to be light and use jokes\n" +
+             "\"quit\" to exit the program\n\n" + 
+             "Enter a number to select a prompt:");
          
-             Console.WriteLine("\nEnter user message or type 'quit' to exit:");
-             string userMessage = Console.ReadLine() ?? "";
-             userMessage = userMessage.Trim();
+             command = Console.ReadLine() ?? "";
              
-             if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
-             {
-                 break;
+             switch (command) {
+                 case "1":
+                     await GetResponseFromOpenAI("../prompts/basic.txt");
+                     break;
+                 case "2":
+                     await GetResponseFromOpenAI("../prompts/email-format.txt");
+                     break;
+                 case "3":
+                     await GetResponseFromOpenAI("../prompts/specify-content.txt");
+                     break;
+                 case "4":
+                     await GetResponseFromOpenAI("../prompts/specify-tone.txt");
+                     break;
+                 case "quit":
+                     Console.WriteLine("Exiting program...");
+                     break;
+                 default:
+                     Console.WriteLine("Invalid input. Please try again.");
+                     break;
              }
-             else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
-             {
-                 Console.WriteLine("Please enter a system and user message.");
-                 continue;
-             }
-             else
-             {
-                 await GetResponseFromOpenAI(systemMessage, userMessage);
-             }
-         } while (true);
+         } while (command != "quit");
          
-         async Task GetResponseFromOpenAI(string systemMessage, string userMessage)  
+         async Task GetResponseFromOpenAI(string fileText)  
          {   
              Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
          
-             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
              {
                  Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
                  return;
              }
              
-             // Configure the Azure OpenAI client
              // Initialize the Azure OpenAI client
              OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
          
-             // Format and send the request to the model
-             // Format and send the request to the model
-             var chatCompletionsOptions = new ChatCompletionsOptions()
-             {
-                 Messages =
-                 {
-                     new ChatRequestSystemMessage(systemMessage),
-                     new ChatRequestUserMessage(userMessage)
-                 },
-                 Temperature = 0.7f,
-                 MaxTokens = 800,
-                 DeploymentName = oaiDeploymentName
-             };
+             // Read text file into system and user prompts
+             string[] prompts = System.IO.File.ReadAllLines(fileText);
+             string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
+             string userPrompt = prompts[1].Split(":", 2)[1].Trim();
          
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+             // Write prompts to console
+             Console.WriteLine("System prompt: " + systemPrompt);
+             Console.WriteLine("User prompt: " + userPrompt);
              
-             ChatCompletions completions = response.Value;
-             string completion = completions.Choices[0].Message.Content;
+             // Create chat completion options
+             // Format and send the request to the model
+              var chatCompletionsOptions = new ChatCompletionsOptions()
+               {
+                   Messages =
+                   {
+                       new ChatRequestSystemMessage(systemPrompt),
+                       new ChatRequestUserMessage(userPrompt)
+                   },
+                   Temperature = 0.7f,
+                   MaxTokens = 800,
+                   DeploymentName = oaiModelName
+               };
+                
+               // Get response from Azure OpenAI
+               Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+               var completions = response.Value;
              
-             // Write response full response to console, if requested
+             // Write full response if needed
              if (printFullResponse)
              {
                  Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
              }
          
-             // Write response to console
-             Console.WriteLine($"\nResponse:\n{completion}\n\n");
-         }  
-            
+             // Write the first choice's message
+             foreach (var choice in completions.Choices)
+             {
+                 Console.WriteLine($"\nResponse: {choice.Message.Content}\n\n");
+             }
+         }       
       ```
    
      **Python**
@@ -472,73 +498,86 @@ In this task, you will complete key parts of the provided C# or Python applicati
       import asyncio
       from dotenv import load_dotenv
       
-      # Add Azure OpenAI package
+      # Add OpenAI import
       from openai import AsyncAzureOpenAI
       
       # Set to True to print the full response from OpenAI for each call
       printFullResponse = False
       
       async def main(): 
-              
           try: 
-          
               # Get configuration settings 
               load_dotenv()
               azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
               azure_oai_key = os.getenv("AZURE_OAI_KEY")
-              azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+              azure_oai_model = os.getenv("AZURE_OAI_MODEL")
               
+              # Set OpenAI configuration settings
               # Configure the Azure OpenAI client
               client = AsyncAzureOpenAI(
                   azure_endpoint = azure_oai_endpoint, 
                   api_key=azure_oai_key,  
                   api_version="2024-02-15-preview"
                   )
-              
+                  
       
               while True:
-                  # Pause the app to allow the user to enter the system prompt
-                  print("------------------\nPausing the app to allow you to change the system prompt.\nPress enter to continue...")
-                  input()
-      
-                  # Read in system message and prompt for user message
-                  system_text = open(file="system.txt", encoding="utf8").read().strip()
-                  user_text = input("Enter user message, or 'quit' to exit: ")
-                  if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                  print('1: Basic prompt (no prompt engineering)\n' +
+                        '2: Prompt with email formatting and basic system message\n' +
+                        '3: Prompt with formatting and specifying content\n' +
+                        '4: Prompt adjusting system message to be light and use jokes\n' +
+                        '\'quit\' to exit the program\n')
+                  command = input('Enter a number:')
+                  if command == '1':
+                      await call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
+                  elif command =='2':
+                      await call_openai_model(messages="../prompts/email-format.txt", model=azure_oai_model, client=client)
+                  elif command =='3':
+                      await call_openai_model(messages="../prompts/specify-content.txt", model=azure_oai_model, client=client)
+                  elif command =='4':
+                      await call_openai_model(messages="../prompts/specify-tone.txt", model=azure_oai_model, client=client)
+                  elif command.lower() == 'quit':
                       print('Exiting program...')
                       break
-                  
-                  await call_openai_model(system_message = system_text, 
-                                          user_message = user_text, 
-                                          model=azure_oai_deployment, 
-                                          client=client
-                                          )
+                  else :
+                      print("Invalid input. Please try again.")
       
           except Exception as ex:
               print(ex)
       
-      async def call_openai_model(system_message, user_message, model, client):
-          # Format and send the request to the model
+      async def call_openai_model(messages, model, client):
+          # In this sample, each file contains both the system and user messages
+          # First, read them into variables, strip whitespace, then build the messages array
+          with open(messages, encoding="utf8") as file:
+              system_message = file.readline().split(':', 1)[1].strip()
+              user_message = file.readline().split(':', 1)[1].strip()
+      
+          # Print the messages to the console
+          print("System message: " + system_message)
+          print("User message: " + user_message)
+      
+          # Build the messages array
+           # Format and send the request to the model
           messages =[
-              {"role": "system", "content": system_message},
-              {"role": "user", "content": user_message},
-          ]
-          
+                  {"role": "system", "content": system_message},
+                  {"role": "user", "content": user_message},
+              ]
+              
           print("\nSending request to Azure OpenAI model...\n")
       
-          # Call the Azure OpenAI model
+              # Call the Azure OpenAI model
           response = await client.chat.completions.create(
-              model=model,
-              messages=messages,
-              temperature=0.7,
-              max_tokens=800
-          )
+                  model=model,
+                  messages=messages,
+                  temperature=0.7,
+                  max_tokens=800
+              )
           
       
           if printFullResponse:
               print(response)
       
-          print("Response:\n" + response.choices[0].message.content + "\n")
+          print("Completion: \n\n" + response.choices[0].message.content + "\n")
       
       if __name__ == '__main__': 
           asyncio.run(main())
@@ -546,13 +585,11 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
 ### Task 4: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
-
-1. In the folder of your preferred language, open **system.txt** in Cloudshell code editor. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
@@ -572,7 +609,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. The AI tool will take the **System prompt** as `You are an AI assistant` and the **User prompt** as `Write an intro for a new wildlife Rescue`
 
-     ![](../media/x233.png)
+     ![](../media/L3T4S5-1707.png)
 
 1. Observe the output. The model will likely produce a good generic introduction to a wildlife rescue.
 
@@ -580,7 +617,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. This time it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
 
-     ![](../media/x233.png)
+     ![](../media/L3T4S8-1707.png)
 
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
@@ -588,7 +625,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. Observe, it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-     ![](../media/x233.png)
+     ![](../media/L3T4S11-1707.png)
 
 1. Observe the output and see how the email has changed based on your clear instructions.
 
@@ -596,7 +633,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. It will take the **System prompt** as `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-     ![](../media/x233.png)
+     ![](../media/L3T4S14-1707.png)
 
 11. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
