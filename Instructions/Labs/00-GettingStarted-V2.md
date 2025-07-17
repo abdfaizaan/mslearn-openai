@@ -8,10 +8,10 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 
 ## Objective
 
-In this lab, you will learn how to use OpenAI to create natural language solutions. You’ll start by setting up the OpenAI environment in Azure and explore the basic features of OpenAI models for language processing. By the end of the lab, you’ll build and deploy a simple application that can process and respond to user input, while also learning how to enhance the model’s performance and output quality.
+In this lab, you will learn how to use OpenAI to create natural language solutions. You’ll start by setting up the OpenAI environment in Azure and exploring the basic features of OpenAI models for language processing. By the end of the lab, you’ll build and deploy a simple application that can process and respond to user input, while also learning how to enhance the model’s performance and output quality.
 
-- **Get started with Azure OpenAI Service**: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
-- **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
+- **Get started with Azure OpenAI Service:** This hands-on exercise aims to provision an Azure OpenAI resource and deploy a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code generation to automate tasks.
+- **Use Azure OpenAI SDKs in your app:** This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
 
 ## Pre-requisites
 
@@ -28,13 +28,13 @@ The architecture flow for this task begins with provisioning an Azure OpenAI res
 
 ## Explanation of Components
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
-1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
-1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
+1. **Azure OpenAI:** Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
+1. **Azure OpenAI Models:** Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
+1. **Azure CloudShell:** Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
 
 ## Getting Started with the Lab
 
-Welcome to the "Get Started With OpenAI and Build Natural Language Solutions" lab. In this lab, you will learn how to use OpenAI models to create natural language solutions. You'll explore the basics and work on building and deploying applications that understand and process language. Let’s get started with the lab and explore the possibilities of AI.
+Welcome to the **Get Started With OpenAI and Build Natural Language Solutions** Workshop!. In this lab, you will learn how to use OpenAI models to create natural language solutions. You'll explore the basics and work on building and deploying applications that understand and process language. Let’s get started with the lab and explore the possibilities of AI.
  
 ## Accessing Your Lab Environment
  
@@ -78,7 +78,7 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. In the LabVM, click on the **Azure portal** shortcut of the Microsoft Edge browser, which is created on the desktop.
 
    ![Inicie el Portal de Azure](../media/sc900-image(1).png)
  
