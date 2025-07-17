@@ -19,19 +19,19 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
 
    ![](../media/select-openai-1607.png)
 
-1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left pane. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/180625(12).png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Please paste it into a text editor such as Notepad for later use.
+      - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
+      - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
         ![](../media/180625(13).png "Keys and Endpoints")
 
@@ -43,7 +43,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
 
     ![](../media/180625(14).png)
 
@@ -51,7 +51,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/180625(15).png)
 
-3. Within the Getting Started page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
+3. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
@@ -61,18 +61,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 5. Within the **Create storage account** page, enter the following details:
 
-    - Subscription: Default- Choose the only existing subscription assigned for this lab **(1)**.
+    - Subscription: Choose the Default subscription **(1)**.
     - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Region: **<inject key="Region" enableCopy="false" /> (3)**
     - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - File share: Create a new file share named **none** **(5)**
-    - Click **Create** (6)
+    - Click **Create** **(6)**
 
         ![](../media/nlpe18.png "Create storage advanced settings")
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
+7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
     ![](../media/nlpe19.png)
 
