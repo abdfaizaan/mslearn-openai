@@ -35,7 +35,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
 
-1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user query.
 
     ```code
     What does the following function do?  
@@ -53,9 +53,17 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 8. Observe the output, which explains what the function does in natural language.
 
-9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+9. Submit the below mentioned prompt to get a simpler version of the function.
 
-10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+   ```
+   Can you simplify the function?
+   ```   
+
+10. Submit the below mentioned prompt to add comments to the code.
+
+   ```
+   Add some comments to the function.
+   ```
     
 ### Task 2: Set up an application in Cloud Shell
 
@@ -65,26 +73,18 @@ In this task, you will use a short command-line application running in Cloud She
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+2. If you see the prviously opened shell, click on the top right 'x' button to close it and open Cloudshell again.
 
-   > **Note**: If a **Cloud Shell timed out** pop-up 
-   appears, click **Reconnect**.
+   ![](../media/L4T2S2-1707.png)
 
 3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
    ![](../media/classic-cloudshell.png)
 
-4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
-
-5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
-
-    ```bash
-   cd azure-openai/Labfiles/04-code-generation
+    cd mslearn-openai/Labfiles/04-code-generation
     ```
 
    > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -251,3 +251,5 @@ In this lab, you have accomplished the following:
 -   Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+   
+   ![](../media/next-page.png)
