@@ -637,45 +637,6 @@ In this task, you will run your configured app to send a request to your model a
 
 11. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
-1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-
-1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-
-1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
-
-    **C#:** Program.cs
-
-    ```csharp
-    // Format and send the request to the model
-    Console.WriteLine("\nAdding grounding context from grounding.txt");
-    string groundingText = System.IO.File.ReadAllText("grounding.txt");
-    userMessage = groundingText + userMessage;
-    ```
-
-    **Python:** prompt-engineering.py
-
-    ```python
-    # Format and send the request to the model
-    print("\nAdding grounding context from grounding.txt")
-    grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
-    user_message = grounding_text + user_message
-    ```
-
-1. Save the file and rerun your app.
-
-1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
-
-    **System message**
-
-    ```prompt
-    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt and respond concisely.
-    ```
-
-    **User message:**
-
-    ```prompt
-    What animal is the favorite of children at Contoso?
-    ```
 
 ## Summary
 
