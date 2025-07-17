@@ -41,7 +41,6 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 4. Review all the remaining configured settings **Networks** and **Tags** to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
 
      ![](../media/170725(01).png "Create Azure OpenAI resource")
-     
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -64,7 +63,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/180625(03).png)
 
-1. In the Azure OpenAI resource page, click on **Overview (1)** then select **Go to Azure AI Foundry portal (2)**, which will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on **Overview (1)**, then select **Go to Azure AI Foundry portal (2)**, which will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/goto-aiportal-1607.png)
 
@@ -83,7 +82,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. Within the **Deploy model** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
-      - Deployment type: **Standard(2)**
+      - Deployment type: **Standard (2)**
       - Model version: **2024-07-18(default) (3)**
       - Tokens per Minute Rate Limit (thousands): **8K (4)**
       - Content Filter: **DefaultV2 (5)**
@@ -110,19 +109,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
       - Deployment name: **gpt-35-turbo-instruct (1)**
-      - Deployment type: **Standard(2)**
+      - Deployment type: **Standard (2)**
       - Model version: **0914 (Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
       - Content Filter: **DefaultV2 (5)**      
       - Enable dynamic quota: **Enabled (6)**
-      - Click on **Deploy** (7)
+      - Click on **Deploy** **(7)**
   
         ![](../media/get-started-openai-lab1-3.png)
 
 1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
-
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -144,6 +142,7 @@ In this task, you'll explore a model in the Completions playground that involves
    ```
    Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer
    ```
+
       ![](../media/170725(02).png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
@@ -242,7 +241,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/170725(07).png)
 
-### Task 5: Explore prompts and parameters
+## Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -266,7 +265,6 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicles.*
 
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-      
       ```
 
       ![](../media/L1T5S2-1607.png)
@@ -281,7 +279,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 6: Explore code generation
+## Task 6: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
@@ -311,6 +309,6 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 In this lab, you have provisioned an Azure OpenAI resource, deployed a model, explored a model in the Completions playground, used the Chat playground, explored prompts, parameters, and code-generation.
 
-### You have successfully completed the lab. Click on Next >> to proceed with the next exercise.
+### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
      
    ![](../media/next-1507.png)
