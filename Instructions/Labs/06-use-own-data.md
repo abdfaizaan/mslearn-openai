@@ -3,6 +3,8 @@
 ## Estimated Duration: 75 minutes
 
 ## Lab Overview
+In this lab, you will learn how to connect your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG).
+
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics or blend it with results from the pre-trained model.
 
 ## Lab Objectives
