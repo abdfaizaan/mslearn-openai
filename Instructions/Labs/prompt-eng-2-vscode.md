@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_7.png)
 
-1. On **AI Foundry | Azure OpenAI** blade under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
 
    ![](../media/gs_1_11.png)
 
@@ -126,7 +126,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
+1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under **Playgrounds** section in the left pane.
 
    ![](../media/gg_ex2_1_15.png)
 
@@ -211,6 +211,8 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. Click **+ Add section (1)** again, select **Examples (2)** from the dropdown, and add another example with the provided text.
 
+    ![](../media/gg_ex2_1_19.png)
+
     **User:**
 
     ```code
@@ -234,7 +236,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     ![](../media/gg_ex2_1_21.png)
 
- Click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
+1. In the **Chat session** section now again send the same prompt about the California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -271,7 +273,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
    > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
-1. After expanding the **03-prompt-engineering** folder, open either the **CSharp** or **Python** subfolder based on your preferred programming language. Each folder contains language-specific files to integrate Azure OpenAI functionality into the app.
+1. After expanding the **03-prompt-engineering** folder, open either the **CSharp** or **Python** subfolder based on your preferred programming language. Each folder contains language-specific files to integrate **Azure OpenAI** functionality into the app.
 
    ![](../media/gg_ex2_1_27.png)
 
@@ -722,7 +724,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here, you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 15. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-16. In your app, immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+16. In your app, immediately after the comment **Format and send the request to the model** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
     **C#:** Program.cs
 
