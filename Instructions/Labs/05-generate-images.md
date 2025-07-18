@@ -2,12 +2,12 @@
 
 ## Estimated Duration: 75 minutes
 
-## Lab scenario
+## Lab Overview
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
 
 In this exercise, you'll use a DALL-E version 3 model to generate images based on natural language prompts.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Explore image-generation in the DALL-E playground
@@ -33,7 +33,7 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/update07-1.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**.
 
       ![](../media/dev-genai-june-1.png)
 
@@ -41,16 +41,16 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/ui1.png)
 
-5. Search for **dall-e-3**, click on **Confirm**
+5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (text to image) (2)** model, and click on **Confirm (3)**
 
-      ![](../media/dalle31.png)
+      ![](../media/L5T1S5-1807.png)
 
 6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize(2)** and make the **capacity 1K(Tokens per minute)(3)**
 and click on **Deploy (4)**.
 
-      ![](../media/dalle32_1-1.png)
+      ![](../media/L5T1S6.1-1807.png)
 
-      ![](../media/dev-genai-june-7.png)
+      ![](../media/L5T1S6.2-1807.png)
               
 4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
    
@@ -84,27 +84,19 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
    ![](../media/classic-cloudshell.png)
 
-4. Once the terminal starts, enter the following command to download the application code you are going to work with.
-
-    ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
-
-    The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
-
-5. Navigate to the folder for the language of your preference by running the appropriate command.
-
-      **Python**
-
-    ```bash
-   cd azure-openai/Labfiles/05-image-generation/Python
-    ```
+4. Navigate to the folder for the language of your preference by running the appropriate command.
 
       **C#**
 
     ```bash
-   cd azure-openai/Labfiles/05-image-generation/CSharp
+   cd mslearn-openai/Labfiles/05-image-generation/CSharp
+    ```
+
+
+      **Python**
+
+    ```bash
+   cd mslearn-openai/Labfiles/05-image-generation/Python
     ```
 
 6. Use the following command to open the built-in code editor and see the code files you will be working with.
@@ -179,7 +171,7 @@ In this task, you will use a configuration file in the application to store the 
      >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
 1. Run the following command to install the required SDK version locally:     
 
@@ -189,7 +181,7 @@ In this task, you will use a configuration file in the application to store the 
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -205,6 +197,18 @@ In this task, you will use a configuration file in the application to store the 
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
+1. For Python, run the following command to install the dependencies
+
+    **Python**
+
+    ```bash
+   pip install requests
+    ```
+      > **Note:** If you receive a permission error after executing the pip install command, please use the below command to install.
+      > ```
+      > pip install --user requests
+      > ```
+
 #### Task 2.3: View application code
 
 In this task, you will explore the code used to call the REST API and generate an image.
@@ -218,7 +222,7 @@ In this task, you will explore the code used to call the REST API and generate a
 
    >**Note** : Right-click on the file from the left pane, and hit **Save**
    
-    - The code makes https requests to the endpoint for your service, including the key for your service in the header. Both of these values are obtained from the configuration file.
+    - The code makes HTTPS requests to the endpoint for your service, including the key for your service in the header. Both of these values are obtained from the configuration file.
     - The process consists of <u>two</u> REST requests: One to initiate the image-generation request, and another to retrieve the results.
     The initial request includes the following data:
         - The user-provided prompt that describes the image to be generated
@@ -241,16 +245,6 @@ In this task, you will run the reviewed code to generate some images.
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 1. In the console prompt pane, enter the appropriate command to run your application:
-
-    **Python**
-
-    ```bash
-   pip install requests
-    ```
-      > **Note:** If you receive a permission error after executing the pip install command, please use the below command to install.
-      > ```
-      > pip install --user requests
-      > ```
 
     **C#**
 
@@ -276,7 +270,9 @@ In this task, you will run the reviewed code to generate some images.
 ## Summary
 
 In this lab, you have accomplished the following:
--   understand the concepts of image generation via the DALL-E model.
--   Implement image-generation into your applications using this model
+-   Understand the concepts of image generation via the DALL-E model.
+-   Implement image generation into your applications using this model
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+   
+   ![](../media/next-page.png)

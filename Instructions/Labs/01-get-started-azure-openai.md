@@ -268,7 +268,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
 - Deploy an Azure OpenAI model within the Azure AI Foundry portal
-- Use the chat playground to utilize the functionalities of prompts, parameters, and code-generation
+- Use the chat playground to utilize the functionalities of prompts, parameters, and code generation
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
    ![Launch Azure Portal](../media/sc900-image(3).png)
