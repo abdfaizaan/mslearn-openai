@@ -1,4 +1,4 @@
-# Lab 03: Utilize prompt engineering in your app
+# Lab 03: Utilize prompt engineering in your App
 
 ## Estimated Duration: 60 Minutes
 
@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Configure your application
 - Task 4: Run your application
 
-### Task 1: Apply prompt engineering in chat playground
+## Task 1: Apply prompt engineering in chat playground
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
@@ -149,7 +149,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The model should correctly respond with Python code, doing what the comments requested.
 
-### Task 2: Set up an application in Cloud Shell
+## Task 2: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
@@ -186,7 +186,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
     ```
 
-### Task 3: Configure your application
+## Task 3: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
@@ -493,6 +493,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
       ```
    
      **Python**
+   
       ```python
       import os
       import asyncio
@@ -585,9 +586,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+1. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
 
-### Task 4: Run your application
+## Task 4: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
