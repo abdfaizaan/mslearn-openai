@@ -2,12 +2,12 @@
 
 ## Estimated Duration: 40 minutes
 
-## Lab scenario
+## Lab Overview
 Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principals for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
 In this exercise, you'll explore the effect of the default content filters in Azure OpenAI.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Generate natural language output
@@ -48,13 +48,13 @@ In this task, you will observe how the model behaves in a conversational interac
 
 9. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
-    ![](../media/dev-genai-june-17.png)
+    ![](../media/L7T1S9-1807.png)
 
 ### Task 2: Explore content filters
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
-1. In Azure AI Foundry portal, click on the **Guardrails + Controls (1)** page from the left navigation menu.
+1. In Azure AI Foundry portal, click on the **Guardrails + Controls (1)** under **Shared resources** from the left navigation menu.
 
 2. Select **Content filters (2)**, under that click on **+ Create content filter (3)** and review the default settings for a content filter.
 
