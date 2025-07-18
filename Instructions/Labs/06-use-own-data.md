@@ -1,6 +1,6 @@
-# Lab 06:  Add your data for RAG with Azure OpenAI Service
+# Lab 06: Add your data for RAG with Azure OpenAI Service
 
-## Estimated Duration: 75 minutes
+## Estimated Duration: 75 Minutes
 
 ## Lab Overview
 In this lab, you will learn how to connect your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG).
@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 - Task 5: Configure your application
 - Task 6: Run your application
 
-### Task 1: Observe normal chat behavior without adding your own data
+## Task 1: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
@@ -40,8 +40,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
-
-### Task 2: Connect your data in the chat playground
+## Task 2: Connect your data in the chat playground
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
    
@@ -57,12 +56,12 @@ In this task, you will observe how the base model responds to queries without an
 
    | Settings | Action |
    | -- | -- |
-   | **Subscription** | Default - Pre-assigned subscription (1) |
-   | **Resource group** | openai-<inject key="DeploymentID" enableCopy="false"></inject> (2) |
-   | **Region** | Select <inject key="Region" enableCopy="false" /> (4) |
-   | **Storage account name (4)** | storage1<inject key="DeploymentID" enableCopy="false"></inject> (3) |
-   | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 (5) |
-   | **Redundancy** | Locally-redundant storage (LRS) (6) |
+   | **Subscription** | Default - Pre-assigned subscription **(1)** |
+   | **Resource group** | openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)** |
+   | **Storage account name** | storage1<inject key="DeploymentID" enableCopy="false"></inject> **(3)** |
+   | **Region** | Select <inject key="Region" enableCopy="false" /> **(4)** |
+   | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)** |
+   | **Redundancy** | Locally-redundant storage (LRS) **(6)** |
   
     ![](../media/dev-genai-june-12.png "Create storage account")
 
@@ -161,7 +160,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/API_key-1.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+1. On the **Review and finish** page select **Save and close**, which will add your data. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data(preview)** tab in the **Assistant setup** pane.
 
     ![](../media/review-1.png "Add data")
 
@@ -169,11 +168,11 @@ In this task, you will observe how the base model responds to queries without an
        
     ![](../media/review-2.png)
   
- - Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
+ - Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab inthe  **Assistant setup** pane.
 
     ![](../media/review-3.png)   
 
-### Task 3: Chat with a model grounded in your data
+## Task 3: Chat with a model grounded in your data
 
 In this task, you will ask the same questions as before after adding your data, and observe how the responses differ.
 
@@ -191,7 +190,7 @@ Try asking it about other cities included in the grounding data, which are Dubai
 
 > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-### Task 4: Set up an application in Cloud Shell
+## Task 4: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -228,7 +227,7 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-### Task 5: Configure your application
+## Task 5: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
