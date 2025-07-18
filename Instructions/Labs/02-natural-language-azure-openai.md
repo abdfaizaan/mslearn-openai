@@ -1,4 +1,4 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# Lab 02: Use Azure OpenAI SDKs in your App
 
 ## Estimated Duration: 70 Minutes
 
@@ -39,16 +39,15 @@ In this task, you will provision an **Azure OpenAI** resource in your Azure subs
 
 ## Task 2: Set up an application in Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+In this task, you will integrate with an Azure OpenAI model. We'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-    >**Note**: If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
 
-    >    ![](../media/180625(14).png)
-
+     ![](../media/180625(14).png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
@@ -69,7 +68,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - Region: **<inject key="Region" enableCopy="false" /> (3)**
     - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - File share: Create a new file share named **none** **(5)**
-    - Click **Create** (6)
+    - Click **Create** **(6)**
 
         ![](../media/nlpe18.png "Create storage advanced settings")
 
@@ -111,7 +110,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ## Task 3: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+For this task, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
@@ -150,26 +149,26 @@ For this exercise, you'll complete some key parts of the application to enable u
     
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
 
-    - **C#**:
+    - **C#:**
      
       ![](../media/L2T3S4-CS.png)   
 
-    - **Python**:
+    - **Python:**
      
       ![](../media/L2T3S4-py.png) 
 
-       > **Note**: You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
 1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
-    **C#** : 
+    **C#:** 
 
     ```bash
     cd CSharp
     dotnet add package Azure.AI.OpenAI --version 2.1.0
     ```
 
-    **Python** : 
+    **Python:**
 
     ```bash
     cd Python
@@ -180,7 +179,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Navigate to your preferred language folder, replace the comment **Add Azure OpenAI package** with code to add the Azure OpenAI SDK library:
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
     // Add Azure OpenAI packages
@@ -190,7 +189,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S6-1507.png) 
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Add Azure OpenAI package
@@ -201,7 +200,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1.  In the application code for your language, find the comment **Configure the Azure OpenAI client**, and add code to configure the Azure OpenAI client:
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
     // Configure the Azure OpenAI client
@@ -211,7 +210,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S7-1507.png)  
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Configure the Azure OpenAI client
@@ -224,11 +223,11 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S7-py.png)   
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 1. In the function that calls the **Azure OpenAI model**, under the comment **Get response from Azure OpenAI**, add the code to format and send the request to the model.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
       // Get response from Azure OpenAI
@@ -251,7 +250,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      ![](../media/L2T3S8-1507.png)      
 
-    **Python**: application.py
+    **Python:** application.py
 
     ```python
     # Get response from Azure OpenAI
@@ -275,7 +274,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
       
       ```CSharp
       // Implicit using statements are included
@@ -380,10 +379,9 @@ For this exercise, you'll complete some key parts of the application to enable u
       }
       
       }
-
       ```
     
-   **Python**: application.py
+   **Python:** application.py
 
       ```Python
       import os
@@ -453,7 +451,6 @@ For this exercise, you'll complete some key parts of the application to enable u
       
       if __name__ == '__main__': 
           asyncio.run(main())
-
       ```
     
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**
@@ -468,11 +465,11 @@ Now that your app has been set up, you can just run it to send your request to y
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
-    - **C#**: `dotnet run`
+    - **C#:** `dotnet run`
     
-    - **Python**: `python application.py`
+    - **Python:** `python application.py`
 
-      > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+      > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 1. For the first iteration, enter the following prompts:
 
@@ -513,6 +510,7 @@ Now that your app has been set up, you can just run it to send your request to y
    ```
    Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
    ```
+   
 1. Observe the output, and see how the email has changed based on your clear instructions.   
 
 1. Next, enter the following prompts where we add details about tone to the system message:
