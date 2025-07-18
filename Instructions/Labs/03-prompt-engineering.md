@@ -4,9 +4,9 @@
 
 ## Lab Overview
 
-In this lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+In this lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the lab can be applied similarly for a variety of use cases.
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this lab, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -165,14 +165,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell.png)
 
-1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
     ```bash
    rm -r mslearn-openai -f
    git clone https://github.com/CloudLabs-MOC/mslearn-openai
     ```
 
-1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
     ```bash
     cd mslearn-openai/Labfiles/03-prompt-engineering
@@ -199,7 +199,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
+1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -242,7 +242,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
 1. Run the following command to install the required SDK version locally:     
 
@@ -252,7 +252,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
+      >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -268,7 +268,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
-1. If you are preferring Python, please perform below steps to install the packages
+1. If you prefer Python, please perform below steps to install the packages
    
     **Python**
    
@@ -380,7 +380,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-1. The modified code should look like as shown below:
+1. The modified code should look as shown below:
 
     **C#**
       
@@ -636,7 +636,6 @@ In this task, you will run your configured app to send a request to your model a
      ![](../media/L3T4S14-1707.png)
 
 11. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-
 
 ## Summary
 
