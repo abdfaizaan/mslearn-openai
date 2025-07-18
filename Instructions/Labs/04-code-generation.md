@@ -101,84 +101,43 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, expand the language folder for your preferred language.
 
-2. Open the configuration file for your language.
+1. Open the configuration file for your language.
 
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
-    ![](../media/oai06.png)
+    ![](../media/app-settings-c-1807.png)
 
-    ![](../media/oai04.png)
+    ![](../media/env-p-1807.png)
 
-1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
+
+   For **C#:** 
 
     ```
     cd CSharp
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.5
     ```
-
-4. Navigate to the folder for your preferred language and install the necessary packages.
-
-4. Navigate to the folder for your preferred language and install the necessary packages.
-
-    **Python**
+    
+    For **Python**
 
       ```bash
     cd Python
     pip install openai==1.65.2
     ```
+      
    ![](../media/L2T3S9python-0205.png)
       > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
       > ```bash
       > pip install --user openai==1.65.2
       > ```
 
-5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
+1. Open the application code file of your preferred language and briefly observe the code. 
 
-    **C#**
-    `Program.cs`
-
-   ```csharp
-    // Format and send the request to the model
-    var chatCompletionsOptions = new ChatCompletionOptions()
-    {
-        Temperature = 0.7f,
-        MaxOutputTokenCount = 800
-    };
-
-    // Get response from Azure OpenAI
-    ChatCompletion response = await chatClient.CompleteChatAsync(
-        [
-            new SystemChatMessage(systemPrompt),
-            new UserChatMessage(userPrompt),
-        ],
-        chatCompletionsOptions);
-    ```
-
-    **Python**
-     `code-generation.py`
-
-      ```python
-    # Format and send the request to the model
-    messages =[
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
-
-    # Call the Azure OpenAI model
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=1000
-    )
-
-    ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-
-6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+    - **C#**: `Program.cs`
+    - **Python**: `code-generation.py`
 
 ### Task 4: Run your application
 
@@ -186,38 +145,30 @@ In this task, you will run your configured app to generate code for each use cas
 
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
-1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
+1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. The OpenAI tool will use these files to generate the responses. 
    
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-4. Run the application.
+1. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
-        ```
-        pip install --user --upgrade openai
-        ```
+      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
 
+1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
-5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+1. In the response you will see that OpenAI has added comments to your sample-code provided from function file. 
 
-    ```prompt
-    Add comments to the following function. Return only the commented code.\n---\n
-    ```
-6. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+1. Next, choose option **2** to write unit tests for that same function.
 
-    ```prompt
-    Write four unit tests for the following function.\n---\n
-    ```
+1. In the response you will notice that the unit tests are added to your sample-code.
 
-7. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+1. Next, choose option **3** to fix bugs in an app for playing Go Fish. 
 
-    ```prompt
-    Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
-    ```
-8. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+1. This time OpenAI would use the go fish file and fix the code in it and response the updated code. 
+
+1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on lines 30 and 59
     - **Python**: Fixes are made on lines 18 and 31
