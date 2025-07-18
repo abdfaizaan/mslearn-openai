@@ -53,17 +53,17 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 8. Observe the output, which explains what the function does in natural language.
 
-9. Submit the below mentioned prompt to get a simpler version of the function.
+9. Submit the following prompt to get a simpler version of the function.
 
    ```
    Can you simplify the function?
    ```   
 
-10. Submit the below mentioned prompt to add comments to the code.
+10. Submit the below-mentioned prompt to add comments to the code.
 
-   ```
-   Add some comments to the function.
-   ```
+      ```
+      Add some comments to the function.
+      ```
     
 ### Task 2: Set up an application in Cloud Shell
 
