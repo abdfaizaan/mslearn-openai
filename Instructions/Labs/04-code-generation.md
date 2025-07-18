@@ -2,10 +2,10 @@
 
 ## Estimated Duration: 60 minutes
 
-## Lab scenario
+## Lab Overview
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Generate code in chat playground
