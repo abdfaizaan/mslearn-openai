@@ -593,11 +593,11 @@ In this task, you will run your configured app to send a request to your model a
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
     - **C#:** `dotnet run`
 
-      > **Note:** If you recieve any warning messages, you can ignore those and continue.
+      > **Note:** If you receive any warning messages, you can ignore those and continue.
       
     - **Python:** `python prompt-engineering.py`
 
@@ -635,7 +635,7 @@ In this task, you will run your configured app to send a request to your model a
 
      ![](../media/L3T4S14-1707.png)
 
-11. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+11. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
 
 ## Summary
@@ -643,8 +643,8 @@ In this task, you will run your configured app to send a request to your model a
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
 - Deploy an OpenAI model within the Azure AI Foundry portal
-- Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+- Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
-## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
    
    ![](../media/next-page.png)
