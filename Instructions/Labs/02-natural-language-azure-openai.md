@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task, you will provision an **Azure OpenAI** resource in your Azure subscription. 
 
 1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
@@ -47,7 +47,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     >**Note**: If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
 
-    ![](../media/180625(14).png)
+    >    ![](../media/180625(14).png)
 
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
@@ -79,10 +79,10 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/nlpe19.png)
 
-1. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `mslearn-openai`.
 
     ```bash
-   rm -r azure-openai -f
+   rm -r mslearn-openai -f
    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
