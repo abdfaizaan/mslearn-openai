@@ -1,6 +1,6 @@
 # Lab 04: Generate and improve code with Azure OpenAI Service
 
-## Estimated Duration: 60 minutes
+## Estimated Duration: 60 Minutes
 
 ## Lab Overview
 In this lab, you will learn how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You will explore code generation in the chat playground and integrate OpenAI into your app to automate code tasks. This will help you enhance productivity by simplifying coding and debugging processes.
@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Configure your application
 - Task 4: Run your application
 
-### Task 1: Generate code in chat playground
+## Task 1: Generate code in chat playground
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
@@ -26,8 +26,9 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
-   Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+    Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
+    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
 1. Next, send the prompt:
@@ -35,7 +36,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Do the same thing, but this time write it in C#.
    ```
 
-1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
 1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user query.
 
@@ -67,7 +68,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
     
-### Task 2: Set up an application in Cloud Shell
+## Task 2: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -89,7 +90,7 @@ In this task, you will use a short command-line application running in Cloud She
     cd mslearn-openai/Labfiles/04-code-generation
     ```
 
-   > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+   > **Note:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 6. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
@@ -97,7 +98,7 @@ In this task, you will use a short command-line application running in Cloud She
      code .
       ```
 
-### Task 3: Configure your application
+## Task 3: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -105,8 +106,8 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. Open the configuration file for your language.
 
-    - **C#**: `appsettings.json`
-    - **Python**: `.env`
+    - **C#:** `appsettings.json`
+    - **Python:** `.env`
 
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
@@ -123,7 +124,7 @@ In this task, you will complete key parts of the application to enable it to use
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.5
     ```
     
-    For **Python**
+    For **Python:**
 
       ```bash
     cd Python
@@ -138,14 +139,14 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. Open the application code file of your preferred language and briefly observe the code. 
 
-    - **C#**: `Program.cs`
-    - **Python**: `code-generation.py`
+    - **C#:** `Program.cs`
+    - **Python:** `code-generation.py`
 
-### Task 4: Run your application
+## Task 4: Run your application
 
 In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
 
-> **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
+> **Note:** Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. The OpenAI tool will use these files to generate the responses. 
    
@@ -153,10 +154,10 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. Run the application.
 
-    - **C#**: `dotnet run`
-    - **Python**: `python code-generation.py`
+    - **C#:** `dotnet run`
+    - **Python:** `python code-generation.py`
 
-      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
+      >**Note:** If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
@@ -172,10 +173,10 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
-    - **C#**: Fixes are made on lines 30 and 59
-    - **Python**: Fixes are made on lines 18 and 31
+    - **C#:** Fixes are made on lines 30 and 59
+    - **Python:** Fixes are made on lines 18 and 31
 
-        >**Note**: Click on Ctrl+C to stop the project.
+        >**Note:** Click on Ctrl+C to stop the project.
 
 10. To check the results, paste the following code in the terminal:
 
