@@ -655,7 +655,8 @@ In this task, you will run your configured app to send a request to your model a
     ![](../media/x233upd.png)
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-7. Next, enter the following prompts which specify a format for the response:
+
+1. Next, enter the following prompts which specify a format for the response:
 
     **System message (system.txt)**
 
@@ -700,6 +701,7 @@ In this task, you will run your configured app to send a request to your model a
     ![](../media/email1.png)
 
 1. Observe the output, and see how the email has changed based on your clear instructions.
+
 1. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message (system.txt)**
@@ -747,6 +749,7 @@ In this task, you will run your configured app to send a request to your model a
     > **Note:** Ensure that all indentation errors are corrected before moving forward.
 
 1. Save the file with **CTRL+S** and rerun your app.
+
 1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message (system.txt)**
