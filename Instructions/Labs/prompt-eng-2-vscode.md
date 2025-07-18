@@ -55,7 +55,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/gg_ex2_1_6.png "Keys and Endpoints")
+        ![](../media/gs_1_12.png "Keys and Endpoints")
 
 #### Validation
 
