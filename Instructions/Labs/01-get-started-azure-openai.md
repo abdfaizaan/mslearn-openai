@@ -1,6 +1,6 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-## Estimated Duration: 80 minutes
+## Estimated Duration: 80 Minutes
 
 ## Lab Overview
 In this lab, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models. The Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. 
@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 - Task 5: Explore prompts and parameters 
 - Task 6: Explore code generation
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -50,7 +50,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
@@ -66,7 +66,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/L1T2S3-1607.png)
 
-1. On the **Deploy gpt-4o** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9)**:
+1. On the **Deploy gpt-4o** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
 
    | Settings | Action |
    | -- | -- |
@@ -110,7 +110,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
-      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
+      > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -119,7 +119,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
-### Task 3: Explore a model in the Completions playground
+## Task 3: Explore a model in the Completions playground
 
 In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
@@ -139,7 +139,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
       ![](../media/lab1-g2upd-1.png)
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt essentially words or word parts in the text.
+      >**Note:** You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt, essentially words or word parts in the text.
 
 4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
@@ -149,13 +149,13 @@ In this task, you'll explore a model in the Completions playground that involves
     
 5. Close the **Sample Code**.
 
-### Task 4: Use the Chat playground
+## Task 4: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
 1. In the **Playground** section from the left pane, select the **Chat** page, and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement **(2)**:
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement **(2):**
 
    ```
    The system is an AI teacher that helps people learn about AI.
@@ -169,19 +169,19 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 4. Enter the following message and response in the designated boxes:
 
-    - **User (1)**:
+    - **User (1):**
       ```
          What are the different types of artificial intelligence?
       ```
     
-    - **Assistant (2)**:
+    - **Assistant (2):**
       ```
          There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
       ```
 
       ![](../media/L1T4S4-1607.png)
 
-      >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      >**Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply changes** and on **Update system message?** pop-up, click on **Continue**.
 
@@ -195,7 +195,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/L1T4S6-1607.png)
 
-   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   > **Note:** You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 7. Review the response and then submit the following message to continue the conversation:
 
@@ -205,15 +205,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-### Task 5: Explore prompts and parameters
+## Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Setup** pane select **Parameters** , set the following parameter values:
     
-   - **Temperature (1)**: 0
+   - **Temperature (1):** 0
     
-   - **Max response (2)**: 500
+   - **Max response (2):** 500
 
       > **Note:** You may need to scroll down to see the parameters option.
 
@@ -241,7 +241,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    - The prompt specifically states that the desired output should be three multiple-choice questions.
    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 6: Explore code generation
+## Task 6: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
@@ -271,4 +271,5 @@ In this lab, you have accomplished the following:
 - Use the chat playground to utilize the functionalities of prompts, parameters, and code generation
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
-   ![Launch Azure Portal](../media/sc900-image(3).png)
+
+![Launch Azure Portal](../media/sc900-image(3).png)
