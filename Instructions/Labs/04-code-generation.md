@@ -10,79 +10,12 @@ The Azure OpenAI Service models can generate code for you using natural language
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Generate code in the chat playground
-- Task 4: Set up an application in Cloud Shell
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 1: Generate code in the chat playground
+- Task 2: Set up an application in Cloud Shell
+- Task 3: Configure your application
+- Task 4: Run your application
 
-## Task 1: Provision an Azure OpenAI resource
-
-In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
-
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
-
-   ![](../media/dev-07.png)
-
-1. On **AI Foundry | Azure OpenAI** page, click on **+ Create**.
-
-   ![](../media/tel-10-2.png)
-
-1. Create an **Azure OpenAI** resource with the following settings:
-
-   | Settings | Action |
-   | -- | -- |
-   | **Subscription (1)** | Default - Pre-assigned subscription. |
-   | **Resource group (2)** | openai-<inject key="DeploymentID" enableCopy="false"></inject> |
-   | **Region (3)** | **Swedencentral** |
-   | **Name (4)** | OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> |
-   | **Pricing tier (5)** | Standard S0 |
-
-   ![](../media/create-openai-1707.png "Create Azure OpenAI resource")
-
-1. Click on **Next (6)** thrice and then click on **Create**.
-
-1. Wait for the deployment to complete. Once it's finished, click the **Go to resource** button to navigate to the deployed Azure OpenAI resource in the Azure portal.
-
-## Task 2: Deploy a model
-
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
-
-1. In the Azure OpenAI Overview page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
-
-   ![](../media/L1T2S1-1607.png)
-
-1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
-
-     ![](../media/dev-08.png)
-
-1. On the Select a model page, search for **gpt-35-turbo-instruct (1)** model, select **gpt-35-turbo-instruct (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
-
-     ![](../media/L1T2S6-1607.png)
-   
-1. On the **Deploy gpt-35-turbo-instruct** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9)** :
-
-   | Settings | Action |
-   | -- | -- |
-   | **Deployment name (2)** | gpt-35-turbo-instruct |
-   | **Deployment type (3)** | Standard |
-   | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-   | **Model version (5)** | 0914 (Default) |
-   | **Tokens per Minute Rate Limit (thousands) (6)** | 20K |
-   | **Content Filter (7)** | DefaultV2 |
-   | **Enable dynamic quota(8)** | Enabled |
-
-      ![](../media/L1T2S7.1-1607.png)
-
-      ![](../media/L1T2S7.2-1607.png)
-
-1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
-
-      > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
-   
-
-## Task 3: Generate code in chat playground
+## Task 1: Generate code in chat playground
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
@@ -135,7 +68,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
     
-## Task 4: Set up an application in Cloud Shell
+## Task 2: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -165,7 +98,7 @@ In this task, you will use a short command-line application running in Cloud She
      code .
       ```
 
-## Task 5: Configure your application
+## Task 3: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -209,7 +142,7 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#:** `Program.cs`
     - **Python:** `code-generation.py`
 
-## Task 6: Run your application
+## Task 4: Run your application
 
 In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
 
