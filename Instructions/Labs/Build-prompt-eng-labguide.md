@@ -3,9 +3,9 @@
 
 ## Lab Overview
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content if requested in a clear and concise way. In this lab, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+In the lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
-In the scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content if requested in a clear and concise way. In this lab, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -33,23 +33,23 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Subscription:** Default - Pre-assigned subscription **(1)**.
     - **Resource group:** openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
     - **Region:** Select **France Central** **(3)**
-    - **Name:** OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+    - **Name:** OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
     - **Pricing tier:** Standard S0 **(5)**
     -  Click on **Next** **(6)**
   
-       ![](../media/gg_ex2_1_3.png "Create Azure OpenAI resource")
+       ![](../media/create-openai-2107.png "Create Azure OpenAI resource")
 
        >**Note:** Make sure you are deploying OpenAI resource in **France Central** Region.
 
 1. Click **Next** twice to navigate to the **Review + submit** tab, then click **Create** to deploy the Azure OpenAI resource.
 
-   ![](../media/gg_ex2_1_4.png)
+   ![](../media/create-openai2-2107.png)
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
 
    ![](../media/gg_ex2_1_5.png)
 
-1. In the **Azure OpenAI** resource, under the **Resource Management** section, to capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+1. In the **Azure OpenAI** resource, under the **Resource Management** section, to capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -74,11 +74,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_7.png)
 
-1. On **AI Foundry | Azure OpenAI** blade under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
+1. On **AI Foundry | Azure OpenAI** blade under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane and select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**.
 
-   ![](../media/gs_1_11.png)
+   ![](../media/T2S2-2107.png)
 
-1. In the Azure OpenAI resource pane, click on **Overview (1)** page and click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on **Overview (1)** page and click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
     
    ![](../media/gg_ex2_1_9.png)
 
