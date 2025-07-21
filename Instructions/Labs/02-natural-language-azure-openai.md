@@ -535,5 +535,5 @@ In this lab, you have accomplished the following:
 - Integrate Azure OpenAI models into your applications
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
-   
-   ![](../media/next-page.png)
+
+![Launch Azure Portal](../media/next-page-2107.png)
