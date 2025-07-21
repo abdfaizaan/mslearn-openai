@@ -54,7 +54,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI Overview page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/L1T2S1-1607.png)
 
@@ -261,8 +261,6 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-   ![](../media/L1T5S4-1607.jpg)
-
 ## Summary
 
 In this lab, you have accomplished the following:
@@ -272,4 +270,4 @@ In this lab, you have accomplished the following:
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/sc900-image(3).png)
+![Launch Azure Portal](../media/next-page-2107.png)
