@@ -151,6 +151,13 @@ In this task, you will use a short command-line application running in Cloud She
 
    ![](../media/classic-cloudshell.png)
 
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
+
+    ```bash
+   rm -r mslearn-openai -f
+   git clone https://github.com/CloudLabs-MOC/mslearn-openai
+    ```
+
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
     ```bash
