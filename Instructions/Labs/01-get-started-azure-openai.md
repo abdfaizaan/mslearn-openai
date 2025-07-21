@@ -318,7 +318,10 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 ## Summary
 
-In this lab, you have provisioned an Azure OpenAI resource, deployed a model, explored a model in the Completions playground, used the Chat playground, explored prompts, parameters, and code-generation.
+- In this lab, you provisioned an **Azure OpenAI resource** to integrate generative AI capabilities into your applications.
+- You **deployed two models** (gpt-4o-mini for chat and gpt-35-turbo-instruct for completions) using the Azure AI Foundry portal.
+- You explored the models in the **Completions and Chat playgrounds**, experimented with prompts and parameters, and tested the model’s **code generation abilities**.
+
 
 ### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
      
