@@ -130,7 +130,7 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
- ![Launch Azure Portal](../media/sc900-image(3).png)
+![Launch Azure Portal](../media/next-page-2107.png)
  
 ### Happy learning!
 

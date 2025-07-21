@@ -20,15 +20,19 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Observe normal chat behavior without adding your own data
 
-Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
+Before you connect Azure OpenAI to your data, you should first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playgrounds** section, select the **Chat** option.
+1. In the **Playgrounds** section, select the **Chat (1)** option.
 
-2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model** is selected.
+2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
+
+   ![](../media/dev-genai-june-5.png)
 
 3. In the **Setup** area, the default system message is set to *You are an AI assistant that helps people find information*.
 
-4. In the **Chat session**, submit the following queries, and review the responses:
+   ![](../media/model-instr-2107.png)
+
+4. In the **Chat session** on the right side, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?
@@ -37,7 +41,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     ```
     What are some facts about New York?
     ```
-
+    
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
 ## Task 2: Connect your data in the chat playground
@@ -168,13 +172,13 @@ In this task, you will observe how the base model responds to queries without an
        
     ![](../media/review-2.png)
   
- - Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab inthe  **Assistant setup** pane.
+ - Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
 
     ![](../media/review-3.png)   
 
 ## Task 3: Chat with a model grounded in your data
 
-In this task, you will ask the same questions as before after adding your data, and observe how the responses differ.
+In this task, you will ask the same questions as before in the chat section after adding your data, and observe how the responses differ.
 
    ```
    I'd like to take a trip to New York. Where should I stay?
@@ -184,11 +188,9 @@ In this task, you will ask the same questions as before after adding your data, 
    What are some facts about New York?
    ```
 
-You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
+You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
-Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
-
-> **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
+> **Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
 ## Task 4: Set up an application in Cloud Shell
 
@@ -239,9 +241,9 @@ In this task, you will complete key parts of the application to enable it to use
     - **Python**: `.env`
 
 1. Update the configuration values to include:
-    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively, it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal.
+    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task). Alternatively, it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal.
     - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **my-gpt-model**).
-    - The endpoint for your AI search service (Which you copied in the previous task, alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
+    - The endpoint for your AI search service (Which you copied in the previous task; alternatively, it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
 
@@ -250,7 +252,7 @@ In this task, you will complete key parts of the application to enable it to use
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
     ```
-         <Project Sdk="Microsoft.NET.Sdk">
+    <Project Sdk="Microsoft.NET.Sdk">
      
        <PropertyGroup>
          <OutputType>Exe</OutputType>
@@ -423,8 +425,10 @@ In this task, you will run the reviewed code to generate some images.
 
 In this lab, you have accomplished the following:
 
-- Used the power of OpenAI models to generate responses limited to custom ingested data.
+- You explored **Retrieval-Augmented Generation (RAG)** by connecting your own data with the Azure OpenAI Service.
+- You **observed base model behavior** without grounding data and then connected your **Azure Blob Storage and AI Search index** to ground responses with your uploaded PDFs.
+* You configured and ran an **application in Azure Cloud Shell** to interact with the model using your custom data as the knowledge source.
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
-   
-   ![](../media/next-page.png)
+
+![Launch Azure Portal](../media/next-page-2107.png)
