@@ -2,10 +2,11 @@
 
 ### Estimated Duration: 120 minutes
 
-## Lab scenario
-The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
+## Lab Overview
 
-## Lab objectives
+In this lab, you will learn how to integrate your own data with the Azure OpenAI Service to build grounded AI solutions. You will provision the Azure OpenAI resource, deploy a model, and connect it to your custom data source. Finally, you will configure and run an application to observe how the model generates responses using your specific data. The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
+
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
@@ -17,7 +18,7 @@ In this lab, you will complete the following tasks:
 - Task 7: Configure your application
 - Task 8: Run your application
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -25,9 +26,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/search.png)
 
-2. On **Azure OpenAI services | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. On **AI Foundry | Azure OpenAI (1)** blade, click on **Create (2)**.
 
-   ![](../media/openai_create.png)
+   ![](../media/L1T1S2-2107.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and then click on **Next (6)** thrice.
    
@@ -37,22 +38,22 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/u1.png "Create Azure OpenAI resource")
+      ![](../media/L1T1S3-2107.png "Create Azure OpenAI resource")
     
 4. Click on **Create**.
 
 5. Wait for deployment to complete. Then click on **Go to resource group**.
 
-   ![](../media/u2.png)
+   ![](../media/L1T1S5-2107.png)
 
 6. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
    
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-      ![](../media/u4.png "Keys and Endpoints")
+      ![](../media/L1T1S6-2107.png "Keys and Endpoints")
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
@@ -62,7 +63,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure AI Foundry portal**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
@@ -70,41 +71,39 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       ![](../media/search.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
-      ![](../media/openai.png)
+      ![](../media/L1T2S2-2107.png)
 
 1. In the Azure OpenAI resource pane, **Overview (1)** section, click on **Go to Azure AI Foundry portal (2)** it will navigate to **Azure AI Foundry portal**.
 
-      ![](../media/update08.png)
+      ![](../media/L1T2S3-2107.png)
 
-1. After navigating to Azure AI Foundry portal, If prompted click on **Close** pop-up on the top.
+1. After navigating to Azure AI Foundry portal, if prompted, click on **Close** pop-up on the top.
 
-1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+1. Click on Azure AI Foundry portal, go to **Deployments (1)** from the left navigation pane, click on **+ Deploy model (2)**, select **Deploy base Model (3)**.  
 
-   ![](../media/ui1.png)
+   ![](../media/L1T2S5-2107.png)
 
 1. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
-   ![](../media/mew5.png)
+   ![](../media/L1T2S6-2107.png)
 
 1. Click on **Customize**.
 
-   ![](../media/u3.png)
+   ![](../media/L1T2S7-2107.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
     
     - **Deployment name**: **text-turbo (1)**
     - **Deployment type**: **Standard (2)**
-    - **Model version**: **0125 (3)** ( Check the Deployement name after changing the model version, if it is changed please update it to **text-turbo**)
+    - **Model version**: **0125 (3)** ( Check the Deployment name after changing the model version. If it is changed, please update it to **text-turbo**)
     - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: **20K (4)**
     - Click on **Deploy (5)**
   
-   ![](../media/text-turbo-01.png)
+   ![](../media/L1T2S8-2107.png)
 
 1. This will deploy a model that you will be playing around with as you proceed.
-
-   ![](../media/u6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
@@ -114,13 +113,13 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
 
-### Task 3: Observe normal chat behavior without adding your own data
+## Task 3: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playground** section, select the **Chat** page. 
+1. In the Azure AI Foundry portal, from the **Playground** section, select the **Chat** page. 
 
-   ![](../media/u7.png)
+   ![](../media/L1T3S1-2107.png)
 
 2. The **Chat** playground page consists of three main sections:
 
@@ -146,38 +145,24 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
       What are some facts about New York?
       ```
 
-      ![](../media/u9.png)   
+      ![](../media/L1T3S5.1-2107.png)   
 
-      ![](../media/u10.png)   
+      ![](../media/L1T3S5.2-2107.png)   
 
       >**Note:** Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
-### Task 4: Connect your data in the chat playground
+## Task 4: Connect your data in the chat playground
 
-Next, add your data in the chat playground to see how it responds with your data as grounding
-
-1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
-
-      - Click on the **File Explorer**, from the bottom taskbar.
-      - Navigate to `C:\Users\azureuser\Downloads\` press **Enter**.
-      - Right click on **brochures (1)** file and then click on **Extract all (2)**
-
-        ![](../media/u11.png)
-
-      - Click on **Extract**.
-
-        ![](../media/u12.png)      
-
-        ![](../media/u13.png)
+In this task ,you will add your data in the chat playground to see how it responds with your data as grounding
 
 1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
-      ![](../media/1.png)
+      ![](../media/L1T4S1-2107.png)
 
 1. On **Storage Account** page, click on **+ Create**.
 
-      ![](../media/2.png)
+      ![](../media/L1T4S2-2107.png)
 
 1. Create a **Storage Account** resource with the following settings:
 
@@ -189,11 +174,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - Select **Next (6)**
   
-         ![](../media/u14.png "Create storage account")
+         ![](../media/L1T4S3-2107.png "Create storage account")
 
     - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section **(1)**. Click on **Review + Create (2)**.  
 
-         ![](../media/u15.png "allow blob access")
+         ![](../media/L1T4S3.2-2107.png "allow blob access")
 
 1. Click on **Create**         
 
@@ -201,41 +186,37 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. On the deployment blade, click **Go to resource**.
 
-      ![](../media/u16.png "upload files")
+1. On the **Storage Account** page, from the left navigation, select **Containers (1)** under Data storage and click on **+ Add container (2)**.
 
-1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
-
-1. On **Storage Account | Containers** blade, click on **+ Containers (2)**.
-
-      ![](../media/storage-container.png "upload files")
+      ![](../media/L1T4S7-2107.png "upload files")
 
 1. Create a container with the name **openaidatasource (1)**, and under **Anonymous access level** select **Container (2)**. Select **Create (3)**.
 
-      ![](../media/u17.png "create container")
+      ![](../media/L1T4S8-2107.png "create container")
 
 1. Select the **openaidatasource** container, and select **Upload**.
 
-      ![](../media/u18.png)
+      ![](../media/L1T4S9-2107.png)
 
 1. Click on **Browse for files**.
 
-      ![](../media/u19.png)
+      ![](../media/L1T4S10-2107.png)
 
-1. Navigate to `C:\Users\azureuser\Downloads\brochures`, press **Enter** **(1)**. Select all the files that you have extracted **(2)** and then click on **Open (3)**.
+1. Navigate to `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data`, press **Enter** **(1)**. Select all the files that you have extracted **(2)** and then click on **Open (3)**.
 
-      ![](../media/u20.png "upload files")
+      ![](../media/L1T4S11-2107.png "upload files")
 
 1. Click on **Upload**.
 
-      ![](../media/u21.png)
+      ![](../media/L1T4S12-2107.png)
 
 1. In the **Azure portal**, search for **AI search (1)** and select **AI search (2)**.
 
       ![](../media/u22.png)
 
-2.  On **Azure AI services | AI search (1)** blade, click on **Create (2)**.
+2.  On **AI Foundry | AI search (1)** blade, click on **Create (2)**.
 
-      ![](../media/ai_search_create.png "upload files")
+      ![](../media/L1T4S14-2107.png "upload files")
 
 3. Create an **AI Search** resource with the following settings and click on **Review + create (6)**. 
 
@@ -245,7 +226,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - Location: Select **<inject key="Region" enableCopy="false" /> (4)**
     - Pricing tier: **Basic (5)** (Click on **Change Pricing Tier**, click on **Basic** and then click **Select**).
 
-      ![](../media/u23.png "Create cognitive search resource")
+      ![](../media/L1T4S15-2107.png "Create cognitive search resource")
 
 1. Click on **Create**.      
 
@@ -253,11 +234,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page **copy the URL and paste it in a text editor such as notepad for later use.**
 
-      ![](../media/u24.png)
+      ![](../media/L1T4S18-2107.png)
 
 1. From the left navigation pane, under **Settings**, click on **Keys (1)** and copy the **primary key (2)** or secondary key and paste it in a notepad file for later use.
 
-      ![](../media/u25.png)
+      ![](../media/L1T4S19-2107.png)
 
 1. Navigate to the **Chat (1)** playground followed by select **Add your data(2)** in the setup pane and click on **+ Add a data source (3)**.
 
@@ -266,14 +247,14 @@ Next, add your data in the chat playground to see how it responds with your data
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - Select data source: **Azure Blob Storage (1)**
-    - Select Azure Blob storage resouce: **Choose the storage resource you created (2)**
+    - Select Azure Blob storage resource: **Choose the storage resource you created (2)**
     - Select storage container: **Choose the storage container you created (3)**
     - Select Azure AI Search resource: **Choose the search resource you created (4)**
     - Enter the index name: **margiestravel (5)**
     - Indexer schedule: **Once (6)**
     - Click on **Next (7)**
       
-      ![](../media/u26.png "Add data configurations")
+      ![](../media/L1T4S21-new.png "Add data configurations")
    
   1. On the **Data management** page select the **1024(default)** search type from the drop-down, and then select **Next**.
 
@@ -285,11 +266,11 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. 
    
-      ![](../media/u27.png "Add data")
+      ![](../media/L1T4S24-2107.png "Add data")
 
 1. Once completed, verify if the data source, **search resource**, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
 
-      ![](../media/u29.png)
+      ![](../media/L1T4S25-2107.png)
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
@@ -299,7 +280,7 @@ Next, add your data in the chat playground to see how it responds with your data
 <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
 
-### Task 5: Chat with a model grounded in your data
+## Task 5: Chat with a model grounded in your data
 
 1. Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
@@ -319,7 +300,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
       >**Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-### Task 6: Set up an application in Cloud Shell
+## Task 6: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -378,7 +359,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/u31.png "Create storage advanced settings")      
    
-### Task 7: Configure your application
+## Task 7: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -452,7 +433,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
     
-1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with AI Foundry.
 
     ```
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
