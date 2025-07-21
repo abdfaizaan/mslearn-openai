@@ -4,7 +4,7 @@
 
 ## Overview
 
-These hands-on labs will allow you to explore how the Azure OpenAI Service integrates your own data with the intelligence of the underlying large language model (LLM). You'll learn how to control the model's use of your data, either by limiting it to specific topics or by blending it with results from the pre-trained model. The Azure OpenAI Service includes default content filters designed to identify and remove potentially harmful prompts and completions, ensuring safer interactions. Additionally, you'll have the opportunity to apply for custom content filters tailored to your specific needs, reinforcing responsible AI principles in your generative AI applications. Content filtering plays a vital role in a responsible AI strategy, and this lab will provide insight into its impact and effectiveness.
+This hands-on lab will allow you to explore how the Azure OpenAI Service integrates your own data with the intelligence of the underlying large language model (LLM). You'll learn how to control the model's use of your data, either by limiting it to specific topics or by blending it with results from the pre-trained model. The Azure OpenAI Service includes default content filters designed to identify and remove potentially harmful prompts and completions, ensuring safer interactions. Additionally, you'll have the opportunity to apply for custom content filters tailored to your specific needs, reinforcing responsible AI principles in your generative AI applications. Content filtering plays a vital role in a responsible AI strategy, and this lab will provide insight into its impact and effectiveness.
 
 ## Objective
 
@@ -42,12 +42,6 @@ Once you're ready to dive in, your virtual machine and **Lab guide** will be rig
 
    ![](../media/u40.png)
 
-## Lab Guide Zoom In/Zoom Out
-
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-   ![Manage Your Virtual Machine](../media/u41.png)
-
 ## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
@@ -56,41 +50,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](../media/u42.png)
+   ![Explore Lab Resources](../media/exp-lab-resources.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../media/u43.png)
+ ![Use the Split Window Feature](../media/split-feature-new.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/u44.png)
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/u46.png)
+![Inline Validation](../media/inline-validationupd.png)
 
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
+## Lab Guide Zoom In/Zoom Out
 
-## Lab Duration Extension
+To adjust the zoom level in the lab environment, click the **A↕ (1)** icon next to the timer and select a preferred zoom option from the **dropdown menu (2)**.
 
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../media/u45.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+   ![Manage Your Virtual Machine](../media/gs_1_2.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -109,20 +93,10 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
-
-1. If **Action required** pop-up window appears, click on **Ask later**.
-
-   ![Ask Later](../media/ask-later-01.png)
     
-1. If prompted to stay signed in, you can click **No**.
+1. If prompted to **Stay signed in**, you can click **No**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
-
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
-
-   ![Launch Azure Portal](../media/sc900-image(3).png)
-
-This hands-on-lab will help you to gain insights on how Azure OpenAI’s content filtering mechanisms contribute to responsible AI deployment, and how you can leverage these filters to ensure that your AI models adhere to appropriate content standards.
 
 ## Support Contact
 
@@ -133,6 +107,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Click **Next** from the bottom right corner to embark on your Lab journey!
+
+   ![Launch Azure Portal](../media/next-page-2107.png)
 
 ## Happy Learning!!
