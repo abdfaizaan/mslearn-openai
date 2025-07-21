@@ -1,6 +1,6 @@
 # Lab 01: Use your own data with Azure OpenAI
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
 ## Lab Overview
 
@@ -328,21 +328,23 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/u28.png "Create storage advanced settings")
 
-1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to **Bash**. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+   ![](../media/classic-cloudshell.png)
+
+1. Enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   rm -r mslearn-openai -f
+   git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
     ![](../media/u30.png "Create storage advanced settings")
 
-1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **mslearn-openai**. You can just navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/06-use-own-data
+   cd mslearn-openai/Labfiles/02-use-own-data
     ```
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -351,13 +353,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ```bash
    code .
-    ```
-    
-   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 7 and 8** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png)
-
-      ![](../media/u31.png "Create storage advanced settings")      
+    ```  
    
 ## Task 7: Configure your application
 
@@ -365,39 +361,56 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. In the code editor, expand the language folder for your preferred language.
 
-1. Open the configuration file for your language.
+1. Open the configuration file for your preferred language
 
-    - **C#**: `appsettings.json`
-    - **Python**: `.env`
+    - **C#**: appsettings.json
+    - **Python**: .env
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+1. Update the configuration values to include:
+    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task). Alternatively, it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal.
+    
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
+    
+    - The endpoint for your AI search service (Which you copied in the previous task; alternatively, it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
+    
+    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
+    - The name of the search index (which should be `margiestravel`).
+
+    - Press **Ctrl + S** on your keyboard to save the file.
+
+      ![](../media/app-set-2107.png)
+
+      ![](../media/env-file-2107.png)
+
+1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    </PropertyGroup>
-
-     <ItemGroup>
-     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
-     </ItemGroup>
-
-     <ItemGroup>
-       <None Update="appsettings.json">
-         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-     </ItemGroup>
-
-    </Project>
-    ```    
-
-     ![](../media/u47.png)    
+     
+       <PropertyGroup>
+         <OutputType>Exe</OutputType>
+         <TargetFramework>net8.0</TargetFramework>
+         <ImplicitUsings>enable</ImplicitUsings>
+         <Nullable>enable</Nullable>
+         <LangVersion>12</LangVersion>
+       </PropertyGroup>
+     
+       <ItemGroup>
+         <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
+         <PackageReference Include="Azure.Search.Documents" Version="11.6.0" />
+         <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+       </ItemGroup>
+     
+       <ItemGroup>
+         <None Update="appsettings.json">
+           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+         </None>
+       </ItemGroup>
+     
+     </Project>
+    ```   
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -413,7 +426,7 @@ For this exercise, you'll complete some key parts of the application to enable u
      >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
 1.  Run the following command to install the required SDK version locally:     
 
@@ -439,32 +452,23 @@ For this exercise, you'll complete some key parts of the application to enable u
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
+1. If you are using Python, navigate to the **Python** folder and install the necessary packages.
+
     **Python**:
 
     ```
     cd Python
     pip install python-dotenv
-    pip install openai==1.55.3
+    pip install openai==1.56.2
+    pip install openai requests python-dotenv
     ```
-
-1. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
-
-    - **C#**: appsettings.json
-    - **Python**: .env
-
-1. Update the configuration values to include:
-    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
-    
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
-    
-    - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
-    
-    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
-    - The name of the search index (which should be `margiestravel`).
-
-    - Press **Ctrl + S** on your keyboard to save the file.
-
-      ![](../media/x676.png)
+      > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the command below for installation.
+      >    ![](../media/L2T3S9python-0205.png)
+      > ```bash
+      > pip install --user python-dotenv
+      > pip install --user openai==1.56.2
+      > pip install --user openai requests python-dotenv
+      > ```
 
 1. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 
@@ -472,63 +476,89 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     ```csharp
     // Configure your data source
-    AzureSearchChatExtensionConfiguration ownDataConfig = new()
-    {
-            SearchEndpoint = new Uri(azureSearchEndpoint),
-            Authentication = new OnYourDataApiKeyAuthenticationOptions(azureSearchKey),
-            IndexName = azureSearchIndex
-    };
+     // Extension methods to use data sources with options are subject to SDK surface changes. Suppress the warning to acknowledge this and use the subject-to-change AddDataSource method.
+     #pragma warning disable AOAI001
+     
+     ChatCompletionOptions chatCompletionsOptions = new ChatCompletionOptions()
+     {
+        MaxOutputTokenCount = 600,
+        Temperature = 0.9f,
+     };
+     
+     chatCompletionsOptions.AddDataSource(new AzureSearchChatDataSource()
+     {
+        Endpoint = new Uri(azureSearchEndpoint),
+        IndexName = azureSearchIndex,
+        Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
+     });
     ```
-
+    
     **Python**: ownData.py
 
     ```python
     # Configure your data source
-    extension_config = dict(dataSources = [  
-            { 
-                "type": "AzureCognitiveSearch", 
-                "parameters": { 
-                    "endpoint":azure_search_endpoint, 
-                    "key": azure_search_key, 
-                    "indexName": azure_search_index,
+     text = input('\nEnter a question:\n')
+     
+     completion = client.chat.completions.create(
+        model=deployment,
+        messages=[
+            {
+                "role": "user",
+                "content": text,
+            },
+        ],
+        extra_body={
+            "data_sources":[
+                {
+                    "type": "azure_search",
+                    "parameters": {
+                        "endpoint": os.environ["AZURE_SEARCH_ENDPOINT"],
+                        "index_name": os.environ["AZURE_SEARCH_INDEX"],
+                        "authentication": {
+                            "type": "api_key",
+                            "key": os.environ["AZURE_SEARCH_KEY"],
+                        }
+                    }
                 }
-            }]
-        )
+            ],
+        }
+     )
     ```
-      >**Note**: Ensure that the indentation is correct after pasting the code into the editor; it should align with the previous line.
 
-1. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
+      >**Note**: Ensure that the indentation is correct after pasting the code into the editor; it should align with the previous line.
 
 1. Press **Ctrl + S** on your keyboard to save the file.
 
-
 ## Task 8: Run your application
 
-Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
+In this task, you will run your configured app to send a request to your model and observe the response, noting that the only difference between options is the prompt content while all other parameters (such as token count and temperature) remain consistent.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+In this task, you will run the reviewed code to generate some images.
+
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
-
-      ![](../media/u48.png )   
-
-       >**Note:** If you get any warnings, please ignore.  
-
     - **Python**: `python ownData.py`
 
-      ![](../media/python-output-1.png)
+     >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+        
+    ```
+    pip install --user --upgrade openai
+    ```
 
-       >**Note:** If you get any warnings please ignore.  
+    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-       > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
-1. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
-
+   ![](../media/final-response-2107.png "upload files")
+   
 ### Summary
 
 In this lab, you have accomplished the following:
 -   Provisioned an Azure OpenAI resource
 -   Deployed an OpenAI model within the Azure AI Foundry portal
--   Used the power of OpenAI models to generate responses limited to a custom ingested data.
+-   Used the power of OpenAI models to generate responses limited to custom ingested data.
 
 ### You have successfully finished the lab. Click **Next** to continue to the next lab.
