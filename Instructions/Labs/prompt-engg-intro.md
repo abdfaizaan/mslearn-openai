@@ -355,3 +355,5 @@ Some of the examples above were adopted from the ["Best practices for prompt eng
 In this lab, you learned how to create powerful prompts for AI models by examining the idea of prompt engineering in this assignment. Using Azure OpenAI Playground, you gained practical experience by experimenting with various prompt types and comprehending their components and design advice.
 
 ## You have successfully completed the lab. Click on Next >> to proceed to the next lab.
+
+![Launch Azure Portal](../media/gs_1_7.png)
