@@ -562,3 +562,5 @@ In this lab, you have accomplished the following:
 -   Used the power of OpenAI models to generate responses limited to custom ingested data.
 
 ### You have successfully finished the lab. Click **Next** to continue to the next lab.
+
+   ![Launch Azure Portal](../media/next-page-2107.png)
