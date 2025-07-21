@@ -1,19 +1,19 @@
 # Lab 2: Explore content filters in Azure OpenAI
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
-## Lab scenario
+## Lab Overview
+In this Lab, you'll explore the effect of the default content filters in Azure OpenAI.
+
 Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principals for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
 
-In this exercise, you'll explore the affect of the default content filters in Azure OpenAI.
-
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
  - Task 1: Deploy an OpenAI model
  - Task 2: Generate natural language output
  - Task 3: Explore content filters
 
-### Task 1: Deploy an OpenAI model
+## Task 1: Deploy an OpenAI model
 
 As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
 
@@ -56,7 +56,7 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
     > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
-### Task 2: Generate natural language output
+## Task 2: Generate natural language output
 
 Let's see how the model behaves in a conversational interaction.
 
@@ -97,7 +97,7 @@ Let's see how the model behaves in a conversational interaction.
 
     ![](../media/u36.png)
    
-### Task 3: Explore content filters
+## Task 3: Explore content filters
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
