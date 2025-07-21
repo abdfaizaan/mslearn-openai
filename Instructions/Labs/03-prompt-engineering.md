@@ -183,7 +183,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
 
    ```bash
-      code .
+   code .
     ```
 
 ## Task 3: Configure your application
@@ -646,5 +646,5 @@ In this lab, you have accomplished the following:
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
-   
-   ![](../media/next-page.png)
+
+![Launch Azure Portal](../media/next-page-2107.png)
