@@ -9,11 +9,11 @@ In this exercise, you'll explore the affect of the default content filters in Az
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
- - Task 1: Deploy a OpenAI model
+ - Task 1: Deploy an OpenAI model
  - Task 2: Generate natural language output
  - Task 3: Explore content filters
 
-### Task 1: Deploy a OpenAI model
+### Task 1: Deploy an OpenAI model
 
 As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
 
@@ -21,15 +21,15 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/search.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
 
-   ![](../media/openai.png)
+   ![](../media/L1T1S2-2107.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to **Azure AI Foundry portal**.
 
-   ![](../media/update08.png)
+   ![](../media/L1T2S3-2107.png)
 
-1. After navigating to Azure AI Studio, If prompted click on **Close** on the pop-up.
+1. After navigating to Azure AI Studio, if prompted, click on **Close** on the pop-up.
 
 1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
@@ -59,6 +59,8 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 ### Task 2: Generate natural language output
 
 Let's see how the model behaves in a conversational interaction.
+
+1. First, make sure to remove the data source you have added in the previous lab.
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat (1)** playground in the left pane. Select **text-turbo-35(version:0125) (2)**. In the **Setup** section at the top, select the **Default** system message template **(3)**.
 
@@ -91,7 +93,7 @@ Let's see how the model behaves in a conversational interaction.
    Describe characteristics of Scottish people.
     ```
 
-1. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
+1. Observe the output, which should hopefully indicate that the request to be racist and derogatory is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
     ![](../media/u36.png)
    
@@ -99,9 +101,11 @@ Let's see how the model behaves in a conversational interaction.
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
-1. In Azure AI Foundry portal, view the **Content filters (2)** page under **Safety+security (1)** from the left navigation menu.
+1. In the Azure AI Foundry portal, click on the **Guardrails + Controls (1)** under Shared resources from the left navigation menu.
 
-     ![](../media/u37.png)
+1. Select **Content filters (2)**. Under that, click on **+ Create content filter (3)** and review the default settings for a content filter.
+
+     ![](../media/content-filter-1-2107.png)
 
 1. Click on **Next**.
 
