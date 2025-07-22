@@ -252,7 +252,8 @@ In this task ,you will add your data in the chat playground to see how it respon
     - Select Azure AI Search resource: **Choose the search resource you created (4)**
     - Enter the index name: **margiestravel (5)**
     - Indexer schedule: **Once (6)**
-    - Click on **Next (7)**
+    - Click on **Next (7)** 
+
       
       ![](../media/L1T4S21-new.png "Add data configurations")
    
