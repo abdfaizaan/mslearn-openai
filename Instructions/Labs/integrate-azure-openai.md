@@ -143,14 +143,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    rm -r azure-openai -f
+    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
 9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-    cd azure-openai/Labfiles/02-azure-openai-api
+    cd mslearn-openai/Labfiles/01-app-develop
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
@@ -179,23 +179,23 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-2. Open the configuration file for your language
+2. Open the configuration file for your language:
 
-    - C#: `appsettings.json`
+    - C#: `appsettings.json`  
     - Python: `.env`
-    
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
-    **C#** : 
+4. Navigate to the folder for your preferred language and install the necessary packages.
+
+    **C#:**
 
     ```bash
     cd CSharp
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
-    **Python** : 
+    **Python:**
 
     ```bash
     cd Python
@@ -219,14 +219,14 @@ In this task, you will complete key parts of the application to enable it to use
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+6. In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
     ```csharp
     // Initialize the Azure OpenAI client
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    
+
     // System message to provide context to the model
     string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
     ```
@@ -236,21 +236,21 @@ In this task, you will complete key parts of the application to enable it to use
     ```python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
-            azure_endpoint = azure_oai_endpoint, 
-            api_key=azure_oai_key,  
-            api_version="2024-02-15-preview"
-            )
-    
+        azure_endpoint = azure_oai_endpoint, 
+        api_key=azure_oai_key,  
+        api_version="2024-02-15-preview"
+    )
+
     # Create a system message
     system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
-        If no area is specified, I will default to near Rainier National Park. 
-        I will then provide three suggestions for nearby hikes that vary in length. 
-        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-        """
+    If no area is specified, I will default to near Rainier National Park. 
+    I will then provide three suggestions for nearby hikes that vary in length. 
+    I will also share an interesting fact about the local nature on the hikes when making a recommendation.
+    """
     ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-    
+    > **Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
 7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
@@ -298,9 +298,10 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
 
-   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    > **Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
 
 ### Task 5: Test your application
 
