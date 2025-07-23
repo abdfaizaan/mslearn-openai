@@ -52,7 +52,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
            ![](../media/ui3.png "Keys and Endpoints")
 
-   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
+   <validation step="7c4e3561-5bcf-4427-a50e-bdb11b1f5113" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -101,8 +101,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
 
-   <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
-   
+   <validation step="64adeae3-05e0-4fbd-84bb-176e70a4b3ce" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -167,7 +167,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    ![](../media/classic-cloudshell-prompt.png) 
 
  
-   <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
+   <validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
