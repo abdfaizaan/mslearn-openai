@@ -238,7 +238,7 @@ For this task, you'll complete some key parts of the application to enable using
     ```bash
     cd Python
     python -m venv labenv
-   ./labenv/bin/Activate.ps1
+    source ./labenv/bin/activate
     pip install python-dotenv openai==1.65.2 --user
     ```
 
