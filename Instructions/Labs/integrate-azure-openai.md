@@ -143,14 +143,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   rm -r mslearn-openai -f
+   git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
 9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-    cd azure-openai/Labfiles/02-azure-openai-api
+    cd mslearn-openai/Labfiles/01-app-develop
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
