@@ -25,11 +25,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/tel-11.png)
 
-2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
+1. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
    ![](../media/itp1n.png)
 
-3. Create an **Azure OpenAI** resource with the following settings 
+1. Create an **Azure OpenAI** resource with the following settings 
 
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
@@ -40,11 +40,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
          ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-4. Click on **Next** again and subsequently click on **Create** 
+1. Click on **Next** again and subsequently click on **Create** 
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -67,38 +67,39 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/itp9.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/update08.png)
 
-4. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
+1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
     ![](../media/itp2.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo-16k** and click on **Confirm**
+1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 
-      ![](../media/new04.png)
+   ![](../media/L1T2S3-1607.png)
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    
-    - **Deployment name**: text-turbo (1) 
-    - **Model version**: 0613(Default) (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+1. On the **Deploy gpt-4o** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
+
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name (2)** | my-gpt-model |
+   | **Deployment type (3)** | Standard |
+   | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
+   | **Model version (5)** | 2024-11-20 |
+   | **Tokens per Minute Rate Limit (thousands) (6)** | 10K |
+   | **Content Filter (7)** | DefaultV2 |
+   | **Enable dynamic quota(8)** | Enabled |
   
-      ![](../media/i2.png)
-      
-8. This will deploy a model that you will be playing around with as you proceed.
+      ![](../media/L1T2S4-1607.png)
 
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-   
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+      ![](../media/L1T2S4.2-1607.png)
+
+   > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
 
    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
    
@@ -115,17 +116,17 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
@@ -136,18 +137,18 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r mslearn-openai -f
    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
-9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
     cd mslearn-openai/Labfiles/01-app-develop
@@ -597,9 +598,12 @@ Now that your app has been set up, you can just run it to send your request to y
 In this task, you will provide a history of the conversation in your prompt to enable the Azure OpenAI model to reference past messages, enhancing the realism of interactions despite the API's stateless design.
 
 1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-2. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
-4. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+
+1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+
+1. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
+
+1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
 
     **C#**: Program.cs
 
@@ -618,7 +622,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+1. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
 
     **C#**: Program.cs
 
@@ -673,7 +677,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     print("Summary: " + generated_text + "\n")
     ```
 
-6. The final code should look like as shown below:
+1. The final code should look like as shown below:
 
    **C#**: Program.cs
 
@@ -835,15 +839,17 @@ In this task, you will provide a history of the conversation in your prompt to e
        main()
    ```
 
-7. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
-8. In the terminal pane, enter the following command to run the application.
+1. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
+1. In the terminal pane, enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
-9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
+1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
+
+1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+
+1. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
 
     > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
 
