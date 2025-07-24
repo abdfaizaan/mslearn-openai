@@ -135,7 +135,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -840,6 +840,7 @@ In this task, you will provide a history of the conversation in your prompt to e
    ```
 
 1. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
+
 1. In the terminal pane, enter the following command to run the application.
 
     - **C#**: `dotnet run`
