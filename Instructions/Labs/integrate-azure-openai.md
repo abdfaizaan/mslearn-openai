@@ -65,19 +65,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/tel-11.png)
+    ![](../media/tel-11.png)
 
 1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/itp9.png)
+    ![](../media/itp9.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/update08.png)
+    ![](../media/update08.png)
 
 1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
-    ![](../media/itp2.png "Create a new deployment")
+     ![](../media/itp2.png "Create a new deployment")
 
 1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 
@@ -164,7 +164,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
      > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
-    ![](../media/classic-cloudshell-prompt.png) 
+     ![](../media/classic-cloudshell-prompt.png) 
 
  
      <validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
