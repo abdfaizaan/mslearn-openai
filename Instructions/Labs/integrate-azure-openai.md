@@ -23,11 +23,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/tel-11.png)
+    ![](../media/tel-11.png)
 
 1. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
-   ![](../media/itp1n.png)
+    ![](../media/itp1n.png)
 
 1. Create an **Azure OpenAI** resource with the following settings 
 
@@ -38,19 +38,19 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-         ![](../media/azopenai123.png "Create Azure OpenAI resource")
+        ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 1. Click on **Next** again and subsequently click on **Create** 
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    - Select **Keys and Endpoint (1)** under **Resource Management**.
+    - Click on **Show Keys (2)**.
+    - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+    - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-           ![](../media/ui3.png "Keys and Endpoints")
+        ![](../media/ui3.png "Keys and Endpoints")
 
    <validation step="7c4e3561-5bcf-4427-a50e-bdb11b1f5113" />
 
@@ -81,32 +81,32 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 
-   ![](../media/L1T2S3-1607.png)
+    ![](../media/L1T2S3-1607.png)
 
 1. On the **Deploy gpt-4o** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9):**
 
-   | Settings | Action |
-   | -- | -- |
-   | **Deployment name (2)** | my-gpt-model |
-   | **Deployment type (3)** | Standard |
-   | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-   | **Model version (5)** | 2024-11-20 |
-   | **Tokens per Minute Rate Limit (thousands) (6)** | 10K |
-   | **Content Filter (7)** | DefaultV2 |
-   | **Enable dynamic quota(8)** | Enabled |
-  
-      ![](../media/L1T2S4-1607.png)
+    | Settings | Action |
+    | -- | -- |
+    | **Deployment name (2)** | my-gpt-model |
+    | **Deployment type (3)** | Standard |
+    | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
+    | **Model version (5)** | 2024-11-20 |
+    | **Tokens per Minute Rate Limit (thousands) (6)** | 10K |
+    | **Content Filter (7)** | DefaultV2 |
+    | **Enable dynamic quota(8)** | Enabled |
 
-      ![](../media/L1T2S4.2-1607.png)
+    ![](../media/L1T2S4-1607.png)
 
-   > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
+    ![](../media/L1T2S4.2-1607.png)
 
-   <validation step="64adeae3-05e0-4fbd-84bb-176e70a4b3ce" />
+    > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    <validation step="64adeae3-05e0-4fbd-84bb-176e70a4b3ce" />
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
 ## Task 3: Set up an application in Cloud Shell
 
@@ -120,11 +120,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/cloudshell-getting-started.png)
+    ![](../media/cloudshell-getting-started.png)
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+    ![](../media/cloudshell-mount-strg-account.png)
 
 1. Within the **Advanced settings** pane, enter the following details:
 
@@ -144,8 +144,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r mslearn-openai -f
-   git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
+    rm -r mslearn-openai -f
+    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
@@ -154,25 +154,25 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     cd mslearn-openai/Labfiles/01-app-develop
     ```
 
-   Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
-   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
+    Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
-   ```bash
-   code .
-   ```
+    ```bash
+    code .
+    ```
 
-  > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+    ![](../media/classic-cloudshell-prompt.png) 
 
  
-   <validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
+    <validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Configure your application
 
@@ -217,13 +217,13 @@ For this task, you'll complete some key parts of the application to enable using
 
     - **C#:**
      
-      ![](../media/L2T3S4-CS.png)   
+        ![](../media/L2T3S4-CS.png)   
 
     - **Python:**
      
-      ![](../media/L2T3S4-py.png) 
+        ![](../media/L2T3S4-py.png) 
 
-       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+        > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
 1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
@@ -253,7 +253,7 @@ For this task, you'll complete some key parts of the application to enable using
     using OpenAI.Chat;
     ```
 
-     ![](../media/L2T3S6-1507.png) 
+    ![](../media/L2T3S6-1507.png) 
 
     **Python:** application.py
 
@@ -262,7 +262,7 @@ For this task, you'll complete some key parts of the application to enable using
     from openai import AsyncAzureOpenAI
     ```
 
-     ![](../media/L2T3S6-py.png)      
+    ![](../media/L2T3S6-py.png)      
 
 1.  In the application code for your language, find the comment **Configure the Azure OpenAI client**, and add code to configure the Azure OpenAI client:
 
@@ -274,7 +274,7 @@ For this task, you'll complete some key parts of the application to enable using
     ChatClient chatClient = azureClient.GetChatClient(oaiDeploymentName);
     ```
 
-     ![](../media/L2T3S7-1507.png)  
+    ![](../media/L2T3S7-1507.png)  
 
     **Python:** application.py
 
@@ -287,9 +287,9 @@ For this task, you'll complete some key parts of the application to enable using
       )
     ```
 
-     ![](../media/L2T3S7-py.png)   
+    ![](../media/L2T3S7-py.png)   
 
-      >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 1. In the function that calls the **Azure OpenAI model**, under the comment **Get response from Azure OpenAI**, add the code to format and send the request to the model.
 
@@ -314,7 +314,7 @@ For this task, you'll complete some key parts of the application to enable using
       Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
     ```
 
-     ![](../media/L2T3S8-1507.png)      
+    ![](../media/L2T3S8-1507.png)      
 
     **Python:** application.py
 
@@ -336,7 +336,7 @@ For this task, you'll complete some key parts of the application to enable using
       )
     ```
 
-     ![](../media/L2T3S8-py.png)  
+    ![](../media/L2T3S8-py.png)  
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
@@ -447,7 +447,7 @@ For this task, you'll complete some key parts of the application to enable using
       }
       ```
     
-   **Python:** application.py
+    **Python:** application.py
 
       ```Python
       import os
@@ -521,7 +521,7 @@ For this task, you'll complete some key parts of the application to enable using
     
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**
 
-   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 ## Task 5: Test your application
 
@@ -535,7 +535,7 @@ Now that your app has been set up, you can just run it to send your request to y
     
     - **Python:** `python application.py`
 
-      > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+    > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 1. For the first iteration, enter the following prompts:
 
@@ -681,90 +681,90 @@ In this task, you will provide a history of the conversation in your prompt to e
 
    **C#**: Program.cs
 
-   ```csharp
-   // Implicit using statements are included
-      using System.Text;
-      using System.Text.Json;
-      using Microsoft.Extensions.Configuration;
-      using Microsoft.Extensions.Configuration.Json;
-      using Azure;
+    ```csharp
+    // Implicit using statements are included
+    using System.Text;
+    using System.Text.Json;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Configuration.Json;
+    using Azure;
       
-      // Add Azure OpenAI package
-      using Azure.AI.OpenAI;
+    // Add Azure OpenAI package
+    using Azure.AI.OpenAI;
       
       // Build a config object and retrieve user settings.
       IConfiguration config = new ConfigurationBuilder()
-          .AddJsonFile("appsettings.json")
-          .Build();
-      string? oaiEndpoint = config["AzureOAIEndpoint"];
-      string? oaiKey = config["AzureOAIKey"];
-      string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+        .AddJsonFile("appsettings.json")
+        .Build();
+    string? oaiEndpoint = config["AzureOAIEndpoint"];
+    string? oaiKey = config["AzureOAIKey"];
+    string? oaiDeploymentName = config["AzureOAIDeploymentName"];
       
-      if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-      {
-          Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-          return;
-      }
+    if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+    {
+        Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+        return;
+    }
       
-      // Initialize the Azure OpenAI client...
-      // Initialize the Azure OpenAI client
-         OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    // Initialize the Azure OpenAI client...
+    // Initialize the Azure OpenAI client
+        OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
       
-      // System message to provide context to the model
-      string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+    // System message to provide context to the model
+    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
       
-      // Initialize messages list
-      var messagesList = new List<ChatRequestMessage>()
-      {
-          new ChatRequestSystemMessage(systemMessage),
-      };
+    // Initialize messages list
+    var messagesList = new List<ChatRequestMessage>()
+    {
+        new ChatRequestSystemMessage(systemMessage),
+    };
       
       
-      do {
-          Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
-          string? inputText = Console.ReadLine();
-          if (inputText == "quit") break;
+    do {
+        Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
+        string? inputText = Console.ReadLine();
+        if (inputText == "quit") break;
       
-          // Generate summary from Azure OpenAI
-          if (inputText == null) {
-              Console.WriteLine("Please enter a prompt.");
-              continue;
-          }
+        // Generate summary from Azure OpenAI
+        if (inputText == null) {
+            Console.WriteLine("Please enter a prompt.");
+            continue;
+        }
           
-          Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
+        Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
       
-          // Add code to send request...
-         // Add code to send request...
-          // Build completion options object
-          messagesList.Add(new ChatRequestUserMessage(inputText));
+        // Add code to send request...
+        // Add code to send request...
+        // Build completion options object
+        messagesList.Add(new ChatRequestUserMessage(inputText));
       
-          ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-          {
-              MaxTokens = 1200,
-              Temperature = 0.7f,
-              DeploymentName = oaiDeploymentName
-          };
+        ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+        {
+            MaxTokens = 1200,
+            Temperature = 0.7f,
+            DeploymentName = oaiDeploymentName
+        };
       
-          // Add messages to the completion options
-          foreach (ChatRequestMessage chatMessage in messagesList)
-          {
-              chatCompletionsOptions.Messages.Add(chatMessage);
-          }
+        // Add messages to the completion options
+        foreach (ChatRequestMessage chatMessage in messagesList)
+        {
+            chatCompletionsOptions.Messages.Add(chatMessage);
+        }
       
-          // Send request to Azure OpenAI model
-          ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+        // Send request to Azure OpenAI model
+        ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
       
-          // Return the response
-          string completion = response.Choices[0].Message.Content;
+        // Return the response
+        string completion = response.Choices[0].Message.Content;
       
-          // Add generated text to messages list
-          messagesList.Add(new ChatRequestAssistantMessage(completion));
+        // Add generated text to messages list
+        messagesList.Add(new ChatRequestAssistantMessage(completion));
       
-          Console.WriteLine("Response: " + completion + "\n");
+        Console.WriteLine("Response: " + completion + "\n");
       
       
-      } while (true);
-      ```
+    } while (true);
+    ```
 
     **Python**: test-openai-model.py
 
