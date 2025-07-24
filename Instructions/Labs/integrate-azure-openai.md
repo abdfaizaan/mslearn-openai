@@ -118,17 +118,17 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+   ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
 1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-    ![](../media/cloudshell-getting-started.png)
+   ![](../media/cloudshell-getting-started.png)
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-    ![](../media/cloudshell-mount-strg-account.png)
+   ![](../media/cloudshell-mount-strg-account.png)
 
 1. Within the **Advanced settings** pane, enter the following details:
 
@@ -154,7 +154,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
-    ```bash
+   ```bash
     cd mslearn-openai/Labfiles/01-app-develop
     ```
 
@@ -162,7 +162,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    
     Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
-    ```bash
+   ```bash
     code .
     ```
 
@@ -230,7 +230,7 @@ For this task, you'll complete some key parts of the application to enable using
      
         ![](../media/L2T3S4-py.png) 
 
-        > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
 1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
