@@ -111,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="64adeae3-05e0-4fbd-84bb-176e70a4b3ce" />
-   
+
 ## Task 3: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
