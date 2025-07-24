@@ -102,7 +102,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/L1T2S4.2-1607.png)
 
-    > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
+> **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
