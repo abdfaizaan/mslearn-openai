@@ -132,14 +132,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Within the **Advanced settings** pane, enter the following details:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
-    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+   - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+   - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
+   - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
+   - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
+   - **File share**: Create a new file share named **none** (5)
+   - Click **Create Storage** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -147,7 +147,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-    ```bash
+   ```bash
     rm -r mslearn-openai -f
     git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
@@ -166,9 +166,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     code .
     ```
 
-     > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
-     ![](../media/classic-cloudshell-prompt.png) 
+    ![](../media/classic-cloudshell-prompt.png) 
 
  
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
