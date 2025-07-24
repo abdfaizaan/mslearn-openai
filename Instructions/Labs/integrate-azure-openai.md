@@ -95,9 +95,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     | **Content Filter (7)** | DefaultV2 |
     | **Enable dynamic quota(8)** | Enabled |
 
-    ![](../media/L1T2S4-1607.png)
+     ![](../media/L1T2S4-1607.png)
 
-    ![](../media/L1T2S4.2-1607.png)
+     ![](../media/L1T2S4.2-1607.png)
 
      > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
 
