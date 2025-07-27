@@ -466,7 +466,7 @@ Ahora que su aplicación ha sido configurada, puede ejecutarla para enviar su so
 
     - **C#:** `dotnet run`
     
-    - **Python:** `python application.py
+    - **Python:** `python application.py`
 
         > **Sugerencia**: Puede utilizar el icono **Maximizar tamaño del panel** (**^**) en la barra de herramientas de la terminal para ver más texto de la consola.
 

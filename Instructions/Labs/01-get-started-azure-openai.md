@@ -150,7 +150,7 @@ En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo 
          Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer.
     ```
     
-    * Haga clic en **Generar (3)** para enviar el prompt y recibir la respuesta.
+    * Haga clic en **Generate (3)** para enviar el prompt y recibir la respuesta.
 
     ![](../media/170725\(02\).png)
 
@@ -178,7 +178,7 @@ En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo 
 
 En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo de IA y probar sus capacidades conversacionales mediante una interfaz de chat simulada.
 
-1. Vaya a la sección **Recursos compartidos** en el menú de la izquierda y seleccione **Implementaciones (1)**. En la lista de implementaciones disponibles, elija **my-gpt-model** y haga clic en **Abrir en Área de juegos de Chat (2)**. Esta acción iniciará el **Área de juegos de Chat**, donde podrá interactuar con el modelo implementado en una interfaz conversacional.
+1. Vaya a la sección **Recursos compartidos** en el menú de la izquierda y seleccione **Implementaciones (1)**. En la lista de implementaciones disponibles, elija **my-gpt-model** y haga clic en **Abrir en Área de juegos (2)**. Esta acción iniciará el **Área de juegos de chat**, donde podrá interactuar con el modelo implementado en una interfaz conversacional.
 
     ![](../media/170725(03).png)
 
