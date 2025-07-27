@@ -8,7 +8,7 @@ El Servicio Azure OpenAI incorpora los modelos de IA Generativa desarrollados po
 
 ## Objetivo
 
-Al final de este laboratorio, será capaz de:
+En este laboratorio, aprenderá a usar OpenAI para crear soluciones de lenguaje natural. Comenzará configurando el entorno de OpenAI en Azure y explorando las características básicas de los modelos de OpenAI para el procesamiento del lenguaje. Al finalizar el laboratorio, creará e implementará una aplicación sencilla que pueda procesar y responder a la entrada del usuario, a la vez que aprenderá a mejorar el rendimiento y la calidad de los resultados del modelo.
 
 - **Comenzar a usar el Servicio Azure OpenAI**: Este ejercicio práctico tiene como objetivo aprovisionar un recurso de Azure OpenAI e implementar un modelo. Explore las capacidades del modelo en el área de juegos (Playground) Completions y luego interactúe con él mediante el área de juegos (Playground) Chat. Afine las respuestas mediante el ajuste de los prompts y los parámetros, y aproveche la generación de código para automatizar las tareas.
 - **Utilizar los SDKs de Azure OpenAI en su aplicación**: Este ejercicio práctico tiene como objetivo aprovisionar un recurso de Azure OpenAI, implementar un modelo, establecer y configurar una aplicación en Cloud Shell y luego ejecutar la aplicación, demostrando el ciclo de vida completo desde la creación del recurso hasta la implementación y ejecución de la aplicación.
@@ -33,18 +33,14 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
 1. **Azure CloudShell**: Azure CloudShell ofrece una experiencia shell integrada basada en navegador para administrar los recursos de Azure. Proporciona un entorno listo para usar con herramientas preinstaladas y acceso tanto a Bash como a PowerShell.
 
 ## Comenzando con el Laboratorio
+
+¡Bienvenido al taller **Comience a Usar OpenAI y Cree Una Solución de Lenguaje Natural**! En este laboratorio, aprenderá a usar los modelos de OpenAI para crear soluciones de lenguaje natural. Explorará los conceptos básicos y trabajará en la creación e implementación de aplicaciones que comprenden y procesan el lenguaje. Comencemos con el laboratorio y exploremos las posibilidades de la IA.
  
 ## Accediendo a Su Ambiente de Laboratorio
  
 Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
 ![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/getting-started-spanish-openai-1.png)
-
-### Guía de laboratorio Acercar/alejar
-
-Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
-
-   ![Manage Your Virtual Machine](../media/nlsg2.png)
 
 ### Máquina Virtual & Guía de Laboratorio
  
@@ -64,13 +60,25 @@ Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separad
  
 ## Administrando Su Máquina Virtual
  
-Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
+Siéntase libre de **Iniciar, Detener o Reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
  
 ![Administre Su Máquina Virtual](../media/getting-started-spanish-openai-3.png)
 
+### Acercar/Alejar Guía de laboratorio
+
+Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
+
+   ![Manage Your Virtual Machine](../media/nlsg2.png)
+
+## Validación de Laboratorio
+
+Tras completar la tarea, pulse el botón **Validar** en la pestaña Validación integrada en la guía de laboratorio. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea; de lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso siguiendo las instrucciones de la guía de laboratorio.
+
+   ![Validación en línea](../media/getting-started-eng-openai-4.png)
+
 ## Comenzando con el Portal de Azure
  
-1. En su máquina virtual, haga clic en el icono de Azure Portal como se muestra a continuación:
+1. En LabVM, haga clic en el acceso directo **Azure Portal** del navegador Microsoft Edge, que se crea en el escritorio.
  
    ![Inicie el Portal de Azure](../media/sc900-image(1).png)
  
@@ -90,8 +98,6 @@ Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuan
  
 5. Si aparece una ventana emergente de **Bienvenido a Microsoft Azure**, simplemente haga clic en **Cancelar** para omitir la visita guiada.
  
-   Este laboratorio le brindará las habilidades para implementar y personalizar los modelos de Azure OpenAI, permitiéndole crear aplicaciones de IA avanzadas como chatbots y sistemas de recomendación.
-
 ## Contacto de Soporte
 
 El equipo de soporte de CloudLabs está disponible las 24 horas del día, los 7 días de la semana, los 365 días del año, por correo electrónico y chat en vivo para garantizar una asistencia perfecta en cualquier momento. Ofrecemos canales de soporte dedicados y diseñados específicamente para estudiantes e instructores, garantizando que todas sus necesidades se aborden de manera rápida y eficiente.
@@ -103,6 +109,6 @@ Contactos de Soporte para Estudiantes:
 
 Ahora, haga clic en Siguiente en la esquina inferior derecha para pasar a la página siguiente.
 
-![Start Your Azure Journey](../media/nlsg6.png)
+![Comience Su Recorrido Hacia Azure](../media/nlsg6.png)
 
 ## ¡¡Feliz aprendizaje!!

@@ -2,10 +2,9 @@
 
 ### Duración Estimada: 120 minutos
 
-## Escenario de laboratorio
-Con el Servicio Azure OpenAI, los desarrolladores pueden crear chatbots, modelos de lenguaje y otras aplicaciones que se destacan en la comprensión del lenguaje humano natural. Azure OpenAI proporciona acceso a modelos de IA pre-entrenados, así como a un conjunto de APIs y herramientas para personalizar y ajustar estos modelos para cumplir con los requisitos específicos de su aplicación. En este ejercicio, aprenderá a implementar un modelo en Azure OpenAI y a usarlo en su propia aplicación.
+En el laboratorio, desempeñará el papel de un desarrollador de software al que se le ha encargado implementar una aplicación que pueda usar IA generativa para ayudar a proporcionar recomendaciones de senderismo. Las técnicas utilizadas en el ejercicio pueden aplicarse a cualquier aplicación que utilice APIs de Azure OpenAI.
 
-En el escenario de este ejercicio, desempeñará el papel de un desarrollador de software al que se le ha encargado implementar una aplicación que pueda usar IA generativa para ayudar a proporcionar recomendaciones de senderismo. Las técnicas utilizadas en el ejercicio se pueden aplicar a cualquier aplicación que desee usar las APIs de Azure OpenAI.
+Con el Servicio Azure OpenAI, los desarrolladores pueden crear chatbots, modelos de lenguaje y otras aplicaciones que se destacan en la comprensión del lenguaje humano natural. Azure OpenAI proporciona acceso a modelos de IA pre-entrenados, así como a un conjunto de APIs y herramientas para personalizar y ajustar estos modelos para cumplir con los requisitos específicos de su aplicación. En este ejercicio, aprenderá a implementar un modelo en Azure OpenAI y a usarlo en su propia aplicación.
 
 ## Objetivos del laboratorio
 En este laboratorio, completará las siguientes tareas:
@@ -13,27 +12,27 @@ En este laboratorio, completará las siguientes tareas:
 - Tarea 1: Aprovisionar un recurso Azure OpenAI
 - Tarea 2: Configurar una aplicación en Cloud Shell
 - Tarea 3: Configurar su aplicación
-- Tarea 4: Ejecutar su aplicación
+- Tarea 4: Probar su aplicación
 
 ### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
 Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
 
-1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)**.
+1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)** en la sección de Servicios.
 
-   ![](../media/nlp1.png)
+   ![](../media/select-openai-1607.png)
 
-2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. En la página **AI Foundry  | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/nls303.png)
+   ![](../media/180625(12).png)
 
 3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
-      - Finalmente, copie la URL del **Punto de conexión (4)** de la API haciendo clic en copiar al portapapeles. Péguelo en un editor de texto como el Bloc de notas para usarlo más adelante.
+      - Finalmente, copie la URL del **Punto de conexión (4)** de la API haciendo clic en copiar al portapapeles. 
 
-        ![](../media/nlp19.png "Keys and Endpoints")
+        ![](../media/180625(13).png "Claves y puntos de conexión")
 
 ### Tarea 2: Configurar una aplicación en Cloud Shell
 
@@ -41,9 +40,16 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
 1. En el [portal de Azure](https://portal.azure.com?azure-portal=true), seleccione el botón **[>_]** (*Cloud Shell*) en la parte superior de la página a la derecha del cuadro de búsqueda. Se abrirá un panel de Cloud Shell en la parte inferior del portal.
 
-   ![](../media/nlp20.png)
+   ![Captura de pantalla de cómo iniciar Cloud Shell haciendo clic en el ícono a la derecha del cuadro de búsqueda superior](../media/cloudshell-launch-portal.png#lightbox)
+
+   
+   >**Nota:** Si no puede encontrar Cloud Shell, haga clic en los **puntos suspensivos (...) (1)** y luego seleccione **Cloud Shell (2)** del menú.
+
+    ![](../media/180625(14).png)
 
 2. La primera vez que abra Cloud Shell, es posible que se le solicite que elija el tipo de shell que desea usar (*Bash* o *PowerShell*). Seleccione **Bash**. Si no ve esta opción, omita el paso.
+
+    ![](../media/180625(15).png)
 
 3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento (1)**, seleccione su **Suscripción de la cuenta de almacenamiento (2)** en el menú desplegable y haga clic en **Aplicar (3)**.
 
@@ -53,60 +59,59 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. En el panel **Configuración avanzada**, ingrese los siguientes detalles:
+5. En la página **Crear cuenta de almacenamiento**, ingrese los siguientes detalles:
 
-    - **Suscripción**: Predeterminada - Elija la única suscripción existente asignada para este laboratorio **(1)**.
-    - **Región**: **<inject key="Region" enableCopy="false" />** **(2)**
-    - **Grupo de recursos**: Seleccione Usar existente **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
-    - **Cuenta de almacenamiento**: Ingresar **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
-    - **Recurso compartido de archivos**: Cree un nuevo recurso compartido de archivos llamado **none** (5)
-    - Haga clic en **Crear** (6)
+    - Suscripción: Elija la suscripción predeterminada **(1)**.
+    - Grupo de recursos: Seleccione **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Región: **<inject key="Region" enableCopy="false" /> (3)**
+    - Nombre de la cuenta de almacenamiento: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Recurso compartido de archivos: Cree un nuevo recurso compartido de archivos llamado **none** **(5)**
+    - Haga clic en **Crear** **(6)**
 
-      ![](../media/nlp21.png "Crear almacenamiento - configuración avanzada")
+      ![](../media/nlpe18.png "Crear almacenamiento - configuración avanzada")
 
 6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 7. Una vez que se abra la terminal, haga clic en **Configuración (1)** y seleccione **Ir a la versión clásica (2)**.
 
-   ![](../media/nlp22.png)
+   ![](../media/nlpe19.png)
 
-8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
+8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `mslearn-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   rm -r mslearn-openai -f
+   git clone https://github.com/MicrosoftLearning/mslearn-openai mslearn-openai
     ```
 
-    ![](../media/nlp24.png)    
+    ![](../media/L2T2S8-1507.png)    
   
-9. Los archivos se descargan en una carpeta llamada **azure-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
+9. Los archivos se descargan en una carpeta llamada **mslearn-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
 
     ```bash
-   cd azure-openai/Labfiles/02-azure-openai-api
+   cd mslearn-openai/Labfiles/01-app-develop
     ```
 
     Se han proporcionado aplicaciones para C# y Python, así como un archivo de texto de ejemplo que utilizará para probar el resumen. Ambas aplicaciones cuentan con la misma funcionalidad.
 
-10. Abra el editor de código integrado y observe el archivo de texto que resumirá con su modelo ubicado en `text-files/sample-text.txt`. Use el siguiente comando para abrir los archivos de laboratorio en el editor de código.
+10. Abra el editor de código integrado y observe el archivo de texto que resumirá con su modelo. Use el siguiente comando para abrir los archivos de laboratorio en el editor de código.
 
     ```bash
     code .
     ```
    
-#### Validación
-
-   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
-
 > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
 > - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
+   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
+
+
 ### Tarea 3: Configurar su aplicación
 
-Para este ejercicio, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
+En esta tarea, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
 
-1. En el editor de código, expanda la carpeta **CSharp** or **Python**, según su lenguaje de preferencia.
+1. En el editor de código, expanda la carpeta **CSharp** o **Python**, según su lenguaje de preferencia.
 
 1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
 
@@ -115,13 +120,13 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
    
    <PropertyGroup>
    <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
+   <TargetFramework>net9.0</TargetFramework>
    <ImplicitUsings>enable</ImplicitUsings>
    <Nullable>enable</Nullable>
    </PropertyGroup>
    
     <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
     </ItemGroup>
@@ -134,8 +139,6 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
    
     </Project> 
    ```
-
-    ![](../media/nlp25.png) 
 
 1. Abra el archivo de configuración de su lenguaje:
 
@@ -153,318 +156,399 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
      
       ![](../media/nlp27.png)           
 
-1. Navegue hasta la carpeta de su lenguaje preferido e instale los paquetes necesarios.
+       > **Nota:** Puede obtener los valores del punto de conexión y la clave de Azure OpenAI desde la sección **Clave y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
 
-    **C#** : 
+1. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
+
+  **C#:** 
 
     ```bash
     cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    dotnet add package Azure.AI.OpenAI --version 2.1.0
     ```
 
-    **Python** : 
+    **Python:** 
 
     ```bash
     cd Python
-    pip install python-dotenv --user
-    pip install openai==1.56.2 --user
+    python -m venv labenv
+   ./labenv/bin/Activate.ps1
+    pip install python-dotenv openai==1.65.2 --user
     ```
 
-1. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.
+1. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
-    // Add Azure OpenAI package
+    // Add Azure OpenAI packages
     using Azure.AI.OpenAI;
+    using OpenAI.Chat;
     ```
 
-     ![](../media/nlp31.png)    
+     ![](../media/L2T3S6-1507.png) 
 
-    **Python**: test-openai-model.py
+    **Python:** application.py
 
     ```python
     # Add Azure OpenAI package
-    from openai import AzureOpenAI
+    from openai import AsyncAzureOpenAI
     ```
 
-     ![](../media/nlp28.png)      
+     ![](../media/L2T3S6-py.png)        
 
-1. En el código de la aplicación para su lenguaje, reemplace el comentario ***Initialize the Azure OpenAI client...*** con el siguiente código para inicializar el cliente y definir nuestro mensaje del sistema.
+1.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
 
-    **C#**: Program.cs
+   **C#:** Program.cs
 
     ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    
-    // System message to provide context to the model
-    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+    // Configure the Azure OpenAI client
+    AzureOpenAIClient azureClient = new (new Uri(oaiEndpoint), new ApiKeyCredential(oaiKey));
+    ChatClient chatClient = azureClient.GetChatClient(oaiDeploymentName);
     ```
 
-     ![](../media/nlp32.png)    
+     ![](../media/L2T3S7-1507.png)  
 
-    **Python**: test-openai-model.py
+    **Python:** application.py
 
     ```python
-    # Initialize the Azure OpenAI client
-    client = AzureOpenAI(
-            azure_endpoint = azure_oai_endpoint, 
-            api_key=azure_oai_key,  
-            api_version="2024-02-15-preview"
-            )
-    
-    # Create a system message
-    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
-        If no area is specified, I will default to near Rainier National Park. 
-        I will then provide three suggestions for nearby hikes that vary in length. 
-        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-        """
+    # Configure the Azure OpenAI client
+    client = AsyncAzureOpenAI(
+       azure_endpoint = azure_oai_endpoint, 
+       api_key=azure_oai_key,  
+       api_version="2024-02-15-preview"
+      )
     ```
 
-     ![](../media/nlp29.png)     
-
-      >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
+     ![](../media/L2T3S7-py.png)   
+     
+      >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
-1. Reemplace el comentario ***Add code to build request...*** con el código necesario para generar la solicitud; especificando los distintos parámetros para su modelo, como `prompt` y `temperatura`.
+1. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
 
-    **C#**: Program.cs
+     **C#:** Program.cs
 
     ```csharp
-    // Add code to send request...
-    // Build completion options object
-    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-    {
-        Messages =
-        {
-            new ChatRequestSystemMessage(systemMessage),
-            new ChatRequestUserMessage(inputText),
-        },
-        MaxTokens = 400,
-        Temperature = 0.7f,
-        DeploymentName = oaiDeploymentName
-    };
-
-    // Send request to Azure OpenAI model
-    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-
-    // Print the response
-    string completion = response.Choices[0].Message.Content;
-    Console.WriteLine("Response: " + completion + "\n");
+      // Get response from Azure OpenAI
+      ChatCompletionOptions chatCompletionOptions = new ChatCompletionOptions()
+      {
+         Temperature = 0.7f,
+         MaxOutputTokenCount = 800
+      };
+      
+      ChatCompletion completion = chatClient.CompleteChat(
+         [
+             new SystemChatMessage(systemMessage),
+             new UserChatMessage(userMessage)
+         ],
+         chatCompletionOptions
+      );
+      
+      Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
     ```
 
-     ![](../media/nlp33.png)    
+     ![](../media/L2T3S8-1507.png)      
 
-    **Python**: test-openai-model.py
+    **Python:** application.py
 
     ```python
-    # Add code to send request...
-    # Send request to Azure OpenAI model
-    response = client.chat.completions.create(
-        model=azure_oai_deployment,
-        temperature=0.7,
-        max_tokens=400,
-        messages=[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": input_text}
-        ]
-    )
-    generated_text = response.choices[0].message.content
-
-    # Print the response
-    print("Response: " + generated_text + "\n")
+    # Get response from Azure OpenAI
+      messages =[
+         {"role": "system", "content": system_message},
+         {"role": "user", "content": user_message},
+      ]
+      
+      print("\nSending request to Azure OpenAI model...\n")
+      
+      # Call the Azure OpenAI model
+      response = await client.chat.completions.create(
+         model=model,
+         messages=messages,
+         temperature=0.7,
+         max_tokens=800
+      )
     ```
 
-     ![](../media/nlp30.png)     
+     ![](../media/L2T3S8-py.png)      
 
-1. Antes de guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
+1. Antes de poder guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
 
     **C#**: Program.cs
       
       ```CSharp
       // Implicit using statements are included
       using System.Text;
+      using System.ClientModel;
       using System.Text.Json;
       using Microsoft.Extensions.Configuration;
       using Microsoft.Extensions.Configuration.Json;
       using Azure;
       
-      // Add Azure OpenAI package
-      using Azure.AI.OpenAI;
+      // Add Azure OpenAI packages
+          using Azure.AI.OpenAI;
+          using OpenAI.Chat;
       
       // Build a config object and retrieve user settings.
+      class ChatMessageLab
+      {
+      
+      static string? oaiEndpoint;
+      static string? oaiKey;
+      static string? oaiDeploymentName;
+          static void Main(string[] args)
+      {
       IConfiguration config = new ConfigurationBuilder()
           .AddJsonFile("appsettings.json")
           .Build();
-      string? oaiEndpoint = config["AzureOAIEndpoint"];
-      string? oaiKey = config["AzureOAIKey"];
-      string? oaiDeploymentName = config["AzureOAIDeploymentName"];
       
-      if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-      {
-          Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-          return;
-      }
+      oaiEndpoint = config["AzureOAIEndpoint"];
+      oaiKey = config["AzureOAIKey"];
+      oaiDeploymentName = config["AzureOAIDeploymentName"];
       
-      // Initialize the Azure OpenAI client...
-      OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-      
-      // System message to provide context to the model
-      string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+      //Initialize messages list
       
       do {
-          Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
-          string? inputText = Console.ReadLine();
-          if (inputText == "quit") break;
+          // Pause for system message update
+          Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
+          Console.ReadKey();
+          
+          Console.WriteLine("\nUsing system message from system.txt");
+          string systemMessage = System.IO.File.ReadAllText("system.txt"); 
+          systemMessage = systemMessage.Trim();
       
-          // Generate summary from Azure OpenAI
-          if (inputText == null) {
-              Console.WriteLine("Please enter a prompt.");
+          Console.WriteLine("\nEnter user message or type 'quit' to exit:");
+          string userMessage = Console.ReadLine() ?? "";
+          userMessage = userMessage.Trim();
+          
+          if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
+          {
+              break;
+          }
+          else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
+          {
+              Console.WriteLine("Please enter a system and user message.");
               continue;
           }
-          
-          Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
-      
-          // Add code to send request...
-          // Build completion options object
-          ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+          else
           {
-              Messages =
-              {
-                  new ChatRequestSystemMessage(systemMessage),
-                  new ChatRequestUserMessage(inputText),
-              },
-              MaxTokens = 400,
-              Temperature = 0.7f,
-              DeploymentName = oaiDeploymentName
-          };
+              // Format and send the request to the model
       
-          // Send request to Azure OpenAI model
-          ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-      
-          // Print the response
-          string completion = response.Choices[0].Message.Content;
-          Console.WriteLine("Response: " + completion + "\n");
-      
+              GetResponseFromOpenAI(systemMessage, userMessage);
+          }
       } while (true);
+      
+      }
+      
+      // Define the function that gets the response from Azure OpenAI endpoint
+      private static void GetResponseFromOpenAI(string systemMessage, string userMessage)  
+      {   
+          Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
+      
+          if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+          {
+              Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+              return;
+          }
+      
+      // Configure the Azure OpenAI client
+      AzureOpenAIClient azureClient = new (new Uri(oaiEndpoint), new ApiKeyCredential(oaiKey));
+      ChatClient chatClient = azureClient.GetChatClient(oaiDeploymentName);
+      
+      
+      // Get response from Azure OpenAI
+      
+      ChatCompletionOptions chatCompletionOptions = new ChatCompletionOptions()
+      {
+         Temperature = 0.7f,
+         MaxOutputTokenCount = 800
+      };
+      
+      ChatCompletion completion = chatClient.CompleteChat(
+         [
+             new SystemChatMessage(systemMessage),
+             new UserChatMessage(userMessage)
+         ],
+         chatCompletionOptions
+      );
+      
+      Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
+      
+      
+      
+      }
+      
+      }
       ```
     
-   **Python**: test-openai-model.py
+   **Python:** application.py
 
       ```Python
       import os
+      import asyncio
       from dotenv import load_dotenv
       
       # Add Azure OpenAI package
-      from openai import AzureOpenAI
+      from openai import AsyncAzureOpenAI
       
-      def main(): 
-              
+      async def main(): 
           try: 
-          
               # Get configuration settings 
               load_dotenv()
               azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
               azure_oai_key = os.getenv("AZURE_OAI_KEY")
               azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
               
-              # Initialize the Azure OpenAI client...
-              client = AzureOpenAI(
-                      azure_endpoint = azure_oai_endpoint, 
-                      api_key=azure_oai_key,  
-                      api_version="2024-02-15-preview"
-                      )
-              
-              # Create a system message
-              system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
-                  If no area is specified, I will default to near Rainier National Park. 
-                  I will then provide three suggestions for nearby hikes that vary in length. 
-                  I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-                  """
-                    
+              # Configure the Azure OpenAI client
+              client = AsyncAzureOpenAI(
+                  azure_endpoint=azure_oai_endpoint, 
+                  api_key=azure_oai_key,  
+                  api_version="2024-02-15-preview"
+              )
+      
               while True:
-                  # Get input text
-                  input_text = input("Enter the prompt (or type 'quit' to exit): ")
-                  if input_text.lower() == "quit":
+                  # Pause the app to allow the user to enter the system prompt
+                  print("------------------\nPausing the app to allow you to change the system prompt.\nPress enter to continue...")
+                  input()
+      
+                  # Read in system message and prompt for user message
+                  system_text = open(file="system.txt", encoding="utf8").read().strip()
+                  user_text = input("Enter user message, or 'quit' to exit: ")
+                  if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                      print('Exiting program...')
                       break
-                  if len(input_text) == 0:
-                      print("Please enter a prompt.")
-                      continue
       
-                  print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
-                                    
-                  # Add code to send request...
-                  # Send request to Azure OpenAI model
-                  response = client.chat.completions.create(
-                      model=azure_oai_deployment,
-                      temperature=0.7,
-                      max_tokens=400,
-                      messages=[
-                          {"role": "system", "content": system_message},
-                          {"role": "user", "content": input_text}
-                      ]
+                  # Format and send the request to the model
+                  await call_openai_model(
+                      system_message=system_text, 
+                      user_message=user_text, 
+                      model=azure_oai_deployment, 
+                      client=client
                   )
-                  generated_text = response.choices[0].message.content
       
-                  # Print the response
-                  print("Response: " + generated_text + "\n")
-                        
           except Exception as ex:
               print(ex)
       
+      # Define the function that will get the response from Azure OpenAI endpoint
+      async def call_openai_model(system_message, user_message, model, client):
+          # Get response from Azure OpenAI
+          messages = [
+              {"role": "system", "content": system_message},
+              {"role": "user", "content": user_message},
+          ]
+          
+          print("\nSending request to Azure OpenAI model...\n")
+          
+          # Call the Azure OpenAI model
+          response = await client.chat.completions.create(
+              model=model,
+              messages=messages,
+              temperature=0.7,
+              max_tokens=800
+          )
+      
+          print("Response:\n" + response.choices[0].message.content + "\n")
+      
       if __name__ == '__main__': 
-          main()
+          asyncio.run(main())
       ```
     
-1. Para guardar los cambios realizados en el archivo, haga clic derecho en el archivo desde el panel izquierdo en la ventana de código y presione **Guardar**
+1. Para guardar los cambios realizados en el archivo, haga clic derecho en el espacio en blanco del editor de texto del archivo y presione **Guardar**.
 
-   >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
+   >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
-### Tarea 4: Ejecutar su aplicación
+### Tarea 4: Probar su aplicación
 
-Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitud a su modelo y observe la respuesta.
+Ahora que su aplicación ha sido configurada, puede ejecutarla para enviar su solicitud a su modelo y observar la respuesta. Notará que la única diferencia entre las diferentes opciones es el contenido del prompt; todos los demás parámetros (como el recuento de tokens y la temperatura) permanecen iguales para cada solicitud.
+
+1. En la carpeta de su lenguaje preferido, abre el archivo **system.txt**. Para cada interacción, introduzca el **Mensaje del sistema** en este archivo y guárdelo. Cada iteración se pausará primero para que pueda modificar el mensaje del sistema.
 
 1. En el panel de terminal interactivo, asegúrese de que el contexto de la carpeta sea la carpeta de su lenguaje preferido. Luego, ingrese el siguiente comando para ejecutar la aplicación.
 
-    - **C#**: `dotnet run`
+    - **C#:** `dotnet run`
     
-    - **Python**: `python test-openai-model.py`
+    - **Python:** `python application.py
 
-    > **Sugerencia**: Puede utilizar el icono **Maximizar tamaño del panel** (**^**) en la barra de herramientas de la terminal para ver más texto de la consola.
+        > **Sugerencia**: Puede utilizar el icono **Maximizar tamaño del panel** (**^**) en la barra de herramientas de la terminal para ver más texto de la consola.
 
-2. Cuando se le solicite, ingrese el texto `What hike should I do near Rainier?`.
+1. En la terminal, le pedirá que ingrese una tecla para continuar.
 
-    - **C#**:
+    ![](../media/170725(08).png)
 
-      ![](../media/nlp34.png)     
+1. Para la primera iteración, ingrese los siguientes prompts:
 
-    - **Python**:
+   **Mensaje del sistema:**
+   
+   ```
+   You are an AI assistant
+   ```
+   
+   >>**Nota:** El mensaje del sistema debe darse en system.txt en C# o Python. Siga los mismos pasos para los prompts restantes.
+   
+1. En Ingresar mensaje del usuario, proporcione el siguiente mensaje.
 
-      ![](../media/nlp36.png)          
+   **Mensaje del usuario:**
+   
+   ```
+   Write an intro for a new wildlife Rescue 
+   ```
 
-3. Observe el resultado, teniendo en cuenta que la respuesta sigue las pautas proporcionadas en el mensaje del sistema que agregó al arreglo *messages*.
+   >>**Nota:** El mensaje del usuario debe darse en la terminal en C# o Python. Siga los mismos pasos para los prompts restantes.
 
-4. Proporcione el prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` y observe la salida.
+1. Observe la salida. El modelo de IA probablemente producirá una buena introducción genérica a un rescate de vida silvestre.
 
-5. En el archivo de código de su lenguaje preferido, cambie el valor del parámetro *temperature* en su solicitud a **1.0** y guarde el archivo.
+1. A continuación, ingrese los siguientes prompts, que especifican un formato para la respuesta:
 
-    - **C#**:
+   **Mensaje del sistema:**
+   
+   ```
+   You are an AI assistant helping to write emails
+   ```
 
-      ![](../media/nlp35.png) 
+   **Mensaje del usuario:**
+   
+   ```
+   Write a promotional email for a new wildlife rescue, including the following:-Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website
+   ```
 
-    - **Python**:
+1. Observe la salida. Esta vez, probablemente verá el formato de un correo electrónico con los animales específicos incluidos, así como la llamada a donaciones.
 
-      ![](../media/nlp37.png)           
+1. A continuación, ingrese los siguientes prompts que además especifican el contenido:
 
-6. Vuelva a ejecutar la aplicación siguiendo los prompts anteriores y observe el resultado.
+   **Mensaje del sistema:**
+   
+   ```
+   You are an AI assistant helping to write emails
+   ```
 
-Aumentar la temperatura suele provocar que la respuesta varíe, incluso cuando se proporciona el mismo texto, debido al aumento de la aleatoriedad. Puede ejecutarla varias veces para ver cómo puede cambiar el resultado. Intente usar diferentes valores para la temperatura con la misma entrada.
+   **Mensaje del usuario:**
 
-## Revisión
+   ```
+   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+   ```
+   
+1. Observe la salida, y vea cómo el correo electrónico ha cambiado basándose en sus instrucciones claras.   
+
+1. A continuación, ingrese los siguientes prompts donde agregamos detalles sobre el tono al mensaje del sistema:
+
+   **Mensaje del sistema:**
+   
+   ```
+   You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.
+   ```
+
+   **Mensaje del usuario:**
+
+   ```
+   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits..
+   ```
+
+1. Observe la salida. Esta vez, probablemente verá el correo electrónico en un formato similar, pero con un tono mucho más informal. ¡Probablemente incluso verá bromas incluidas!
+
+## Resumen
 
 En este laboratorio, logró lo siguiente:
 - Aprovisionar un recurso de Azure OpenAI
-- Implementar un modelo de OpenAI dentro de Azure AI Foundry portal
+- Implementar un modelo de OpenAI dentro del portal Azure AI Foundry
 - Integrar modelos de Azure OpenAI en sus aplicaciones
 
 ### Ha completado con éxito el laboratorio
