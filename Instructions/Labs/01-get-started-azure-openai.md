@@ -21,7 +21,7 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)**.
 
-   ![](../media/nlp1.png)
+   ![](../media/select-openai-1607.png)
 
 2. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear**.
 
@@ -62,7 +62,7 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
     ![](../media/180625(03).png)
 
-1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Ir al portal de Azure AI Foundry (2)** para acceder al **portal de Azure AI Foundry**.
+1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Go to Azure AI Foundry portal (2)** para acceder al **portal de Azure AI Foundry**.
 
     ![](../media/goto-aiportal-1607.png)
 

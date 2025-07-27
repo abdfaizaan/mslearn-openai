@@ -27,12 +27,12 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
    ![](../media/180625(12).png)
 
 3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
-      - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
+      - Seleccione **Claves y punto de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
-      - Finalmente, copie la URL del **Punto de conexión (4)** de la API haciendo clic en copiar al portapapeles. 
+      - Finalmente, copie la URL del **Extremo (4)** de la API haciendo clic en copiar al portapapeles. 
 
-        ![](../media/180625(13).png "Claves y puntos de conexión")
+        ![](../media/180625(13).png "Claves y punto de conexión")
 
 ### Tarea 2: Configurar una aplicación en Cloud Shell
 
@@ -146,7 +146,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
     
     - Python: `.env`
     
-1. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
+1. Actualice los valores de configuración para incluir el **extremo** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
 
     - C#:
      
@@ -156,7 +156,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
      
       ![](../media/nlp27.png)           
 
-       > **Nota:** Puede obtener los valores del punto de conexión y la clave de Azure OpenAI desde la sección **Clave y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
+       > **Nota:** Puede obtener los valores del extremo y la clave de Azure OpenAI desde la sección **Claves y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
 
 1. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
 
@@ -199,7 +199,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
 1.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
 
-   **C#:** Program.cs
+    **C#:** Program.cs
 
     ```csharp
     // Configure the Azure OpenAI client
@@ -221,7 +221,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
     ```
 
      ![](../media/L2T3S7-py.png)   
-     
+
       >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
 1. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
