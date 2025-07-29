@@ -1,10 +1,10 @@
 # Lab 02: Utilize prompt engineering in your app
 
-## Lab scenario
+## Lab overview
+
+In the lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
-
-In the scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -785,7 +785,7 @@ In this task, you will run your configured app to send a request to your model a
     **System message**
 
     ```prompt
-    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
+    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt and respond concisely.
     ```
 
     **User message:**
@@ -801,7 +801,5 @@ In this lab, you have accomplished the following:
 - Deploy an OpenAI model within the Azure OpenAI Foundry
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
-### You have successfully completed the lab.
-
-### Click on Next >> to proceed to the next exercise.
+### You have successfully completed this lab. Click on Next >> to proceed to the next lab.
 
