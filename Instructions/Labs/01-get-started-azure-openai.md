@@ -1,11 +1,11 @@
 # Laboratorio 01: Comenzar a usar el Servicio Azure OpenAI
 
-### Duración Estimada: 120 minutos
+### Duración Estimada: 120 Minutos
 
 ## Escenario del Laboratorio
 En este laboratorio, aprenderá a comenzar a usar Azure OpenAI aprovisionando el servicio como un recurso de Azure y usando el portal de Azure AI Foundry para implementar y explorar los modelos de OpenAI. El Servicio de Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma en la nube de Azure.
 
-## Objetivos del laboratorio
+## Objetivos laboratorio
 En este laboratorio, completará las siguientes tareas:
 
 - Tarea 1: Aprovisionar un recurso de Azure OpenAI
@@ -21,11 +21,11 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)**.
 
-   ![](../media/select-openai-1607.png)
+   ![](../media/select-openai-1607(upd-1).png)
 
 2. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear**.
 
-   ![](../media/180625(01).png)
+   ![](../media/180625(01)(upd-2).png)
 
 3. Complete los detalles requeridos en la página **Crear Azure OpenAI**:
    
@@ -35,15 +35,15 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
     - **Nombre**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - **Plan de tarifa**: **Standard S0 (5)**
   
-      ![](../media/nlpe1.png "Crear recurso de Azure OpenAI")
+      ![](../media/nlpe1(upd-3).png "Crear recurso de Azure OpenAI")
 
     >**Nota:** Asegúrese de que el recurso esté implementado en la región **Sweden Central**.
 
-4. Haga clic en **Siguiente** en cada pestaña sin cambiar nada.
+4. Haga clic en **Siguiente (6)** en cada pestaña sin cambiar nada.
 
 5. Por último, haga clic en **Revisar + crear** y, a continuación, haga clic en **Crear** para iniciar la implementación.
 
-    ![](../media/170725(01).png "Crear recurso de Azure OpenAI")
+    ![](../media/170725(01)(upd-4).png "Crear recurso de Azure OpenAI")
 
 6. Espere a que se complete la implementación. Luego, vaya al recurso de Azure OpenAI implementado en el Portal de Azure.
 
@@ -60,23 +60,23 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
 1. Desde el **portal de Azure**, diríjase a su recurso de OpenAI **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
-    ![](../media/180625(03).png)
+    ![](../media/180625(03)(upd-5).png)
 
 1. En la página de recursos de **Azure OpenAI**, haga clic en **Información general (1)** y seleccione **Go to Azure AI Foundry portal (2)** para acceder al **portal de Azure AI Foundry**.
 
-    ![](../media/goto-aiportal-1607.png)
+    ![](../media/goto-aiportal-1607(upd-6).png)
 
 1. En la página **Portal de Azure AI Foundry**, seleccione **Implementaciones (1)** en **Recursos compartidos** en el panel izquierdo. A continuación, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-    ![](../media/deploy-model-1607.png)
+    ![](../media/deploy-model-1607(upd-7).png)
 
 1. En la ventana **Seleccionar un modelo**, busque **gpt-4o-mini (1)**, luego seleccione **gpt-4o-mini (2)** y haga clic en **Confirmar (3)**.
 
-    ![](../media/select-gpt-model-1607.png)
+    ![](../media/select-gpt-model-1607(upd-8).png)
 
 1. Haga clic en **Personalizar**.
 
-    ![](../media/get-started-openai-lab1-6.png)
+    ![](../media/get-started-openai-lab1-6(upd-9).png)
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
@@ -88,23 +88,23 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
     - Habilitar cuota dinámica: **Habilitado (6)**
     - Haga clic en **Implementar** **(7)**
   
-      ![](../media/get-started-openai-lab1-2.png)
+      ![](../media/get-started-openai-lab1-2(upd-10).png)
 
          > **Nota**: gpt-4o-mini solo se admite para la finalización del chat y no para la API de finalización.
 
 1. Haga clic en la **flecha atrás** para volver a la pantalla anterior. A continuación, en el panel izquierdo, en **Recursos compartidos**, seleccione **Implementaciones (1)**. Luego, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-    ![](../media/back-to-deployments-1607.png)
+    ![](../media/back-to-deployments-1607(upd-11).png)
 
-    ![](../media/deploy-model-1607.png)
+    ![](../media/deploy-model-1607(upd-7).png)
 
 1. En la ventana **Seleccionar un modelo**, busque **gpt-35-turbo-instruct (1)**, luego seleccione **gpt-35-turbo-instruct (2)** y haga clic en **Confirmar (3)**.
 
-    ![](../media/select-turbo-model-1607.png)
+    ![](../media/select-turbo-model-1607(upd-12).png)
 
 1. Haga clic en **Personalizar**.
 
-    ![](../media/get-started-openai-lab1-7.png)
+    ![](../media/get-started-openai-lab1-7(upd-13).png)
 
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
@@ -117,7 +117,7 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
     - Habilitar cuota dinámica: **Habilitado (6)**
     - Haga clic en **Implementar** (7)
 
-       ![](../media/get-started-openai-lab1-3.png)
+       ![](../media/get-started-openai-lab1-3(upd-14).png)
 
 
 11. Esto implementará modelos con los que puede experimentar tanto para tareas de chat como de finalización a medida que avanza.
@@ -139,7 +139,7 @@ En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo 
 
 1. En el portal de Azure OpenAI Foundry, navegue al panel izquierdo y seleccione **Patios de juego (1) -> Finalizaciones (2)**.
 
-   ![](../media/select-completions-1607.png) 
+   ![](../media/select-completions-1607(upd-15).png) 
 
 2. En la página **Finalizaciones**: 
 
@@ -152,13 +152,13 @@ En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo 
     
     * Haga clic en **Generate (3)** para enviar el prompt y recibir la respuesta.
 
-    ![](../media/170725\(02\).png)
+    ![](../media/170725(02)(upd-16).png)
 
      > **Nota**: La muestra de texto resumido consta de un prompt que proporciona texto para indicarle al modelo qué tipo de respuesta se requiere e incluye información contextual.
 
 3. La respuesta consiste en un cuestionario basado en el ejemplo del prompt.
 
-    ![](../media/nls101.png)
+    ![](../media/nls101(upd-17).png)
 
       > **Nota**: El resultado del chat puede variar. La captura de pantalla se proporciona solo como referencia y es posible que no refleje exactamente el mismo resultado.
 
@@ -168,9 +168,9 @@ En esta tarea, explorará un modelo en el área de juegos de Finalizaciones, lo 
 
 5. Utilice el botón **Ver código** para ver el código que una aplicación cliente usaría para enviar el mensaje. Puede seleccionar su lenguaje de programación preferido. El mensaje contiene el texto que envió al modelo. La solicitud se envía a la API de *Finalizaciones* de su servicio Azure OpenAI.
 
-    ![](../media/NO-3a.png)
+    ![](../media/NO-3a(upd-18).png)
 
-    ![](../media/L1T3S5.2-1407.png)
+    ![](../media/L1T3S5.2-1407(upd-19).png)
 
 6. Cierre la ventana **Código de muestra** una vez que haya revisado el contenido.
 
@@ -180,9 +180,9 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
 1. Vaya a la sección **Recursos compartidos** en el menú de la izquierda y seleccione **Implementaciones (1)**. En la lista de implementaciones disponibles, elija **my-gpt-model** y haga clic en **Abrir en Área de juegos (2)**. Esta acción iniciará el **Área de juegos de chat**, donde podrá interactuar con el modelo implementado en una interfaz conversacional.
 
-    ![](../media/170725(03).png)
+    ![](../media/170725(03)(upd-20).png)
 
-    ![](../media/170725(04).png)
+    ![](../media/170725(04)(upd-21).png)
 
 1. En la sección **Configuración**:
 
@@ -194,13 +194,13 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
     * Haga clic en **Aplicar cambios (2)** y confirme seleccionando **Continuar** en el prompt.
 
-      ![](../media/L1T4S2-1607.png)
+      ![](../media/L1T4S2-1607(upd-22).png)
 
-      ![](../media/L1T4S3-1407.png)
+      ![](../media/L1T4S3-1407(upd-23).png)
 
 1. En la sección **Configuración (1)**, haga clic en el cuadro **+ Agregar sección (2)** y, a continuación, en **Ejemplos (3)**.
 
-      ![](../media/170725(05).png)
+      ![](../media/170725(05)(upd-24).png)
 
 1. Ingrese el siguiente mensaje y respuesta en las casillas designadas:
 
@@ -214,15 +214,15 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
         There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
         ``` 
 
-         ![](../media/L1T4S4-1607.png)
+         ![](../media/L1T4S4-1607(upd-25).png)
 
     > **Nota**: Se utilizan algunos ejemplos para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
   
 1. Haga clic en **Aplicar cambios** y luego en **Continuar** para iniciar el chat con el contexto actualizado.
 
-      ![](../media/L1T4S5.1-1607.png)
+      ![](../media/L1T4S5.1-1607(upd-26).png)
 
-      ![](../media/L1T4S3-1407.png)
+      ![](../media/L1T4S3-1407(1)(upd-27).png)
 
 1. En el cuadro de consulta al final de la página, introduzca el texto **(1)** que se menciona a continuación. Pulse el botón **Enviar (2)** para enviar el mensaje y ver la respuesta.
 
@@ -230,13 +230,13 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
    What is artificial intelligence?
    ```
 
-   ![](../media/L1T4S6-1607.png)
+   ![](../media/L1T4S6-1607(upd-28).png)
 
       > **Nota**: Es posible que reciba una respuesta indicando que la implementación de API aún no está lista. Si es así, espere unos minutos y vuelva a intentarlo.
 
 1. Revise la respuesta.
 
-    ![](../media/L1T4S7-1407.png)
+    ![](../media/L1T4S7-1407(upd-29).png)
 
 1. Después de revisar la respuesta, envíe el siguiente mensaje de seguimiento:
 
@@ -246,13 +246,13 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
 1. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo entienda que "eso" se refiere a inteligencia artificial).
 
-     ![](../media/170725(06).png)
+     ![](../media/170725(06)(upd-30).png)
 
 1. Utilice el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los ejemplos breves de mensajes de *usuario* y *asistente*, y la secuencia de mensajes de *usuario* y *asistente* en la sesión de chat hasta el momento.
 
-      ![](../media/image5a.png)
+      ![](../media/image5a(upd-31).png)
 
-      ![](../media/170725(07).png)
+      ![](../media/170725(07)(upd-32).png)
 
 ### Tarea 5: Explorar prompts y parámetros 
 
@@ -263,7 +263,7 @@ En esta tarea, explorará prompts y parámetros experimentando con diferentes en
     - **Respuesta máxima (tokens)**: 500 **(2)**
     - **Temperatura**: 0 **(3)** (para respuestas deterministas)
 
-      ![](../media/image6.png)
+      ![](../media/image6(upd-33).png)
    
 2. En el cuadro de entrada del chat, introduzca el mensaje **(1)** y haga clic en **Enviar (2)** para enviarlo.
 
@@ -279,12 +279,12 @@ En esta tarea, explorará prompts y parámetros experimentando con diferentes en
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       ```
 
-    ![](../media/L1T5S2-1607.png)
+    ![](../media/L1T5S2-1607(upd-34).png)
 
 
 3. Revise los resultados, que deben consistir en preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión por computadora en el mensaje. La respuesta total debe ser menor que la longitud máxima especificada como parámetro.
 
-      ![](../media/last-3.png)
+      ![](../media/last-3(upd-35).png)
 
 4. Observe lo siguiente sobre el prompt y los parámetros que utilizó:
 
@@ -304,16 +304,16 @@ En esta tarea, explorará la generación de código probando la capacidad del mo
 
     * Haga clic en **Aplicar cambios (2)** y luego en **Continuar** cuando se le solicite.
 
-     ![](../media/L1T6S1-1607.png)
+     ![](../media/L1T6S1-1607(upd-36).png)
 
-     ![](../media/L1T4S3-1407.png)
+     ![](../media/L1T4S3-1407(2)(upd-37).png)
 
 
 2. En el panel **Sesión de chat**, seleccione **Borrar chat** y, a continuación, seleccione **Borrar** en la ventana emergente para borrar el historial de chat e iniciar una nueva sesión.
 
-      ![](../media/clear-history-1607.png)
+      ![](../media/clear-history-1607(upd).png)
 
-      ![](../media/L1T6S2.2-1407.png)
+      ![](../media/L1T6S2.2-1407(upd-38).png)
 
 3. Envíe el siguiente mensaje:
 
@@ -323,7 +323,7 @@ En esta tarea, explorará la generación de código probando la capacidad del mo
 
 4. Revise el fragmento de código Python generado. El modelo debe devolver una definición de función válida que multiplique dos entradas y devuelva el resultado.
 
-   ![](../media/task-6-lasta.png)
+   ![](../media/task-6-lasta(upd-39).png)
 
 ## Resumen
 
@@ -335,4 +335,4 @@ En esta tarea, explorará la generación de código probando la capacidad del mo
 
 ### Ha completado con éxito el laboratorio. Haga clic en Siguiente >> para continuar con el siguiente laboratorio.
 
-   ![](../media/next-1507.png)
+   ![](../media/next-1507(upd-40).png)
