@@ -1,6 +1,6 @@
 # Laboratorio 02: Utilizar los SDKs de Azure OpenAI en su aplicación
 
-### Duración Estimada: 120 minutos
+### Duración Estimada: 120 Minutos
 
 En el laboratorio, desempeñará el papel de un desarrollador de software al que se le ha encargado implementar una aplicación que pueda usar IA generativa para ayudar a proporcionar recomendaciones de senderismo. Las técnicas utilizadas en el ejercicio pueden aplicarse a cualquier aplicación que utilice APIs de Azure OpenAI.
 
