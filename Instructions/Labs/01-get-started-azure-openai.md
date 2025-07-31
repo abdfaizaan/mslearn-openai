@@ -3,7 +3,7 @@
 ### Duración Estimada: 120 minutos
 
 ## Escenario del Laboratorio
-El Servicio Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma de nube de Azure. En este ejercicio, aprenderá cómo comenzar con Azure OpenAI mediante el aprovisionamiento del servicio como un recurso de Azure y el uso de Azure AI Foundry portal para implementar y explorar los modelos de OpenAI. 
+En este laboratorio, aprenderá a comenzar a usar Azure OpenAI aprovisionando el servicio como un recurso de Azure y usando el portal de Azure AI Foundry para implementar y explorar los modelos de OpenAI. El Servicio de Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma en la nube de Azure.
 
 ## Objetivos del laboratorio
 En este laboratorio, completará las siguientes tareas:
@@ -327,7 +327,9 @@ En esta tarea, explorará la generación de código probando la capacidad del mo
 
 ## Resumen
 
-- En este laboratorio, aprovisionó un **recurso de Azure OpenAI** para integrar capacidades de IA generativa en sus aplicaciones.
+- En este laboratorio, 
+
+- Aprovisionó un **recurso de Azure OpenAI** para integrar capacidades de IA generativa en sus aplicaciones.
 - **Implementó dos modelos** (gpt-4o-mini para chat y gpt-35-turbo-instruct para finalizaciones) mediante el portal de Azure AI Foundry.
 - Exploró los modelos en las **áreas de juego Finalizaciones y Chat**, experimentó con prompts y parámetros, y probó las **capacidades de generación de código** del modelo.
 
