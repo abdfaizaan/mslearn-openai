@@ -26,7 +26,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
 
  ![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/arch20-3.png)
 
-## Explicación de Componentes
+## Explicación de componentes
 
 1. **Azure OpenAI**: El Servicio Azure OpenAI proporciona acceso REST API a los potentes modelos de lenguaje de OpenAI y estos modelos se integran con sus datos, permitiendo interacciones personalizadas y seguras.
 1. **Modelos de Azure OpenAI**: Ofrece modelos de lenguaje grande personalizables y pre-entrenados para diversas aplicaciones de IA. Estos modelos permiten crear potentes soluciones impulsadas por IA mediante la generación de contenido personalizado y contextualmente relevante basado en prompts bien diseñados.
