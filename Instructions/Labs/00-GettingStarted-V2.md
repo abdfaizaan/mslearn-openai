@@ -1,6 +1,6 @@
 # Comience a Usar OpenAI y Cree Una Solución de Lenguaje Natural
 
-### Duración Total Estimada: 4 horas
+### Duración Total Estimada: 4 Horas
 
 ## Descripción general
 
