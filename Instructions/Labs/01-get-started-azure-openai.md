@@ -1,11 +1,11 @@
 # Laboratorio 01: Comenzar a usar el Servicio Azure OpenAI
 
-### Duración Estimada: 120 minutos
+### Duración Estimada: 120 Minutos
 
 ## Escenario del Laboratorio
 El Servicio Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma de nube de Azure. En este ejercicio, aprenderá cómo comenzar con Azure OpenAI mediante el aprovisionamiento del servicio como un recurso de Azure y el uso de Azure AI Foundry portal para implementar y explorar los modelos de OpenAI. 
 
-## Objetivos del laboratorio
+## Objetivos laboratorio
 En este laboratorio, completará las siguientes tareas:
 
 - Tarea 1: Aprovisionar un recurso de Azure OpenAI
@@ -39,7 +39,7 @@ En esta tarea, creará un recurso de Azure en Azure Portal, seleccionando el ser
 
     >**Nota:** Asegúrese de que el recurso esté implementado en la región **Sweden Central**.
 
-4. Haga clic en **Siguiente** en cada pestaña sin cambiar nada.
+4. Haga clic en **Siguiente (6)** en cada pestaña sin cambiar nada.
 
 5. Por último, haga clic en **Revisar + crear** y, a continuación, haga clic en **Crear** para iniciar la implementación.
 
