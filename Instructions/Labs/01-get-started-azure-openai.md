@@ -124,11 +124,10 @@ En esta tarea, implementará una instancia de modelo de IA específica dentro de
 
       > **Nota**: Puede ignorar cualquier error relacionado con la asignación de roles para ver los límites de cuota.
 
-
-    > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
-    > - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
-    > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
-    > - Si necesita ayuda, comuníquese con nosotros a cloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
+      > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
+      > - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
+      > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
+      > - Si necesita ayuda, comuníquese con nosotros a cloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
    <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
