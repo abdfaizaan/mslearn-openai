@@ -61,9 +61,9 @@ In this task, you will observe how the base model responds to queries without an
    | Settings | Action |
    | -- | -- |
    | **Subscription** | Default - Pre-assigned subscription **(1)** |
-   | **Resource group** | openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)** |
-   | **Storage account name** | storage1<inject key="DeploymentID" enableCopy="false"></inject> **(3)** |
-   | **Region** | Select <inject key="Region" enableCopy="false" /> **(4)** |
+   | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
+   | **Storage account name** | **storage1<inject key="DeploymentID" enableCopy="false"></inject> (3)** |
+   | **Region** | Select **<inject key="Region" enableCopy="false" /> (4)** |
    | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)** |
    | **Redundancy** | Locally-redundant storage (LRS) **(6)** |
   
@@ -75,7 +75,7 @@ In this task, you will observe how the base model responds to queries without an
    | -- | -- |
    | **Allow enable anonymous access on individual containers (1)** | Check in the box to enable under **Advanced** section. |
 
-   Click on **Review + create (2)** and subsequently click on **Create**. 
+1. Click on **Review + create (2)** and subsequently click on **Create**. 
 
     ![](../media/dev-genai-june-13.png "allow blob access")
 
@@ -122,10 +122,10 @@ In this task, you will observe how the base model responds to queries without an
    | Settings | Action |
    | -- | -- |
    | **Subscription** | Default - Pre-assigned subscription |
-   | **Resource group (1)** | **openai-<inject key="DeploymentID" enableCopy="false"></inject>** |
-   | **Service name (2)** | **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** |
-   | **Location (3)** | Select **<inject key="Region" enableCopy="false" />** |
-   | **Pricing tier (4)** | Change the Pricing tier to **Basic** |
+   | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (1)** |
+   | **Service name** | **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
+   | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
+   | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
     ![](../media/L6T2S16-1807.png "Create cognitive search resource")
 
@@ -147,12 +147,12 @@ In this task, you will observe how the base model responds to queries without an
 
    | Setting | Action |
    | -- | -- |
-   | **Select data source (1)** | Azure Blob Storage (preview) |
-   | **Select Azure Blob storage resource (2)** | *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject>** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
-   | **Select Storage container (3)** | openaidatasource |
-   | **Select Azure AI Search resource (4)** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** search resource you created* |
-   | **Enter the index name (5)** | margiestravel |
-   | **Indexer schedule (6)** | Once |
+   | **Select data source** | Azure Blob Storage (preview) **(1)** |
+   | **Select Azure Blob storage resource** | *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject> (2)** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
+   | **Select Storage container** | **openaidatasource (3)** |
+   | **Select Azure AI Search resource** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject> (4)** search resource you created* |
+   | **Enter the index name** | **margiestravel (5)** |
+   | **Indexer schedule** | **Once (6)** |
    
     ![](../media/image4-8-1.png "Add data configurations")
    
@@ -204,9 +204,9 @@ In this task, you will use a short command-line application running in Cloud She
 
     ![](../media/dev-genai-june-4.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic version**.
+3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic-cloudshell-0108.png)
 
 4. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
 

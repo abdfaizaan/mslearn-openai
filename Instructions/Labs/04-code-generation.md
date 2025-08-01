@@ -5,7 +5,7 @@
 ## Lab Overview
 In this lab, you will learn how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You will explore code generation in the chat playground and integrate OpenAI into your app to automate code tasks. This will help you enhance productivity by simplifying coding and debugging processes.
 
-The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
+The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code, helping you understand what it does and how to improve it.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** under **Playground** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
    ![](../media/dev-genai-june-5.png)
    
@@ -80,9 +80,9 @@ In this task, you will use a short command-line application running in Cloud She
 
    ![](../media/L4T2S2-1707.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic-cloudshell-0108.png)
 
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 

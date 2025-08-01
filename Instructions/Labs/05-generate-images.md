@@ -12,9 +12,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Explore image generation in the DALL-E playground
 - Task 2: Use the REST API to generate images
-      - Task 2.1: Prepare the app environment
-      - Task 2.2: Configure your application
-      - Task 2.3: View application code
+    - Task 2.1: Prepare the app environment
+    - Task 2.2: Configure your application
+    - Task 2.3: View application code
 - Task 3: Run the app
 
 ## Task 1: Explore image generation in the DALL-E playground
@@ -29,17 +29,17 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/tel-11.png)
 
-2. On the **AI Foundry** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+2. On the **AI Foundry** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
       ![](../media/dev-genai-june-1.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
-      ![](../media/ui1.png)
+      ![](../media/deploy-model-1607.png)
 
 5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (text to image) (2)** model, and click on **Confirm (3)**
 
@@ -79,9 +79,9 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     ![](../media/dev-genai-june-4.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic-cloudshell-0108.png)
 
 4. Navigate to the folder for the language of your preference by running the appropriate command.
 

@@ -27,19 +27,19 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/tel-10-2.png)
 
-1. Create an **Azure OpenAI** resource with the following settings:
+1. On the **Create an Azure OpenAI** resource page, select the following settings to create the Azure OpenAI resource:
 
    | Settings | Action |
    | -- | -- |
-   | **Subscription (1)** | Default - Pre-assigned subscription. |
-   | **Resource group (2)** | openai-<inject key="DeploymentID" enableCopy="false"></inject> |
-   | **Region (3)** | **Swedencentral** |
-   | **Name (4)** | OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> |
-   | **Pricing tier (5)** | Standard S0 |
+   | **Subscription** | Default - Pre-assigned subscription. **(1)** |
+   | **Resource group** | **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)** |
+   | **Region** | **Swedencentral (3)** |
+   | **Name** | **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)** |
+   | **Pricing tier** | **Standard S0 (5)**|
 
    ![](../media/create-openai-1707.png "Create Azure OpenAI resource")
 
-1. Click on **Next (6)** thrice and then click on **Create**.
+1. Click on **Next (6)** three times and then click on **Create**.
 
 1. Wait for the deployment to complete. Once it's finished, click the **Go to resource** button to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -54,7 +54,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI Overview page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI **Overview** page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/L1T2S1-1607.png)
 
@@ -70,13 +70,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    | Settings | Action |
    | -- | -- |
-   | **Deployment name (2)** | my-gpt-model |
-   | **Deployment type (3)** | Standard |
-   | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-   | **Model version (5)** | 2024-11-20 |
-   | **Tokens per Minute Rate Limit (thousands) (6)** | 10K |
-   | **Content Filter (7)** | DefaultV2 |
-   | **Enable dynamic quota(8)** | Enabled |
+   | **Deployment name** | **my-gpt-model (2)** |
+   | **Deployment type** | **Standard (3)**|
+   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (4)** |
+   | **Model version** | 2024-11-20 (5)|
+   | **Tokens per Minute Rate Limit (thousands)** | **10K (6)** |
+   | **Content Filter** | **DefaultV2 (7)**|
+   | **Enable dynamic quota** |**Enabled (8)**|
   
       ![](../media/L1T2S4-1607.png)
 
@@ -96,13 +96,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    | Settings | Action |
    | -- | -- |
-   | **Deployment name (2)** | gpt-35-turbo-instruct |
-   | **Deployment type (3)** | Standard |
-   | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-   | **Model version (5)** | 0914 (Default) |
-   | **Tokens per Minute Rate Limit (thousands) (6)** | 20K |
-   | **Content Filter (7)** | DefaultV2 |
-   | **Enable dynamic quota(8)** | Enabled |
+   | **Deployment name** | **gpt-35-turbo-instruct (2)** |
+   | **Deployment type** | **Standard (3)**|
+   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (4)** |
+   | **Model version** | **0914 (Default) (5)**|
+   | **Tokens per Minute Rate Limit (thousands)** | **20K (6)** |
+   | **Content Filter** | **DefaultV2 (7)**|
+   | **Enable dynamic quota** | **Enabled (8)**|
 
       ![](../media/L1T2S7.1-1607.png)
 
@@ -123,19 +123,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In the Azure AI Foundry portal, in the left pane under **Playground**, select **Completions (1)**.
+1. In the **Azure AI Foundry portal**, from the left pane select **Completions (1)** under **Playground**.
 
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected. Copy and paste the below-mentioned prompt **(3)**.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected. In the Prompt section, copy and paste the below-mentioned prompt **(3)** and click on **Generate (4)**.
 
    ```
    Generate a quiz of 5 questions.  For each question, provide me with the answer options and the correct answer.
    ```
 
-   ![](../media/dev-genai-june-3.png)
+   ![](../media/L1T3S2-0108.png)
 
       >**Note:** The summarized text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
-3. Click on the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+3. Observe the response. The response consists of a quiz based on the example in the prompt.
 
       ![](../media/lab1-g2upd-1.png)
 
@@ -171,12 +171,12 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
     - **User (1):**
       ```
-         What are the different types of artificial intelligence?
+      What are the different types of artificial intelligence?
       ```
     
     - **Assistant (2):**
       ```
-         There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
+      There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
       ```
 
       ![](../media/L1T4S4-1607.png)
@@ -190,7 +190,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 6. In the query box on the right side of the page, enter the text **(1)** as mentioned below. Use the **Send (2)** button to submit the message and view the response.
 
    ```
-      What is artificial intelligence?
+   What is artificial intelligence?
    ```
 
    ![](../media/L1T4S6-1607.png)
@@ -200,7 +200,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 7. Review the response and then submit the following message to continue the conversation:
 
    ```
-      How is it related to machine learning?`
+   How is it related to machine learning?`
    ```
 
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
