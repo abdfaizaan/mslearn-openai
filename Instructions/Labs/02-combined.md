@@ -115,7 +115,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
 1. En el editor de código, expanda la carpeta **CSharp** o **Python**, según su lenguaje de preferencia.
 
-1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
+2. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -142,13 +142,13 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
     </Project> 
    ```
 
-1. Abra el archivo de configuración de su lenguaje:
+3. Abra el archivo de configuración de su lenguaje:
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-1. Actualice los valores de configuración para incluir el **extremo** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
+4. Actualice los valores de configuración para incluir el **extremo** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
 
     - C#:
      
@@ -160,7 +160,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
        > **Nota:** Puede obtener los valores del extremo y la clave de Azure OpenAI desde la sección **Claves y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
 
-1. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
+5. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
 
   **C#:** 
 
@@ -178,7 +178,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
     pip install python-dotenv openai==1.65.2 --user
     ```
 
-1. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
+6. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
 
     **C#:** Program.cs
 
@@ -199,7 +199,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
      ![](../media/L2T3S6-py.png)        
 
-1.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
+7.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
 
     **C#:** Program.cs
 
@@ -226,7 +226,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
       >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
-1. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
+8. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
 
      **C#:** Program.cs
 
@@ -273,7 +273,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
      ![](../media/L2T3S8-py.png)      
 
-1. Antes de poder guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
+9. Antes de poder guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
 
     **C#**: Program.cs
       
@@ -454,7 +454,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
           asyncio.run(main())
       ```
     
-1. Para guardar los cambios realizados en el archivo, haga clic derecho en el espacio en blanco del editor de texto del archivo y presione **Guardar**.
+10. Para guardar los cambios realizados en el archivo, haga clic derecho en el espacio en blanco del editor de texto del archivo y presione **Guardar**.
 
    >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
