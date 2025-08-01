@@ -1,6 +1,6 @@
 # Comience a Usar OpenAI y Cree Una Solución de Lenguaje Natural
 
-### Duración Total Estimada: 4 horas
+### Duración Total Estimada: 4 Horas
 
 ## Descripción general
 
@@ -26,7 +26,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
 
  ![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/arch20-3.png)
 
-## Explicación de los Componentes
+## Explicación de componentes
 
 1. **Azure OpenAI**: El Servicio Azure OpenAI proporciona acceso REST API a los potentes modelos de lenguaje de OpenAI y estos modelos se integran con sus datos, permitiendo interacciones personalizadas y seguras.
 1. **Modelos de Azure OpenAI**: Ofrece modelos de lenguaje grande personalizables y pre-entrenados para diversas aplicaciones de IA. Estos modelos permiten crear potentes soluciones impulsadas por IA mediante la generación de contenido personalizado y contextualmente relevante basado en prompts bien diseñados.
@@ -40,7 +40,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
  
 Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
-![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/getting-started-spanish-openai-1.png)
+![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/upd-0.png)
 
 ### Máquina Virtual & Guía de Laboratorio
  
@@ -50,19 +50,19 @@ Su máquina virtual es su caballo de batalla durante todo el taller. La guía de
  
 Para obtener una mejor comprensión de sus recursos de laboratorio y credenciales, navegue a la pestaña **Ambiente**.
  
-![Explore los Recursos de Laboratorio](../media/getting-started-spanish-openai-5.png)
+![Explore los Recursos de Laboratorio](../media/upd-1.png)
  
 ## Utilizando la Función de Ventana Dividida
  
 Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana Dividida** de la esquina superior derecha.
  
-![Utilice la Función de Ventana Dividida](../media/getting-started-spanish-openai-2.png)
+![Utilice la Función de Ventana Dividida](../media/upd-2.png)
  
 ## Administrando Su Máquina Virtual
  
 Siéntase libre de **Iniciar, Detener o Reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
  
-![Administre Su Máquina Virtual](../media/getting-started-spanish-openai-3.png)
+![Administre Su Máquina Virtual](../media/upd-3.png)
 
 ### Acercar/Alejar Guía de laboratorio
 
@@ -74,7 +74,7 @@ Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono *
 
 Tras completar la tarea, pulse el botón **Validar** en la pestaña Validación integrada en la guía de laboratorio. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea; de lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso siguiendo las instrucciones de la guía de laboratorio.
 
-   ![Validación en línea](../media/getting-started-eng-openai-4.png)
+   ![Validación en línea](../media/upd-4.png)
 
 ## Comenzando con el Portal de Azure
  
@@ -86,13 +86,13 @@ Tras completar la tarea, pulse el botón **Validar** en la pestaña Validación 
  
    - **Correo electrónico/Nombre de usuario:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Ingrese Su Nombre de usuario](../media/sc900-image-1.png)
+       ![Ingrese Su Nombre de usuario](../media/upd-5.png)
  
 3. A continuación, proporcione su contraseña:
  
    - **Contraseña:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Ingrese Su Contraseña](../media/sc900-image-2.png)
+       ![Ingrese Su Contraseña](../media/upd-6.png)
  
 4. Si se le solicita que permanezca conectado, puede hacer clic en "No".
  

@@ -1,6 +1,6 @@
 # Laboratorio 02: Utilizar los SDKs de Azure OpenAI en su aplicación
 
-### Duración Estimada: 120 minutos
+### Duración Estimada: 120 Minutos
 
 ## Escenario del Laboratorio
 
@@ -22,11 +22,11 @@ En esta tarea, aprovisionará un recurso de Azure OpenAI dentro de su suscripci�
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)** en la sección de Servicios.
 
-   ![](../media/select-openai-1607.png)
+   ![](../media/select-openai-1607(upd-1).png)
 
 2. En la página **AI Foundry  | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/180625(12).png)
+   ![](../media/180625(12)(upd).png)
 
 3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y punto de conexión (1)** debajo de **Administración de recursos**.
@@ -34,7 +34,7 @@ En esta tarea, aprovisionará un recurso de Azure OpenAI dentro de su suscripci�
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
       - Finalmente, copie la URL del **Extremo (4)** de la API haciendo clic en copiar al portapapeles. 
 
-        ![](../media/180625(13).png "Claves y punto de conexión")
+        ![](../media/180625(13)(upd).png "Claves y punto de conexión")
 
 ### Tarea 2: Configurar una aplicación en Cloud Shell
 
@@ -47,11 +47,11 @@ En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clon
    
    >**Nota:** Si no puede encontrar Cloud Shell, haga clic en los **puntos suspensivos (...) (1)** y luego seleccione **Cloud Shell (2)** del menú.
 
-    ![](../media/180625(14).png)
+    ![](../media/180625(14)(upd).png)
 
 2. La primera vez que abra Cloud Shell, es posible que se le solicite que elija el tipo de shell que desea usar (*Bash* o *PowerShell*). Seleccione **Bash**. Si no ve esta opción, omita el paso.
 
-    ![](../media/180625(15).png)
+    ![](../media/180625(15)(upd).png)
 
 3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento (1)**, seleccione su **Suscripción de la cuenta de almacenamiento (2)** en el menú desplegable y haga clic en **Aplicar (3)**.
 
@@ -70,13 +70,13 @@ En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clon
     - Recurso compartido de archivos: Cree un nuevo recurso compartido de archivos llamado **none** **(5)**
     - Haga clic en **Crear** **(6)**
 
-      ![](../media/nlpe18.png "Crear almacenamiento - configuración avanzada")
+      ![](../media/nlpe18(upd).png "Crear almacenamiento - configuración avanzada")
 
 6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 7. Una vez que se abra la terminal, haga clic en **Configuración (1)** y seleccione **Ir a la versión clásica (2)**.
 
-   ![](../media/nlpe19.png)
+   ![](../media/nlpe19(upd).png)
 
 8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `mslearn-openai`.
 
@@ -115,7 +115,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
 1. En el editor de código, expanda la carpeta **CSharp** o **Python**, según su lenguaje de preferencia.
 
-1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
+2. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -142,13 +142,13 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
     </Project> 
    ```
 
-1. Abra el archivo de configuración de su lenguaje:
+3. Abra el archivo de configuración de su lenguaje:
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-1. Actualice los valores de configuración para incluir el **extremo** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
+4. Actualice los valores de configuración para incluir el **extremo** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
 
     - C#:
      
@@ -160,7 +160,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
        > **Nota:** Puede obtener los valores del extremo y la clave de Azure OpenAI desde la sección **Claves y punto de conexión** del recurso de Azure OpenAI bajo **Administración de recursos**.
 
-1. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
+5. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
 
   **C#:** 
 
@@ -178,7 +178,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
     pip install python-dotenv openai==1.65.2 --user
     ```
 
-1. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
+6. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
 
     **C#:** Program.cs
 
@@ -199,7 +199,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
      ![](../media/L2T3S6-py.png)        
 
-1.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
+7.  En el código de la aplicación para su lenguaje, encuentre el comentario **Configure the Azure OpenAI client**, y agregue código para configurar el cliente de Azure OpenAI:
 
     **C#:** Program.cs
 
@@ -226,7 +226,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
       >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
-1. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
+8. En la función que llama al **modelo Azure OpenAI**, bajo el comentario **Get response from Azure OpenAI**, agregue el código para formatear y enviar la solicitud al modelo.
 
      **C#:** Program.cs
 
@@ -273,7 +273,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 
      ![](../media/L2T3S8-py.png)      
 
-1. Antes de poder guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
+9. Antes de poder guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
 
     **C#**: Program.cs
       
@@ -454,7 +454,7 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
           asyncio.run(main())
       ```
     
-1. Para guardar los cambios realizados en el archivo, haga clic derecho en el espacio en blanco del editor de texto del archivo y presione **Guardar**.
+10. Para guardar los cambios realizados en el archivo, haga clic derecho en el espacio en blanco del editor de texto del archivo y presione **Guardar**.
 
    >**Nota:** Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
