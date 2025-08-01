@@ -1,4 +1,4 @@
-# Lab-04: Fine Tuning [Read-Only]
+# Lab-04: Fine-Tuning [Read-Only]
 
 ### Estimated Duration: 30 Minutes
 
@@ -60,7 +60,7 @@ You might consider prompt engineering when you have a limited or no dataset, and
 
 Prompt engineering could be less cost-effective if you need to provide a large number of instructions to accomplish something similar to what you would get with a Fine-Tuned model, as you'd consume tokens with every request sent.
 
-Hosting a Fine Tune model also has its cost, but on medium to high volumes, that cost would be mostly irrelevant, so operational cost efficiency could be a driver for Fine Tuning.
+Hosting a Fine-Tune model also has its cost, but on medium to high volumes, that cost would be mostly irrelevant, so operational cost efficiency could be a driver for Fine-Tuning.
 
 ---
 
@@ -75,3 +75,11 @@ In this lab, we learned that fine-tuning helps make AI models work better for sp
 [Fine Tuning in the Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/fine-tuning?pivots=programming-language-studio)
 
 ## You have successfully completed the lab.
+
+By completing this **Build Prompt Engineering with Azure OpenAI Service** hands-on Lab, you have gained a strong foundation in working with **Azure OpenAI Service** and building generative AI solutions effectively:
+
+  - You started with the **fundamentals of prompt engineering**, learning how to frame effective prompts, explore model parameters, and use system messages to guide behavior.
+  - You progressed to **integrating Azure OpenAI into real-world applications** using SDKs, managing deployment endpoints, and exploring how generative AI can enhance app functionality—such as recommending hiking destinations.
+  - You then deepened your knowledge through **advanced prompting techniques** like zero-shot, one-shot, and few-shot learning, as well as understanding the importance of context windows and token usage in generating high-quality outputs.
+  - Finally, you explored the **concept of fine-tuning models**, understanding when to use it versus prompt engineering, how to prepare training data, and the cost and performance implications of each approach.
+
