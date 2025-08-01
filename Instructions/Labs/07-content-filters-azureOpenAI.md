@@ -17,9 +17,9 @@ In this lab, you will complete the following tasks:
 
 In this task, you will observe how the model behaves in a conversational interaction.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** under **Playground** from the left pane.
 
-2. In the **Setup** section at the top, ensure the deployment is set to **my-gpt-model** and model instructions is set to **You are an AI assistant that helps people find information.**
+2. In the **Setup** section at the top, ensure the deployment is set to **my-gpt-model** and model instructions are set to **You are an AI assistant that helps people find information.**
 
 3. Make sure to remove the data source you have added before.
 
@@ -79,3 +79,5 @@ In this lab, you have accomplished the following:
 - Explore content filters.
 
 ## You have successfully completed the Hands-on lab.
+
+By completing the **Develop Generative AI solutions with Azure OpenAI Service** Hands-on-Lab, you have developed practical skills in building generative AI solutions using the Azure OpenAI Service. You learned to configure and integrate Azure OpenAI SDKs, apply prompt engineering techniques, generate and refine both code and images using advanced models like GPT and DALL·E, and incorporate your own data using Retrieval-Augmented Generation (RAG). Additionally, you explored content filtering to manage AI output responsibly. These hands-on exercises have equipped you to confidently design, deploy, and scale secure, intelligent, and production-ready AI applications in the Azure ecosystem.
