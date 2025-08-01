@@ -81,7 +81,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
+   rm -r mslearn-openai -f
    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
 
@@ -554,3 +554,9 @@ In this lab,
 - You tested the application using various prompts and observed how different inputs influence the AI-generated responses.
 
 ### You have successfully completed the Hands-on lab.
+
+By completing this **Get Started With OpenAI And Build Natural Language Solution** hands-on lab, you have gained practical experience in provisioning, deploying, and interacting with Azure OpenAI models. You explored both the Completions and Chat capabilities and learned how to fine-tune model behavior using parameters. Additionally, you integrated the models into an application using the Azure OpenAI SDK with **Python** or **C#**. 
+
+This lab has equipped you with the foundational skills to start building intelligent, AI-powered solutions on Azure.
+
+
