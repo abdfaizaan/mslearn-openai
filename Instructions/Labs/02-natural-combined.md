@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task, you will provision an Azure OpenAI resource within your Azure subscription. This step is essential to access OpenAI models and retrieve the endpoint and API key required to authenticate your application.
 
 1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
 
@@ -39,7 +39,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ## Task 2: Set up an application in Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+In this task, you will set up a development environment using Azure Cloud Shell. You will clone the sample application repository, prepare the workspace, and open the code editor to begin integrating Azure OpenAI services.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
@@ -110,7 +110,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ## Task 3: Configure your application
 
-In this task, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+In this task, you will configure the application to connect with the Azure OpenAI resource. You will update configuration files with your environment credentials and implement the client logic to interact with the deployed model.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
@@ -459,7 +459,7 @@ In this task, you'll complete some key parts of the application to enable using 
 
 ## Task 4: Test your application
 
-Now that your app has been set up, you can just run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt; all other parameters (such as token count and temperature) remain the same for each request.
+In this task, you will run the application and interact with the Azure OpenAI model using different system and user prompts. This hands-on testing will help you observe how prompt variations affect the model’s output.
 
 1. In the folder of your preferred language, open the **system.txt** file. For each of the interactions, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
@@ -547,9 +547,10 @@ Now that your app has been set up, you can just run it to send your request to y
 
 ## Summary
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure AI Foundry portal
-- Integrate Azure OpenAI models into your applications
+In this lab, 
+- You have provisioned an Azure OpenAI resource to access and use language models via the Azure portal.
+- You set up a development environment in Azure Cloud Shell and cloned a sample application repository.
+- You configured the application with your OpenAI credentials and integrated the Azure OpenAI SDK.
+- You tested the application using various prompts and observed how different inputs influence the AI-generated responses.
 
 ### You have successfully completed the Hands-on lab.
