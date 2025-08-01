@@ -18,7 +18,7 @@ En este laboratorio, completará las siguientes tareas:
 
 ### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
-Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
+En esta tarea, aprovisionará un recurso de Azure OpenAI dentro de su suscripción de Azure. Este paso es esencial para acceder a los modelos de OpenAI y recuperar el punto de conexión y la clave API necesarios para autenticar su aplicación.
 
 1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)** en la sección de Servicios.
 
@@ -38,7 +38,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 ### Tarea 2: Configurar una aplicación en Cloud Shell
 
-Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicación de línea de comandos breve que se ejecuta en Cloud Shell en Azure. Abra una nueva pestaña del navegador para trabajar con Cloud Shell.
+En esta tarea, configurará un entorno de desarrollo con Azure Cloud Shell. Clonará el repositorio de la aplicación de ejemplo, preparará el espacio de trabajo y abrirá el editor de código para comenzar a integrar los servicios de Azure OpenAI.
 
 1. En el [portal de Azure](https://portal.azure.com?azure-portal=true), seleccione el botón **[>_]** (*Cloud Shell*) en la parte superior de la página a la derecha del cuadro de búsqueda. Se abrirá un panel de Cloud Shell en la parte inferior del portal.
 
@@ -111,7 +111,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
 ### Tarea 3: Configurar su aplicación
 
-En esta tarea, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
+En esta tarea, configurará la aplicación para que se conecte al recurso de Azure OpenAI. Actualizará los archivos de configuración con las credenciales de su entorno e implementará la lógica del cliente para interactuar con el modelo implementado.
 
 1. En el editor de código, expanda la carpeta **CSharp** o **Python**, según su lenguaje de preferencia.
 
@@ -460,7 +460,7 @@ En esta tarea, completará algunas partes clave de la aplicación para habilitar
 
 ### Tarea 4: Probar su aplicación
 
-Ahora que su aplicación ha sido configurada, puede ejecutarla para enviar su solicitud a su modelo y observar la respuesta. Notará que la única diferencia entre las diferentes opciones es el contenido del prompt; todos los demás parámetros (como el recuento de tokens y la temperatura) permanecen iguales para cada solicitud.
+En esta tarea, ejecutará la aplicación e interactuará con el modelo de Azure OpenAI mediante diferentes prompts del sistema y del usuario. Estas pruebas prácticas le ayudarán a observar cómo las variaciones en los prompts afectan el resultado del modelo.
 
 1. En la carpeta de su lenguaje preferido, abre el archivo **system.txt**. Para cada interacción, introduzca el **Mensaje del sistema** en este archivo y guárdelo. Cada iteración se pausará primero para que pueda modificar el mensaje del sistema.
 
@@ -548,9 +548,14 @@ Ahora que su aplicación ha sido configurada, puede ejecutarla para enviar su so
 
 ## Resumen
 
-En este laboratorio, logró lo siguiente:
-- Aprovisionar un recurso de Azure OpenAI
-- Implementar un modelo de OpenAI dentro del portal Azure AI Foundry
-- Integrar modelos de Azure OpenAI en sus aplicaciones
+En este laboratorio:
+- Ha aprovisionado un recurso de Azure OpenAI para acceder y usar modelos de lenguaje a través del Portal de  Azure.
+- Ha configurado un entorno de desarrollo en Azure Cloud Shell y ha clonado un repositorio de aplicaciones de ejemplo.
+- Ha configurado la aplicación con sus credenciales de OpenAI e integrado el SDK de Azure OpenAI.
+- Ha probado la aplicación con varios prompts y ha observado cómo las diferentes entradas influyen en las respuestas generadas por la IA.
 
 ### Ha completado con éxito el laboratorio
+
+Al completar este laboratorio práctico **Introducción a OpenAI y creación de una solución de lenguaje natural**, ha adquirido experiencia práctica en el aprovisionamiento, la implementación y la interacción con modelos de Azure OpenAI. Ha explorado las funcionalidades de Finalización y Chat, y ha aprendido a ajustar el comportamiento de los modelos mediante parámetros. Además, ha integrado los modelos en una aplicación mediante el SDK de Azure OpenAI con **Python** o **C#**.
+
+Este laboratorio le ha proporcionado las habilidades fundamentales para empezar a crear soluciones inteligentes basadas en IA en Azure.
