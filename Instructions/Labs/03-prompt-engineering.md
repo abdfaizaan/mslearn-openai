@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Apply prompt engineering in chat playground
 
-In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
+In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and that the **my-gpt-model (2)** model is selected in the Deployment.
 
