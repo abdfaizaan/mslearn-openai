@@ -111,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         > **Note:** You can ignore the "Failed to fetch deployments quota information" notification.
         
-        > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+        > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
    
 #### Validation
 
@@ -124,13 +124,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ## Task 3: Apply prompt engineering in chat playground
 
-In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
+In this task, you will explore how prompt engineering impacts model behavior in the Azure AI Foundry Playground. You'll experiment with prompt styles, system messages, and example-based guidance to generate structured Python code and improve content classification accuracy.
 
 1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under **Playgrounds** section in the left pane.
 
    ![](../media/gg_ex2_1_15.png)
 
-1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue (4)** in the pop up.
+1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue (4)** in the pop-up.
 
    ![](../media/17022025(9).png)
 
@@ -151,7 +151,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/17022025(10).png)
 
-1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop up.
+1. Next in the selected **text-turbo (version:0125) (1)** deployment, update the system message to include instructions `You are an AI assistant helping write Python code. Complete the app based on the provided comments **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue (4)** in the pop-up.
 
    ![](../media/17022025(11).png)
 
@@ -167,7 +167,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. The model should correctly respond with complete Python code, doing what the comments requested.
 
-1. Next, we'll see the impact of a shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes**, and subsequently click on **Continue**. This will create a new chat session.
+1. Next, we'll see the impact of a shot prompt when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes**, and subsequently click on **Continue**. This will create a new chat session.
 
 1. Send the following prompt to the model.
 
@@ -183,7 +183,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
 
-1. In the **Setup** section near the system message, click **+ Add section (1)**, select **Examples (2)** from the dropdown, and add the following example.
+1. In the **Setup** section, click **+ Add section (1)**, select **Examples (2)** from the dropdown, and add the following example.
 
     ![](../media/gg_ex2_1_19.png)
 
@@ -236,7 +236,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     ![](../media/gg_ex2_1_21.png)
 
-1. In the **Chat session** section now again send the same prompt about the California drought, provided here again for convenience.
+1. In the **Chat session** section, now again send the same prompt about the California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -255,7 +255,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
-1. On the desktop, right-click the **Visual Studio Code (1)** icon and select **Open (2)** from the context menu.
+1. On the Lab VM desktop, right-click the **Visual Studio Code (1)** icon and select **Open (2)** from the context menu.
 
    ![](../media/gg_ex2_1_22.png)
 
