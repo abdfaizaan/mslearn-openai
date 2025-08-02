@@ -179,7 +179,7 @@ En esta tarea, usará el Área de juegos de Chat para interactuar con el modelo 
 
 1. Vaya a la sección **Recursos compartidos** en el menú de la izquierda y seleccione **Implementaciones (1)**. En la lista de implementaciones disponibles, elija **my-gpt-model** y haga clic en **Abrir en Área de juegos (2)**. Esta acción iniciará el **Área de juegos de chat**, donde podrá interactuar con el modelo implementado en una interfaz conversacional.
 
-    ![](../media/170725(03)(upd-20).png)
+    ![](../media/170725(03).png)
 
     ![](../media/170725(04)(upd-21).png)
 
