@@ -163,26 +163,25 @@ En esta tarea, configurará la aplicación para que se conecte al recurso de Azu
 5. Navegue de vuelta al Cloudshell e instale los paquetes necesarios para su lenguaje preferido:
 
   **C#:** 
+  ```
+   cd CSharp
+   dotnet add package Azure.AI.OpenAI --version 2.1.0
+  ```
 
-    ```bash
-    cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 2.1.0
-    ```
-
-    **Python:** 
-
-    ```bash
+  **Python:** 
+  ```
     cd Python
     python -m venv labenv
    ./labenv/bin/Activate.ps1
     pip install python-dotenv openai==1.65.2 --user
-    ```
+  ```
+    
 
 6. Navegue hasta la carpeta de su lenguaje preferido, reemplace el comentario **Add Azure OpenAI package** con código para agregar la biblioteca Azure OpenAI SDK:
 
     **C#:** Program.cs
 
-    ```csharp
+    ```
     // Add Azure OpenAI packages
     using Azure.AI.OpenAI;
     using OpenAI.Chat;
