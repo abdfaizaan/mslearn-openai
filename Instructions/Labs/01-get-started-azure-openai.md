@@ -133,6 +133,8 @@ In this task, you'll explore a model in the Completions playground that involves
 
    ![](../media/L1T3S2-0108.png)
 
+   >**Note: If the Completion Playground is not visible, please proceed by using the Chat Playground within AI Foundry. The Chat Playground offers similar functionality and can be used to continue your testing or development activities without interruption.**
+
       >**Note:** The summarized text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
 3. Observe the response. The response consists of a quiz based on the example in the prompt.
