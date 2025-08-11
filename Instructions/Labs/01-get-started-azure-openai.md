@@ -10,10 +10,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code generation
+- Task 3: Use the Chat playground
+- Task 4: Explore prompts and parameters 
+- Task 5: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -82,36 +81,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/L1T2S4.2-1607.png)
 
-   > **Note:** gpt-4o is supported only for chat completions, and it is not supported for the completions API.
+   > **Note:** gpt-4o is supported only for chat completions.
 
-1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
-
-     ![](../media/dev-08.png)
-
-1. On the Select a model page, search for **gpt-35-turbo-instruct (1)** model, select **gpt-35-turbo-instruct (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
-
-     ![](../media/L1T2S6-1607.png)
-   
-1. On the **Deploy gpt-35-turbo-instruct** interface, click on **Customize (1)** and enter the details as mentioned below, then click on **Deploy (9)** :
-
-   | Settings | Action |
-   | -- | -- |
-   | **Deployment name** | **gpt-35-turbo-instruct (2)** |
-   | **Deployment type** | **Standard (3)**|
-   | **Model version upgrade policy** | **Upgrade once new default version becomes available. (4)** |
-   | **Model version** | **0914 (Default) (5)**|
-   | **Tokens per Minute Rate Limit (thousands)** | **20K (6)** |
-   | **Content Filter** | **DefaultV2 (7)**|
-   | **Enable dynamic quota** | **Enabled (8)**|
-
-      ![](../media/L1T2S7.1-1607.png)
-
-      ![](../media/L1T2S7.2-1607.png)
-
-1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
-
-      > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
-   
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -119,39 +90,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
-## Task 3: Explore a model in the Completions playground
 
-In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In the **Azure AI Foundry portal**, from the left pane select **Completions (1)** under **Playground**.
-
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected. In the Prompt section, copy and paste the below-mentioned prompt **(3)** and click on **Generate (4)**.
-
-   ```
-   Generate a quiz of 5 questions.  For each question, provide me with the answer options and the correct answer.
-   ```
-
-   ![](../media/L1T3S2-0108.png)
-
-   >**Note: If the Completion Playground is not visible, please proceed by using the Chat Playground within AI Foundry. The Chat Playground offers similar functionality and can be used to continue your testing or development activities without interruption.**
-
-      >**Note:** The summarized text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
-
-3. Observe the response. The response consists of a quiz based on the example in the prompt.
-
-      ![](../media/lab1-g2upd-1.png)
-
-      >**Note:** You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt, essentially words or word parts in the text.
-
-4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
-
-      ![](../media/codeviewcompletionupd.png)
-
-      ![](../media/openai-7uu-1.png)
-    
-5. Close the **Sample Code**.
-
-## Task 4: Use the Chat playground
+## Task 3: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
@@ -207,7 +148,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-## Task 5: Explore prompts and parameters
+## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -243,7 +184,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    - The prompt specifically states that the desired output should be three multiple-choice questions.
    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-## Task 6: Explore code generation
+## Task 5: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
