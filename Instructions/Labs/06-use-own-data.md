@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 Before you connect Azure OpenAI to your data, you should first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playgrounds** section, select the **Chat (1)** option.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane.
 
 2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
 
@@ -48,15 +48,15 @@ Before you connect Azure OpenAI to your data, you should first observe how the b
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
    
-1. In the **Azure portal**, search for **Storage Account (1)** and select **Storage Account(2)**.
+1. On the Azure portal, type **Storage account (1)** in the search box and select **Storage accounts (2)** from the results.
 
    ![](../media/open-strg-accnt.png)
 
-1. On **Storage Account** page, click on **+ Create**.
+1. On **Storage Accounts** page, click on **+ Create**.
 
    ![](../media/L6T2S3-0205.png)
 
-1. To create a **Storage Account** resource enter the following details and click on **Next (7)**:
+1. On the **Create a storage account** page, enter the following details and click on **Next (7)**:
 
    | Settings | Action |
    | -- | -- |
@@ -73,7 +73,7 @@ In this task, you will observe how the base model responds to queries without an
 
    | Settings | Action |
    | -- | -- |
-   | **Allow enable anonymous access on individual containers (1)** | Check in the box to enable under **Advanced** section. |
+   | **Allow enable anonymous access on individual containers (1)** | Check in the box. |
 
 1. Click on **Review + create (2)** and subsequently click on **Create**. 
 
@@ -89,15 +89,15 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S7-0205-1.png "upload files")
 
-1. Create a container with the name **openaidatasource (1)**, enable **Anonymous access level for container (2)** and click on **Create (3)**.
+1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level (2)** to Container (anonymous read access for containers and blobs). Once both fields are configured, click on the **Create (3)** button..
 
     ![](../media/L6T2S8-0205.png "create container")
 
-1. Select the **openaidatasource** container, on the **openaidatasource** container blade, click on **Upload**. 
+1. Open the **openaidatasource** container page, click on the **Upload** button located at the top to begin uploading files to the container.
 
     ![](../media/L6T2S9-0205-1.png "upload files")
 
-1. From the right pane, click on **Browse for files**.
+1. On the **Upload blob** pane, click on **Browse for files** to select the file you want to upload.
 
     ![](../media/L6T2S9-0205-5.png)
 
@@ -109,7 +109,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S9.1-0205.png "upload files")
 
-1. In the **Azure portal**, search for **AI search (1)** and select **AI search (2)**.
+1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
 
     ![](../media/L6T2S9-0205-4.png)
 
@@ -139,11 +139,11 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S19-1807.png)
 
-1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** playground followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
+1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** section under **Playground** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
     ![](../media/chat_playground-1.png)
    
-1. In the **Add data**, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
+1. In the **Add data** page, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
 
    | Setting | Action |
    | -- | -- |
@@ -196,7 +196,7 @@ You'll notice a very different response this time, with specifics about certain 
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
       ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
@@ -305,7 +305,7 @@ In this task, you will complete key parts of the application to enable it to use
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -402,7 +402,7 @@ In this task, you will run your configured app to send a request to your model a
 
 In this task, you will run the reviewed code to generate some images.
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. In the **Cloudshell** bash terminal, navigate to the folder for your preferred language.
 
 2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 

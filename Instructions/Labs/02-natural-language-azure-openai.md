@@ -21,11 +21,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you will provision an **Azure OpenAI** resource in your Azure subscription. 
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
+1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
 
    ![](../media/select-openai-1607.png)
 
-1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left pane. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+1. On the **AI Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left pane. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
    ![](../media/180625(12).png)
 
@@ -41,7 +41,7 @@ In this task, you will provision an **Azure OpenAI** resource in your Azure subs
 
 In this task, you will integrate with an Azure OpenAI model. We'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
@@ -74,7 +74,7 @@ In this task, you will integrate with an Azure OpenAI model. We'll use a short c
 
 1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
     ![](../media/nlpe19.png)
 
@@ -159,7 +159,7 @@ For this task, you'll complete some key parts of the application to enable using
 
        > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
-1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
+1. Navigate back to the **Cloudshell terminal** and install the necessary packages for your preferred language:
 
     **C#:** 
 
