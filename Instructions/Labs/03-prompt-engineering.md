@@ -6,7 +6,7 @@
 
 In this lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the lab can be applied similarly for a variety of use cases.
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this lab, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+When working with the Azure OpenAI Service, how developers shape their prompts greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this lab, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and that the **my-gpt-model (2)** model is selected in the Deployment.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
    ![](../media/dev-genai-june-5.png)
 
@@ -117,7 +117,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes** and subsequently clicking on **Continue** to start a new session and set the behavioral context of the chat system.
 
    ```
    You are an AI assistant that helps people find information.
@@ -153,7 +153,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
@@ -161,7 +161,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    >  ![](../media/cloudshell-bash.png)
 
-1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings** and select **Go to Classic version**.
 
    ![](../media/classic-cloudshell.png)
 
@@ -592,13 +592,13 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. In the **Cloud Shell** bash terminal, navigate to the folder for your preferred language.
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
     - **C#:** `dotnet run`
 
-      > **Note:** If you receive any warning messages, you can ignore those and continue.
+      > **Note:** If you receive any warning messages, you can ignore them and continue.
       
     - **Python:** `python prompt-engineering.py`
 
