@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
 
    ![](../media/dev-07.png)
 
@@ -57,11 +57,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/L1T2S1-1607.png)
 
-1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. On the **Azure AI Foundry portal**, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
      ![](../media/dev-08.png)
 
-1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
+1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (Chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 
    ![](../media/L1T2S3-1607.png)
 
@@ -72,7 +72,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    | **Deployment name** | **my-gpt-model (2)** |
    | **Deployment type** | **Standard (3)**|
    | **Model version upgrade policy** | **Upgrade once new default version becomes available. (4)** |
-   | **Model version** | 2024-11-20 (5)|
+   | **Model version** | 2024-11-20 **(5)**|
    | **Tokens per Minute Rate Limit (thousands)** | **10K (6)** |
    | **Content Filter** | **DefaultV2 (7)**|
    | **Enable dynamic quota** |**Enabled (8)**|
@@ -90,13 +90,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
-
-
 ## Task 3: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section from the left pane, select the **Chat** page, and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
+1. From the left navigation pane, select the **Chat** section under the **Playground** and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
 
 2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement **(2):**
 
