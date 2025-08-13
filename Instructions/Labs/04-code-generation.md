@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** under **Playground** in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
    ![](../media/dev-genai-june-5.png)
    
@@ -72,7 +72,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
@@ -80,7 +80,7 @@ In this task, you will use a short command-line application running in Cloud She
 
    ![](../media/L4T2S2-1707.png)
 
-3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
+3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
    ![](../media/classic-cloudshell-0108.png)
 
