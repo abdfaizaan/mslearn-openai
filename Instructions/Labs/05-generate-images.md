@@ -79,7 +79,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     ![](../media/dev-genai-june-4.png)
 
-3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
+3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
    ![](../media/classic-cloudshell-0108.png)
 
@@ -112,7 +112,7 @@ In this task, you will use a configuration file in the application to store the 
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
+2. Update the configuration values to include the **Endpoint**, **Key1**, and set the Azure OpenAI Deployment name as **Dalle3 (deployment name of your image generation model)** for your Azure OpenAI service.  Then, save the file by right-clicking the file in the left pane.
 
     > **Tip:** You can adjust the split at the top of the cloud shell pane to see the Azure portal and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 

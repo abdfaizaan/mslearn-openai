@@ -24,7 +24,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/dev-genai-june-5.png)
 
-1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**.
+1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**. In the **Update system message?** pop-up click on **Continue**.
 
    ```
    You are an AI assistant that helps people find information.
@@ -299,7 +299,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **Python:** prompt-engineering.py
 
     ```python
-    # Add Azure OpenAI package
+    # Add Azure OpenAI import
     from openai import AsyncAzureOpenAI
     ```
 
@@ -356,7 +356,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
       ![](../media/L3T3S12c-1707.png)
 
-    **Python:** prompt-engineering.py - Add the code in **Create chat completion options** section
+    **Python:** prompt-engineering.py - Add the code in **Build the messages array** section
 
    ```python
     # Format and send the request to the model
@@ -500,6 +500,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
       from dotenv import load_dotenv
       
       # Add OpenAI import
+      # Add Azure OpenAI package
       from openai import AsyncAzureOpenAI
       
       # Set to True to print the full response from OpenAI for each call
@@ -520,7 +521,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
                   api_key=azure_oai_key,  
                   api_version="2024-02-15-preview"
                   )
-                  
+             
       
               while True:
                   print('1: Basic prompt (no prompt engineering)\n' +
@@ -558,21 +559,21 @@ In this task, you will complete key parts of the provided C# or Python applicati
           print("User message: " + user_message)
       
           # Build the messages array
-           # Format and send the request to the model
+          # Format and send the request to the model
           messages =[
                   {"role": "system", "content": system_message},
                   {"role": "user", "content": user_message},
-              ]
-              
+          ]
+       
           print("\nSending request to Azure OpenAI model...\n")
       
-              # Call the Azure OpenAI model
+       # Call the Azure OpenAI model
           response = await client.chat.completions.create(
-                  model=model,
-                  messages=messages,
-                  temperature=0.7,
-                  max_tokens=800
-              )
+             model=model,
+             messages=messages,
+             temperature=0.7,
+             max_tokens=800
+          )
           
       
           if printFullResponse:
@@ -582,6 +583,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
       
       if __name__ == '__main__': 
           asyncio.run(main())
+
       ```
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
@@ -603,6 +605,15 @@ In this task, you will run your configured app to send a request to your model a
     - **Python:** `python prompt-engineering.py`
 
        >**Note:** If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
+
+       >Note: If you get any **ImportError: cannot import name 'ChatCompletionReasoningEffort' from 'openai.types.chat'**, then try executing the below commands once and then try to run the Python application.
+       
+       >```
+       >pip uninstall -y openai
+       >rm -rf /home/odl_user/.local/lib/python3.12/site-packages/openai
+       >rm -rf /home/odl_user/.local/lib/python3.12/site-packages/openai-*
+       >pip install --user --no-cache-dir openai==1.56.2
+       >```
 
        > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
