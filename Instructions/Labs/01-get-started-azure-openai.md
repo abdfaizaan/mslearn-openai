@@ -94,7 +94,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. From the left navigation pane, select the **Chat** section under the **Playground** and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
+1. In the Azure **AI Foundry portal** from the left navigation pane, select the **Chat** section under the **Playground** and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
 
 2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement **(2):**
 
@@ -152,15 +152,15 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 1. In the **Setup** pane select **Parameters** , set the following parameter values:
     
-   - **Temperature (1):** 0
-    
-   - **Max response (2):** 500
+   - **Max response (1):** 500
 
+   - **Temperature (2):** 0
+    
       > **Note:** You may need to scroll down to see the parameters option.
 
         ![](../media/L1T5S1-1607.png)
       
-2. Submit the following message in the chat session
+3. Submit the following message in the chat session
 
    ```
    Write three multiple-choice questions based on the following text.
@@ -174,11 +174,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors. 
    ```
 
-3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
+4. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
    ![](../media/last-3.jpg)
    
-4. Observe the following about the prompt and parameters you used:
+5. Observe the following about the prompt and parameters you used:
    - The prompt specifically states that the desired output should be three multiple-choice questions.
    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
