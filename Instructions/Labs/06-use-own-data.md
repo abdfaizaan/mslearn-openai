@@ -56,7 +56,7 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/L6T2S3-0205.png)
 
-1. On the **Create a storage account** page, enter the following details and click on **Next (7)**:
+1. On the **Create a storage account** page, under the **Basic** tab, enter the following details and click on **Next (7)**:
 
    | Settings | Action |
    | -- | -- |
@@ -69,7 +69,7 @@ In this task, you will observe how the base model responds to queries without an
   
     ![](../media/dev-genai-june-12.png "Create storage account")
 
-1. Under the **Advanced** section, provide the following details:
+1. Under the **Advanced** tab, provide the following details:
 
    | Settings | Action |
    | -- | -- |
@@ -89,7 +89,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S7-0205-1.png "upload files")
 
-1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level (2)** to Container (anonymous read access for containers and blobs). Once both fields are configured, click on the **Create (3)** button..
+1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level** to **Container (anonymous read access for containers and blobs) (2)**. Once both fields are configured, click on the **Create (3)** button..
 
     ![](../media/L6T2S8-0205.png "create container")
 
@@ -117,7 +117,7 @@ In this task, you will observe how the base model responds to queries without an
 
     [](../media/L6T2S15-1807.png "upload files")
 
-1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequently click on **Create**.
+1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
 
    | Settings | Action |
    | -- | -- |
@@ -129,7 +129,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S16-1807.png "Create cognitive search resource")
 
-1. Once the deployment is successful, click on Go to resource to go to the deployed search service. 
+1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page, copy the URL and paste it in a text editor such as Notepad for later use.
 
@@ -143,7 +143,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/chat_playground-1.png)
    
-1. In the **Add data** page, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
+1. On the **Add data** page, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
 
    | Setting | Action |
    | -- | -- |
@@ -164,7 +164,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/API_key-1.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data(preview)** tab in the **Assistant setup** pane.
+1. On the **Review and finish** page select **Save and close**, which will add your data.
 
     ![](../media/review-1.png "Add data")
 
@@ -180,6 +180,8 @@ In this task, you will observe how the base model responds to queries without an
 
 In this task, you will ask the same questions as before in the chat section after adding your data, and observe how the responses differ.
 
+1. In the **Chat** session on the right side, submit the following queries, and review the responses:
+
    ```
    I'd like to take a trip to New York. Where should I stay?
    ```
@@ -188,7 +190,7 @@ In this task, you will ask the same questions as before in the chat section afte
    What are some facts about New York?
    ```
 
-You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
+2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
 > **Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
@@ -243,7 +245,7 @@ In this task, you will complete key parts of the application to enable it to use
 1. Update the configuration values to include:
     - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task). Alternatively, it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal.
     - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **my-gpt-model**).
-    - The endpoint for your AI search service (Which you copied in the previous task; alternatively, it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
+    - The endpoint for your AI search service (Which you copied in the previous task; alternatively, it is available in the **URL** value on the overview page for your AI search resource in the Azure portal).
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
 
@@ -339,7 +341,7 @@ In this task, you will complete key parts of the application to enable it to use
       > pip install --user openai requests python-dotenv
       > ```
 
-1. In the code editor, replace the comment Configure your data source with code to your index as a data source for chat completion:
+1. In the code editor, replace the comment **Configure your data source** with code to your index as a data source for chat completion:
 
     For **C#**: OwnData.cs
 
@@ -427,7 +429,7 @@ In this lab, you have accomplished the following:
 
 - You explored **Retrieval-Augmented Generation (RAG)** by connecting your own data with the Azure OpenAI Service.
 - You **observed base model behavior** without grounding data and then connected your **Azure Blob Storage and AI Search index** to ground responses with your uploaded PDFs.
-* You configured and ran an **application in Azure Cloud Shell** to interact with the model using your custom data as the knowledge source.
+- You configured and ran an **application in Azure Cloud Shell** to interact with the model using your custom data as the knowledge source.
 
 ### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
 
