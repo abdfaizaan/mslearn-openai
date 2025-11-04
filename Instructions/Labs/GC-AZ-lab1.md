@@ -72,7 +72,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. On your **gpt-4o-mini** model, click on **Open in playground**.
 
-      ![](../media/gpt-4-open-in-playground.png)
+      ![](../media/rm12.png)
 
 1. In the **Chat session (1)**, enter the following prompt and press **Enter (2)**.
 
