@@ -12,9 +12,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Explore image-generation in the DALL-E playground
 - Task 2: Use the REST API to generate images
-- Task 2.1: Prepare the app environment
-- Task 2.2: Configure your application
-- Task 2.3: View application code
+  - Task 2.1: Prepare the app environment
+  - Task 2.2: Configure your application
+  - Task 2.3: View application code
 - Task 3: Run the app
 
 ## Task 1: Explore image generation in the DALL-E playground
@@ -35,13 +35,13 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 1. In the **Overiew** pane, click on **Go to Azure AI Foundry Portal** and it will navigate to **Azure AI Foundry portal**.
 
     ![](../media/openaige8.png)
 
-1. From the left navigation pane, click on **Images (1)** and select **+ Create a deployment (2)**.
+1. From the left navigation pane, click on **Images (1)** under Playgrounds and select **+ Create a deployment (2)**.
 
     ![](../media/openge4.png)
 
@@ -55,7 +55,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
    - Deployment type: **Standard (2)**
    - Model version: **3.0 (Default) (3)**
    - Tokens per Minute Rate Limit: **1K (4)**
-   - Content Filter: **Default (5)**
+   - Content filter: **Default (5)**
    - Enable dynamic quota: **Enabled (6)**
    - Click on **Deploy (7)**
 
@@ -67,7 +67,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. Once in the playground, you will see a prompt box where you can enter a description of the image you would like to generate.
 
-1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, **An elephant on a skateboard (1)**. Then select **Generate (2)** and view the image that is generated.
+1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, `An elephant on a skateboard` **(1)**. Then select **Generate (2)** and view the image that is generated.
 
     ![](../media/openge7.png)
 
@@ -83,14 +83,14 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 ## Task 2.1: Prepare the app environment
 
-In this exercise, you will use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
+In this task, you will use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
    the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to **Bash**. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
 1. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
@@ -99,7 +99,7 @@ In this exercise, you will use a simple Python or Microsoft C# app to generate i
     git clone https://github.com/CloudLabs-MOC/mslearn-openai.git
     ```
 
-   > **NOTE:** if you get Message saying already cloned , please move the next step.
+   > **NOTE:** If you get message saying already cloned, please move the next step.
 
 1. Navigate to the folder for the language of your preference  by running the appropriate command.
 
@@ -147,7 +147,7 @@ The application uses a configuration file to store the details needed to connect
 
 2. Update the configuration values to include:
    
-    - The **endpoint** and **key** that you copied in Notepad from the Azure OpenAI resource.
+    - The **Endpoint** and **key** that you copied in Notepad from the Azure OpenAI resource.
     - The **deployment name** for your model deployment: **dall-e-3**.
     - Press **Ctrl + S** to save the file.
     - To exit the code editor: Press **Ctrl + Q**.
@@ -225,7 +225,6 @@ Now that you have reviewed the code, it's time to run it and generate some image
      </ItemGroup>
    
    </Project>
-   
    ```
 
 1. Save the file by right-clicking on the file in the left pane and selecting **Save**, then exit the code editor by pressing **Ctrl + Q**.
@@ -258,13 +257,13 @@ Now that you have reviewed the code, it's time to run it and generate some image
    ![](../media/rm9.png)
 
 1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
-
-   <validation step="0123144f-896f-464d-bfa2-090e62c99e62" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+  
+   <validation step="0123144f-896f-464d-bfa2-090e62c99e62" />
 
 ## Summary
 
