@@ -38,7 +38,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
       ![](../media/openaige8.png)
 
-1. In the Azure AI Foundry portal, navigate to **Deployments (1)**, select **+ Deploy model (2)**, and then choose **Deploy base model (3)**.
+1. In the Azure AI Foundry portal, navigate to **Deployments (1)** under Shared resources, select **+ Deploy model (2)**, and then choose **Deploy base model (3)**.
 
       ![](../media/Openai-04.png)
 
@@ -49,15 +49,15 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: gpt-4o-mini **(1)**
     - **Deployment type**: Standard **(2)**
-    - **Model Version**: 2024-07-18(Default) **(3)**
+    - **Model Version**: 2024-07-18 (Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
-    - **Content Filter**: Default **(5)**
+    - **Content filter**: Default **(5)**
     - **Enable dynamic quota**: Enabled **(6)**
     - Click on **Deploy (7)**
 
         ![](../media/openge3.png)
 
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   > **Note**: You can ignore the "Failed to fetch deployments quota information" notification.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -183,17 +183,16 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Repeat the commands you executed in steps 7 and 8 for the language of your preference.
 
-
-<validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it.
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
+
 ## Task 4: Configure your application
 
-For this exercise, you will complete some key parts of the application to enable using your Azure OpenAI resource.
+For this task, you will complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. Use the appropriate command below based on your chosen programming language.
 
@@ -465,4 +464,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
-## You have successfully completed the lab. Click on Next >> to procced with next exercise.
+## You have successfully completed the lab. Click on Next >> to procced with next lab.
