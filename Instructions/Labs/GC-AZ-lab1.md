@@ -1,6 +1,6 @@
 # Lab 01: Generate and improve code with Azure OpenAI Service
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 120 minutes
 
 ## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
@@ -24,7 +24,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. On **AI Foundry | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/ai-foundry-openai.png)
+   ![](../media/rm4.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
