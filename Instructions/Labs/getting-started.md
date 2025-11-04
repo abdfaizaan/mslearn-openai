@@ -39,7 +39,7 @@ In this hands-on lab, you will follow an architecture flow that begins with expl
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
-   ![](../media/getting-started-page.png "Lab Environment")
+   ![](../media/rm10.png "Lab Environment")
    
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
 
@@ -67,22 +67,22 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Login to Azure Portal
 
-1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
+1. In the LabVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](../media/azureportal_icon1.png "Lab Environment")
+   ![](../media/rm1.png "Lab Environment")
    
 1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**.
    
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+    **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    
      ![](../media/image7.png "Enter Email")
      
-1. Now enter the following password and click on **Sign in**.
+1.Now enter the Temporary Access Pass and click on **Sign in**.
+
+   **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject>
    
-   * Password: <inject key="AzureAdUserPassword"></inject>
+   ![](../media/rm2.png "Enter Password")
    
-     ![](../media/image8.png "Enter Password")
-     
 1. If you see the pop-up **Action Required**, click **Ask Later**.
 
      ![](../media/asklater.png "Action required window")
