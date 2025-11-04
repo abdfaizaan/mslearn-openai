@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/msi-image2.png)
 
@@ -38,22 +38,14 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
       ![](../media/openaige8.png)
 
-1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+1. In the Azure AI Foundry portal, navigate to **Deployments (1)**, select **+ Deploy model (2)**, and then choose **Deploy base model (3)**.
 
       ![](../media/Openai-04.png)
 
-1. Search **gpt-4o-mini**, **select (2)** it and click on **Confirm (3)**.
+1. On the Select a model page, search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)**, and click **Confirm (3)**.
 
       ![](../media/openge1.png)
 
-1. Within the **Deploy model** pop-up interface, enter the following details:
-
-    - **Deployment name**: gpt-4o-mini **(1)**
-    - **Deployment type**: Standard **(2)**
-    -  Select **Customize** **(3)**
-
-        ![](../media/openge2.png)
-       
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: gpt-4o-mini **(1)**
     - **Deployment type**: Standard **(2)**
@@ -61,7 +53,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
     - **Content Filter**: Default **(5)**
     - **Enable dynamic quota**: Enabled **(6)**
-    - Click on **Deploy** (7)
+    - Click on **Deploy (7)**
 
         ![](../media/openge3.png)
 
@@ -80,15 +72,15 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. On your **gpt-4o-mini** model, click on **Open in playground**.
 
-      ![](../media/gpt-4-open-in-playground.png)
+      ![](../media/rm12.png)
 
-1. In the **Chat session**, enter the following prompt and press *Enter*.
+1. In the **Chat session (1)**, enter the following prompt and press **Enter (2)**.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
       ```
 
-      ![](../media/gpt-4-chat-session.png)
+      ![](../media/rm11.png)
         
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
@@ -138,22 +130,22 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/Openai-08.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select **Bash**. If you don't see this option, skip the step.
 
       ![](../media/Openai-09.png)
 
-1. Within the Getting Started pane, select Mount **storage account (1)**, select your Storage account **subscription (2)** from the dropdown 
-   and **click Apply (3)**.
+1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown 
+   and click **Apply (3)**.
 
       ![](../media/Openai-10.png)
 
-1. Within the Mount storage account pane, select I want to create a **storage account** **(1)** and click **Next** **(2)**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
       ![](../media/Openai-11.png)
 
-1. Within the Advanced settings pane, enter the following details:
+1. Within the Create storage account pane, enter the following details:
 
-      - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
+      - Subscription: Default - **Pre-assigned subscription (1)**
       - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(2)**
       - Region: Select  **<inject key="Region" enableCopy="false" />** **(3)**
       - Storage account: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
@@ -420,7 +412,7 @@ Now that your app has been configured, run it to send your request to your model
 
     > **Tip**: You may find the automatic typing in the VM doesn't work well with multiline prompts. If that is your issue, copy the entire prompt then paste it into the terminal.
 
-1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+1. Observe the output. This time, you will likely see the format of an email with the specific animals included, as well as the call for donations.
    
 1. Next, enter the following prompts that additionally specify the content:
 
@@ -464,7 +456,7 @@ Now that your app has been configured, run it to send your request to your model
 
 ## Summary
 
-By completing this lab, you’ve gained hands-on experience with Azure OpenAI Service models, demonstrating how AI can be a powerful tool in code generation, bug fixing, and code comprehension. You’ve learned to deploy models, utilize the Chat Playground for code-related tasks, and integrate AI into a real-world application through Azure Cloud Shell. Additionally, you've explored the capabilities of the DALL-E model for image generation. These skills will help you leverage AI to enhance your coding workflow, making development more efficient and insightful.
+By completing this lab, you have gained hands-on experience with Azure OpenAI Service models, demonstrating how AI can be a powerful tool in code generation, bug fixing, and code comprehension. You’ve learned to deploy models, utilize the Chat Playground for code-related tasks, and integrate AI into a real-world application through Azure Cloud Shell. Additionally, you've explored the capabilities of the DALL-E model for image generation. These skills will help you leverage AI to enhance your coding workflow, making development more efficient and insightful.
 
 ## Review
 
