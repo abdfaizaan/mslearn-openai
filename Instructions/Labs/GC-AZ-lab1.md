@@ -1,6 +1,6 @@
 # Lab 01: Generate and improve code with Azure OpenAI Service
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
 ## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
