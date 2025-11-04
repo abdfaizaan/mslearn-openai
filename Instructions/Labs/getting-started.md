@@ -37,11 +37,19 @@ In this hands-on lab, you will follow an architecture flow that begins with expl
 
 ## Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
+## Accessing Your Lab Environment
+
+Once the environment is provisioned, a virtual machine (LabVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
    ![](../media/rm10.png "Lab Environment")
+
+## Virtual Machine & Lab Guide
+
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+
+## Exploring Your Lab Resources
    
-1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
 
    ![](../media/envdetails.png "Lab Environment")
 
@@ -51,47 +59,43 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ![](../media/1302024(4).png)
 
+## Utilizing the Split Window Feature
+
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](../media/inline-validation.png)
 
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/timer.png)
 
 ## Login to Azure Portal
 
-1. In the LabVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
+1. In the LabVM, click on **Azure portal** shortcut of Microsoft Edge browser which is created on desktop.
 
    ![](../media/rm1.png "Lab Environment")
    
 1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**.
    
-    **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    
-     ![](../media/image7.png "Enter Email")
+        ![](../media/image7.png "Enter Email")
      
-1.Now enter the Temporary Access Pass and click on **Sign in**.
+1. Now enter the Temporary Access Pass and click on **Sign in**.
 
-   **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject>
    
-   ![](../media/rm2.png "Enter Password")
-   
-1. If you see the pop-up **Action Required**, click **Ask Later**.
-
-     ![](../media/asklater.png "Action required window")
-     
-    > If you are getting popup **save password**, then select **Save & Turn on** option.
+      ![](../media/rm2.png "Enter Password")
        
 1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
 
@@ -102,9 +106,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
 
      ![](../media/rg.png "Resource groups")
-   
-
-In this hands-on-lab, you will learn how Azure OpenAI models can generate and refine code and use the DALL-E model to create images from text prompts, showcasing AI's versatility in coding and creativity.
 
 ## Support Contact
  
@@ -119,4 +120,4 @@ Click on the **Next** button from lower right corner to move on to the next page
 
 ![](../media/msi-image1.png)
 
-### Happy learning !
+### Happy learning!
