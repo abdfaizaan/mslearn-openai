@@ -214,6 +214,8 @@ For this exercise, you will complete some key parts of the application to enable
    
     - The **endpoint** and **key** that you copied in Notepad from the Azure OpenAI resource.
     - The **deployment name** for your model deployment: **gpt-4o-mini**.
+    - Press **Ctrl + S** to save the file.
+    - To exit the code editor: Press **Ctrl + Q**.
 
       - Navigate to the folder for your preferred language and install the necessary packages.
 
