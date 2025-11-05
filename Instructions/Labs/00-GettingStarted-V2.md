@@ -63,7 +63,7 @@ We've prepared a seamless environment for you to explore and learn about the con
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/accessing-lab-env.jpg)
+   ![](../media/guide.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -73,31 +73,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](../media/exp-lab-resources.png)
+   ![](../media/envt.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../media/split-feature-new.png)
+ ![](../media/splitwin.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/dev-04.png)
+![](../media/resources.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../media/dev-06.png)
+   ![](../media/zoom.png)
 
 ## Let's Get Started with Azure Portal
 
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
 
-   ![Launch Azure Portal](../media/sc900-image(1).png)
+   ![](../media/openaz.png)
    
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -109,13 +109,19 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/sc900-image-2.png)
- 
+       ![](../media/tpwrd.png)
+
+    > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
+
 1. If you see the pop-up **Stay Signed in?**, select **No**.
  
+   ![](../media/staysign.png)       
+
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
-## Steps to Proceed with MFA Setup
+   ![](../media/skiptour.png)
+
+## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
 
 If, in case, after signing in to the Azure portal, you are asked to register for MFA, please follow the steps below to proceed:
 
