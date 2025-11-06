@@ -159,13 +159,16 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Review the response and then submit the following message to continue the conversation: **`How is it related to machine learning?`**
 
-      ![](../media/upmodel_response.png)
+      ![](../media/wtai.png)
 
 1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+
+      ![](../media/ml.png)
 
 1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](../media/image5a.png)
+      ![](../media/uprevres.png)
 
 ## Task 4: Explore prompts and parameters
 
