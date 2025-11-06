@@ -19,38 +19,41 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
 
-   ![](../media/select-openai-1607.png)
+   ![](../media/azureai.png)
 
-2. On **AI Foundry | Azure OpenAI**, click on **Azure OpenAI (1)** blade, and then click on **+ Create (2)** and choose **Azure OpenAI (3)**.
+2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
 
-   ![](../media/L1T1S2.png)
+   ![](../media/createazai.png)
 
-3. Fill in the required details on the **Create Azure OpenAI** page:
-   
-    - Subscription: Default - Pre-assigned subscription **(1)**
+3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+    
+    - Subscription: **Default Subscription (1)**
+    
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
+    
+    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    
     - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/nlpe1.png "Create Azure OpenAI resource")
+      ![](../media/clicknext.png)
 
-      >**Note:** Ensure the resource is deployed in the **Sweden Central** region.
+4. Under the **Review + submit** tab, click on **Create**.
 
-4. Click **Next** on each tab without changing anything.
+      ![](../media/clickcreate.png)
 
-5. Finally, click **Review + create**, then click **Create** to start the deployment.
+5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-     ![](../media/170725(01).png "Create Azure OpenAI resource")
-
-5. Wait for the deployment to complete, then go to the deployed resource from the notification pane.
+      ![](../media/e1t1p5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+- Hit the Validate button for the corresponding task.
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
@@ -58,140 +61,128 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. From the **Azure portal**, navigate to your OpenAI resource **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
 
-   ![](../media/180625(03).png)
+    ![](../media/gotofoundry.png)
 
-1. On the **Azure OpenAI** resource page, click **Overview (1)**, then select **Go to Azure AI Foundry portal (2)** to navigate to the **Azure AI Foundry portal**.
+1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-   ![](../media/goto-aiportal-1607.png)
+    ![](../media/e1t2p2.png)
 
-1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
+1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/deploy-model-1607.png)
+   ![](../media/confirm4.1.png) 
 
-1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-4.1-mini (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
+   >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
 
-   ![](../media/L1T2S4.png)
-
-1. Click on **Customize**.
+      ![](../media/e1t2p2(1).png)
    
-   ![](../media/L1T2S5.png)   
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
 
-1. Within the **Deploy model** pop-up interface, enter the following details:
+   ![](../media/custom4.1.png)
+
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
+
       - Deployment type: **Global Standard (2)**
+
       - Model version: **2025-04-14 (Default) (3)**
+
       - Tokens per Minute Rate Limit (thousands): **10K (4)**
+
       - Content filter: **DefaultV2 (5)**
-      - Click on **Deploy** **(6)**
-  
-           ![](../media/L1T2S6.png)
 
-1. With the deployed model, now you can experiment with the chat completion tasks as you go along.
- 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+      - Click on **Deploy (6)**
 
-   <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
+        ![](../media/deploy4.1.png)
+      
+        
+1. This will deploy a model that you will be playing around with as you proceed.
 
+    > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
+   
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- Hit the Validate button for the corresponding task.
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
+   
 ## Task 3: Use the Chat playground
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. Navigate to the **Shared resources** section in the left-hand menu and select **Deployments (1)**. From the list of available deployments, choose **my-gpt-model**, then click on **Open in playground (2)**. This action will launch the **Chat Playground**, where you can interact with the deployed model in a conversational interface.
+1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2025-04-14) (2)** model is selected in the configuration pane.
 
-   ![](../media/L1T3S1.png)
+      ![](../media/chatmodelv.png)  
 
-   ![](../media/L1T3S1i.png)
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
 
-2. In the **Setup** pane:
+      ![](../media/applychanges.png)
 
-   * Replace the default **System message (1)** with the following instruction:
+1. In the **Update system message?** window, click on **Continue**.
 
-     ```
-     The system is an AI teacher that helps people learn about AI.
-     ```
-   * Click **Apply changes (2)** and confirm by selecting **Continue** on the prompt.
-
-      ![](../media/L1T3S2.png)
-
-      ![](../media/L1T3S2i.png)
+      ![](../media/e1t4p3.png)
    
-1. In the **Setup (1)** section, click on **+ Add section (2)** box, then click on **Examples (3)**.
+1. In the **Setup** section, click on **+ Add section (1)** drop-down box, then click on **Examples (2)**.
 
-      ![](../media/L1T3S3.png)
+      ![](../media/e1t4p4.png)
 
 1. Enter the following message and response in the designated boxes:
 
-      - **User (1)**:
-        ```
-        What are the different types of artificial intelligence?
-        ```
+      - **User:** `What are the different types of artificial intelligence?` **(1)**
     
-      - **Assistant (2)**:
-        ```
-        There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).
-        ``` 
+      - **Assistant:** `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
 
-         ![](../media/L1T4S4-1607.png)
+         ![](../media/e1t4p5.png)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-1. Click **Apply changes**, then **Continue** to initialize the chat with the updated context.
+1. Save the changes by clicking on **Apply changes**.
 
-      ![](../media/L1T4S5.1-1607.png)
+      ![](../media/e1t4p6.png)
 
-      ![](../media/L1T3S2i.png)
+1. In the **Update system message?** pop-up window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
    
-1. In the query box at the bottom of the page, enter the below-mentioned text **(1)**. Use the **Send (2)** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Use the **Send** button to submit the message and view the response.
 
-   ```
-   What is artificial intelligence?
-   ```
-
-   ![](../media/L1T4S6-1607.png)
+      ![](../media/NO-7a.png)
    
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+      > **Note:** You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-1. Review the response.
+1. Review the response and then submit the following message to continue the conversation: **`How is it related to machine learning?`**
 
-   ![](../media/L1T3S7.png)
+      ![](../media/upmodel_response.png)
 
-1. After reviewing the response, submit the following follow-up message:
+1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-   ```
-   `How is it related to machine learning?`
-   ```
-
-1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
-
-     ![](../media/L1T3S8.png)
-
-1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](../media/image5a.png)
-
-      ![](../media/170725(07).png)
 
 ## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane, go to **Parameters (1)** and set the following values:
-
-   * **Max response tokens (2)**: 500
-   * **Temperature (3)**: 0 (for deterministic responses)
-
-     ![](../media/image6.png)
+1. In the **Chat Configuration** pane select **Parameters (1)**, set the following parameter values:
       
-2. In the chat input box, enter the message **(1)** and click **Submit (2)** to send it.
+      - Max response: **500 (2)**
+     
+      - Temperature: **0 (3)**
+   
+          ![](../media/image6.png)
+      
+2. Submit the following message as a query in a chat session
 
       ```
-      Write three multiple-choice questions based on the following text.
+      Write three multiple choice questions based on the following text.
 
       Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
@@ -202,11 +193,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       ```
 
-      ![](../media/L1T5S2-1607.png)
+3. Review the **results**, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
-
-      ![](../media/last-3.jpg)
+      ![](../media/g18.png)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -218,33 +207,32 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, update the **System message (1)** to:
+1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Apply changes (2)**.
 
-   ```
-   You are a Python developer.
-   ```
+      ![](../media/pydev.png)
 
-   * Click **Apply changes (2)** and then **Continue** when prompted.
+1. In the **Update system message?** pop-up window, click on **Continue**.
 
-     ![](../media/L1T5S1.png)
+      ![](../media/e1t4p3.png)
 
-     ![](../media/L1T3S2i.png)
+1. In the **Chat session** pane, click on the **Clear chat** icon to clear the chat history and start a new session.
 
-2. In the **Chat session** pane, select the **Clear chat** button, then select **Clear** from the pop-up window to clear the chat history and start a new session.
+      ![](../media/e1t6p2.png)
 
-      ![](../media/clear-history-1607.png)
+1. Click on **Clear** in **Clear chat?** pop-up window.      
 
-      ![](../media/L1T5S2i.png)
+      ![](../media/e1t6p3.png)
 
-4. Enter the following prompt:
+1. Submit the following user message:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
       ```
 
-5. Review the generated Python code snippet. The model should return a valid function definition that multiplies two inputs and returns the result.
+1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-     ![](../media/L1T5S4.png)
+      ![](../media/task-6-lasta.png)
+
 
 ## Summary
 
@@ -256,4 +244,4 @@ In this lab,
 
 ### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
      
-   ![](../media/next-1507.png)
+   ![](../media/next2.png)
