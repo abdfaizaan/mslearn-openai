@@ -231,7 +231,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/task-6-lasta.png)
+      ![](../media/pysol.png)
 
 
 ## Summary
