@@ -132,9 +132,15 @@ In this task, you will complete key parts of the application to enable it to use
     - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
-        ![](../media/app-settings-c-1807.png)
+   > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
-        ![](../media/env-p-1807.png)
+   - **C#:**
+
+      ![](../media/app-settings-c-1807.png)
+
+   - **Python:**
+
+      ![](../media/env-p-1807.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
