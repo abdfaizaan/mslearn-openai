@@ -171,6 +171,8 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. The OpenAI tool will use these files to generate the responses. 
    
+   ![](../media/samplecode.png)
+
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 1. Run the application.
@@ -182,13 +184,19 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
+   ![](../media/option1.png)
+
 1. In the response, you will see that OpenAI has added comments to your sample code provided from the function file. 
 
 1. Next, choose option **2** to write unit tests for that same function.
 
+   ![](../media/option2.png)
+
 1. In the response, you will notice that the unit tests are added to your sample code.
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. 
+
+   ![](../media/option3.png)
 
 1. This time, OpenAI would use the go fish file and fix the code in it and respond with the updated code. 
 
@@ -211,11 +219,13 @@ In this task, you will run your configured app to generate code for each use cas
      cat app.txt
      ```
 
+      ![](../media/cat.png)
+
 The app for Go Fish in `sample-code` can be run if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
 It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the player's hand when they get a pair, and a few other bugs that require an understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but they can't be trusted as correct and need to be verified by the developer.
 
-If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True` and rerun the app.
+If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True` and re-run the app.
 
 ## Summary
 
@@ -223,4 +233,4 @@ In this lab, you explored how to use Azure OpenAI Service to generate, explain, 
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![](../media/next5.png)
