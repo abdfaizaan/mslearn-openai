@@ -23,7 +23,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
-   ![](../media/dev-genai-june-5.png)
+   ![](../media/chatmodelv.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -31,12 +31,16 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
+   ![](../media/pyprog.png)
+
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
 1. Next, send the prompt:
    ```
    Do the same thing, but this time write it in C#.
    ```
+
+   ![](../media/cprog.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -56,6 +60,8 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
+   ![](../media/ruby.png)
+
 1. Observe the output, which explains what the function does.
 
 1. Submit the following prompt to get a simpler version of the function.
@@ -64,11 +70,15 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
+   ![](../media/simpfun.png)
+
 1. Submit the below-mentioned prompt to add comments to the code.
 
       ```
       Add some comments to the function.
       ```
+
+      ![](../media/comments.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 
