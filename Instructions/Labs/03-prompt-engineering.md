@@ -195,11 +195,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
 
-   >  ![](../media/cloudshell-bash.png)
+   >  ![](../media/bash.png)
 
-1. Once the terminal opens, click on **Settings** and select **Go to Classic version**.
+1. Once the terminal opens, click on **Settings(1)** and select **Go to Classic version(2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
