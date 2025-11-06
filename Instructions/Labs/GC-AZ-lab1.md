@@ -49,6 +49,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: gpt-4o-mini **(1)**
     - **Deployment type**: Standard **(2)**
+    - Click on **Customize** to expand the menu.
     - **Model Version**: 2024-07-18 (Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
     - **Content filter**: Default **(5)**

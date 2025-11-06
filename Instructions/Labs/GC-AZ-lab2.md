@@ -53,6 +53,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
    - Deployment name: **dall-e-3 (1)**
    - Deployment type: **Standard (2)**
+   - Click on **Customize** to expand the menu.
    - Model version: **3.0 (Default) (3)**
    - Tokens per Minute Rate Limit: **1K (4)**
    - Content filter: **Default (5)**
@@ -277,3 +278,5 @@ In this lab, you have accomplished the following:
 -   Implement image-generation into your applications using this model
 
 ## You have successfully completed the lab.
+
+By completing this lab **Generate Code and Images with Azure OpenAI Services**, you gained practical experience in utilizing Azure OpenAI models to enhance coding and creative workflows through natural language interaction. You explored how AI can generate new code, debug existing scripts, and provide meaningful explanations and comments to simplify complex logic. Additionally, you experimented with the DALL-E model to create original images using descriptive prompts, both through the DALL-E playground and REST API calls. This lab demonstrated how Azure OpenAI empowers developers and creators to boost productivity, creativity, and innovation by combining intelligent code generation with AI-driven visual content creation.

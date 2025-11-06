@@ -26,7 +26,7 @@ In this hands-on lab, you will follow an architecture flow that begins with expl
 
 ## Architecture Diagram
 
-   ![](../media/ARCH10.PNG)
+   ![](../media/arch21.png)
 
 ## Explanation of Components
 
