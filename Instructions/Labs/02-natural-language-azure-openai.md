@@ -25,7 +25,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
    ![](../media/select-openai-1607.png)
 
-1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On the **AI Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
    ![](../media/L2T1S2.png)
 
@@ -35,7 +35,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
       - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
-        ![](../media/L2T1S3.png "Keys and Endpoints")
+        ![](../media/keys.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -51,15 +51,15 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-    ![](../media/180625(15).png)
+    ![](../media/bash.png)
 
 3. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../media/cloudshell-getting-started.png)
+   ![](../media/mountstrg.png)
 
 4. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+   ![](../media/csanext.png)
 
 5. Within the **Create storage account** page, enter the following details:
 
@@ -70,13 +70,13 @@ In this task, you will set up a development environment using Azure Cloud Shell.
     - File share: Create a new file share named **none** **(5)**
     - Click **Create** **(6)**
 
-        ![](../media/nlpe18.png "Create storage advanced settings")
+        ![](../media/csacreate.png)
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-    ![](../media/L2T2S7.png)
+    ![](../media/classic.png)
 
 8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
