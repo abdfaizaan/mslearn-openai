@@ -22,13 +22,19 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-   ![](../media/dev-genai-june-5.png)
+   ![](../media/chatplay.png)
 
-1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**. 
+1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**. 
 
    ```
    You are an AI assistant that helps people find information.
    ```
+
+   ![](../media/findinfoo.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session**, submit the following query:
 
@@ -44,17 +50,28 @@ In this task, you'll explore how prompt engineering influences model behavior by
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    The response describes the article. However, suppose you want a more specific format for article categorization.
+   ![](../media/article1.png)
 
-1. In the **Setup** section, change the **Give the model instructions and context** to the below text and click on **Apply changes**. 
+   The response describes the article. However, suppose you want a more specific format for article categorization.
+  
+
+1. In the **Setup** section, change the **Give the model instructions and context(1)** to the below text and click on **Apply changes(2)**. 
 
    ```
    You are a news aggregator that categorizes news articles.
    ```
 
-1. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
+   ![](../media/newsaggre.png)
 
-    **User:**
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
+
+1. Under the new system message, select the **Add section(1)** button, and choose **Examples(2)**. Then add the following example.
+
+   ![](../media/addsectioneg.png)
+
+   **User:**
     
     ```prompt
     What kind of article is this?
@@ -97,9 +114,13 @@ In this task, you'll explore how prompt engineering influences model behavior by
     Entertainment
     ```
 
-   ![](../media/L3T1S7-0205.png)
-
 1. Click on the **Apply changes** button to save your changes.
+
+   ![](../media/up2eg.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -117,10 +138,18 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes**.
+   ![](../media/2egchat.png)
+
+1. Set the **Give the model instructions and context(1)** to the text mentioned below. Save the changes by clicking on **Apply changes(2)**.
    ```
    You are an AI assistant that helps people find information.
    ```
+
+   ![](../media/findinfoo.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session** section, submit the following prompt:
 
@@ -131,6 +160,8 @@ In this task, you'll explore how prompt engineering influences model behavior by
     ```
 
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
+
+   ![](../media/loa.png)
 
 1. Change the **Give the model instructions and context** to the text mentioned below, and apply the changes.
 
