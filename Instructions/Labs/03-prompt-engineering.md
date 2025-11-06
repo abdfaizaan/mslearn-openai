@@ -222,6 +222,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    code .
     ```
 
+   ![](../media/giteditor.png)
+
 ## Task 3: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
