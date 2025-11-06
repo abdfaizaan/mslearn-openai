@@ -88,7 +88,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/cshell.png)
 
 2. If you see the previously opened shell, click on the top right 'x' button to close it and open Cloudshell again.
 
@@ -96,7 +96,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell-0108.png)
+   ![](../media/classic.png)
 
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
@@ -111,6 +111,8 @@ In this task, you will use a short command-line application running in Cloud She
     ```bash
     code .
     ```
+
+   ![](../media/labfilecodegen.png)
 
 ## Task 3: Configure your application
 
