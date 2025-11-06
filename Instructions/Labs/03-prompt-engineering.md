@@ -242,6 +242,16 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
+    - **C#:**
+     
+      ![](../media/nlp26.png)   
+
+    - **Python:**
+     
+      ![](../media/nlp27.png) 
+
+       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
     ```
