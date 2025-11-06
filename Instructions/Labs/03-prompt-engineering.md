@@ -163,21 +163,27 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/loa.png)
 
-1. Change the **Give the model instructions and context** to the text mentioned below, and apply the changes.
+1. Change the **Give the model instructions and context(1)** to the text mentioned below, and **Apply changes(2)** the changes.
 
    ```
    You are a coding assistant helping write Python code.
    ```
 
-1. Resubmit the following prompt to the model:
+   ![](../media/pyassis.png)
 
-    ```
-    # 1. Create a list of animals
-    # 2. Create a list of whimsical names for those animals
-    # 3. Combine them randomly into a list of 25 animal and name pairs
-    ```
+1. In the **Update system message?** window, click on **Continue**.
 
-    The model should correctly respond with Python code, doing what the comments requested.
+      ![](../media/e1t4p3.png)
+
+1. Submit the following prompt to the model:
+
+      ```
+      Write a Python function named Multiply that multiplies two numeric parameters.
+      ```
+
+1. Review the response, which should include sample Python code that meets the requirement in the prompt.
+
+      ![](../media/pyop.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
