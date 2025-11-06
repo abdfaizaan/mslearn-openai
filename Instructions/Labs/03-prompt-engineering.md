@@ -711,4 +711,4 @@ In this lab, you explored how prompt engineering can influence the behavior of a
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![Launch Azure Portal](../media/4next.png)
