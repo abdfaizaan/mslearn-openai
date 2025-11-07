@@ -61,11 +61,11 @@ In this task, you will observe how the base model responds to queries without an
    
 1. On the Azure portal, type **Storage account (1)** in the search box and select **Storage accounts (2)** from the results.
 
-   ![](../media/open-strg-accnt.png)
+   ![](../media/strgact.png)
 
-1. On **Storage Accounts** page, click on **+ Create**.
+1. On **Storage Centre** page, from left pane expand **Object storage(1)** and select **Blob Storage(2)** and then click on **+ Create(3)**.
 
-   ![](../media/L6T2S3-0205.png)
+   ![](../media/strgcreate.png)
 
 1. On the **Create a storage account** page, under the **Basic** tab, enter the following details and click on **Next (7)**:
 
@@ -78,7 +78,7 @@ In this task, you will observe how the base model responds to queries without an
    | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)** |
    | **Redundancy** | Locally-redundant storage (LRS) **(6)** |
   
-    ![](../media/dev-genai-june-12.png "Create storage account")
+    ![](../media/strgcreatenext.png)
 
 1. Under the **Advanced** tab, provide the following details:
 
@@ -88,13 +88,13 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Click on **Review + create (2)** and subsequently click on **Create**. 
 
-    ![](../media/dev-genai-june-13.png "allow blob access")
+    ![](../media/advstrg.png)
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
 1. Once the deployment is successful, click **Go to resource**.
 
-    ![](../media/L6T2S7-1807.png "upload files")
+    ![](../media/gtr.png)
 
 1. On **Storage Account**, go to **Container (1)** section under Data Storage and click on **+ Add Container (2)** to create a new container.
 
