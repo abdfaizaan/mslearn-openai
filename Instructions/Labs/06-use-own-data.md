@@ -27,15 +27,17 @@ In this task, you will observe how the base model responds to queries without an
 
 2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
 
-   ![](../media/dev-genai-june-5.png)
+   ![](../media/chatmodelv.png)
 
-3. In the **Setup** area, for the Give the model instructions and context, provide the following message and click on **Apply changes**.
+3. In the **Setup** area, for the **Give the model instructions and context(1)**, provide the following message and click on **Apply changes(2)**.
+
+   > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
 
     ```
     You are an AI assistant that helps people find information.
     ```
 
-   ![](../media/model-instr-2107.png)
+   ![](../media/findinfoo.png)
 
 4. In the **Chat session** on the right side, submit the following queries, and review the responses:
 
@@ -43,10 +45,14 @@ In this task, you will observe how the base model responds to queries without an
     I'd like to take a trip to New York. Where should I stay?
     ```
 
+   ![](../media/nystay.png)
+
     ```
     What are some facts about New York?
     ```
-    
+
+   ![](../media/nyfact.png)
+
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
 ## Task 2: Connect your data in the chat playground
