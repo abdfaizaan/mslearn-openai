@@ -199,9 +199,13 @@ In this task, you will ask the same questions as before in the chat section afte
    I'd like to take a trip to New York. Where should I stay?
    ```
 
+   ![](../media/trrpny.png)
+
    ```
    What are some facts about New York?
    ```
+
+   ![](../media/factsnyy.png)
 
 2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
@@ -213,7 +217,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+      ![](../media/cshell.png)
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
 
@@ -221,7 +225,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell-0108.png)
+   ![](../media/classic.png)
 
 4. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
 
