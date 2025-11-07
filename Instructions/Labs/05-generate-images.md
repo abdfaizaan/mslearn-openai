@@ -53,13 +53,13 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/dallrpm.png)
               
-4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
+4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, **An elephant on a skateboard**), and then select **Generate (3)** to view the **resulting image (4)**.
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/dev-genai-june-8.png)
+      ![](../media/eleskt.png)
 
-5. Modify the prompt to provide a more specific description. For example, *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+5. Modify the prompt to provide a more specific description. For example, **An elephant on a skateboard in the style of Picasso**. Then generate the new image and review the results.
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/dev-genai-june-9.png)
+      ![](../media/elepicso.png)
 
       > **Note:** The image may appear differently than shown in the screenshot. 
 
