@@ -126,7 +126,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **AI Foundry | AI search (1)** blade, click on **+ Create (2)**.
 
-    [](../media/aisearchcreate2.png)
+    ![](../media/aisearchcreate2.png)
 
 1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
 
@@ -138,11 +138,11 @@ In this task, you will observe how the base model responds to queries without an
    | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
    | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
-   [](../media/reviewaisrch2.png)
+   ![](../media/reviewaisrch2.png)
 
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
-   [](../media/2gtrai.png)
+   ![](../media/2gtrai.png)
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page, copy the URL and paste it in a text editor such as Notepad for later use.
 
