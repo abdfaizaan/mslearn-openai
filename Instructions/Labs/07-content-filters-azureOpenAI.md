@@ -47,6 +47,10 @@ In this task, you will observe how the model behaves in a conversational interac
 
     ![](../media/racapply.png)
 
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
+
 1. In the **Chat session** section, re-enter the following prompt.
 
     ```code
@@ -65,7 +69,7 @@ In this task, you will apply content filters to prompts and completions to preve
 
 1. Select **Content filters (2)**, under that click on **+ Create content filter (3)** and review the default settings for a content filter.
 
-    ![](../media/content-filter-1.png)
+    ![](../media/contentfil.png)
 
 1. Content filters in **Azure OpenAI** are designed to restrict potentially harmful content across four main categories:
 
@@ -73,6 +77,8 @@ In this task, you will apply content filters to prompts and completions to preve
     - **Sexual:** Sexually explicit or abusive language.
     - **Violence:** Language promoting or describing violence.
     - **Self-harm:** Language encouraging or describing self-harm.
+
+    ![](../media/filchar.png)
 
 1. Each category can be filtered for both prompts and completions using severity levels: **safe**, **low**, **medium**, and **high**. These levels determine the strictness of the filter and what types of content are blocked.
 
