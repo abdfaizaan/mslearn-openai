@@ -424,7 +424,7 @@ In this task, you will run the reviewed code to generate some images.
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
-    ![](../media/dev-genai-june-14.png "upload files")
+    ![](../media/tellabt.png)
 
 ## Summary
 
@@ -432,4 +432,4 @@ In this lab, you connected your own data to the Azure OpenAI Service for Retriev
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![Launch Azure Portal](../media/7next.png)
