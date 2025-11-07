@@ -45,13 +45,13 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
 5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (Text to image) (2)** model, and click on **Confirm (3)**
 
-      ![](../media/L5T1S5-1807.png)
+      ![](../media/dallsearch.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) (3)** and click on **Deploy (4)**.
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) OR 3 as (Request per Minute Rate Limit) (3)** and click on **Deploy (4)**.
 
-      ![](../media/dalle1-0409.png)
+      ![](../media/dallcustom.png)
 
-      ![](../media/dalle2-0409.png)
+      ![](../media/dallrpm.png)
               
 4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
    
