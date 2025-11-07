@@ -102,7 +102,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level** to **Container (anonymous read access for containers and blobs) (2)**. Once both fields are configured, click on the **Create (3)** button..
 
-    ![](../media/L6T2S8-0205.png "create container")
+    ![](../media/newcon.png)
 
 1. Open the **openaidatasource** container page, click on the **Upload** button located at the top to begin uploading files to the container.
 
@@ -110,7 +110,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On the **Upload blob** pane, click on **Browse for files** to select the file you want to upload.
 
-    ![](../media/L6T2S9-0205-5.png)
+    ![](../media/bff.png)
 
 1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **PDF files (2)** and click on **Open (3)**. Then click on **Upload** to upload all PDF files. 
 
@@ -118,7 +118,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Verify the **openaidatasource** container after all files are uploaded.
 
-    ![](../media/L6T2S9.1-0205.png "upload files")
+    ![](../media/fileuploaded.png)
 
 1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
 
