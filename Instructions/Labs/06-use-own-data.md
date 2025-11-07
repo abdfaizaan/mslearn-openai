@@ -122,11 +122,11 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
 
-    ![](../media/L6T2S9-0205-4.png)
+    ![](../media/aisrchportal.png)
 
 1. On **AI Foundry | AI search (1)** blade, click on **+ Create (2)**.
 
-    [](../media/L6T2S15-1807.png "upload files")
+    [](../media/aisearchcreate.png)
 
 1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
 
@@ -138,21 +138,23 @@ In this task, you will observe how the base model responds to queries without an
    | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
    | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
-    ![](../media/L6T2S16-1807.png "Create cognitive search resource")
+   [](../media/reviewaisrch.png)
 
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
+   [](../media/gtrai.png)
+
 1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page, copy the URL and paste it in a text editor such as Notepad for later use.
 
-    ![](../media/L6T2S18-1807.png)
+    ![](../media/cogurl.png)
 
-1. From the left navigation pane, click on **Keys** under Settings and copy the primary key or secondary key and paste it into a notepad for later use.
+1. From the left navigation pane, under **Settings(1)** click on **Keys(2)** and **copy the primary key or secondary key(3)** and paste it into a notepad for later use.
 
-    ![](../media/L6T2S19-1807.png)
+    ![](../media/cogkeys.png)
 
 1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
-    ![](../media/chat_playground-1.png)
+    ![](../media/chatadd.png)
    
 1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
 
@@ -165,27 +167,27 @@ In this task, you will observe how the base model responds to queries without an
    | **Enter the index name** | **margiestravel (5)** |
    | **Indexer schedule** | **Once (6)** |
    
-    ![](../media/image4-8-1.png "Add data configurations")
+    ![](../media/addds.png)
    
 1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
-    ![](../media/lab6-g4-1.png "Add data")
+    ![](../media/dmnext.png)
 
 1. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
 
-    ![](../media/API_key-1.png "Add data")
+    ![](../media/dconcn.png)
    
 1. On the **Review and finish** page select **Save and close**, which will add your data.
 
-    ![](../media/review-1.png "Add data")
+    ![](../media/refin.png)
 
 1. This may take a few minutes, during which you need to keep your window open.
        
-    ![](../media/review-2.png)
+    ![](../media/ingprcs.png)
   
 1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
 
-    ![](../media/review-3.png)   
+    ![](../media/ingdone.png)   
 
 ## Task 3: Chat with a model grounded in your data
 
