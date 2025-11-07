@@ -22,13 +22,19 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-   ![](../media/dev-genai-june-5.png)
+   ![](../media/chatplay.png)
 
-1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**. 
+1. Update the  **Give the model instructions and context(1)** with the text mentioned below, and click on **Apply changes(2)**. 
 
    ```
    You are an AI assistant that helps people find information.
    ```
+
+   ![](../media/findinfoo.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session**, submit the following query:
 
@@ -44,17 +50,28 @@ In this task, you'll explore how prompt engineering influences model behavior by
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning that the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    The response describes the article. However, suppose you want a more specific format for article categorization.
+   ![](../media/article1.png)
 
-1. In the **Setup** section, change the **Give the model instructions and context** to the below text and click on **Apply changes**. 
+   The response describes the article. However, suppose you want a more specific format for article categorization.
+  
+
+1. In the **Setup** section, change the **Give the model instructions and context(1)** to the below text and click on **Apply changes(2)**. 
 
    ```
    You are a news aggregator that categorizes news articles.
    ```
 
-1. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
+   ![](../media/newsaggre.png)
 
-    **User:**
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
+
+1. Under the new system message, select the **Add section(1)** button, and choose **Examples(2)**. Then add the following example.
+
+   ![](../media/addsectioneg.png)
+
+   **User:**
     
     ```prompt
     What kind of article is this?
@@ -97,9 +114,13 @@ In this task, you'll explore how prompt engineering influences model behavior by
     Entertainment
     ```
 
-   ![](../media/L3T1S7-0205.png)
-
 1. Click on the **Apply changes** button to save your changes.
+
+   ![](../media/up2eg.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -117,10 +138,18 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes**.
+   ![](../media/2egchat.png)
+
+1. Set the **Give the model instructions and context(1)** to the text mentioned below. Save the changes by clicking on **Apply changes(2)**.
    ```
    You are an AI assistant that helps people find information.
    ```
+
+   ![](../media/findinfoo.png)
+
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/e1t4p3.png)
 
 1. In the **Chat session** section, submit the following prompt:
 
@@ -132,21 +161,29 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-1. Change the **Give the model instructions and context** to the text mentioned below, and apply the changes.
+   ![](../media/loa.png)
+
+1. Change the **Give the model instructions and context(1)** to the text mentioned below, and **Apply changes(2)** the changes.
 
    ```
    You are a coding assistant helping write Python code.
    ```
 
-1. Resubmit the following prompt to the model:
+   ![](../media/pyassis.png)
 
-    ```
-    # 1. Create a list of animals
-    # 2. Create a list of whimsical names for those animals
-    # 3. Combine them randomly into a list of 25 animal and name pairs
-    ```
+1. In the **Update system message?** window, click on **Continue**.
 
-    The model should correctly respond with Python code, doing what the comments requested.
+      ![](../media/e1t4p3.png)
+
+1. Submit the following prompt to the model:
+
+      ```
+      Write a Python function named Multiply that multiplies two numeric parameters.
+      ```
+
+1. Review the response, which should include sample Python code that meets the requirement in the prompt.
+
+      ![](../media/pyop.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -154,15 +191,15 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/cshell.png)
 
    > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
 
-   >  ![](../media/cloudshell-bash.png)
+   >  ![](../media/bash.png)
 
-1. Once the terminal opens, click on **Settings** and select **Go to Classic version**.
+1. Once the terminal opens, click on **Settings(1)** and select **Go to Classic version(2)**.
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/classic.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
@@ -185,6 +222,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    code .
     ```
 
+   ![](../media/giteditor.png)
+
 ## Task 3: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
@@ -202,6 +241,16 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - **Key1**: The primary key from your Azure OpenAI resource.
     - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
+
+   > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+    
+    - **C#:**
+     
+      ![](../media/nlp26.png)   
+
+    - **Python:**
+     
+      ![](../media/nlp27.png) 
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -662,4 +711,4 @@ In this lab, you explored how prompt engineering can influence the behavior of a
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![Launch Azure Portal](../media/4next.png)

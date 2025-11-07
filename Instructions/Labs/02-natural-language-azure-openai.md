@@ -12,12 +12,12 @@ With the Azure OpenAI Service, developers can create chatbots, language models, 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Review the Azure OpenAI resource provisioned earlier.
 - Task 2: Set up an application in Cloud Shell
 - Task 3: Configure your application
 - Task 4: Test your application
 
-## Task 1: Provision an Azure OpenAI resource
+## Task 1: Review the Azure OpenAI resource provisioned earlier.
 
 In this task, you will review the provisioned Azure OpenAI resource within your Azure subscription. This step is essential to access OpenAI models and retrieve the endpoint and API key required to authenticate your application.
 
@@ -25,7 +25,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
    ![](../media/select-openai-1607.png)
 
-1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On the **AI Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
    ![](../media/L2T1S2.png)
 
@@ -35,7 +35,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
       - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
-        ![](../media/L2T1S3.png "Keys and Endpoints")
+        ![](../media/keys.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -51,15 +51,15 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-    ![](../media/180625(15).png)
+    ![](../media/bash.png)
 
 3. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../media/cloudshell-getting-started.png)
+   ![](../media/mountstrg.png)
 
 4. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+   ![](../media/csanext.png)
 
 5. Within the **Create storage account** page, enter the following details:
 
@@ -70,13 +70,13 @@ In this task, you will set up a development environment using Azure Cloud Shell.
     - File share: Create a new file share named **none** **(5)**
     - Click **Create** **(6)**
 
-        ![](../media/nlpe18.png "Create storage advanced settings")
+        ![](../media/csacreate.png)
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-    ![](../media/L2T2S7.png)
+    ![](../media/classic.png)
 
 8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -101,12 +101,14 @@ In this task, you will set up a development environment using Azure Cloud Shell.
     code .
     ```
 
+      ![](../media/code-editor.png)  
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
+<validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
 ## Task 3: Configure your application
 
@@ -547,14 +549,12 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 ## Summary
 
 In this lab, 
-- You have provisioned an Azure OpenAI resource to access and use language models via the Azure portal.
+- You reviewed the Azure OpenAI resource that was provisioned in the previous lab and used it to build and test an application using the Azure OpenAI SDK.
 - You set up a development environment in Azure Cloud Shell and cloned a sample application repository.
 - You configured the application with your OpenAI credentials and integrated the Azure OpenAI SDK.
 - You tested the application using various prompts and observed how different inputs influence the AI-generated responses.
 
-### You have successfully completed the Hands-on lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab. 
 
-By completing this **Get Started With OpenAI And Build Natural Language Solution** hands-on lab, you have gained practical experience in provisioning, deploying, and interacting with Azure OpenAI models. You explored both the Completions and Chat capabilities and learned how to fine-tune model behavior using parameters. Additionally, you integrated the models into an application using the Azure OpenAI SDK with **Python** or **C#**. 
-
-This lab has equipped you with the foundational skills to start building intelligent, AI-powered solutions on Azure.
+   ![](../media/next3.png)
 

@@ -29,7 +29,7 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
 1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
 
-      ![](../media/tel-11.png)
+      ![](../media/azureai.png)
 
 2. On the **AI Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
@@ -45,21 +45,21 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
 5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (Text to image) (2)** model, and click on **Confirm (3)**
 
-      ![](../media/L5T1S5-1807.png)
+      ![](../media/dallsearch.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) (3)** and click on **Deploy (4)**.
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) OR 3 as (Request per Minute Rate Limit) (3)** and click on **Deploy (4)**.
 
-      ![](../media/dalle1-0409.png)
+      ![](../media/dallcustom.png)
 
-      ![](../media/dalle2-0409.png)
+      ![](../media/dallrpm.png)
               
-4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
+4. From the left navigation pane, navigate to **Images (1)** under **Playgrounds**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, **An elephant on a skateboard**), and then select **Generate (3)** to view the **resulting image (4)**.
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/dev-genai-june-8.png)
+      ![](../media/eleskt.png)
 
-5. Modify the prompt to provide a more specific description. For example, *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+5. Modify the prompt to provide a more specific description. For example, **An elephant on a skateboard in the style of Picasso**. Then generate the new image and review the results.
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/dev-genai-june-9.png)
+      ![](../media/elepicso.png)
 
       > **Note:** The image may appear differently than shown in the screenshot. 
 
@@ -73,7 +73,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/cshell.png)
 
     > **Note:** If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
@@ -83,7 +83,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell-0108.png)
+   ![](../media/classic.png)
 
 4. Navigate to the folder for the language of your preference by running the appropriate command.
 
@@ -120,6 +120,8 @@ In this task, you will use a configuration file in the application to store the 
     - **Key1**: The primary key from your Azure OpenAI resource.
     - **Deployment Name**: Set this to **Dalle3** (the name of your image generation model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
+
+    > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
 3. If you are using **Python**, you'll also need to install the **python-dotenv** package used to read the configuration file. In the console prompt pane, ensure the current folder is **~/azure-openai/Labfiles/05-image-generation/Python**. Then enter this command:
 
@@ -253,9 +255,9 @@ In this task, you will run the reviewed code to generate some images.
     
 1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
-   ![](../media/link.jpg "Keys and Endpoints")
+   ![](../media/urlgir.png)
 
-   ![](../media/dev-genai-june-10.png)
+   ![](../media/kitegir.png)
 
 1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
@@ -265,4 +267,4 @@ In this lab, you explored the DALL-E playground in the Azure AI Foundry portal t
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![Launch Azure Portal](../media/6next.png)

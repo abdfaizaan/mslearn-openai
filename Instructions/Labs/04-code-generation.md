@@ -23,7 +23,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
-   ![](../media/dev-genai-june-5.png)
+   ![](../media/chatmodelv.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -31,12 +31,16 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
+   ![](../media/pyprog.png)
+
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
 1. Next, send the prompt:
    ```
    Do the same thing, but this time write it in C#.
    ```
+
+   ![](../media/cprog.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -56,6 +60,8 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
+   ![](../media/ruby.png)
+
 1. Observe the output, which explains what the function does.
 
 1. Submit the following prompt to get a simpler version of the function.
@@ -64,11 +70,15 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
+   ![](../media/simpfun.png)
+
 1. Submit the below-mentioned prompt to add comments to the code.
 
       ```
       Add some comments to the function.
       ```
+
+      ![](../media/comments.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 
@@ -78,7 +88,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/cshell.png)
 
 2. If you see the previously opened shell, click on the top right 'x' button to close it and open Cloudshell again.
 
@@ -86,7 +96,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic-cloudshell-0108.png)
+   ![](../media/classic.png)
 
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
@@ -101,6 +111,8 @@ In this task, you will use a short command-line application running in Cloud She
     ```bash
     code .
     ```
+
+   ![](../media/labfilecodegen.png)
 
 ## Task 3: Configure your application
 
@@ -120,9 +132,15 @@ In this task, you will complete key parts of the application to enable it to use
     - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
     After updating these values, save the file by right-clicking it in the left pane.
 
-        ![](../media/app-settings-c-1807.png)
+   > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
-        ![](../media/env-p-1807.png)
+   - **C#:**
+
+      ![](../media/app-settings-c-1807.png)
+
+   - **Python:**
+
+      ![](../media/env-p-1807.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -153,6 +171,8 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. The OpenAI tool will use these files to generate the responses. 
    
+   ![](../media/samplecode.png)
+
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 1. Run the application.
@@ -164,13 +184,19 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
+   ![](../media/option1.png)
+
 1. In the response, you will see that OpenAI has added comments to your sample code provided from the function file. 
 
 1. Next, choose option **2** to write unit tests for that same function.
 
+   ![](../media/option2.png)
+
 1. In the response, you will notice that the unit tests are added to your sample code.
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. 
+
+   ![](../media/option3.png)
 
 1. This time, OpenAI would use the go fish file and fix the code in it and respond with the updated code. 
 
@@ -193,11 +219,13 @@ In this task, you will run your configured app to generate code for each use cas
      cat app.txt
      ```
 
+      ![](../media/cat.png)
+
 The app for Go Fish in `sample-code` can be run if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
 It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the player's hand when they get a pair, and a few other bugs that require an understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but they can't be trusted as correct and need to be verified by the developer.
 
-If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True` and rerun the app.
+If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True` and re-run the app.
 
 ## Summary
 
@@ -205,4 +233,4 @@ In this lab, you explored how to use Azure OpenAI Service to generate, explain, 
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![](../media/next5.png)
