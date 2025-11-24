@@ -55,7 +55,7 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![](../media/1302024(4).png)
 
@@ -64,14 +64,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
 ![](../media/rm14.png)
-
-## Lab Validation
-
-After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../media/valid.png)
-
-If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -89,7 +81,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
     - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    
-        ![](../media/image7.png "Enter Email")
+        ![](../media/signin-2411.png "Enter Email")
      
 1. Now enter the Temporary Access Pass and click on **Sign in**.
 
@@ -97,13 +89,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
       ![](../media/rm2.png "Enter Password")
        
-1. If you see the pop-up **Stay Signed in?**, click **No**.
+1. If you see the pop-up **Stay Signed in?**, click **Yes**.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
 
 1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-     ![](../media/select-rg.png "Resource groups")
+     ![](../media/rg-2411.png "Resource groups")
 
 1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
 
