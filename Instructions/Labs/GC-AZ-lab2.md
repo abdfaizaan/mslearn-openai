@@ -1,6 +1,6 @@
 # Lab 02: Generate images with a DALL-E model
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
 ## Overview
 
@@ -41,7 +41,7 @@ You can use the DALL-E playground in **Microsoft Foundry portal** to experiment 
 
 1. On the Select a model page, search for **dall-e (1)**, select **dall-e-3 (2)**, and click **Confirm (3)**.
 
-    ![](../media/L2T1S5-2411.png)
+    ![](../media/dell-e-3-2411.png)
 
 1. Provide the following details:
 
