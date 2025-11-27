@@ -25,7 +25,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
 
-   ![](../media/createazai.png)
+   ![](../media/va1.png)
 
 3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
@@ -61,17 +61,17 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
+1. In the Azure OpenAI resource pane, click on **Foundry portal**, which will navigate to **Microsoft Foundry**.
 
-    ![](../media/gotofoundry.png)
+    ![](../media/va2.png)
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](../media/e1t2p2.png)
+    ![](../media/va3.png)
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/confirm4.1.png) 
+   ![](../media/va4.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
 
@@ -176,11 +176,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 1. In the **Chat Configuration** pane select **Parameters (1)**, set the following parameter values:
       
-      - Max response: **500 (2)**
+      - Max Completion Tokens: **500 (2)**
      
       - Temperature: **0 (3)**
    
-          ![](../media/image6.png)
+          ![](../media/va5.png)
       
 2. Submit the following message as a query in a chat session
 
