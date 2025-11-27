@@ -73,7 +73,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/va4.png) 
 
-   >**Note:** If pop-up window **Unlock the full capabilities of Azure Al Foundry with projects** appears, click **Continue with existing setup**
+   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
       ![](../media/e1t2p2(1).png)
    
