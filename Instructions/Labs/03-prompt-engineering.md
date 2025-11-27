@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
+1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
    ![](../media/chatplay.png)
 
