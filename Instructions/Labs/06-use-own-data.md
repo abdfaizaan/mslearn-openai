@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will observe how the base model responds to queries without any grounding data.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
+1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
 
 2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
 
@@ -124,7 +124,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/aisrchportal.png)
 
-1. On **AI Foundry | AI search (1)** blade, click on **+ Create (2)**.
+1. On **Microsoft Foundry | AI search (1)** blade, click on **+ Create (2)**.
 
     ![](../media/aisearchcreate2.png)
 
@@ -152,7 +152,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/cogkeys.png)
 
-1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
+1. In **Microsoft Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
     ![](../media/chatadd.png)
    
@@ -263,7 +263,7 @@ In this task, you will complete key parts of the application to enable it to use
 
     - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
     - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
-    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in the Azure AI Foundry portal).
+    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in the Azure Microsoft Foundry portal).
     - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
     - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
     - **Search index name**: Enter `margiestravel` as the index name.

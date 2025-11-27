@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Explore image generation in the DALL-E playground
 
-In this task, you will use the DALL-E playground in the Azure AI Foundry portal to experiment with image generation.
+In this task, you will use the DALL-E playground in the Azure Microsoft Foundry portal to experiment with image generation.
 
 > **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the model deployment fails, it may be due to quota restrictions on the existing resource. 
 
@@ -31,15 +31,15 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/azureai.png)
 
-2. On the **AI Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+2. On the **Microsoft Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource page, click on **Go to Microsoft Foundry portal**, which will navigate to the **Azure Microsoft Foundry portal**.
 
       ![](../media/dev-genai-june-1.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
+4. On the **Microsoft Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
       ![](../media/deploy-model-1607.png)
 
@@ -263,7 +263,7 @@ In this task, you will run the reviewed code to generate some images.
 
 ## Summary
 
-In this lab, you explored the DALL-E playground in the Azure AI Foundry portal to generate images based on natural language prompts. You also examined a simple application that uses the REST API to generate images with a DALL-E model and ran the application in the Cloud Shell console within the Azure portal.
+In this lab, you explored the DALL-E playground in the Azure Microsoft Foundry portal to generate images based on natural language prompts. You also examined a simple application that uses the REST API to generate images with a DALL-E model and ran the application in the Cloud Shell console within the Azure portal.
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
