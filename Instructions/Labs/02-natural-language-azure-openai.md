@@ -556,11 +556,7 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
 ## Summary
 
-In this lab, 
-- You reviewed the Azure OpenAI resource that was provisioned in the previous lab and used it to build and test an application using the Azure OpenAI SDK.
-- You set up a development environment in Azure Cloud Shell and cloned a sample application repository.
-- You configured the application with your OpenAI credentials and integrated the Azure OpenAI SDK.
-- You tested the application using various prompts and observed how different inputs influence the AI-generated responses.
+In this lab, you used your Azure OpenAI resource to build and test an application with the Azure OpenAI SDK by configuring the development environment, integrating required credentials, and running the sample app to observe how different prompts influence AI-generated responses.
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab. 
 

@@ -352,21 +352,21 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```csharp
     // Configure your data source
-     // Extension methods to use data sources with options are subject to SDK surface changes. Suppress the warning to acknowledge this and use the subject-to-change AddDataSource method.
-     #pragma warning disable AOAI001
+    // Extension methods to use data sources with options are subject to SDK surface changes. Suppress the warning to acknowledge this and use the subject-to-change AddDataSource method.
+    #pragma warning disable AOAI001
      
-     ChatCompletionOptions chatCompletionsOptions = new ChatCompletionOptions()
-     {
-        MaxOutputTokenCount = 600,
-        Temperature = 0.9f,
-     };
+    ChatCompletionOptions chatCompletionsOptions = new ChatCompletionOptions()
+    {
+       MaxOutputTokenCount = 600,
+       Temperature = 0.9f,
+    };
      
-     chatCompletionsOptions.AddDataSource(new AzureSearchChatDataSource()
-     {
-        Endpoint = new Uri(azureSearchEndpoint),
-        IndexName = azureSearchIndex,
-        Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
-     });
+    chatCompletionsOptions.AddDataSource(new AzureSearchChatDataSource()
+    {
+       Endpoint = new Uri(azureSearchEndpoint),
+       IndexName = azureSearchIndex,
+       Authentication = DataSourceAuthentication.FromApiKey(azureSearchKey),
+    });
     ```
 
     For **Python**: ownData.py
