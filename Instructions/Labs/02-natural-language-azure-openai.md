@@ -25,9 +25,9 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
    ![](../media/select-openai-1607.png)
 
-1. On the **AI Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+1. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
-   ![](../media/L2T1S2.png)
+   ![](../media/va6.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -476,15 +476,17 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
     ![](../media/170725(08).png)
 
-1. For the first iteration, enter the following prompts:
+1. For the first iteration, navigate to `System.txt` file **(1)** and then enter the following prompts **(2)**:
 
    **System message:**
    
    ```
    You are an AI assistant
    ```
+
+    ![](../media/va7.png)   
    
-   >>**Note:** System message should given in system.txt in C# or Python. Follow the same steps for the remaining prompts.
+     >**Note:** System message should given in system.txt in C# or Python. Follow the same steps for the remaining prompts.
    
 1. In the Enter User message, give the following message.
 
@@ -494,7 +496,9 @@ In this task, you will run the application and interact with the Azure OpenAI mo
    Write an intro for a new wildlife Rescue 
    ```
 
-   >>**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
+    ![](../media/va8.png)   
+
+    >**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
@@ -546,13 +550,13 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
 1. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
+1. Close the Cloudshell.
+
+    ![](../media/va9.png)
+
 ## Summary
 
-In this lab, 
-- You reviewed the Azure OpenAI resource that was provisioned in the previous lab and used it to build and test an application using the Azure OpenAI SDK.
-- You set up a development environment in Azure Cloud Shell and cloned a sample application repository.
-- You configured the application with your OpenAI credentials and integrated the Azure OpenAI SDK.
-- You tested the application using various prompts and observed how different inputs influence the AI-generated responses.
+In this lab, you used your Azure OpenAI resource to build and test an application with the Azure OpenAI SDK by configuring the development environment, integrating required credentials, and running the sample app to observe how different prompts influence AI-generated responses.
 
 ### Congratulations on completing the lab! Click Next >> to continue to the next lab. 
 
