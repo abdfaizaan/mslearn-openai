@@ -42,7 +42,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
 
-    - Click **Next** thrice to navigate to the **Review + submit** tab.
+    - Click **Next (6)** thrice to navigate to the **Review + submit** tab.
   
       ![](../media/clicknext.png)
 
@@ -112,6 +112,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. This will deploy a model that you will be playing around with as you proceed.
 
+<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
+
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 ## Task 3: Set up an application in Cloud Shell
@@ -126,19 +128,19 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     ![](../media/180625(14).png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
     ![](../media/bash.png)
 
-3. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
+1. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/mountstrg.png)
 
-4. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
+1. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/csanext.png)
 
-5. Within the **Create storage account** page, enter the following details:
+1. Within the **Create storage account** page, enter the following details:
 
     - Subscription: Choose the **Default subscription (1)**.
 
@@ -154,13 +156,13 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
         ![](../media/csacreate.png)
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
     ![](../media/classic.png)
 
-8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r mslearn-openai -f
@@ -169,7 +171,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     ![](../media/L2T2S8-1507.png)    
   
-9. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd mslearn-openai/Labfiles/01-app-develop
@@ -177,15 +179,15 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
     >**Note**: Applications for both **C#** and **Python** have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
     ```
 
-      ![](../media/code-editor.png)  
+      ![](../media/code-editor.png)
 
-<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
+<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -543,8 +545,6 @@ In this task, you will configure the application to connect with the Azure OpenA
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-
-<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
