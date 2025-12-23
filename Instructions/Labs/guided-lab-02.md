@@ -12,30 +12,45 @@ With the Azure OpenAI Service, developers can create chatbots, language models, 
 
 In this lab, you will complete the following tasks:
 
-- Task 1: Review the Azure OpenAI resource provisioned earlier.
-- Task 2: Set up an application in Cloud Shell
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Set up an application in Cloud Shell
 - Task 3: Configure your application
 - Task 4: Test your application
 
-## Task 1: Review the Azure OpenAI resource provisioned earlier.
+## Task 1: Provision an Azure OpenAI resource
 
-In this task, you will review the provisioned Azure OpenAI resource within your Azure subscription. This step is essential to access OpenAI models and retrieve the endpoint and API key required to authenticate your application.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
 
-   ![](../media/select-openai-1607.png)
+   ![](../media/azureai.png)
 
-1. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
 
-   ![](../media/va6.png)
+   ![](../media/va1.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
-      - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
+3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+    
+    - Subscription: **Default Subscription (1)**
+    
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
+    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
+    
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    
+    - Pricing tier: **Standard S0 (5)**
+  
+      ![](../media/clicknext.png)
 
-        ![](../media/keys.png)
+4. Under the **Review + submit** tab, click on **Create**.
+
+      ![](../media/clickcreate.png)
+
+5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+      ![](../media/e1t1p5.png)
 
 <validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
 
@@ -44,7 +59,54 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Set up an application in Cloud Shell
+## Task 2: Deploy a model
+
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+
+1. In the Azure OpenAI resource pane, click on **Foundry portal**, which will navigate to **Microsoft Foundry**.
+
+    ![](../media/va2.png)
+
+1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+
+    ![](../media/va3.png)
+
+1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
+
+   ![](../media/va4.png) 
+
+   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
+
+      ![](../media/e1t2p2(1).png)
+   
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
+
+   ![](../media/custom4.1.png)
+
+1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
+
+      - Deployment name: **text-turbo (1)**
+
+      - Deployment type: **Global Standard (2)**
+
+      - Model version: **2025-04-14 (Default) (3)**
+
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+
+      - Content filter: **DefaultV2 (5)**
+
+      - Click on **Deploy (6)**
+
+        ![](../media/deploy4.1.png)
+      
+        
+1. This will deploy a model that you will be playing around with as you proceed.
+
+    > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
+   
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+
+## Task 3: Set up an application in Cloud Shell
 
 In this task, you will set up a development environment using Azure Cloud Shell. You will clone the sample application repository, prepare the workspace, and open the code editor to begin integrating Azure OpenAI services.
 
@@ -117,7 +179,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 3: Configure your application
+## Task 4: Configure your application
 
 In this task, you will configure the application to connect with the Azure OpenAI resource. You will update configuration files with your environment credentials and implement the client logic to interact with the deployed model.
 
@@ -472,7 +534,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 4: Test your application
+## Task 5: Test your application
 
 In this task, you will run the application and interact with the Azure OpenAI model using different system and user prompts. This hands-on testing will help you observe how prompt variations affect the model’s output.
 
