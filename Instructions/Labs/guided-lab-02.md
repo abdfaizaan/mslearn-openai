@@ -42,7 +42,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
 
-    - Click **Next** thrice to navigate to the **Review + submit** tab.
+    - Click **Next (6)** thrice to navigate to the **Review + submit** tab.
   
       ![](../media/clicknext.png)
 
