@@ -26,11 +26,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/azureai.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
+1. On  **Microsoft Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](../media/va1.png)
 
-3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
+1. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
     - Subscription: **Default Subscription (1)**
     
@@ -41,16 +41,30 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     
     - Pricing tier: **Standard S0 (5)**
+
+    - Click **Next** thrice to navigate to the **Review + submit** tab.
   
       ![](../media/clicknext.png)
 
-4. Under the **Review + submit** tab, click on **Create**.
+1. Under the **Review + submit** tab, click on **Create**.
 
       ![](../media/clickcreate.png)
 
-5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
       ![](../media/e1t1p5.png)
+
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+
+    - Navigate to **Keys and Endpoint (2)** under **Resource Management (1)**.
+    
+    - Click on **Show Keys (3)**.
+    
+    - Copy **Key 1 (4)** and ensure to paste it in a text editor such as notepad for future reference.
+    
+    - Finally copy the **Endpoint (5)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+    
+        ![](../media/e1t1p5a.png "Keys and Endpoints")
 
 <validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
 
@@ -63,47 +77,41 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Foundry portal**, which will navigate to **Microsoft Foundry**.
+1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
     ![](../media/va2.png)
 
-1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
+1. Select the **Deployments (1)** from the left pane under **Shared resources**, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
     ![](../media/va3.png)
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/va4.png) 
+   ![](../media/va4.png)
 
-   >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
+1. Within the **Deploy gpt-4.1-mini** pop-up interface, enter the following details:
 
-      ![](../media/e1t2p2(1).png)
-   
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
+    - **Deployment name**: **text-turbo (1)**
 
-   ![](../media/custom4.1.png)
+    - **Deployment type**: **Standard (2)**
 
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
+    - Click on **Customize**
 
-      - Deployment name: **text-turbo (1)**
+    - **Model version upgrade policy**: Select **Upgrade once new default version becomes available (3)**
 
-      - Deployment type: **Global Standard (2)**
+    - **Model version**: Choose **2025-04-14 (Default) (4)**
 
-      - Model version: **2025-04-14 (Default) (3)**
+    - **Tokens per Minute Rate Limit**: **10K (5)**
+        >**Note**: If you're unable to slide to 10K, click on the slider thumb and use your keyboard arrows (right/left) to adjust the token rate limit.
 
-      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+    - **Enable dynamic quota**: Ensure dynamic quota is **Enabled (6)**
 
-      - Content filter: **DefaultV2 (5)**
-
-      - Click on **Deploy (6)**
+    - Click on **Deploy (7)**
 
         ![](../media/deploy4.1.png)
-      
-        
+
 1. This will deploy a model that you will be playing around with as you proceed.
 
-    > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
-   
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 ## Task 3: Set up an application in Cloud Shell
@@ -132,12 +140,17 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 5. Within the **Create storage account** page, enter the following details:
 
-    - Subscription: Choose the Default subscription **(1)**.
+    - Subscription: Choose the **Default subscription (1)**.
+
     - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    
     - Region: **<inject key="Region" enableCopy="false" /> (3)**
+
     - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    - File share: Create a new file share named **none** **(5)**
-    - Click **Create** **(6)**
+
+    - File share: Create a new file share named **none (5)**
+
+    - Click **Create (6)**
 
         ![](../media/csacreate.png)
 
@@ -162,7 +175,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
    cd mslearn-openai/Labfiles/01-app-develop
     ```
 
-    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+    >**Note**: Applications for both **C#** and **Python** have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
 10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model. Use the following command to open the lab files in the code editor.
 
@@ -185,7 +198,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and save the file.
+1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and save the file using **Ctrl+S**.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -218,17 +231,17 @@ In this task, you will configure the application to connect with the Azure OpenA
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo` and then save the file by right-clicking on the blank space in the file text editor and hit **Save** or use **Ctrl+S**.
 
     - **C#:**
      
-      ![](../media/nlp26.png)   
+      ![](../media/nlp26.png)
 
     - **Python:**
      
-      ![](../media/nlp27.png) 
+      ![](../media/nlp27.png)
 
-       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
+       > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**. Refer to `Task 1: Step 6`.
 
 1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
@@ -266,7 +279,9 @@ In this task, you will configure the application to connect with the Azure OpenA
     from openai import AsyncAzureOpenAI
     ```
 
-     ![](../media/L2T3S6-py.png)      
+     ![](../media/L2T3S6-py.png)
+
+     Save the files by right-clicking on the blank space in the file text editor and hit **Save** or use **Ctrl+S**.
 
 1.  In the application code for your language, find the comment **Configure the Azure OpenAI client**, and add code to configure the Azure OpenAI client:
 
@@ -294,7 +309,9 @@ In this task, you will configure the application to connect with the Azure OpenA
      ![](../media/L2T3S7-py.png)   
 
       >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-    
+
+    Save the files by right-clicking on the blank space in the file text editor and hit **Save** or use **Ctrl+S**.
+
 1. In the function that calls the **Azure OpenAI model**, under the comment **Get response from Azure OpenAI**, add the code to format and send the request to the model.
 
     **C#:** Program.cs
@@ -542,7 +559,11 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then, enter the following command to run the application.
 
+    ![](../media/csharpdir.png)  
+
     - **C#:** `dotnet run`
+
+    ![](../media/pydir.png) 
     
     - **Python:** `python application.py`
 
@@ -552,7 +573,7 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
     ![](../media/170725(08).png)
 
-1. For the first iteration, navigate to `System.txt` file **(1)** and then enter the following prompts **(2)**:
+1. For the first iteration, navigate to `System.txt` file **(1)**, enter the following prompts **(2)** and save the file:
 
    **System message:**
    
