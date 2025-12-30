@@ -62,7 +62,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 ## Task 2: Explore image generation in the DALL-E playground
 
-In this task, you will use the DALL-E playground in the Azure AI Foundry portal to experiment with image generation.
+In this task, you will use the DALL-E playground in the Microsoft Foundry portal to experiment with image generation.
 
 > **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the deployment fails, it may be due to quota restrictions on the existing resource. 
 
@@ -76,7 +76,7 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
 
       ![](../media/dev-genai-june-1.png)
 
@@ -84,7 +84,7 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/ui1.png)
 
-5. In the **Select a model** page, search for **dall-e-3 (1)**, select **dall-e-3 (text to image) (2)** model, and click on **Confirm (3)**
+5. In the **Select a model** page, search for **dall-e-3 (1)**, select **dall-e-3 (Text to image) (2)** model, and click on **Confirm (3)**
 
       ![](../media/L5T1S5-1807.png)
 
