@@ -22,15 +22,15 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **[Azure portal](https://portal.azure.com/)**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
+2. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)** from the left pane, click **+ Create (2)** drop-down and click on **Azure OpenAI (3)**.
 
       ![](../media/tel-10.png)
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings, click on **Next** thrice and subsequently click on **Create**:
    
       - **Subscription**: Default - Pre-assigned subscription.
       - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
@@ -38,11 +38,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
       - **Pricing tier**: Standard S0
 
-           ![](../media/azopenai123.png "Create Azure OpenAI resource")
+        ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-           >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+        >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Wait for deployment to complete. Then go to the deployed **Azure OpenAI** resource in the Azure portal.
 
 5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -50,7 +50,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-           ![](../media/ui3.png "Keys and Endpoints")
+        ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
 
@@ -72,19 +72,19 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/tel-11.png)
 
-2. On the **AI Foundry** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>(2)**
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
       ![](../media/dev-genai-june-1.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+4. On the **Microsoft Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
       ![](../media/ui1.png)
 
-5. In the Select a model page, search for **dall-e-3 (1)**, select **dall-e-3 (text to image) (2)** model, and click on **Confirm (3)**
+5. In the **Select a model** page, search for **dall-e-3 (1)**, select **dall-e-3 (text to image) (2)** model, and click on **Confirm (3)**
 
       ![](../media/L5T1S5-1807.png)
 
@@ -277,7 +277,7 @@ In this task, you will explore the code used to call the REST API and generate a
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
+<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
 
 ## Task 4: Run the app
 
