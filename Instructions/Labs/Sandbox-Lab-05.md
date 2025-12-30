@@ -88,17 +88,17 @@ In this task, you will use the DALL-E playground in the Azure AI Foundry portal 
 
       ![](../media/L5T1S5-1807.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) (3)** and click on **Deploy (4)**.
+6. Within the **Deploy model** pop-up interface, enter the **Deployment name** as **Dalle3 (1)**, Click on **Customize (2)** and make the **Requests per Minute Rate Limit: 3 (3)** and click on **Deploy (4)**.
 
       ![](../media/L5T1S6.1-1807.png)
 
       ![](../media/L5T1S6.2-1807.png)
               
-4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
+4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, `An elephant on a skateboard`), and then select **Generate (3)** to view the **resulting image (4)**.
    
       ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/dev-genai-june-8.png)
 
-5. Modify the prompt to provide a more specific description. For example, *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+5. Modify the prompt to provide a more specific description. For example, `An elephant on a skateboard in the style of Picasso`. Then generate the new image and review the results.
 
       ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/dev-genai-june-9.png)
 
@@ -112,21 +112,48 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 In this task, you will use a simple Python or C# app to generate images by calling the REST API and running the code in the Cloud Shell console interface within the Azure portal.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
     > **Note:** If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
+1. Select **Bash (1)** as the Cloud Shell, choose **Mount storage account (2)** and click on **Apply (3)**.
 
+    ![](../media/bashselect.png)
+
+    ![](../media/bashselect-1.png)
+
+1. On the **Mount storage account** screen, select **I want to create a storage account (1)** and click on **Next (2)**.
+
+    ![](../media/bashselect-2.png)
+
+1. Provide the following details:
+
+    - **Subscription**: Default - Pre-assigned subscription.
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Storage account name**: storage-<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **File share**: file
+
+    ![](../media/bashselect-3.png)
+    
+    >**Note**: After the storage account is created and mounted, make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
+    
     ![](../media/dev-genai-june-4.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
    ![](../media/classic-cloudshell.png)
 
-4. Navigate to the folder for the language of your preference by running the appropriate command.
+1. Run the below commands:
+
+    ```
+    rm -r mslearn-openai -f
+    git clone https://github.com/CloudLabs-MOC/mslearn-openai
+    ```
+
+1. Navigate to the folder for the language of your preference by running the appropriate command.
 
     **C#**
 
@@ -140,12 +167,14 @@ In this task, you will use a simple Python or C# app to generate images by calli
     cd mslearn-openai/Labfiles/05-image-generation/Python
     ```
 
-6. Use the following command to open the built-in code editor and see the code files you will be working with.
+1. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
     ```
-   
+
+    ![](../media/bashcodeview.png)
+
 ### Task 3.2: Configure your application
 
 In this task, you will use a configuration file in the application to store the details needed to connect to your Azure OpenAI service account.
@@ -155,7 +184,7 @@ In this task, you will use a configuration file in the application to store the 
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
+2. Update the configuration values to include the **Endpoint**, **Key1** and **Deployment name: Dalle3** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
 
     > **Tip:** You can adjust the split at the top of the cloud shell pane to see the Azure portal and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
@@ -223,6 +252,8 @@ In this task, you will use a configuration file in the application to store the 
      ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
+      
+      >**Note:** If the commands do not execute as a bunch, kindly run them one by one.
 
 1. Enter the following command to restore the workload.
 
