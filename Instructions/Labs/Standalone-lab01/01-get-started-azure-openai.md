@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4o-mini (1)** in the search bar, select **gpt-4o-mini (2)** and click on **Confirm (3)**.
 
-   ![](./media/T2S3.png)
+   ![](./media/L1T2S3.png)
 
    >**Note:** If pop-up window **Unlock the full capabilities of Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
