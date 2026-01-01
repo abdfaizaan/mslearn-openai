@@ -5,11 +5,11 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/Standalone-lab01/GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/Standalone-lab01/GettingStarted-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/Standalone-lab01/01-get-started-azure-openai.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/Standalone-lab01/01-get-started-azure-openai.md",
         "Order": 2
       }
     ]
