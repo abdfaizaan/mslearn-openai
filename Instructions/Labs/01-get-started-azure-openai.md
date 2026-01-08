@@ -19,11 +19,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the result.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/azureai.png)
+   ![](../media/new/1.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI(1)** from the left menu, click on **+ Create(2)** and select **Azure OpenAI(3)**
+2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
    ![](../media/va1.png)
 
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/va4.png) 
+   ![](../media/new/2.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
@@ -89,15 +89,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Model version: **2025-04-14 (Default) (3)**
 
-      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+      - Tokens per Minute Rate Limit (thousands): In between **10K - 13K (4)**
 
       - Content filter: **DefaultV2 (5)**
 
       - Click on **Deploy (6)**
 
-        ![](../media/deploy4.1.png)
+        ![](../media/new/3b.png)
       
-        
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
@@ -117,7 +116,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playgrounds** section, select the **Chat (1)** page, and ensure that the **my-gpt-model(version:2025-04-14) (2)** model is selected in the configuration pane.
+1. From the left navigation pane, select the **Chat (1)** under **Playgrounds** section, and ensure that the **my-gpt-model(version:2025-04-14) (2)** model is selected in the configuration pane.
 
       ![](../media/chatmodelv.png)  
 
@@ -151,7 +150,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](../media/e1t4p3.png)
    
-1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Use the **Send** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Press **Enter** or use the **Send** button to submit the message and view the response.
 
       ![](../media/NO-7a.png)
    
@@ -165,10 +164,13 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](../media/ml.png)
 
-1. Use the **</>View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Use the **</>View Code** button to view the code for the interaction.
 
-      ![](../media/image5a.png)
-      ![](../media/uprevres.png)
+      ![](../media/new/4.png)
+
+1. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+
+      ![](../media/new/5.png)
 
 ## Task 4: Explore prompts and parameters
 
@@ -198,8 +200,8 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the **results**, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](../media/g18.png)
-   
+      ![](../media/new/6.png)
+
 4. Observe the following about the prompt and parameters you used:
 
       - The prompt specifically states that the desired output should be three multiple-choice questions.
@@ -234,14 +236,13 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/pysol.png)
+      ![](../media/new/7.png)
 
 
 ## Summary
 
 In this lab, you provisioned an Azure OpenAI resource, deployed a model using Azure Microsoft Foundry, and explored its capabilities in the Chat playground, including testing prompts, adjusting parameters, and evaluating the model’s ability to generate code for your applications.
 
-
-### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-   ![](../media/next2.png)
+![](../media/new/next.png)
