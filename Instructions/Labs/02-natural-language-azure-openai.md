@@ -23,25 +23,27 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
 
-   ![](../media/select-openai-1607.png)
+   ![](../media/new/1.png)
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
    ![](../media/va6.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
+
+      - Expand **Resource Management (1)** and select **Keys and Endpoint (2)** under .
+
       - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
+
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
-        ![](../media/keys.png)
+        ![](../media/new/q1.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
 In this task, you will set up a development environment using Azure Cloud Shell. You will clone the sample application repository, prepare the workspace, and open the code editor to begin integrating Azure OpenAI services.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the **Azure portal**, select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/L2T2S1.png)
 
@@ -116,7 +118,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and save the file.
+1. If you are using the **C#** language, kindly open the **CSharp.csproj** file and replace it with the following code and press **Ctrl + S** to save the file.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -153,11 +155,11 @@ In this task, you will configure the application to connect with the Azure OpenA
 
     - **C#:**
      
-      ![](../media/nlp26.png)   
+      ![](../media/new/q2.png)   
 
     - **Python:**
      
-      ![](../media/nlp27.png) 
+      ![](../media/new/q3.png) 
 
        > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
@@ -188,7 +190,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     using OpenAI.Chat;
     ```
 
-     ![](../media/L2T3S6-1507.png) 
+     ![](../media/new/q4.png) 
 
     **Python:** application.py
 
@@ -224,7 +226,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
      ![](../media/L2T3S7-py.png)   
 
-      >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**Note:** Ensure the code is properly indented by removing any extra whitespace after pasting it into the code editor.
     
 1. In the function that calls the **Azure OpenAI model**, under the comment **Get response from Azure OpenAI**, add the code to format and send the request to the model.
 
@@ -249,7 +251,7 @@ In this task, you will configure the application to connect with the Azure OpenA
       Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
     ```
 
-     ![](../media/L2T3S8-1507.png)      
+     ![](../media/new/q5.png)      
 
     **Python:** application.py
 
@@ -271,7 +273,7 @@ In this task, you will configure the application to connect with the Azure OpenA
       )
     ```
 
-     ![](../media/L2T3S8-py.png)  
+     ![](../media/new/q5a.png)  
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
@@ -454,7 +456,7 @@ In this task, you will configure the application to connect with the Azure OpenA
           asyncio.run(main())
       ```
     
-1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save**.
+1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save** or press **Ctrl + S**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
@@ -472,22 +474,24 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
       > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-1. In the terminal, it will ask you to enter a key to continue.
+1. For the first iteration, navigate to `System.txt` **(1)** file and then enter the following message and **Save** the file :
 
-    ![](../media/170725(08).png)
-
-1. For the first iteration, navigate to `System.txt` file **(1)** and then enter the following prompts **(2)**:
-
-   **System message:**
+   **System message:** **(2)**
    
    ```
-   You are an AI assistant
+   You are an AI assistant 
    ```
 
-    ![](../media/va7.png)   
+    ![](../media/new/q8.png) 
    
+    ![](../media/new/q9.png)
+
      >**Note:** System message should given in system.txt in C# or Python. Follow the same steps for the remaining prompts.
    
+1. In the terminal, press **Enter** a key to continue.
+
+    ![](../media/new/q7.png)
+
 1. In the Enter User message, give the following message.
 
    **User message:**
@@ -496,7 +500,9 @@ In this task, you will run the application and interact with the Azure OpenAI mo
    Write an intro for a new wildlife Rescue 
    ```
 
-    ![](../media/va8.png)   
+    ![](../media/new/w1.png)
+
+    ![](../media/new/q10.png)  
 
     >**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
 
@@ -552,13 +558,13 @@ In this task, you will run the application and interact with the Azure OpenAI mo
 
 1. Close the Cloudshell.
 
-    ![](../media/va9.png)
+    ![](../media/new/w2.png)
 
 ## Summary
 
 In this lab, you used your Azure OpenAI resource to build and test an application with the Azure OpenAI SDK by configuring the development environment, integrating required credentials, and running the sample app to observe how different prompts influence AI-generated responses.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab. 
-
-   ![](../media/next3.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)
 

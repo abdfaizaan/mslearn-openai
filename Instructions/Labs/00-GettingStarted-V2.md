@@ -63,7 +63,7 @@ We've prepared a seamless environment for you to explore and learn about the con
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../media/guide.png)
+   ![](../media/new/vm.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -83,7 +83,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop,** or **Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![](../media/resources.png)
 
@@ -95,7 +95,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 ## Let's Get Started with Azure Portal
 
-1. On your virtual machine, click on the **Azure Portal** icon as shown below:
+1. On your **Lab VM**, click on the **Azure Portal** icon as shown below:
 
    ![](../media/openaz.png)
    
@@ -105,15 +105,15 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
  
        ![Enter Your Username](../media/sc900-image-1.png)
  
-1. Next, provide your password:
+1. Next, provide your Temporary password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Acces Pass:** <inject key="AzureAdUserPassword"></inject>
  
        ![](../media/tpwrd.png)
 
 1. If you see the pop-up **Stay Signed in?**, select **No**.
  
-   ![](../media/staysign.png)       
+   ![](../media/new/stay.png)       
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
@@ -128,9 +128,9 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next** from the lower right corner to move on to the next page.
+Now, click on **Next >>** from the lower right corner to move on to the next page.
 
-![Launch Azure Portal](../media/next-page-2107.png)
+![Launch Azure Portal](../media/new/next.png)
  
 ### Happy learning!
 

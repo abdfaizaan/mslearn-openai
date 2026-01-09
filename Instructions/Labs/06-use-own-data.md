@@ -23,13 +23,13 @@ In this lab, you will complete the following tasks:
 
 In this task, you will observe how the base model responds to queries without any grounding data.
 
-1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
+1. Navigate to [Microsoft Foundry](https://ai.azure.com/) portal.
 
-2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
+1. From the left navigation pane, select **Chat (1)** and ensure that your model deployment **my-gpt-model (2)** is selected.
 
    ![](../media/chatmodelv.png)
 
-3. In the **Setup** area, for the **Give the model instructions and context(1)**, provide the following message and click on **Apply changes(2)**.
+1. In the **Setup** area, for the **Give the model instructions and context (1)**, provide the following message and click on **Apply changes (2)**.
 
    > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
 
@@ -39,19 +39,23 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/findinfoo.png)
 
-4. In the **Chat session** on the right side, submit the following queries, and review the responses:
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/new/19.png)
+
+1. In the **Chat session** on the right side, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?
     ```
 
-   ![](../media/nystay.png)
+   ![](../media/new/t1.png)
 
     ```
     What are some facts about New York?
     ```
 
-   ![](../media/nyfact.png)
+   ![](../media/new/t2.png)
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
@@ -59,11 +63,11 @@ In this task, you will observe how the base model responds to queries without an
 
 In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
    
-1. On the Azure portal, type **Storage account (1)** in the search box and select **Storage accounts (2)** from the results.
+1. On the **Azure portal**, search for **Storage account (1)** in the search box and select **Storage accounts (2)** from the results.
 
    ![](../media/strgact.png)
 
-1. On **Storage Centre** page, from left pane expand **Object storage(1)** and select **Blob Storage(2)** and then click on **+ Create(3)**.
+1. On **Storage Centre** page, from left pane expand **Object storage (1)** and select **Blob Storage (2)** and then click on **+ Create (3)**.
 
    ![](../media/strgcreate.png)
 
@@ -80,15 +84,17 @@ In this task, you will observe how the base model responds to queries without an
   
     ![](../media/strgcreatenext.png)
 
-1. Under the **Advanced** tab, provide the following details:
+1. Under the **Advanced** tab, provide the following details and click on **Review + create (2)**
 
    | Settings | Action |
    | -- | -- |
    | **Allow enable anonymous access on individual containers (1)** | Check in the box. |
 
-1. Click on **Review + create (2)** and subsequently click on **Create**. 
-
     ![](../media/advstrg.png)
+
+1.  Then, click on **Create** to create a new blob storage. 
+
+    ![](../media/new/t3.png)
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
@@ -98,13 +104,17 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **Storage Account**, go to **Container (1)** section under Data Storage and click on **+ Add Container (2)** to create a new container.
 
-    ![](../media/L6T2S7-0205-1.png "upload files")
+    ![](../media/new/t4.png)
 
 1. On the **New container** creation page, enter the container name as **openaidatasource (1)**, then set the **Anonymous access level** to **Container (anonymous read access for containers and blobs) (2)**. Once both fields are configured, click on the **Create (3)** button..
 
     ![](../media/newcon.png)
 
-1. Open the **openaidatasource** container page, click on the **Upload** button located at the top to begin uploading files to the container.
+1. Open the newly created **openaidatasource** container. 
+
+    ![](../media/new/t5.png)
+
+1. Click on the **Upload** button located at the top to begin uploading files to the container.
 
     ![](../media/L6T2S9-0205-1.png "upload files")
 
@@ -112,23 +122,27 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/bff.png)
 
-1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **PDF files (2)** and click on **Open (3)**. Then click on **Upload** to upload all PDF files. 
+1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` **(1)**. Select all the **PDF files (2)** and click on **Open (3)**.
 
     ![](../media/L6T2S9-0205-3.png)
+
+1. Then click on **Upload** to upload all PDF files. 
+
+    ![](../media/new/t7.png)
 
 1. Verify the **openaidatasource** container after all files are uploaded.
 
     ![](../media/fileuploaded.png)
 
-1. On the Azure portal, type **AI Search (1)** in the search box and select **AI Search (2)** from the results.
+1. On the Azure portal, search for **AI Search (1)** in the search bar and select **AI Search (2)** from the results.
 
     ![](../media/aisrchportal.png)
 
-1. On **Microsoft Foundry | AI search (1)** blade, click on **+ Create (2)**.
+1. On **Microsoft Foundry | AI search** blade, ensure **AI Search (1)** is selected, then click on **+ Create (2)**.
 
-    ![](../media/aisearchcreate2.png)
+    ![](../media/new/t8.png)
 
-1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** and subsequently click on **Create**.
+1. On the **Create an AI Search** resource page, enter the following settings under the **Basics** tab and click on **Review + create (5)** 
 
    | Settings | Action |
    | -- | -- |
@@ -138,7 +152,11 @@ In this task, you will observe how the base model responds to queries without an
    | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
    | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
-   ![](../media/reviewaisrch2.png)
+   ![](../media/new/t9.png)
+
+1. Then click on **Create**.
+
+   ![](../media/new/t11.png)
 
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
@@ -148,13 +166,13 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/cogurl.png)
 
-1. From the left navigation pane, under **Settings(1)** click on **Keys(2)** and **copy the primary key or secondary key(3)** and paste it into a notepad for later use.
+1. From the left navigation pane, expand **Settings (1)** click on **Keys (2)** and **copy the primary key (3)** and paste it into a notepad for later use.
 
     ![](../media/cogkeys.png)
 
-1. In **Microsoft Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
+1. In **Microsoft Foundry** portal, navigate to the **Chat (1)** section, expand the **Add your data (2)** option and click on **+ Add a data source (3)**.
 
-    ![](../media/chatadd.png)
+    ![](../media/new/d1.png)
    
 1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
 
@@ -167,27 +185,27 @@ In this task, you will observe how the base model responds to queries without an
    | **Enter the index name** | **margiestravel (5)** |
    | **Indexer schedule** | **Once (6)** |
    
-    ![](../media/addds.png)
+    ![](../media/new/d2.png)
    
 1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
-    ![](../media/dmnext.png)
+    ![](../media/new/d3.png)
 
 1. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
 
-    ![](../media/dconcn.png)
+    ![](../media/new/d4.png)
    
 1. On the **Review and finish** page select **Save and close**, which will add your data.
 
-    ![](../media/refin.png)
+    ![](../media/new/d5.png)
 
 1. This may take a few minutes, during which you need to keep your window open.
        
-    ![](../media/ingprcs.png)
+    ![](../media/new/d6.png)
   
 1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
 
-    ![](../media/ingdone.png)   
+    ![](../media/new/d7.png) 
 
 ## Task 3: Chat with a model grounded in your data
 
@@ -199,13 +217,13 @@ In this task, you will ask the same questions as before in the chat section afte
    I'd like to take a trip to New York. Where should I stay?
    ```
 
-   ![](../media/trrpny.png)
+   ![](../media/new/d8.png) 
 
    ```
    What are some facts about New York?
    ```
 
-   ![](../media/factsnyy.png)
+   ![](../media/new/d9.png) 
 
 2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
@@ -215,13 +233,13 @@ In this task, you will ask the same questions as before in the chat section afte
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the **Azure portal**, select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
       ![](../media/cshell.png)
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
 
-    ![](../media/dev-genai-june-4.png)
+    ![](../media/new/e6.png)
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
@@ -257,6 +275,7 @@ In this task, you will complete key parts of the application to enable it to use
 1. Open the configuration file for your language.
 
     - **C#**: `appsettings.json`
+
     - **Python**: `.env`
 
 1. Update the configuration file for your chosen language with the following values:
@@ -269,7 +288,9 @@ In this task, you will complete key parts of the application to enable it to use
     - **Search index name**: Enter `margiestravel` as the index name.
     - Save your changes after updating these values.
 
-        ![](../media/L6T5S3-1807.png)
+        ![](../media/new/f1.png)
+
+        ![](../media/new/f2.png)
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
@@ -301,7 +322,7 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-    ![](../media/L6T5S4-1807.png)    
+    ![](../media/new/f3.png)    
 
 1. Navigate to the **CSharp** folder and install the necessary packages. These commands set up the environment for a local installation of the .NET SDK in Cloud Shell.
 
@@ -369,6 +390,8 @@ In this task, you will complete key parts of the application to enable it to use
     });
     ```
 
+    ![](../media/new/f4.png)
+
     For **Python**: ownData.py
 
     ```python
@@ -401,6 +424,8 @@ In this task, you will complete key parts of the application to enable it to use
     )
     ```
 
+    ![](../media/new/f5.png)
+
 1. Save the changes to the code file.
 
 ## Task 6: Run your application
@@ -430,6 +455,6 @@ In this task, you will run the reviewed code to generate some images.
 
 In this lab, you connected your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG). You observed how the base model responds to queries without any grounding data, connected your data in the chat playground, and chatted with a model grounded in your data. You also set up an application in Cloud Shell, configured it to use your Azure OpenAI resource and AI search service, and ran the application to see how it integrates with the Azure OpenAI model.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![Launch Azure Portal](../media/7next.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)
