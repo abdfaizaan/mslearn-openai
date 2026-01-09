@@ -265,6 +265,6 @@ In this task, you will run the reviewed code to generate some images.
 
 In this lab, you explored the DALL-E playground in the Azure Microsoft Foundry portal to generate images based on natural language prompts. You also examined a simple application that uses the REST API to generate images with a DALL-E model and ran the application in the Cloud Shell console within the Azure portal.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![Launch Azure Portal](../media/6next.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)

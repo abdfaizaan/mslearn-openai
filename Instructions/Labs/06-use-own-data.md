@@ -430,6 +430,6 @@ In this task, you will run the reviewed code to generate some images.
 
 In this lab, you connected your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG). You observed how the base model responds to queries without any grounding data, connected your data in the chat playground, and chatted with a model grounded in your data. You also set up an application in Cloud Shell, configured it to use your Azure OpenAI resource and AI search service, and ran the application to see how it integrates with the Azure OpenAI model.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![Launch Azure Portal](../media/7next.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)

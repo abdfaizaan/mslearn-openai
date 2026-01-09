@@ -708,6 +708,6 @@ In this task, you will run your configured app to send a request to your model a
 
 In this lab, you explored how prompt engineering can influence the behavior of an AI model. You experimented with different system messages and few-shot examples in the chat playground to see how they affected the model's responses. You also set up a simple application in Cloud Shell that interacts with your Azure OpenAI model, allowing you to see how different prompts yield different results while keeping other parameters constant.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![Launch Azure Portal](../media/new/next.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)

@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Microsoft Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. In **Microsoft Foundry** portal, navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
    ![](../media/chatmodelv.png)
    
@@ -31,7 +31,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
-   ![](../media/pyprog.png)
+   ![](../media/new/e1.png)
 
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
@@ -40,7 +40,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Do the same thing, but this time write it in C#.
    ```
 
-   ![](../media/cprog.png)
+   ![](../media/new/e2.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -60,7 +60,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-   ![](../media/ruby.png)
+   ![](../media/new/e3.png)
 
 1. Observe the output, which explains what the function does.
 
@@ -70,7 +70,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
-   ![](../media/simpfun.png)
+   ![](../media/new/e4.png)
 
 1. Submit the below-mentioned prompt to add comments to the code.
 
@@ -78,7 +78,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
 
-      ![](../media/comments.png)
+      ![](../media/new/e5.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 
@@ -86,7 +86,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the **Azure portal**, select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![](../media/cshell.png)
 
@@ -136,11 +136,11 @@ In this task, you will complete key parts of the application to enable it to use
 
    - **C#:**
 
-      ![](../media/app-settings-c-1807.png)
+      ![](../media/new/q2.png)
 
    - **Python:**
 
-      ![](../media/env-p-1807.png)
+      ![](../media/new/q3.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -231,6 +231,6 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 
 In this lab, you explored how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You generated code in different programming languages, explained existing code, and simplified functions using the chat playground. You also set up a command-line application in Cloud Shell, configured it to use your Azure OpenAI resource, and ran the application to automate code tasks such as adding comments, writing unit tests, and fixing bugs.
 
-### Congratulations on completing the lab! Click Next >> to continue to the next lab.
-
-![](../media/next5.png)
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
+     
+![](../media/new/next.png)
