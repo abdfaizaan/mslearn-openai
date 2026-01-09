@@ -34,7 +34,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. In the **Chat session**, submit the following query:
 
@@ -64,7 +64,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. Under the new system message, select the **Add section(1)** button, and choose **Examples(2)**. Then add the following example.
 
@@ -119,7 +119,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -148,7 +148,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. In the **Chat session** section, submit the following prompt:
 
@@ -172,7 +172,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. Submit the following prompt to the model:
 

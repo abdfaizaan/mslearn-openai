@@ -23,13 +23,13 @@ In this lab, you will complete the following tasks:
 
 In this task, you will observe how the base model responds to queries without any grounding data.
 
-1. In [Microsoft Foundry](https://ai.azure.com/) portal, navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
+1. Navigate to [Microsoft Foundry](https://ai.azure.com/) portal.
 
-2. From the left navigation pane, select **Chat (1)** and ensure that your model deployment **my-gpt-model (2)** is selected.
+1. From the left navigation pane, select **Chat (1)** and ensure that your model deployment **my-gpt-model (2)** is selected.
 
    ![](../media/chatmodelv.png)
 
-3. In the **Setup** area, for the **Give the model instructions and context (1)**, provide the following message and click on **Apply changes (2)**.
+1. In the **Setup** area, for the **Give the model instructions and context (1)**, provide the following message and click on **Apply changes (2)**.
 
    > **Note:** If the Apply changes button is greyed out, it means this instruction is already set — no further action is needed.
 
@@ -39,7 +39,11 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/findinfoo.png)
 
-4. In the **Chat session** on the right side, submit the following queries, and review the responses:
+1. In the **Update system message?** window, click on **Continue**.
+
+      ![](../media/new/19.png)
+
+1. In the **Chat session** on the right side, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?

@@ -126,7 +126,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. In the **Update system message?** window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
    
 1. In the **Setup** section, click on **+ Add section (1)** drop-down box, then click on **Examples (2)**.
 
@@ -148,7 +148,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. In the **Update system message?** pop-up window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
    
 1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Press **Enter** or use the **Send** button to submit the message and view the response.
 
@@ -218,7 +218,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Update system message?** pop-up window, click on **Continue**.
 
-      ![](../media/e1t4p3.png)
+      ![](../media/new/19.png)
 
 1. In the **Chat session** pane, click on the **Clear chat** icon to clear the chat history and start a new session.
 
