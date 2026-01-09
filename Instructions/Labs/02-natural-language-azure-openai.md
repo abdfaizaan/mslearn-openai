@@ -31,7 +31,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
-      - Expand **Resource Management (1)** and select **Keys and Endpoint (2)** under .
+      - Expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
 
       - Copy **Key 1 (3)**, and save it securely in a text editor (e.g., Notepad) for use in later steps.
 

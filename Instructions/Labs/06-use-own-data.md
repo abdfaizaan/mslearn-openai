@@ -67,7 +67,7 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/strgact.png)
 
-1. On **Storage Centre** page, from left pane expand **Object storage (1)** and select **Blob Storage (2)** and then click on **+ Create (3)**.
+1. From the left navigation pane, expand **Object Storage (1)** and select **Blob Storage (2)** and then click on **+ Create (3)**.
 
    ![](../media/strgcreate.png)
 
@@ -203,7 +203,7 @@ In this task, you will observe how the base model responds to queries without an
        
     ![](../media/new/d6.png)
   
-1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
+1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab.
 
     ![](../media/new/d7.png) 
 
