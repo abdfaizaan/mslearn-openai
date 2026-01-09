@@ -61,7 +61,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the Azure OpenAI resource pane, click on **Foundry portal**, which will navigate to **Microsoft Foundry**.
+1. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to **Microsoft Foundry**.
 
     ![](../media/va2.png)
 

@@ -35,7 +35,7 @@ In this task, you will use the DALL-E playground in the Microsoft Foundry portal
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource page, click on **Go to Microsoft Foundry portal**, which will navigate to the **Azure Microsoft Foundry portal**.
+3. In the Azure OpenAI resource page, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry**.
 
       ![](../media/dev-genai-june-1.png)
 
@@ -47,7 +47,7 @@ In this task, you will use the DALL-E playground in the Microsoft Foundry portal
 
       ![](../media/new/r2.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize (2)** and make the **capacity 1K(Tokens per minute) OR 3 as (Request per Minute Rate Limit) (3)** and click on **Deploy (4)**.
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **Customize (2)** and make the **Request per Minute Rate Limit** to **`3` (3)** and click on **Deploy (4)**.
 
       ![](../media/dallcustom.png)
 
@@ -77,7 +77,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     > **Note:** If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Switch to Bash*, select **Switch to Bash** and choose **Confirm** from the pop-up box.
 
     ![](../media/dev-genai-june-4.png)
 
@@ -114,16 +114,15 @@ In this task, you will use a configuration file in the application to store the 
     - C#: `appsettings.json`
     - Python: `.env`
     
-      ![](../media/new/r5.png)
-
-      ![](../media/new/r7.png)
-
 2. In the configuration file, enter the following values for your Azure OpenAI service:
 
     - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
     - **Key1**: The primary key from your Azure OpenAI resource.
-    - **Deployment Name**: Set this to **Dalle3** (the name of your image generation model deployment).
-    After updating these values, save the file by right-clicking it in the left pane.
+    - **Deployment Name**: Set this to **Dalle3** (the name of your image generation model deployment). After updating these values, press **CTRL + S** to save the file.
+
+      ![](../media/new/r5.png)
+
+      ![](../media/new/r7.png)
 
     > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 

@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In **Microsoft Foundry** portal, navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
    ![](../media/chatmodelv.png)
    
@@ -90,7 +90,7 @@ In this task, you will use a short command-line application running in Cloud She
 
     ![](../media/cshell.png)
 
-2. If you see the previously opened shell, click on the top right 'x' button to close it and open Cloudshell again.
+2. If you see the previously opened shell, click on the top right **X** button to close it and open Cloudshell again.
 
    ![](../media/L4T2S2-1707.png)
 
