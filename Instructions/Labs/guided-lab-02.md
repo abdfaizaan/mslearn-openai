@@ -56,7 +56,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
-    - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**
+    - On the left navigation menu, expand **Resource Management (1)** and select **Keys and Endpoint (2)**.
     
     - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
     
