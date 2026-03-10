@@ -37,7 +37,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
     
-    - Name: **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
+    - Name: **OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
     
     - Pricing tier: **Standard S0 (5)**
   
