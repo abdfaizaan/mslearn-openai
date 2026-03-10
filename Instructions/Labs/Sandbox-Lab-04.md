@@ -51,6 +51,14 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
       ![](../media/e1t1p5.png)
 
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+           ![](../media/ui3.png)    
+
 ## Task 2: Deploy a model 
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
@@ -199,6 +207,13 @@ In this task, you will use a short command-line application running in Cloud She
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
    ![](../media/classic.png)
+
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
+
+    ```bash
+   rm -r mslearn-openai -f
+   git clone https://github.com/CloudLabs-MOC/mslearn-openai
+    ```
 
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
