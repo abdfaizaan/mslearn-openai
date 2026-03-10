@@ -23,11 +23,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/new/1.png)
+   ![](../media/new/AI1.png)
 
 2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
-   ![](../media/va1.png)
+   ![](../media/new/AI2.png)
 
 3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
@@ -41,15 +41,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/clicknext.png)
+      ![](../media/new/AI3.png)
 
 4. Under the **Review + submit** tab, click on **Create**.
 
-      ![](../media/clickcreate.png)
+      ![](../media/new/AI4.png)
 
 5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
-      ![](../media/e1t1p5.png)
+      ![](../media/new/AI5.png)
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -73,15 +73,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/new/2.png) 
+   ![](../media/new/AI6.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
-      ![](../media/e1t2p2(1).png)
+      ![](../media/new/AI7.png)
    
 1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
 
-   ![](../media/custom4.1.png)
+   ![](../media/new/AI8.png)
 
 1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
 
@@ -97,7 +97,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (6)**
 
-        ![](../media/new/3b.png)
+        ![](../media/new/AI9.png)
       
 1. This will deploy a model that you will be playing around with as you proceed.
 
@@ -111,7 +111,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-   ![](../media/chatmodelv.png)
+   ![](../media/new/AI10.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -119,7 +119,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
-   ![](../media/new/e1.png)
+   ![](../media/new/AI12.png)
 
 1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
@@ -128,7 +128,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Do the same thing, but this time write it in C#.
    ```
 
-   ![](../media/new/e2.png)
+   ![](../media/new/AI13.png)
 
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task, such as reversing the input string.
 
@@ -148,7 +148,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-   ![](../media/new/e3.png)
+   ![](../media/new/AI14.png)
 
 1. Observe the output, which explains what the function does.
 
@@ -158,7 +158,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
    Can you simplify the function?
    ```   
 
-   ![](../media/new/e4.png)
+   ![](../media/new/AI15.png)
 
 1. Submit the below-mentioned prompt to add comments to the code.
 
@@ -166,7 +166,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       Add some comments to the function.
       ```
 
-      ![](../media/new/e5.png)
+      ![](../media/new/AI16.png)
 
 1. Observe the output, which includes comments explaining what each part of the function does. 
 
@@ -176,15 +176,11 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
-
-   > **Note**: If you dont see the **[>_]** (*Cloud Shell*) button, click on three dots **(...)(1)** and select **Cloud Shell(2) (2)**
-
-   ![](../media/code8.png "Keys and Endpoints")          
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)      
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-   ![](../media/Bash1.png)
+   ![](../media/new/Bash1.png)
 
 1. If you're prompted as Getting Started click on **Mount storage account (1)** select the available subscription **(2)** and click on **Apply (3)**.
 
@@ -202,7 +198,7 @@ In this task, you will use a short command-line application running in Cloud She
     - **File share**: Enter **none** (5)
     - Click **Create** (6)
 
-      ![](../media/lab04-storage1.png)
+      ![](../media/new/AI17.png)
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
@@ -229,7 +225,7 @@ In this task, you will use a short command-line application running in Cloud She
     code .
     ```
 
-   ![](../media/labfilecodegen.png)
+   ![](../media/new/AI18.png)
 
 ## Task 5: Configure your application
 
@@ -253,11 +249,11 @@ In this task, you will complete key parts of the application to enable it to use
 
    - **C#:**
 
-      ![](../media/new/q2.png)
+      ![](../media/new/AI19.png)
 
    - **Python:**
 
-      ![](../media/new/q3.png)
+      ![](../media/new/AI20.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -288,7 +284,7 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. The OpenAI tool will use these files to generate the responses. 
    
-   ![](../media/samplecode.png)
+   ![](../media/new/AI21.png)
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
@@ -301,19 +297,19 @@ In this task, you will run your configured app to generate code for each use cas
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 
-   ![](../media/option1.png)
+   ![](../media/new/AI22.png)
 
 1. In the response, you will see that OpenAI has added comments to your sample code provided from the function file. 
 
 1. Next, choose option **2** to write unit tests for that same function.
 
-   ![](../media/option2.png)
+   ![](../media/new/AI23.png)
 
 1. In the response, you will notice that the unit tests are added to your sample code.
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. 
 
-   ![](../media/option3.png)
+   ![](../media/new/AI24.png)
 
 1. This time, OpenAI would use the go fish file and fix the code in it and respond with the updated code. 
 
@@ -336,7 +332,7 @@ In this task, you will run your configured app to generate code for each use cas
      cat app.txt
      ```
 
-      ![](../media/cat.png)
+      ![](../media/new/AI25.png)
 
 The app for Go Fish in `sample-code` can be run if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
