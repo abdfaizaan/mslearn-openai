@@ -57,7 +57,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
-## Task 2: Deploy a model
+## Task 2: Deploy a model 
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
