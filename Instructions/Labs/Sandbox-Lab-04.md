@@ -202,7 +202,7 @@ In this task, you will use a short command-line application running in Cloud She
     - **File share**: Enter **none** (5)
     - Click **Create** (6)
 
-      ![](../media/lab04-storage.png)
+      ![](../media/lab04-storage1.png)
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
