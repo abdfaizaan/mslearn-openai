@@ -166,13 +166,35 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
-1. In the **Azure portal**, select the **[>_] (Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![](../media/cshell.png)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. If you see the previously opened shell, click on the top right **X** button to close it and open Cloudshell again.
+   > **Note**: If you dont see the **[>_]** (*Cloud Shell*) button, click on three dots **(...)(1)** and select **Cloud Shell(2) (2)**
 
-   ![](../media/L4T2S2-1707.png)
+   ![](../media/code8.png "Keys and Endpoints")          
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+
+   ![](../media/Bash1.png)
+
+1. If you're prompted as Getting Started click on **Mount storage account (1)** select the available subscription **(2)** and click on **Apply (3)**.
+
+   ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
+
+1. Select **I want to create a storage account (2)** and click on **Next (2)**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+1. Within the **Create storage account** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(2)
+    - **CloudShell region**: East US (3)
+    - **Storage Account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
+    - **File share**: Enter **none** (5)
+    - Click **Create** (6)
+
+      ![](../media/lab04-storage.png)
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
