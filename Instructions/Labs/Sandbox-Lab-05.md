@@ -74,11 +74,11 @@ In this task, you will use the DALL-E playground in the Microsoft Foundry portal
 
 2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject>(2)**
 
-      ![](../media/update07-1.png)
+      ![](../media/l5-12-11.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Foundry portal**, which will navigate to the **Microsoft Foundry portal**.
 
-      ![](../media/dev-genai-june-1.png)
+      ![](../media/l5-12-21.png)
 
 4. On the **Microsoft Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
