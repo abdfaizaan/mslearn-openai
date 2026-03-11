@@ -33,20 +33,20 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 3. Create an **Azure OpenAI** resource with the following settings, click on **Next (6)** thrice and subsequently click on **Create**:
    
       - **Subscription:** Default - Pre-assigned subscription. **(1)**
-      - **Resource group:** **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+      - **Resource group:** **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
       - **Region:** Select **<inject key="Region" enableCopy="false" /> (3)**
-      - **Name:** **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+      - **Name:** **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
       - **Pricing tier**: Standard S0 **(5)**
 
         ![](../media/l3-12-01.png)
 
-        >**Note:** gpt-image-1-mini 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+        >**Note:** gpt-image-1-mini models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
 1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
      ![](../media/l1-12-21.png)
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -73,7 +73,7 @@ In this task, you will use the gpt-image-1-mini playground in the Microsoft Foun
 
       ![](../media/l1-12-01.png)
 
-2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>(2)**
+2. On the **Microsoft Foundry | Azure OpenAI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>(2)**
 
       ![](../media/l5-12-11.png)
 
@@ -134,9 +134,9 @@ In this task, you will use a simple Python or C# app to generate images by calli
 1. Provide the following details:
 
     - **Subscription**: Default - Pre-assigned subscription **(1)**.
-    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Resource group**: **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
     - **Region**: Select **<inject key="Region" enableCopy="false" /> (3)**
-    - **Storage account name**: **stg<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Storage account name**: **stg<inject key="Deployment-id" enableCopy="false"></inject> (4)**
     - **File share**: none **(5)**
     - Click **Create (6)**
 
