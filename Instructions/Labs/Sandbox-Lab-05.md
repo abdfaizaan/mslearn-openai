@@ -34,13 +34,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    
       - **Subscription:** Default - Pre-assigned subscription. **(1)**
       - **Resource group:** **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
-      - **Region:** Select **<inject key="Region" enableCopy="false" /> (3)**
+      - **Region:** Select **East US 2 (3)**
       - **Name:** **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject> (4)**
       - **Pricing tier**: Standard S0 **(5)**
 
         ![](../media/l3-12-01.png)
 
-        >**Note:** gpt-image-1-mini models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+        > **Note:** The **gpt-image-1-mini** model is only available in Azure OpenAI Service resources in the **East US 2**, **Poland Central**, **Sweden Central**, and **West US 3** regions.
 
 1. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
