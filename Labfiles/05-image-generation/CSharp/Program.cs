@@ -4,7 +4,6 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Web;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
@@ -26,77 +25,71 @@ namespace generate_image
 
                 // Get prompt for image to be generated
                 Console.Clear();
-                string prompt = "";
                 Console.WriteLine("Enter a prompt to request an image:");
-                prompt = Console.ReadLine();
+                string prompt = Console.ReadLine();
 
-                // Make the initial call to start the job
                 using (var client = new HttpClient())
                 {
-                    var contentType = new MediaTypeWithQualityHeaderValue("application/json");                   
+                    var contentType = new MediaTypeWithQualityHeaderValue("application/json");
                     var deployment = configuration["AzureOAIDeployment"];
                     var api = $"/openai/deployments/{deployment}/images/generations?api-version=2025-04-01-preview";
-                    client.BaseAddress = new Uri(aoaiEndpoint);
+
+                    // Ensure endpoint has no trailing slash
+                    var endpoint = aoaiEndpoint.TrimEnd('/');
+                    client.BaseAddress = new Uri(endpoint);
                     client.DefaultRequestHeaders.Accept.Add(contentType);
                     client.DefaultRequestHeaders.Add("api-key", aoaiKey);
-                    Console.WriteLine("Calling URL: " + client.BaseAddress + api);                     
+                    Console.WriteLine("Calling URL: " + endpoint + api);
+
+                    // gpt-image-1 supported params: prompt, n, size, quality
+                    // quality values: "low", "medium", "high" (NOT "standard"/"hd")
+                    // size values: "1024x1024", "1024x1536", "1536x1024"
+                    // NOT supported: style, response_format
+                    // Response is synchronous (no polling needed) and returns b64_json
                     var data = new
                     {
-                        prompt=prompt,
-                        n=1,
-                        size="1024x1024"
+                        prompt = prompt,
+                        n = 1,
+                        size = "1024x1024",
+                        quality = "high"
                     };
 
                     var jsonData = JsonSerializer.Serialize(data);
                     var contentData = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                    var init_response = await client.PostAsync(api, contentData); 
 
-                    // Get the operation-location URL for the callback
-                    
-                    if (!init_response.Headers.TryGetValues("operation-location", out var headerValues))
+                    // gpt-image-1 responds synchronously — no polling needed
+                    var response = await client.PostAsync(api, contentData);
+
+                    if (!response.IsSuccessStatusCode)
                     {
-                        Console.WriteLine("Error: 'operation-location' header not found in the response.");
-                        Console.WriteLine("Status Code: " + init_response.StatusCode);
-                        string errorContent = await init_response.Content.ReadAsStringAsync();
-                        Console.WriteLine("Response Content: " + errorContent);
+                        Console.WriteLine("Failed to generate image.");
+                        Console.WriteLine("Status Code: " + response.StatusCode);
+                        string errorContent = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Response: " + errorContent);
                         return;
                     }
 
-                    var callback_url = headerValues.FirstOrDefault();
-
-
-                    // Poll the callback URL until the job has succeeeded (or 100 attempts)
-                    var response = await client.GetAsync(callback_url); 
-                    var stringResponse = await response.Content.ReadAsStringAsync();
-                    var status = JsonSerializer.Deserialize<Dictionary<string,object>>(stringResponse)["status"];
-                    var tries = 1;
-                    while (status.ToString() != "succeeded" && tries < 101)
-                    {
-                        tries ++;
-                        response = await client.GetAsync(callback_url);
-                        stringResponse = await response.Content.ReadAsStringAsync();
-                        status = JsonSerializer.Deserialize<Dictionary<string,object>>(stringResponse)["status"];
-                        Console.WriteLine(tries.ToString() + ": " + status);
-                    }
-
-                    // Get the results
-                    stringResponse = await response.Content.ReadAsStringAsync();
+                    // Parse the base64 image from the response
+                    string stringResponse = await response.Content.ReadAsStringAsync();
                     JsonNode contentNode = JsonNode.Parse(stringResponse)!;
-                    JsonNode resultNode = contentNode!["result"];
-                    JsonNode dataNode = resultNode!["data"];
-                    JsonNode urlNode = dataNode[0]!;
-                    JsonNode url = urlNode!["url"];
+                    JsonNode dataNode = contentNode!["data"]!;
+                    string b64Json = dataNode[0]!["b64_json"]!.GetValue<string>();
 
-                    // Display the URL for the generated image
-                    Console.WriteLine(url.ToJsonString().Replace(@"\u0026", "&"));
+                    // Decode and save as PNG
+                    byte[] imageBytes = Convert.FromBase64String(b64Json);
+                    string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string Path = $"/home/odl_user/mslearn-openai/Labfiles/05-image-generation/CSharp/generated_image_{timestamp}.png";
+                    await System.IO.File.WriteAllBytesAsync(Path, imageBytes);
+                    string outputPath = $"/mslearn-openai/Labfiles/05-image-generation/CSharp/generated_image_{timestamp}.png";
 
+                    Console.WriteLine($"\n✅ Image saved successfully!");
+                    Console.WriteLine($"   Path: {outputPath}");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
-
 }
