@@ -147,6 +147,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     ```
     rm -r mslearn-openai -f
     git clone https://github.com/CloudLabs-MOC/mslearn-openai
+
     ```
 
 1. Navigate to the folder for the language of your preference by running the appropriate command.
@@ -155,19 +156,21 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     ```bash
     cd mslearn-openai/Labfiles/05-image-generation/CSharp
+
     ```
 
     **Python**
 
     ```bash
     cd mslearn-openai/Labfiles/05-image-generation/Python
+
     ```
 
 1. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
-    ```
+   ```
 
     ![](../media/l5-12-91.png)
 
