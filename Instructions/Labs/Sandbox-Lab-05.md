@@ -328,15 +328,32 @@ In this task, you will run the reviewed code to generate some images.
     ```bash
     python generate-image.py
     ```
-1. When prompted, enter a description for an image. For example, **A giraffe flying a kite**.
     
-1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
+1. In the **terminal**, when prompted with **Enter a prompt to request an image**, type the prompt **“A giraffe flying a kite” (1)** and press **Enter**.  Once the request is processed, the generated image file will be saved automatically and the **file path of the generated image (2)** will be displayed.
 
-   ![](../media/dall8.png)
+    - **Python :**
 
-   ![](../media/dev-genai-june-101.png)
+         ![](../media/Dallpy.png)   
 
-1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt and once done close the cloudshell.
+    - **C# :**
+
+         ![](../media/DallCS01.png)  
+
+1. In the **Download a file** window, verify the generated file path **(4)** and click **Download (5)** to download the image file to your system.
+
+    ![](../media/Dall11.png)  
+
+1. After the download begins, click **Click here to download your file (6)** to open the downloaded image from the browser.
+
+    ![](../media/Dall12.png)  
+
+1. In the **browser Downloads panel**, locate the downloaded file and click **Open file (7)** to view the generated image.
+
+    ![](../media/Dall13.png)  
+
+1. The generated image will open in the viewer, displaying the result based on the prompt **“A giraffe flying a kite.”**
+
+    ![](../media/Dall15.png)  
 
 ## Summary
 
