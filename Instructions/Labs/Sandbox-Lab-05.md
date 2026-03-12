@@ -65,10 +65,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you will use the gpt-image-1-mini playground in the Microsoft Foundry portal to experiment with image generation.
 
-> **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the deployment fails, it may be due to quota restrictions on the existing resource. 
-
-> To resolve this, create a new Azure OpenAI resource in a supported region such as **East US** or **Australia East**, and then attempt to deploy the DALL·E model again.
-
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
       ![](../media/l1-12-01.png)
@@ -184,7 +180,7 @@ In this task, you will use a configuration file in the application to store the 
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. Update the configuration values to include the **Endpoint**, **Key1** and **Deployment name: Dalle3** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
+2. Update the configuration values to include the **Endpoint**, **Key1** and **Deployment name: gpt-image-1-mini** for your Azure OpenAI service. Then, save the file by right-clicking the file in the left pane.
 
     > **Tip:** You can adjust the split at the top of the cloud shell pane to see the Azure portal and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
