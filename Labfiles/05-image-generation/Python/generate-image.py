@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 
+
 def main():
     try:
         # Load environment variables
