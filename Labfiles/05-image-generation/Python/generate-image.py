@@ -1,15 +1,16 @@
 import requests
-import time
+import base64
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
-def main(): 
+def main():
     try:
         # Load environment variables
         load_dotenv()
         api_base = os.getenv("AZURE_OAI_ENDPOINT")
         api_key = os.getenv("AZURE_OAI_KEY")
-        deployment = os.getenv("AZURE_OAI_DEPLOYMENT")  # e.g., Dalle3
+        deployment = os.getenv("AZURE_OAI_DEPLOYMENT")  # e.g., gpt-image-1
         api_version = '2025-04-01-preview'
 
         # Ensure the endpoint ends without a trailing slash
@@ -26,51 +27,48 @@ def main():
             "api-key": api_key,
             "Content-Type": "application/json"
         }
+
+        # gpt-image-1 supported parameters (confirmed from Microsoft docs):
+        # - size:    "1024x1024", "1024x1536", "1536x1024"
+        # - quality: "low", "medium", "high" (default: "high")
+        # NOT supported: style, response_format (always returns b64_json automatically)
         body = {
             "prompt": prompt,
-            "model": deployment,  # required for DALL·E 3
             "n": 1,
-            "size": "1024x1024",  # valid sizes: 1024x1024, 1024x1792, 1792x1024
-            "quality": "standard",  # optional: "standard" or "hd"
-            "style": "vivid",       # optional: "vivid" or "natural"
-            "response_format": "url"
+            "size": "1024x1024",
+            "quality": "high"
         }
 
-        # Debug: print the request URL and body
         print("Calling URL:", url)
-        print("Request Body:", body)
 
-        # Submit the image generation job
-        submission = requests.post(url, headers=headers, json=body)
+        # Submit the image generation request (synchronous for gpt-image-1)
+        response = requests.post(url, headers=headers, json=body)
 
-        # Check if the request was accepted
-        if submission.status_code != 202:
-            print("Failed to submit image generation job.")
-            print("Status Code:", submission.status_code)
-            print("Response:", submission.text)
+        if response.status_code != 200:
+            print("Failed to generate image.")
+            print("Status Code:", response.status_code)
+            print("Response:", response.text)
             return
 
-        # Get the operation-location URL for polling
-        operation_location = submission.headers.get('Operation-Location')
-        if not operation_location:
-            print("Operation-Location header not found in response.")
-            print("Response Headers:", submission.headers)
-            return
+        # Extract base64 image data
+        response_data = response.json()
+        image_b64 = response_data['data'][0]['b64_json']
 
-        # Poll the callback URL until the job has succeeded
-        status = ""
-        while status != "succeeded":
-            time.sleep(3)
-            response = requests.get(operation_location, headers=headers)
-            status = response.json().get('status')
-            print("Current status:", status)
+        # Decode and save as a PNG file
+        image_bytes = base64.b64decode(image_b64)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"/home/odl_user/mslearn-openai/Labfiles/05-image-generation/Python/generated_image_{timestamp}.png"
+        output_filename = f"/mslearn-openai/Labfiles/05-image-generation/Python/generated_image_{timestamp}.png"
 
-        # Get the results
-        image_url = response.json()['result']['data'][0]['url']
-        print("Generated Image URL:", image_url)
+        with open(filename, "wb") as f:
+            f.write(image_bytes)
+
+        print(f"\n Image saved successfully as: {output_filename}")
+        print(f"   Open the file to view your generated image.")
 
     except Exception as ex:
         print("An error occurred:", ex)
 
-if __name__ == '__main__': 
+
+if __name__ == '__main__':
     main()
