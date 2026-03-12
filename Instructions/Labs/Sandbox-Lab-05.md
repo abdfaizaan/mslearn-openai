@@ -132,7 +132,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     - **Subscription**: Default - Pre-assigned subscription **(1)**.
     - **Resource group**: **openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
     - **Region**: Select **<inject key="Region" enableCopy="false" /> (3)**
-    - **Storage account name**: **stg<inject key="Deployment-id" enableCopy="false"></inject> (4)**
+    - **Storage account name**: **storage<inject key="Deployment-id" enableCopy="false"></inject> (4)**
     - **File share**: none **(5)**
     - Click **Create (6)**
 
