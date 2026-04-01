@@ -23,7 +23,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-   ![](../media/chatmodelv.png)
+   ![](../media/mdlvr.png)
    
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -60,7 +60,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-   ![](../media/new/e3.png)
+   ![](../media/ruby22.png)
 
 1. Observe the output, which explains what the function does.
 
@@ -96,7 +96,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic.png)
+   ![](../media/gtcv.png)
 
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
@@ -233,4 +233,4 @@ In this lab, you explored how to use Azure OpenAI Service to generate, explain, 
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/5nct.png)

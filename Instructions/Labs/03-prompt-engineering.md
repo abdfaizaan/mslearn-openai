@@ -20,9 +20,9 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
-1. Navigate back to [Microsoft Foundry](https://ai.azure.com/) portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
+1. Navigate back to **Microsoft Foundry** portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-      ![](../media/chatmodelv.png) 
+      ![](../media/mdlvr.png) 
 
 1. Update the  **Give the model instructions and context (1)** with the text mentioned below, and click on **Apply changes (2)**. 
 
@@ -192,13 +192,17 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/cshell.png)
 
+    >**Note:** If you can't find Cloud Shell, click on the **ellipsis (...) (1)** and then select **Cloud Shell (2)** from the menu.
+
+    ![](../media/180625(14).png)
+
    > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
 
    >  ![](../media/bash.png)
 
 1. Once the terminal opens, click on **Settings(1)** and select **Go to Classic version(2)**.
 
-   ![](../media/classic.png)
+   ![](../media/gtcv.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `mslearn-openai`.
 
@@ -258,7 +262,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -278,9 +282,15 @@ In this task, you will complete key parts of the provided C# or Python applicati
     </Project>
     ```    
 
-     ![](../media/new/w6.png)    
+     ![](../media/net9.png)    
 
-1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the directory using the command : 
+
+    ```
+    cd CSharp
+    ```
+
+<!--1. Navigate to the folder for your preferred language and install the necessary packages.
 
    For **C#:**
 
@@ -305,11 +315,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
+-->
 
-1. Enter to run the following command to restore the workload.
+6. Enter to run the following command to restore the workload.
 
     ```
-    dotnet workload restore
+    dotnet restore
     ```
 
      >**Note:** Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
@@ -710,4 +721,4 @@ In this lab, you explored how prompt engineering can influence the behavior of a
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/4nct.png)

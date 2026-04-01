@@ -27,7 +27,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. From the left navigation pane, select **Chat (1)** and ensure that your model deployment **my-gpt-model (2)** is selected.
 
-   ![](../media/chatmodelv.png)
+   ![](../media/mdlvr.png)
 
 1. In the **Setup** area, for the **Give the model instructions and context (1)**, provide the following message and click on **Apply changes (2)**.
 
