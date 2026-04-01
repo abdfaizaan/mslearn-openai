@@ -65,7 +65,7 @@ In this task, you will observe how the base model responds to queries without an
    
 1. On the **Azure portal**, search for **Storage account (1)** in the search box and select **Storage accounts (2)** from the results.
 
-   ![](../media/strgact.png)
+   ![](../media/strsr.png)
 
 1. From the left navigation pane, expand **Object Storage (1)** and select **Blob Storage (2)** and then click on **+ Create (3)**.
 
@@ -82,7 +82,7 @@ In this task, you will observe how the base model responds to queries without an
    | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)** |
    | **Redundancy** | Locally-redundant storage (LRS) **(6)** |
   
-    ![](../media/strgcreatenext.png)
+    ![](../media/strnxt.png)
 
 1. Under the **Advanced** tab, provide the following details and click on **Review + create (2)**
 
@@ -90,11 +90,11 @@ In this task, you will observe how the base model responds to queries without an
    | -- | -- |
    | **Allow enable anonymous access on individual containers (1)** | Check in the box. |
 
-    ![](../media/advstrg.png)
+    ![](../media/rc.png)
 
 1.  Then, click on **Create** to create a new blob storage. 
 
-    ![](../media/new/t3.png)
+    ![](../media/crst.png)
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
@@ -102,7 +102,7 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/gtr.png)
 
-1. On **Storage Account**, go to **Container (1)** section under Data Storage and click on **+ Add Container (2)** to create a new container.
+1. On **Storage Account**, go to **Container (1)** section under **Data Storage** and click on **+ Add Container (2)** to create a new container.
 
     ![](../media/new/t4.png)
 
@@ -124,7 +124,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` **(1)**. Select all the **PDF files (2)** and click on **Open (3)**.
 
-    ![](../media/L6T2S9-0205-3.png)
+    ![](../media/filopn.png)
 
 1. Then click on **Upload** to upload all PDF files. 
 
@@ -136,7 +136,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On the Azure portal, search for **AI Search (1)** in the search bar and select **AI Search (2)** from the results.
 
-    ![](../media/aisrchportal.png)
+    ![](../media/aisr.png)
 
 1. On **Microsoft Foundry | AI search** blade, ensure **AI Search (1)** is selected, then click on **+ Create (2)**.
 
