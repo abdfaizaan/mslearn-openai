@@ -270,4 +270,4 @@ In this lab, you explored the DALL-E playground in the Azure Microsoft Foundry p
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/6nct.png)
