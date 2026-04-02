@@ -152,11 +152,13 @@ In this task, you will observe how the base model responds to queries without an
    | **Location** | Select **<inject key="Region" enableCopy="false" /> (3)** |
    | **Pricing tier** | Change the Pricing tier to **Basic (4)** |
 
-   ![](../media/new/t9.png)
+    >**Note:** If you’re unable to switch the pricing tier to Basic, please change the location to Central US or West US and try again.
+
+   ![](../media/css.png)
 
 1. Then click on **Create**.
 
-   ![](../media/new/t11.png)
+   ![](../media/upt11.png)
 
 1. Once the deployment is successful, click on **Go to resource** to go to the deployed search service. 
 
@@ -168,7 +170,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. From the left navigation pane, expand **Settings (1)** click on **Keys (2)** and **copy the primary key (3)** and paste it into a notepad for later use.
 
-    ![](../media/cogkeys.png)
+    ![](../media/PAK.png)
 
 1. In **Microsoft Foundry** portal, navigate to the **Chat (1)** section, expand the **Add your data (2)** option and click on **+ Add a data source (3)**.
 
@@ -243,7 +245,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-   ![](../media/classic.png)
+   ![](../media/gtcv.png)
 
 4. In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise.
 
@@ -252,7 +254,7 @@ In this task, you will use a short command-line application running in Cloud She
      git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
      ```
 
-5. After the repo has been cloned, navigate to the folder containing the chat application code files
+5. After the repo has been cloned, navigate to the folder containing the chat application code files.
    
     ```bash
     cd mslearn-openai/Labfiles/02-use-own-data
@@ -457,4 +459,4 @@ In this lab, you connected your own data to the Azure OpenAI Service for Retriev
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/7nct.png)

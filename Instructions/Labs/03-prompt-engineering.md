@@ -262,7 +262,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -282,15 +282,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
     </Project>
     ```    
 
-     ![](../media/net9.png)    
+     ![](../media/new/w6.png)
 
-1. Navigate to the directory using the command : 
-
-    ```
-    cd CSharp
-    ```
-
-<!--1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages.
 
    For **C#:**
 
@@ -315,12 +309,11 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
--->
 
 6. Enter to run the following command to restore the workload.
 
     ```
-    dotnet restore
+    dotnet workload restore
     ```
 
      >**Note:** Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
