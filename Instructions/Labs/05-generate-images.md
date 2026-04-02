@@ -29,7 +29,7 @@ In this task, you will use the DALL-E playground in the Microsoft Foundry portal
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/new/1.png)
+   ![](../media/azoai.png)
 
 2. On the **Microsoft Foundry | Azure Open AI** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 

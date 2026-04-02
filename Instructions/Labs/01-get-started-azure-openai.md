@@ -21,11 +21,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from the results.
 
-   ![](../media/new/1.png)
+   ![](../media/azoai.png)
 
-2. On  **AI Foundary | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
+2. On  **Microsoft Foundry | Azure OpenAI** blade, select **Azure OpenAI (1)** from the left menu, click on **+ Create (2)** and select **Azure OpenAI (3)**
 
-   ![](../media/va1.png)
+   ![](../media/mfai.png)
 
 3. Create an **Azure OpenAI** resource using the settings below, then click **Next (6)** three times, leaving all other options at their defaults.
     
@@ -67,7 +67,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Select the **Deployments (1)** from the left pane, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-    ![](../media/va3.png)
+    ![](../media/dbm.png)
 
 1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
 
@@ -118,7 +118,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. From the left navigation pane, select the **Chat (1)** under **Playgrounds** section, and ensure that the **my-gpt-model(version:2025-04-14) (2)** model is selected in the configuration pane.
 
-      ![](../media/chatmodelv.png)  
+      ![](../media/mdlvr.png)  
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
 
@@ -158,15 +158,15 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Review the response and then submit the following message to continue the conversation: **`How is it related to machine learning?`**
 
-      ![](../media/wtai.png)
+      ![](../media/hwml.png)
 
 1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-      ![](../media/ml.png)
+      ![](../media/hwmlres.png)
 
 1. Use the **</>View Code** button to view the code for the interaction.
 
-      ![](../media/new/4.png)
+      ![](../media/vcode.png)
 
 1. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
@@ -245,4 +245,4 @@ In this lab, you provisioned an Azure OpenAI resource, deployed a model using Az
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/2nct.png)

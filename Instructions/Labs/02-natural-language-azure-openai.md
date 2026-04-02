@@ -23,11 +23,11 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)** from Services section.
 
-   ![](../media/new/1.png)
+   ![](../media/azoai.png)
 
 1. On the **Microsoft Foundry | Azure OpenAI** page, select **Azure OpenAI (1)**, and then choose **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
-   ![](../media/va6.png)
+   ![](../media/sloai.png)
 
 1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
 
@@ -37,7 +37,7 @@ In this task, you will review the provisioned Azure OpenAI resource within your 
 
       - Next, copy the **Endpoint (4)** by clicking the copy icon, and save it in the same location.
 
-        ![](../media/new/q1.png)
+        ![](../media/oikey.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -57,7 +57,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 3. Within the **Getting started** page, select **Mount storage account (1)**, select your **Subscription (2)** from the dropdown and click **Apply (3)**.
 
-   ![](../media/mountstrg.png)
+   ![](../media/aplycsh.png)
 
 4. Within the **Mount storage account** page, select **I want to create a storage account (1)** and click **Next (2)**.
 
@@ -78,7 +78,7 @@ In this task, you will set up a development environment using Azure Cloud Shell.
 
 7. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
-    ![](../media/classic.png)
+    ![](../media/gtcv.png)
 
 8. Once the terminal starts, enter the below-mentioned command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -566,5 +566,5 @@ In this lab, you used your Azure OpenAI resource to build and test an applicatio
 
 ### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
      
-![](../media/new/next.png)
+![](../media/3nct.png)
 

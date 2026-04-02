@@ -23,7 +23,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 1. From the left navigation pane, select **Chat (1)** under **Playgrounds**. In the **Setup** section, ensure the deployment is set to **my-gpt-model (2)** and **Give the model instructions and context (3)** is set to `You are an AI assistant that helps people find information.`
 
-    ![](../media/depset.png)
+    ![](../media/cai.png)
 
 1. Remove the data source that you added in the previous lab by clicking on the **Remove data source** button in the Data source section at the bottom.
 
@@ -71,7 +71,7 @@ In this task, you will apply content filters to prompts and completions to preve
 
 1. From the left navigation pane, click on **Guardrails + Controls (1)**, then select **Content filters (2)**, under that click on **+ Create content filter (3)** and review the default settings for a content filter.
 
-    ![](../media/new/15.png)
+    ![](../media/ccf.png)
 
 1. Enter a name for the content filter and click **Next** to continue.
 
