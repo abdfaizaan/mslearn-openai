@@ -247,7 +247,7 @@ In this task, you will run the reviewed code to generate some images.
 
 1. In the **Cloudshell** bash terminal, navigate to the folder for your preferred language.
 
-1. In the console prompt pane, enter the appropriate command to run your application:
+2. In the console prompt pane, enter the appropriate command to run your application:
 
     **C#**
 
@@ -260,17 +260,17 @@ In this task, you will run the reviewed code to generate some images.
     ```bash
     python generate-image.py
     ```
-1. When prompted, enter a description for an image. For example, `A giraffe flying a kite` **(1)**.
+3. When prompted, enter a description for an image. For example, `A giraffe flying a kite` **(1)**.
     
-1. Wait for the image to be generated—you’ll see a success message indicating that the image has been saved. **Copy (2)** the image name, then run the command ``download <image name>`` **(3)**. A **pop-up (4)** will appear at the bottom-left of the Cloud Shell; click it to download and view the generated image. opnfiledwn
+4. Wait for the image to be generated—you’ll see a success message indicating that the image has been saved. **Copy (2)** the image name, then run the command ``download <image name>`` **(3)**. A **pop-up (4)** will appear at the bottom-left of the Cloud Shell; click it to download and view the generated image. opnfiledwn
 
-   ![](../media/fildn.png)
+    ![](../media/fildn.png)
 
-   ![](../media/opnfiledwn.png)
+    ![](../media/opnfiledwn.png)
 
-   ![](../media/imgv.png)
+    ![](../media/imgv.png)
 
-1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary
 
