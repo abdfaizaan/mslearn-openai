@@ -120,7 +120,7 @@ In this task, you will use a configuration file in the application to store the 
     
 2. In the configuration file, enter the following values for your Azure OpenAI service:
 
-    > **Note:** As mentioned earlier, if your model was deployed to a newly created resource during deployment, you’ll need to use its Azure OpenAI endpoint and API key. To find these, go to **Overview (1)**, select **Azure OpenAI (2)**, and copy the **Azure OpenAI endpoint (3)** and **API Key (4)**.
+    > **Note:** As mentioned earlier, if your model was deployed to a newly created resource during deployment, you’ll need to use its Azure OpenAI endpoint and API key. To find these, go to **Overview (1)** of newely created resource on foundry portal, select **Azure OpenAI (2)**, and copy the **Azure OpenAI endpoint (3)** and **API Key (4)**.
 
     ![](../media/neeyy.png)
 
