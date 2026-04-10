@@ -22,7 +22,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. Navigate back to **Microsoft Foundry** portal, from the left navigation pane, select **Chat (1)** and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
-      ![](../media/mdlvr.png) 
+      ![](../media/MDV.png) 
 
 1. Update the  **Give the model instructions and context (1)** with the text mentioned below, and click on **Apply changes (2)**. 
 
@@ -30,7 +30,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are an AI assistant that helps people find information.
    ```
 
-   ![](../media/findinfoo.png)
+   ![](../media/hihlp.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -52,7 +52,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. The response describes the article. However, suppose you want a more specific format for article categorization.
   
-   ![](../media/article1.png)
+   ![](../media/artcl.png)
 
 1. In the **Setup** section, change the **Give the model instructions and context (1)** to the below text and click on **Apply changes (2)**. 
 
@@ -60,7 +60,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are a news aggregator that categorizes news articles.
    ```
 
-   ![](../media/newsaggre.png)
+   ![](../media/nwsagr.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -137,14 +137,14 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-   ![](../media/new/w4.png)
+   ![](../media/envtart2.png)
 
 1. Set the **Give the model instructions and context (1)** to the text mentioned below. Save the changes by clicking on **Apply changes (2)**.
    ```
    You are an AI assistant that helps people find information.
    ```
 
-   ![](../media/findinfoo.png)
+   ![](../media/hihlp.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -160,7 +160,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you wanted was for the model to write a Python program that performs the tasks you described?
 
-   ![](../media/loa.png)
+   ![](../media/anmllst.png)
 
 1. Change the **Give the model instructions and context(1)** to the text mentioned below, and **Apply changes(2)** the changes.
 
@@ -168,7 +168,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
    You are a coding assistant helping write Python code.
    ```
 
-   ![](../media/pyassis.png)
+   ![](../media/cdas.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -182,7 +182,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/new/w5.png)
+      ![](../media/pyopfn.png)
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -198,7 +198,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    > **Note:** If you open the Cloud Shell for the first time, you will be prompted to choose the type of shell. Please choose **Bash**.
 
-   >  ![](../media/bash.png)
+    ![](../media/bash.png)
 
 1. Once the terminal opens, click on **Settings(1)** and select **Go to Classic version(2)**.
 
@@ -290,23 +290,31 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     ```
     cd CSharp
+    ```
+
+    ```
     export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```     
+    ```
 
      >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
 1. Run the following command to install the required SDK version locally:     
 
-     ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-     chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ```
+    ```
+    curl -fsSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+    chmod +x dotnet-install.sh
+    ``` 
+
+    ```
+    ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_ROOT
+    ```
+
+    ```
+    export PATH=$DOTNET_ROOT:$PATH
+    ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 

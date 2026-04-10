@@ -27,7 +27,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. From the left navigation pane, select **Chat (1)** and ensure that your model deployment **my-gpt-model (2)** is selected.
 
-   ![](../media/mdlvr.png)
+   ![](../media/MDV.png)
 
 1. In the **Setup** area, for the **Give the model instructions and context (1)**, provide the following message and click on **Apply changes (2)**.
 
@@ -37,7 +37,7 @@ In this task, you will observe how the base model responds to queries without an
     You are an AI assistant that helps people find information.
     ```
 
-   ![](../media/findinfoo.png)
+   ![](../media/hihlp.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -49,13 +49,13 @@ In this task, you will observe how the base model responds to queries without an
     I'd like to take a trip to New York. Where should I stay?
     ```
 
-   ![](../media/new/t1.png)
+   ![](../media/nycst.png)
 
     ```
     What are some facts about New York?
     ```
 
-   ![](../media/new/t2.png)
+   ![](../media/nycfac.png)
 
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 

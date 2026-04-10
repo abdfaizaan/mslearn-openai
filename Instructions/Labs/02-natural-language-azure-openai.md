@@ -500,9 +500,9 @@ In this task, you will run the application and interact with the Azure OpenAI mo
    Write an intro for a new wildlife Rescue 
    ```
 
-    ![](../media/new/w1.png)
+    ![](../media/wlres.png)
 
-    ![](../media/new/q10.png)  
+    ![](../media/pyop.png)  
 
     >**Note:** User message should given in terminal in C# or Python. Follow the same steps for the remaining prompts.
 
