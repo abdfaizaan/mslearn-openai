@@ -272,7 +272,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
-    **Test** py
+    **Test1** py
 
     ```
     import os
