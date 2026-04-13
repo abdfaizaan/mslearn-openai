@@ -69,39 +69,39 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/dbm.png)
 
-1. Search for **gpt-4.1-mini (1)** in the search bar, select **gpt-4.1-mini (2)** and click on **Confirm (3)**.
+1. Search for **gpt-5-mini (1)** in the search bar, select **gpt-5-mini (2)** and click on **Confirm (3)**.
 
-   ![](../media/new/2.png) 
+   ![](../media/5MINCO.png) 
 
    >**Note:** If pop-up window **Unlock the full capabilities of Azure Microsoft Foundry with projects** appears, click **Continue with existing setup**
 
       ![](../media/e1t2p2(1).png)
    
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, click on **Customize**.
+1. Within the **Deploy model gpt-5-mini** pop-up interface, click on **Customize**.
 
-   ![](../media/custom4.1.png)
+   ![](../media/5CUS.png)
 
-1. Within the **Deploy model gpt-4.1-mini** pop-up interface, enter the following details:
+1. Within the **Deploy model gpt-5-mini** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (1)**
 
       - Deployment type: **Global Standard (2)**
 
-      - Model version: **2025-04-14 (Default) (3)**
+      - Model version: **2025-08-07 (Default) (3)**
 
-      - Tokens per Minute Rate Limit (thousands): In between **10K - 13K (4)**
+      - Tokens per Minute Rate Limit (thousands): In between **13K - 16K (4)**
 
       - Content filter: **DefaultV2 (5)**
 
       - Click on **Deploy (6)**
 
-        ![](../media/new/3b.png)
+        ![](../media/tookn.png)
       
 1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
-    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4.1-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+    > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-5-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -116,13 +116,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
-1. From the left navigation pane, select the **Chat (1)** under **Playgrounds** section, and ensure that the **my-gpt-model(version:2025-04-14) (2)** model is selected in the configuration pane.
+1. From the left navigation pane, select the **Chat (1)** under **Playgrounds** section, and ensure that the **my-gpt-model (version:2025-08-07) (2)** model is selected in the configuration pane.
 
-      ![](../media/mdlvr.png)  
+      ![](../media/MDV.png)  
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the existing text with the following statement: **`The system is an AI teacher that helps people learn about AI`** **(1)** and click on **Apply changes (2)**. 
 
-      ![](../media/applychanges.png)
+      ![](../media/AIAPCHNG.png)
 
 1. In the **Update system message?** window, click on **Continue**.
 
@@ -158,15 +158,15 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Review the response and then submit the following message to continue the conversation: **`How is it related to machine learning?`**
 
-      ![](../media/hwml.png)
+      ![](../media/MLREL.png)
 
 1. Review the response, note that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-      ![](../media/hwmlres.png)
+      ![](../media/MLOP.png)
 
 1. Use the **</>View Code** button to view the code for the interaction.
 
-      ![](../media/vcode.png)
+      ![](../media/VCODE.png)
 
 1. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
@@ -178,11 +178,13 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 1. In the **Chat Configuration** pane select **Parameters (1)**, set the following parameter values:
       
-      - Max Completion Tokens: **500 (2)**
+      - Max Completion Tokens: **5000 (2)**
      
-      - Temperature: **0 (3)**
+      - Reasoning Effort: **high (3)**
    
-          ![](../media/va5.png)
+      - Generate Summary: **detailed (4)**
+
+          ![](../media/hgdet.png)
       
 2. Submit the following message as a query in a chat session
 
@@ -200,13 +202,17 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the **results**, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](../media/new/6.png)
+      ![](../media/5kop.png)
 
 4. Observe the following about the prompt and parameters you used:
 
-      - The prompt specifically states that the desired output should be three multiple-choice questions.
-       
-      - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
+      - The prompt explicitly specifies that the desired output should be **three multiple-choice questions**, ensuring the model generates a structured and constrained response.
+
+      - The **Max Completion Tokens** parameter is set to **5000**, allowing sufficient length for detailed outputs without prematurely truncating the response.
+
+      - The **Reasoning Effort** is set to **high**, which enables the model to apply deeper reasoning and produce more thoughtful, accurate, and context-aware responses.
+
+      - The **Generate Summary** option is set to **detailed**, instructing the model to provide more comprehensive and elaborated summaries where applicable.
 
 ## Task 5: Explore code generation
 
@@ -214,7 +220,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Apply changes (2)**.
 
-      ![](../media/pydev.png)
+      ![](../media/pdev.png)
 
 1. In the **Update system message?** pop-up window, click on **Continue**.
 
@@ -224,7 +230,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](../media/e1t6p2.png)
 
-1. Click on **Clear** in **Clear chat?** pop-up window.      
+      >**Note:** If a **Clear chat?** pop-up window shows up click on **Clear**.      
 
       ![](../media/e1t6p3.png)
 
@@ -236,7 +242,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/new/7.png)
+      ![](../media/pyfnop.png)
 
 
 ## Summary

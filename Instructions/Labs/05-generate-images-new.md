@@ -41,7 +41,7 @@ In this task, you will use the gpt-image-1.5 playground in the Microsoft Foundry
 
 4. On the **Microsoft Foundry** portal, from the left navigation pane, select **Deployments (1)**. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)** from the drop-down.
 
-      ![](../media/new/r1.png)
+      ![](../media/dbm5.png)
 
 5. In the Select a model page, search for **gpt-image-1.5 (1)**, select **gpt-image-1.5 (2)** model, and click on **Confirm (3)**.
 
@@ -63,9 +63,11 @@ In this task, you will use the gpt-image-1.5 playground in the Microsoft Foundry
 
 5. Modify the prompt to provide a more specific description. For example, ``An elephant on a skateboard in the style of Picasso`` **(1)**. Then **generate (2)** the new image and review the **results (3)**.
 
-      ![](../media/psso.png)
+    > **Note:** If you hit any rate limit error please try again after 1 or 2 minutes. 
 
-      > **Note:** The image may appear differently than shown in the screenshot. 
+    > **Note:** The image may appear differently than shown in the screenshot. 
+
+    ![](../media/psso.png)
 
 ## Task 2: Use the REST API to generate images 
 
@@ -169,26 +171,31 @@ In this task, you will use a configuration file in the application to store the 
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
-     **C#:**
+    For **C#:**
 
     ```
     export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```     
+    ```
 
      >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
 1. Run the following command to install the required SDK version locally:     
 
-     ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-     chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ```
+    ```
+    curl -fsSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+    chmod +x dotnet-install.sh
+    ``` 
+
+    ```
+    ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_ROOT
+    ```
+
+    ```
+    export PATH=$DOTNET_ROOT:$PATH
+    ```
 
       >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
 
@@ -233,13 +240,6 @@ In this task, you will explore the code used to call the REST API and generate a
       - The desired image resolution
     - The response to the initial request contains an **operation-location** header, which provides a callback URL for polling the status of the image generation.
     - The code repeatedly polls the callback URL until the image generation status is *succeeded*, then extracts and displays the URL of the generated image.
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
 
 ## Task 3: Run the app
 
