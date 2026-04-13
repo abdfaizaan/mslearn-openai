@@ -274,7 +274,8 @@ In this task, you will configure the application to connect with the Azure OpenA
 
     **Test** py
 
-    ```python
+    ```
+    Testing hai ji
     // Implicit using statements are included
     using System.Text;
     using System.ClientModel;
@@ -353,6 +354,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     AzureOpenAIClient azureClient = new (new Uri(oaiEndpoint), new ApiKeyCredential(oaiKey));
     ChatClient chatClient = azureClient.GetChatClient(oaiDeploymentName);
 
+
     // Get response from Azure OpenAI
 
     ChatCompletionOptions chatCompletionOptions = new ChatCompletionOptions();
@@ -366,6 +368,8 @@ In this task, you will configure the application to connect with the Azure OpenA
     );
 
     Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
+
+
 
     }
 
@@ -470,7 +474,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     }
 
     }
-    ```    
+    ```  
 
     **Python:** application.py
 
