@@ -268,7 +268,7 @@ In this task, you will configure the application to connect with the Azure OpenA
         )
     ```
 
-     ![](../media/pyespai.png)  
+    ![](../media/pyespai.png)  
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
@@ -353,7 +353,6 @@ In this task, you will configure the application to connect with the Azure OpenA
     AzureOpenAIClient azureClient = new (new Uri(oaiEndpoint), new ApiKeyCredential(oaiKey));
     ChatClient chatClient = azureClient.GetChatClient(oaiDeploymentName);
 
-
     // Get response from Azure OpenAI
 
     ChatCompletionOptions chatCompletionOptions = new ChatCompletionOptions();
@@ -368,15 +367,12 @@ In this task, you will configure the application to connect with the Azure OpenA
 
     Console.WriteLine($"{completion.Role}: {completion.Content[0].Text}");
 
-
-
     }
 
     }
-    ```
+    ```  
 
-    
-   **Python:** application.py
+    **Python:** application.py
 
     ```python
     import os
@@ -445,7 +441,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     if __name__ == '__main__': 
         asyncio.run(main())
     ```
-    
+
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save** or press **Ctrl + S**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
