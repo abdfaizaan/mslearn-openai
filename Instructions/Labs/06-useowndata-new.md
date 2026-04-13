@@ -73,7 +73,7 @@ In this task, you will create an assistant that will  responds to queries with g
 
 1. On the **Attach files to the assistant file search** click on **Select local files**.
 
-    ![](../media/slf.png)
+    ![](../media/slf2.png)
 
 1. Now Search for navigate to `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` **(1)**. Select all the **PDF files (2)** and click on **Open (3)**.
 
