@@ -268,7 +268,7 @@ In this task, you will configure the application to connect with the Azure OpenA
         )
     ```
 
-     ![](../media/pyespai.png)  
+    ![](../media/pyespai.png)  
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
@@ -376,7 +376,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     ```
 
     
-   **Python:** application.py
+    **Python:** application.py
 
     ```python
     import os
