@@ -393,40 +393,40 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **C#:** Program.cs - Add the code in **Create chat completion options** section
 
     ```CSharp
-       // Format and send the request to the model
+    // Format and send the request to the model
         var chatCompletionsOptions = new ChatCompletionsOptions()
-         {
-             Messages =
-             {
-                 new ChatRequestSystemMessage(systemPrompt),
-                 new ChatRequestUserMessage(userPrompt)
-             },
-             DeploymentName = oaiModelName
-         };
-          
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-         var completions = response.Value;
+        {
+            Messages =
+            {
+                new ChatRequestSystemMessage(systemPrompt),
+                new ChatRequestUserMessage(userPrompt)
+            },
+            DeploymentName = oaiModelName
+        };
+            
+        // Get response from Azure OpenAI
+        Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+        var completions = response.Value;
     ```
 
     ![](../media/frmsnd.png)
 
     **Python:** prompt-engineering.py - Add the code in **Build the messages array** section
 
-   ```python
-    # Format and send the request to the model
-    messages =[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_message},
-    ]
- 
-    print("\nSending request to Azure OpenAI model...\n")
+    ```python
+        # Format and send the request to the model
+        messages =[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+        ]
+    
+        print("\nSending request to Azure OpenAI model...\n")
 
     # Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-       model=model,
-       messages=messages
-    )
+        response = await client.chat.completions.create(
+        model=model,
+        messages=messages
+        )
     ```
 
       ![](../media/pyfrm.png)
@@ -437,202 +437,202 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     **C#**
       
-      ```csharp
-        // Implicit using statements are included
-        using System.Text;
-        using System.Text.Json;
-        using Microsoft.Extensions.Configuration;
-        using Microsoft.Extensions.Configuration.Json;
-        using Azure;
+    ```CSharp
+    // Implicit using statements are included
+    using System.Text;
+    using System.Text.Json;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Configuration.Json;
+    using Azure;
+
+    // Add Azure OpenAI package
+    using Azure.AI.OpenAI;
+
+    // Build a config object and retrieve user settings.
+    IConfiguration config = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
+    string? oaiEndpoint = config["AzureOAIEndpoint"];
+    string? oaiKey = config["AzureOAIKey"];
+    string? oaiModelName = config["AzureOAIModelName"];
+
+    string command;
+    bool printFullResponse = false;
+
+    do {
+        Console.WriteLine("\n1: Basic prompt (no prompt engineering)\n" +
+        "2: Prompt with email formatting and basic system message\n" +
+        "3: Prompt with formatting and specifying content\n" +
+        "4: Prompt adjusting system message to be light and use jokes\n" +
+        "\"quit\" to exit the program\n\n" + 
+        "Enter a number to select a prompt:");
+
+        command = Console.ReadLine() ?? "";
         
-        // Add Azure OpenAI package
-        using Azure.AI.OpenAI;
+        switch (command) {
+            case "1":
+                await GetResponseFromOpenAI("../prompts/basic.txt");
+                break;
+            case "2":
+                await GetResponseFromOpenAI("../prompts/email-format.txt");
+                break;
+            case "3":
+                await GetResponseFromOpenAI("../prompts/specify-content.txt");
+                break;
+            case "4":
+                await GetResponseFromOpenAI("../prompts/specify-tone.txt");
+                break;
+            case "quit":
+                Console.WriteLine("Exiting program...");
+                break;
+            default:
+                Console.WriteLine("Invalid input. Please try again.");
+                break;
+        }
+    } while (command != "quit");
+
+    async Task GetResponseFromOpenAI(string fileText)  
+    {   
+        Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
+
+        if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+        {
+            Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+            return;
+        }
         
-        // Build a config object and retrieve user settings.
-        IConfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .Build();
-        string? oaiEndpoint = config["AzureOAIEndpoint"];
-        string? oaiKey = config["AzureOAIKey"];
-        string? oaiModelName = config["AzureOAIModelName"];
+        // Initialize the Azure OpenAI client
+        OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+
+        // Read text file into system and user prompts
+        string[] prompts = System.IO.File.ReadAllLines(fileText);
+        string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
+        string userPrompt = prompts[1].Split(":", 2)[1].Trim();
+
+        // Write prompts to console
+        Console.WriteLine("System prompt: " + systemPrompt);
+        Console.WriteLine("User prompt: " + userPrompt);
         
-        string command;
-        bool printFullResponse = false;
-        
-        do {
-            Console.WriteLine("\n1: Basic prompt (no prompt engineering)\n" +
-            "2: Prompt with email formatting and basic system message\n" +
-            "3: Prompt with formatting and specifying content\n" +
-            "4: Prompt adjusting system message to be light and use jokes\n" +
-            "\"quit\" to exit the program\n\n" + 
-            "Enter a number to select a prompt:");
-        
-            command = Console.ReadLine() ?? "";
-            
-            switch (command) {
-                case "1":
-                    await GetResponseFromOpenAI("../prompts/basic.txt");
-                    break;
-                case "2":
-                    await GetResponseFromOpenAI("../prompts/email-format.txt");
-                    break;
-                case "3":
-                    await GetResponseFromOpenAI("../prompts/specify-content.txt");
-                    break;
-                case "4":
-                    await GetResponseFromOpenAI("../prompts/specify-tone.txt");
-                    break;
-                case "quit":
-                    Console.WriteLine("Exiting program...");
-                    break;
-                default:
-                    Console.WriteLine("Invalid input. Please try again.");
-                    break;
-            }
-        } while (command != "quit");
-        
-        async Task GetResponseFromOpenAI(string fileText)  
-        {   
-            Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
-        
-            if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+        // Create chat completion options
+        // Format and send the request to the model
+        var chatCompletionsOptions = new ChatCompletionsOptions()
+        {
+            Messages =
             {
-                Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-                return;
-            }
+                new ChatRequestSystemMessage(systemPrompt),
+                new ChatRequestUserMessage(userPrompt)
+            },
+            DeploymentName = oaiModelName
+        };
             
-            // Initialize the Azure OpenAI client
-            OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+        // Get response from Azure OpenAI
+        Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+        var completions = response.Value;
         
-            // Read text file into system and user prompts
-            string[] prompts = System.IO.File.ReadAllLines(fileText);
-            string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
-            string userPrompt = prompts[1].Split(":", 2)[1].Trim();
-        
-            // Write prompts to console
-            Console.WriteLine("System prompt: " + systemPrompt);
-            Console.WriteLine("User prompt: " + userPrompt);
-            
-            // Create chat completion options
-            // Format and send the request to the model
-                var chatCompletionsOptions = new ChatCompletionsOptions()
-                {
-                    Messages =
-                    {
-                        new ChatRequestSystemMessage(systemPrompt),
-                        new ChatRequestUserMessage(userPrompt)
-                    },
-                    DeploymentName = oaiModelName
-                };
-                
-                // Get response from Azure OpenAI
-                Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-                var completions = response.Value;
-            
-            // Write full response if needed
-            if (printFullResponse)
-            {
-                Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
-            }
-        
-            // Write the first choice's message
-            foreach (var choice in completions.Choices)
-            {
-                Console.WriteLine($"\nResponse: {choice.Message.Content}\n\n");
-            }
-        }              
-      ```
+        // Write full response if needed
+        if (printFullResponse)
+        {
+            Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+        }
+
+        // Write the first choice's message
+        foreach (var choice in completions.Choices)
+        {
+            Console.WriteLine($"\nResponse: {choice.Message.Content}\n\n");
+        }
+    }
+    ```
    
      **Python**
    
-      ```python
-        import os
-        import asyncio
-        from dotenv import load_dotenv
+    ```python
+    import os
+    import asyncio
+    from dotenv import load_dotenv
 
-        # Add OpenAI import
-        # Add Azure OpenAI package
-        from openai import AsyncAzureOpenAI
+    # Add OpenAI import
+    # Add Azure OpenAI package
+    from openai import AsyncAzureOpenAI
 
-        # Set to True to print the full response from OpenAI for each call
-        printFullResponse = False
+    # Set to True to print the full response from OpenAI for each call
+    printFullResponse = False
 
-        async def main(): 
-            try: 
-                # Get configuration settings 
-                load_dotenv()
-                azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-                azure_oai_key = os.getenv("AZURE_OAI_KEY")
-                azure_oai_model = os.getenv("AZURE_OAI_MODEL")
-                
-                # Set OpenAI configuration settings
-                # Configure the Azure OpenAI client
-                client = AsyncAzureOpenAI(
-                    azure_endpoint = azure_oai_endpoint, 
-                    api_key=azure_oai_key,  
-                    api_version="2024-02-15-preview"
-                    )
+    async def main(): 
+        try: 
+            # Get configuration settings 
+            load_dotenv()
+            azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+            azure_oai_key = os.getenv("AZURE_OAI_KEY")
+            azure_oai_model = os.getenv("AZURE_OAI_MODEL")
             
-
-                while True:
-                    print('1: Basic prompt (no prompt engineering)\n' +
-                        '2: Prompt with email formatting and basic system message\n' +
-                        '3: Prompt with formatting and specifying content\n' +
-                        '4: Prompt adjusting system message to be light and use jokes\n' +
-                        '\'quit\' to exit the program\n')
-                    command = input('Enter a number:')
-                    if command == '1':
-                        await call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
-                    elif command =='2':
-                        await call_openai_model(messages="../prompts/email-format.txt", model=azure_oai_model, client=client)
-                    elif command =='3':
-                        await call_openai_model(messages="../prompts/specify-content.txt", model=azure_oai_model, client=client)
-                    elif command =='4':
-                        await call_openai_model(messages="../prompts/specify-tone.txt", model=azure_oai_model, client=client)
-                    elif command.lower() == 'quit':
-                        print('Exiting program...')
-                        break
-                    else :
-                        print("Invalid input. Please try again.")
-
-            except Exception as ex:
-                print(ex)
-
-        async def call_openai_model(messages, model, client):
-            # In this sample, each file contains both the system and user messages
-            # First, read them into variables, strip whitespace, then build the messages array
-            with open(messages, encoding="utf8") as file:
-                system_message = file.readline().split(':', 1)[1].strip()
-                user_message = file.readline().split(':', 1)[1].strip()
-
-            # Print the messages to the console
-            print("System message: " + system_message)
-            print("User message: " + user_message)
-
-            # Build the messages array
-            # Format and send the request to the model
-            messages =[
-                    {"role": "system", "content": system_message},
-                    {"role": "user", "content": user_message},
-            ]
+            # Set OpenAI configuration settings
+            # Configure the Azure OpenAI client
+            client = AsyncAzureOpenAI(
+                azure_endpoint = azure_oai_endpoint, 
+                api_key=azure_oai_key,  
+                api_version="2024-02-15-preview"
+                )
         
-            print("\nSending request to Azure OpenAI model...\n")
 
-        # Call the Azure OpenAI model
-            response = await client.chat.completions.create(
-            model=model,
-            messages=messages
-            )
-            
+            while True:
+                print('1: Basic prompt (no prompt engineering)\n' +
+                    '2: Prompt with email formatting and basic system message\n' +
+                    '3: Prompt with formatting and specifying content\n' +
+                    '4: Prompt adjusting system message to be light and use jokes\n' +
+                    '\'quit\' to exit the program\n')
+                command = input('Enter a number:')
+                if command == '1':
+                    await call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
+                elif command =='2':
+                    await call_openai_model(messages="../prompts/email-format.txt", model=azure_oai_model, client=client)
+                elif command =='3':
+                    await call_openai_model(messages="../prompts/specify-content.txt", model=azure_oai_model, client=client)
+                elif command =='4':
+                    await call_openai_model(messages="../prompts/specify-tone.txt", model=azure_oai_model, client=client)
+                elif command.lower() == 'quit':
+                    print('Exiting program...')
+                    break
+                else :
+                    print("Invalid input. Please try again.")
 
-            if printFullResponse:
-                print(response)
+        except Exception as ex:
+            print(ex)
 
-            print("Completion: \n\n" + response.choices[0].message.content + "\n")
+    async def call_openai_model(messages, model, client):
+        # In this sample, each file contains both the system and user messages
+        # First, read them into variables, strip whitespace, then build the messages array
+        with open(messages, encoding="utf8") as file:
+            system_message = file.readline().split(':', 1)[1].strip()
+            user_message = file.readline().split(':', 1)[1].strip()
 
-        if __name__ == '__main__': 
-            asyncio.run(main())
-      ```
+        # Print the messages to the console
+        print("System message: " + system_message)
+        print("User message: " + user_message)
+
+        # Build the messages array
+        # Format and send the request to the model
+        messages =[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+        ]
+    
+        print("\nSending request to Azure OpenAI model...\n")
+
+    # Call the Azure OpenAI model
+        response = await client.chat.completions.create(
+        model=model,
+        messages=messages
+        )
+        
+
+        if printFullResponse:
+            print(response)
+
+        print("Completion: \n\n" + response.choices[0].message.content + "\n")
+
+    if __name__ == '__main__': 
+        asyncio.run(main())
+    ```
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 

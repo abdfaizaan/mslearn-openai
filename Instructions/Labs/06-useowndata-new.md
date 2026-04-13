@@ -156,22 +156,21 @@ In this task, you will complete key parts of the application to enable it to use
 
     - **C#**: `appsettings.json`
 
-    ```json
-    {
-    "AzureOAIEndpoint": "Your OpenAI endpoint",
-    "AzureOAIKey": "Azure OpenAI Key",
-    "AssistantId": "Id of your Assistant"
-    }
-    ```
+        ```json
+        {
+        "AzureOAIEndpoint": "Your OpenAI endpoint",
+        "AzureOAIKey": "Azure OpenAI Key",
+        "AssistantId": "Id of your Assistant"
+        }
+        ```
 
     - **Python**: `.env`
 
-    ```
-    AZURE_OAI_ENDPOINT=<Your OpenAI endpoint>
-    AZURE_OAI_KEY=<Azure OpenAI Key>
-    ASSISTANT_ID=<Id of your Assistant>
-    ```
-
+        ```
+        AZURE_OAI_ENDPOINT=<Your OpenAI endpoint>
+        AZURE_OAI_KEY=<Azure OpenAI Key>
+        ASSISTANT_ID=<Id of your Assistant>
+        ```
 
 1. Update the configuration file for your chosen language with the following values:
 

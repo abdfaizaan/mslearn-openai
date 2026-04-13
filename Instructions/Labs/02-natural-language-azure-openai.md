@@ -232,7 +232,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 
     **C#:** Program.cs
 
-    ```csharp
+    ```CSharp
     // Get response from Azure OpenAI
 
     ChatCompletionOptions chatCompletionOptions = new ChatCompletionOptions();
@@ -253,19 +253,19 @@ In this task, you will configure the application to connect with the Azure OpenA
     **Python:** application.py
 
     ```python
-    # Get response from Azure OpenAI
-    messages = [
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
-    
-    print("\nSending request to Azure OpenAI model...\n")
-    
-    # Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-        model=model,
-        messages=messages
-    )
+        # Get response from Azure OpenAI
+        messages = [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
+        ]
+        
+        print("\nSending request to Azure OpenAI model...\n")
+        
+        # Call the Azure OpenAI model
+        response = await client.chat.completions.create(
+            model=model,
+            messages=messages
+        )
     ```
 
      ![](../media/pyespai.png)  
@@ -273,7 +273,7 @@ In this task, you will configure the application to connect with the Azure OpenA
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
     **C#:** Program.cs
-      
+
     ```CSharp
     // Implicit using statements are included
     using System.Text;
@@ -374,76 +374,77 @@ In this task, you will configure the application to connect with the Azure OpenA
 
     }
     ```
+
     
    **Python:** application.py
 
-      ```Python
-        import os
-        import asyncio
-        from dotenv import load_dotenv
+    ```python
+    import os
+    import asyncio
+    from dotenv import load_dotenv
 
-        # Add Azure OpenAI package
-        from openai import AsyncAzureOpenAI
+    # Add Azure OpenAI package
+    from openai import AsyncAzureOpenAI
 
-        async def main(): 
-            try: 
-                # Get configuration settings 
-                load_dotenv()
-                azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-                azure_oai_key = os.getenv("AZURE_OAI_KEY")
-                azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-                
-                # Configure the Azure OpenAI client
-                client = AsyncAzureOpenAI(
-                    azure_endpoint=azure_oai_endpoint, 
-                    api_key=azure_oai_key,  
-                    api_version="2024-02-15-preview"
-                )
-
-                while True:
-                    # Pause the app to allow the user to enter the system prompt
-                    print("------------------\nPausing the app to allow you to change the system prompt.\nPress enter to continue...")
-                    input()
-
-                    # Read in system message and prompt for user message
-                    system_text = open(file="system.txt", encoding="utf8").read().strip()
-                    user_text = input("Enter user message, or 'quit' to exit: ")
-                    if user_text.lower() == 'quit' or system_text.lower() == 'quit':
-                        print('Exiting program...')
-                        break
-
-                    # Format and send the request to the model
-                    await call_openai_model(
-                        system_message=system_text, 
-                        user_message=user_text, 
-                        model=azure_oai_deployment, 
-                        client=client
-                    )
-
-            except Exception as ex:
-                print(ex)
-
-        # Define the function that will get the response from Azure OpenAI endpoint
-        async def call_openai_model(system_message, user_message, model, client):
-            # Get response from Azure OpenAI
-            messages = [
-                {"role": "system", "content": system_message},
-                {"role": "user", "content": user_message},
-            ]
+    async def main(): 
+        try: 
+            # Get configuration settings 
+            load_dotenv()
+            azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+            azure_oai_key = os.getenv("AZURE_OAI_KEY")
+            azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
             
-            print("\nSending request to Azure OpenAI model...\n")
-            
-            # Call the Azure OpenAI model
-            response = await client.chat.completions.create(
-                model=model,
-                messages=messages
+            # Configure the Azure OpenAI client
+            client = AsyncAzureOpenAI(
+                azure_endpoint=azure_oai_endpoint, 
+                api_key=azure_oai_key,  
+                api_version="2024-02-15-preview"
             )
 
-            print("Response:\n" + response.choices[0].message.content + "\n")
+            while True:
+                # Pause the app to allow the user to enter the system prompt
+                print("------------------\nPausing the app to allow you to change the system prompt.\nPress enter to continue...")
+                input()
 
-        if __name__ == '__main__': 
-            asyncio.run(main())
-      ```
+                # Read in system message and prompt for user message
+                system_text = open(file="system.txt", encoding="utf8").read().strip()
+                user_text = input("Enter user message, or 'quit' to exit: ")
+                if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                    print('Exiting program...')
+                    break
+
+                # Format and send the request to the model
+                await call_openai_model(
+                    system_message=system_text, 
+                    user_message=user_text, 
+                    model=azure_oai_deployment, 
+                    client=client
+                )
+
+        except Exception as ex:
+            print(ex)
+
+    # Define the function that will get the response from Azure OpenAI endpoint
+    async def call_openai_model(system_message, user_message, model, client):
+        # Get response from Azure OpenAI
+        messages = [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
+        ]
+        
+        print("\nSending request to Azure OpenAI model...\n")
+        
+        # Call the Azure OpenAI model
+        response = await client.chat.completions.create(
+            model=model,
+            messages=messages
+        )
+
+        print("Response:\n" + response.choices[0].message.content + "\n")
+
+    if __name__ == '__main__': 
+        asyncio.run(main())
+    ```
     
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save** or press **Ctrl + S**.
 
