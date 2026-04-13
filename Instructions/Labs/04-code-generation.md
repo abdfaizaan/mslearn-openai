@@ -101,7 +101,7 @@ In this task, you will use a short command-line application running in Cloud She
 5. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this task using the following command.
 
     ```bash
-    cd mslearn-openai/Labfiles/04-code-generation
+    cd mslearn-openai/Labfiles/04-code-generation-new
     ```
 
    > **Note:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
