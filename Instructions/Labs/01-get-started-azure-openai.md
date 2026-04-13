@@ -89,13 +89,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Model version: **2025-08-07 (Default) (3)**
 
-      - Tokens per Minute Rate Limit (thousands): In between **10K - 13K (4)**
+      - Tokens per Minute Rate Limit (thousands): In between **13K - 16K (4)**
 
       - Content filter: **DefaultV2 (5)**
 
       - Click on **Deploy (6)**
 
-        ![](../media/5MINDEP.png)
+        ![](../media/tookn.png)
       
 1. This will deploy a model that you will be playing around with as you proceed.
 
