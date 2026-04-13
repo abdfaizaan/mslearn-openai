@@ -272,6 +272,24 @@ In this task, you will configure the application to connect with the Azure OpenA
 
 1. Before you can save the file, please make sure your code looks similar to the code provided below.
 
+    **Test** py
+
+    ```python
+        # Get response from Azure OpenAI
+        messages = [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
+        ]
+        
+        print("\nSending request to Azure OpenAI model...\n")
+        
+        # Call the Azure OpenAI model
+        response = await client.chat.completions.create(
+            model=model,
+            messages=messages
+        )
+    ```
+
     **C#:** Program.cs
 
     ```CSharp
@@ -444,7 +462,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     if __name__ == '__main__': 
         asyncio.run(main())
     ```
-    
+
 1. To save the changes made to the file, right-click on the blank space in the file text editor and hit **Save** or press **Ctrl + S**.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
