@@ -373,9 +373,8 @@ In this task, you will configure the application to connect with the Azure OpenA
     }
 
     }
-    ```
+    ```    
 
-    
     **Python:** application.py
 
     ```python
