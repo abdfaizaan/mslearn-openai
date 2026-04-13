@@ -275,7 +275,7 @@ In this task, you will configure the application to connect with the Azure OpenA
     **Test** py
 
     ```
-     import os
+    import os
     import asyncio
     from dotenv import load_dotenv
 
