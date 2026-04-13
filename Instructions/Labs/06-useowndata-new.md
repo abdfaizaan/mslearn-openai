@@ -152,17 +152,31 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, expand the language folder for your preferred language.
 
-1. Open the configuration file for your language.
+1. Open the configuration file for your language and update the code.
 
     - **C#**: `appsettings.json`
 
+    ```json
+    {
+    "AzureOAIEndpoint": "Your OpenAI endpoint",
+    "AzureOAIKey": "Azure OpenAI Key",
+    "AssistantId": "Id of your Assistant"
+    }
+    ```
+
     - **Python**: `.env`
+
+    ```
+    AZURE_OAI_ENDPOINT=<Your OpenAI endpoint>
+    AZURE_OAI_KEY=<Azure OpenAI Key>
+    ASSISTANT_ID=<Id of your Assistant>
+    ```
+
 
 1. Update the configuration file for your chosen language with the following values:
 
     - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
     - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
-    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in the Azure Microsoft Foundry portal).
     - **AssistantId**: Enter the ID of your assistant that you created in Task 2.
     - Save your changes after updating these values.
 
